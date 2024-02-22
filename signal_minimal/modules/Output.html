@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Pinnacle</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/client.html">client</a></li>
+  <li><a href="../modules/Input.html">Input</a></li>
+  <li><strong>Output</strong></li>
+  <li><a href="../modules/Pinnacle.html">Pinnacle</a></li>
+  <li><a href="../modules/Process.html">Process</a></li>
+  <li><a href="../modules/protobuf.html">protobuf</a></li>
+  <li><a href="../modules/Signal.html">Signal</a></li>
+  <li><a href="../modules/Tag.html">Tag</a></li>
+  <li><a href="../modules/Util.html">Util</a></li>
+  <li><a href="../modules/Window.html">Window</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/OutputHandle.html">OutputHandle</a></li>
+  <li><a href="../classes/TagHandle.html">TagHandle</a></li>
+  <li><a href="../classes/WindowHandle.html">WindowHandle</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Output</code></h1>
+<p>Output management.</p>
+<p>An output is what you would call a monitor. It presents windows, your cursor, and other UI elements.</p>
+
+<p>Outputs are uniquely identified by their name, a.k.a. the name of the connector they're plugged in to.</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#output.get_all">output.get_all()</a></td>
+	<td class="summary">Get all outputs.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#output.get_by_name">output.get_by_name(name)</a></td>
+	<td class="summary">Get an output by its name (the connector it's plugged into).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#output.get_focused">output.get_focused()</a></td>
+	<td class="summary">Get the currently focused output.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#output.connect_for_all">output.connect_for_all(callback)</a></td>
+	<td class="summary">Connect a function to be run with all current and future outputs.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "output.get_all"></a>
+    <strong>output.get_all()</strong>
+    </dt>
+    <dd>
+    Get all outputs.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/OutputHandle.html#">OutputHandle[]</a></span>
+
+
+
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> outputs = Output.<span class="function-name">get_all</span>()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "output.get_by_name"></a>
+    <strong>output.get_by_name(name)</strong>
+    </dt>
+    <dd>
+    Get an output by its name (the connector it's plugged into).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a></span>
+         The name of the connector the output is connected to
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/OutputHandle.html#">OutputHandle</a> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> output = Output.<span class="function-name">get_by_name</span>(<span class="string">"eDP-1"</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "output.get_focused"></a>
+    <strong>output.get_focused()</strong>
+    </dt>
+    <dd>
+    Get the currently focused output. </p>
+
+<p>This is currently defined as the most recent one that has had pointer motion.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/OutputHandle.html#">OutputHandle</a> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> output = Output.<span class="function-name">get_focused</span>()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "output.connect_for_all"></a>
+    <strong>output.connect_for_all(callback)</strong>
+    </dt>
+    <dd>
+    Connect a function to be run with all current and future outputs. </p>
+
+<p>This method does two things:
+1. Immediately runs <code>callback</code> with all currently connected outputs.
+2. Calls <code>callback</code> whenever a new output is plugged in.</p>
+
+<p>This will <em>not</em> run <code>callback</code> with an output that has been unplugged and replugged
+to prevent duplicate setup. Instead, the compositor keeps track of the tags and other
+state associated with that output and restores it when replugged.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">callback</span>
+            <span class="types"><span class="type">function</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Add tags "1" through "5" to all outputs
+</span>Output.<span class="function-name">connect_for_all</span>(<span class="keyword">function</span>(output)
+    <span class="keyword">local</span> tags = Tag.<span class="function-name">add</span>(output, <span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"3"</span>, <span class="string">"4"</span>, <span class="string">"5"</span>)
+    tags[<span class="number">1</span>]:<span class="function-name">toggle_active</span>()
+<span class="keyword">end</span>)</pre>
+    </ul>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-02-22 01:46:34 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
