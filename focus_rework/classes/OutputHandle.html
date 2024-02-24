@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Pinnacle</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><strong>OutputHandle</strong></li>
+  <li><a href="../classes/SignalHandle.html">SignalHandle</a></li>
+  <li><a href="../classes/SignalHandles.html">SignalHandles</a></li>
+  <li><a href="../classes/TagHandle.html">TagHandle</a></li>
+  <li><a href="../classes/WindowHandle.html">WindowHandle</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/Input.html">Input</a></li>
+  <li><a href="../modules/LayoutModule.html">LayoutModule</a></li>
+  <li><a href="../modules/Output.html">Output</a></li>
+  <li><a href="../modules/Pinnacle.html">Pinnacle</a></li>
+  <li><a href="../modules/Process.html">Process</a></li>
+  <li><a href="../modules/Tag.html">Tag</a></li>
+  <li><a href="../modules/Util.html">Util</a></li>
+  <li><a href="../modules/Window.html">Window</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>OutputHandle</code></h1>
+<p>An output handle.</p>
+<p>This is a handle to one of your monitors.
+It serves to make it easier to deal with them, defining methods for getting properties and
+helpers for things like positioning multiple monitors.</p>
+
+<p>This can be retrieved through the various <code>get</code> functions in the <a href="../modules/Output.html#">Output</a> module.</p>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:set_location">outputhandle:set_location(loc)</a></td>
+	<td class="summary">Set the location of this output in the global space.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:set_loc_adj_to">outputhandle:set_loc_adj_to(other, alignment)</a></td>
+	<td class="summary">Set the location of this output adjacent to another one.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:props">outputhandle:props()</a></td>
+	<td class="summary">Get all properties of this output.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:make">outputhandle:make()</a></td>
+	<td class="summary">Get this output's make.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:model">outputhandle:model()</a></td>
+	<td class="summary">Get this output's model.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:x">outputhandle:x()</a></td>
+	<td class="summary">Get this output's x-coordinate in the global space.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:y">outputhandle:y()</a></td>
+	<td class="summary">Get this output's y-coordinate in the global space.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:pixel_width">outputhandle:pixel_width()</a></td>
+	<td class="summary">Get this output's width in pixels.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:pixel_height">outputhandle:pixel_height()</a></td>
+	<td class="summary">Get this output's height in pixels.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:refresh_rate">outputhandle:refresh_rate()</a></td>
+	<td class="summary">Get this output's refresh rate in millihertz.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:physical_width">outputhandle:physical_width()</a></td>
+	<td class="summary">Get this output's physical width in millimeters.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:physical_height">outputhandle:physical_height()</a></td>
+	<td class="summary">Get this output's physical height in millimeters.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:focused">outputhandle:focused()</a></td>
+	<td class="summary">Get whether or not this output is focused.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:tags">outputhandle:tags()</a></td>
+	<td class="summary">Get the tags this output has.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "outputhandle:set_location"></a>
+    <strong>outputhandle:set_location(loc)</strong>
+    </dt>
+    <dd>
+    Set the location of this output in the global space. </p>
+
+<p>On startup, Pinnacle will lay out all connected outputs starting at (0, 0)
+and going to the right, with their top borders aligned.</p>
+
+<p>This method allows you to move outputs where necessary.</p>
+
+<p>Note: If you have space between two outputs when setting their locations,
+the pointer will not be able to move between them.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">loc</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/OutputHandle.html#outputhandle:set_loc_adj_to">OutputHandle.set_loc_adj_to</a>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Assume two monitors in order, "DP-1" and "HDMI-1", with the following dimensions:
+</span> <span class="comment">--  - "DP-1":   ┌─────┐
+</span> <span class="comment">--              │     │1920x1080
+</span> <span class="comment">--              └─────┘
+</span> <span class="comment">--  - "HDMI-1": ┌───────┐
+</span> <span class="comment">--              │ 2560x │
+</span> <span class="comment">--              │ 1440  │
+</span> <span class="comment">--              └───────┘
+</span>Output.<span class="function-name">get_by_name</span>(<span class="string">"DP-1"</span>):<span class="function-name">set_location</span>({ x = <span class="number">0</span>, y = <span class="number">0</span> })
+Output.<span class="function-name">get_by_name</span>(<span class="string">"HDMI-1"</span>):<span class="function-name">set_location</span>({ x = <span class="number">1920</span>, y = -<span class="number">360</span> })
+ <span class="comment">-- Results in:
+</span> <span class="comment">--       ┌───────┐
+</span> <span class="comment">-- ┌─────┤       │
+</span> <span class="comment">-- │DP-1 │HDMI-1 │
+</span> <span class="comment">-- └─────┴───────┘
+</span> <span class="comment">-- Notice that y = 0 aligns with the top of "DP-1", and the top of "HDMI-1" is at y = -360.
+</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "outputhandle:set_loc_adj_to"></a>
+    <strong>outputhandle:set_loc_adj_to(other, alignment)</strong>
+    </dt>
+    <dd>
+    Set the location of this output adjacent to another one. </p>
+
+<p><code>alignment</code> is how you want this output to be placed.
+For example, "top<em>align</em>left" will place this output above <code>other</code> and align the left borders.
+Similarly, "right<em>align</em>center" will place this output to the right of <code>other</code> and align their centers.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">other</span>
+            <span class="types"><a class="type" href="../classes/OutputHandle.html#">OutputHandle</a></span>
+
+
+
+        </li>
+        <li><span class="parameter">alignment</span>
+            <span class="types"><span class="type">Alignment</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Assume two monitors in order, "DP-1" and "HDMI-1", with the following dimensions:
+</span> <span class="comment">--  - "DP-1":   ┌─────┐
+</span> <span class="comment">--              │     │1920x1080
+</span> <span class="comment">--              └─────┘
+</span> <span class="comment">--  - "HDMI-1": ┌───────┐
+</span> <span class="comment">--              │ 2560x │
+</span> <span class="comment">--              │ 1440  │
+</span> <span class="comment">--              └───────┘
+</span>Output.<span class="function-name">get_by_name</span>(<span class="string">"DP-1"</span>):<span class="function-name">set_loc_adj_to</span>(Output:<span class="function-name">get_by_name</span>(<span class="string">"HDMI-1"</span>), <span class="string">"bottom_align_right"</span>)
+ <span class="comment">-- Results in:
+</span> <span class="comment">-- ┌───────┐
+</span> <span class="comment">-- │       │
+</span> <span class="comment">-- │HDMI-1 │
+</span> <span class="comment">-- └──┬────┤
+</span> <span class="comment">--    │DP-1│
+</span> <span class="comment">--    └────┘
+</span> <span class="comment">-- Notice that "DP-1" now has the coordinates (2280, 1440) because "DP-1" is getting moved, not "HDMI-1".
+</span> <span class="comment">-- "HDMI-1" was placed at (1920, 0) during the compositor's initial output layout.</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "outputhandle:props"></a>
+    <strong>outputhandle:props()</strong>
+    </dt>
+    <dd>
+    Get all properties of this output.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">OutputProperties</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:make"></a>
+    <strong>outputhandle:make()</strong>
+    </dt>
+    <dd>
+    Get this output's make. </p>
+
+<p>Note: make and model detection are currently somewhat iffy and may not work.</p>
+
+<p>Shorthand for <code>handle:props().make</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:model"></a>
+    <strong>outputhandle:model()</strong>
+    </dt>
+    <dd>
+    Get this output's model. </p>
+
+<p>Note: make and model detection are currently somewhat iffy and may not work.</p>
+
+<p>Shorthand for <code>handle:props().model</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:x"></a>
+    <strong>outputhandle:x()</strong>
+    </dt>
+    <dd>
+    Get this output's x-coordinate in the global space. </p>
+
+<p>Shorthand for <code>handle:props().x</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:y"></a>
+    <strong>outputhandle:y()</strong>
+    </dt>
+    <dd>
+    Get this output's y-coordinate in the global space. </p>
+
+<p>Shorthand for <code>handle:props().y</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:pixel_width"></a>
+    <strong>outputhandle:pixel_width()</strong>
+    </dt>
+    <dd>
+    Get this output's width in pixels. </p>
+
+<p>Shorthand for <code>handle:props().pixel_width</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:pixel_height"></a>
+    <strong>outputhandle:pixel_height()</strong>
+    </dt>
+    <dd>
+    Get this output's height in pixels. </p>
+
+<p>Shorthand for <code>handle:props().pixel_height</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:refresh_rate"></a>
+    <strong>outputhandle:refresh_rate()</strong>
+    </dt>
+    <dd>
+    Get this output's refresh rate in millihertz. </p>
+
+<p>For example, 144Hz is returned as 144000.</p>
+
+<p>Shorthand for <code>handle:props().refresh_rate</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:physical_width"></a>
+    <strong>outputhandle:physical_width()</strong>
+    </dt>
+    <dd>
+    Get this output's physical width in millimeters. </p>
+
+<p>Shorthand for <code>handle:props().physical_width</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:physical_height"></a>
+    <strong>outputhandle:physical_height()</strong>
+    </dt>
+    <dd>
+    Get this output's physical height in millimeters. </p>
+
+<p>Shorthand for <code>handle:props().physical_height</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:focused"></a>
+    <strong>outputhandle:focused()</strong>
+    </dt>
+    <dd>
+    Get whether or not this output is focused. </p>
+
+<p>The focused output is currently implemented as the one that last had pointer motion.</p>
+
+<p>Shorthand for <code>handle:props().focused</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:tags"></a>
+    <strong>outputhandle:tags()</strong>
+    </dt>
+    <dd>
+    Get the tags this output has. </p>
+
+<p>Shorthand for <code>handle:props().tags</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/TagHandle.html#">TagHandle[]</a> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-02-24 20:47:24 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
