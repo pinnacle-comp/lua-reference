@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Pinnacle</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/Input.html">Input</a></li>
+  <li><a href="../modules/Layout.html">Layout</a></li>
+  <li><a href="../modules/LayoutHandlerModule.html">LayoutHandlerModule</a></li>
+  <li><a href="../modules/LayoutHandler.html">LayoutHandler</a></li>
+  <li><a href="../modules/Output.html">Output</a></li>
+  <li><a href="../modules/Pinnacle.html">Pinnacle</a></li>
+  <li><a href="../modules/Process.html">Process</a></li>
+  <li><a href="../modules/Tag.html">Tag</a></li>
+  <li><a href="../modules/Util.html">Util</a></li>
+  <li><a href="../modules/RectangleModule.html">RectangleModule</a></li>
+  <li><a href="../modules/Rectangle.html">Rectangle</a></li>
+  <li><strong>Window</strong></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/OutputHandle.html">OutputHandle</a></li>
+  <li><a href="../classes/SignalHandle.html">SignalHandle</a></li>
+  <li><a href="../classes/SignalHandles.html">SignalHandles</a></li>
+  <li><a href="../classes/TagHandle.html">TagHandle</a></li>
+  <li><a href="../classes/WindowHandle.html">WindowHandle</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Window</code></h1>
+<p>Window management.</p>
+<p>This module helps you deal with setting windows to fullscreen and maximized, setting their size,
+moving them between tags, and various other actions.</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#window.get_all">window.get_all()</a></td>
+	<td class="summary">Get all windows.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#window.get_focused">window.get_focused()</a></td>
+	<td class="summary">Get the currently focused window.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#window.begin_move">window.begin_move(button)</a></td>
+	<td class="summary">Begin moving this window using the specified mouse button.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#window.begin_resize">window.begin_resize(button)</a></td>
+	<td class="summary">Begin resizing this window using the specified mouse button.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#window.add_window_rule">window.add_window_rule(rule)</a></td>
+	<td class="summary">Add a window rule.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#window.connect_signal">window.connect_signal(signals)</a></td>
+	<td class="summary">Connect to a window signal.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "window.get_all"></a>
+    <strong>window.get_all()</strong>
+    </dt>
+    <dd>
+    Get all windows.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/WindowHandle.html#">WindowHandle[]</a></span>
+        Handles to all windows
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> windows = Window.<span class="function-name">get_all</span>()
+<span class="keyword">for</span> _, window <span class="keyword">in</span> <span class="global">ipairs</span>(windows) <span class="keyword">do</span>
+    <span class="global">print</span>(window:<span class="function-name">props</span>().class)
+<span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "window.get_focused"></a>
+    <strong>window.get_focused()</strong>
+    </dt>
+    <dd>
+    Get the currently focused window.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/WindowHandle.html#">WindowHandle</a> or <span class="type">nil</span></span>
+        A handle to the currently focused window
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span>
+    <span class="global">print</span>(focused:<span class="function-name">props</span>().class)
+<span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "window.begin_move"></a>
+    <strong>window.begin_move(button)</strong>
+    </dt>
+    <dd>
+    Begin moving this window using the specified mouse button. </p>
+
+<p>The button must be pressed at the time this method is called.
+If the button is lifted, the move will end.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">button</span>
+            <span class="types"><span class="type">MouseButton</span></span>
+         The button that will initiate the move
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Input.<span class="function-name">mousebind</span>({ <span class="string">"super"</span> }, <span class="string">"btn_left"</span>, <span class="keyword">function</span>()
+    Window.<span class="function-name">begin_move</span>(<span class="string">"btn_left"</span>)
+<span class="keyword">end</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "window.begin_resize"></a>
+    <strong>window.begin_resize(button)</strong>
+    </dt>
+    <dd>
+    Begin resizing this window using the specified mouse button. </p>
+
+<p>The button must be pressed at the time this method is called.
+If the button is lifted, the resize will end.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">button</span>
+            <span class="types"><span class="type">MouseButton</span></span>
+         The button that will initiate the resize
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Input.<span class="function-name">mousebind</span>({ <span class="string">"super"</span> }, <span class="string">"btn_right"</span>, <span class="keyword">function</span>()
+    Window.<span class="function-name">begin_resize</span>(<span class="string">"btn_right"</span>)
+<span class="keyword">end</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "window.add_window_rule"></a>
+    <strong>window.add_window_rule(rule)</strong>
+    </dt>
+    <dd>
+    Add a window rule. </p>
+
+<p>A window rule defines what properties a window will spawn with given certain conditions.
+For example, if Firefox is spawned, you can set it to open on a specific tag.</p>
+
+<p>This method takes in a table with two keys:</p>
+
+<ul>
+    <li><code>cond</code>: The condition for <code>rule</code> to apply to a new window.</li>
+    <li><code>rule</code>: What gets applied to the new window if <code>cond</code> is true.</li>
+</ul>
+
+<p>There are some important mechanics you should know when using window rules:</p>
+
+<ul>
+    <li>All children inside an <code>all</code> block must be true for the block to be true.</li>
+    <li>At least one child inside an <code>any</code> block must be true for the block to be true.</li>
+    <li>The outermost block of a window rule condition is implicitly an <code>all</code> block.</li>
+    <li>Within an <code>all</code> block, all items in each array must be true for the attribute to be true.</li>
+    <li>Within an <code>any</code> block, only one item in each array needs to be true for the attribute to be true.</li>
+</ul>
+
+<p><code>cond</code> can be a bit confusing and quite table heavy. Examples are shown below for guidance.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">rule</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         The condition and rule
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- A simple window rule. This one will cause Firefox to open on tag "Browser".
+</span>Window.<span class="function-name">add_window_rule</span>({
+    cond = { classes = { <span class="string">"firefox"</span> } },
+    rule = { tags = { Tag.<span class="function-name">get</span>(<span class="string">"Browser"</span>) } },
+})
+
+ <span class="comment">-- To apply rules when *all* provided conditions are true, use <code>all</code>.
+</span> <span class="comment">-- <code>all</code> takes an array of conditions and checks if all are true.
+</span> <span class="comment">-- The following will open Steam fullscreen only if it opens on tag "5".
+</span>Window.<span class="function-name">add_window_rule</span>({
+    cond = {
+        all = {
+            {
+                classes = { <span class="string">"steam"</span> },
+                tags = { Tag.<span class="function-name">get</span>(<span class="string">"5"</span>) },
+            }
+        }
+    },
+    rule = { fullscreen_or_maximized = <span class="string">"fullscreen"</span> },
+})
+
+ <span class="comment">-- The outermost block of a <code>cond</code> is implicitly an <code>all</code> block.
+</span> <span class="comment">-- Thus, the above can be shortened to:
+</span>Window.<span class="function-name">add_window_rule</span>({
+    cond = {
+        classes = { <span class="string">"steam"</span> },
+        tags = { Tag.<span class="function-name">get</span>(<span class="string">"5"</span>) },
+    },
+    rule = { fullscreen_or_maximized = <span class="string">"fullscreen"</span> },
+})
+
+ <span class="comment">-- <code>any</code> also exists to allow at least one provided condition to match.
+</span> <span class="comment">-- The following will open either xterm or Alacritty floating.
+</span>Window.<span class="function-name">add_window_rule</span>({
+    cond = {
+        any = { { classes = { <span class="string">"xterm"</span>, <span class="string">"Alacritty"</span> } } }
+    },
+    rule = { floating = <span class="keyword">true</span> },
+})
+
+ <span class="comment">-- You can arbitrarily nest <code>any</code> and <code>all</code> to achieve desired logic.
+</span> <span class="comment">-- The following will open Discord, Thunderbird, or Firefox floating if they
+</span> <span class="comment">-- open on either *all* of tags "A", "B", and "C" or both tags "1" and "2".
+</span>Window.<span class="function-name">add_window_rule</span>({
+    cond = {
+        all = { <span class="comment">-- This <code>all</code> block is needed because the outermost block cannot be an array.
+</span>            { any = {
+                { classes = { <span class="string">"firefox"</span>, <span class="string">"thunderbird"</span>, <span class="string">"discord"</span> } }
+            } },
+            { any = {
+                <span class="comment">-- Because <code>tag</code> is inside an <code>all</code> block,
+</span>                <span class="comment">-- the window must have all these tags for this to be true.
+</span>                <span class="comment">-- If it was in an <code>any</code> block, only one tag would need to match.
+</span>                { all = {
+                    { tags = { Tag.<span class="function-name">get</span>(<span class="string">"A"</span>), Tag.<span class="function-name">get</span>(<span class="string">"B"</span>), Tag.<span class="function-name">get</span>(<span class="string">"C"</span>) } }
+                } },
+                { all = {
+                    { tags = { Tag.<span class="function-name">get</span>(<span class="string">"1"</span>), Tag.<span class="function-name">get</span>(<span class="string">"2"</span>) } }
+                } },
+            } }
+        }
+    },
+    rule = { floating = <span class="keyword">true</span> },
+})</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "window.connect_signal"></a>
+    <strong>window.connect_signal(signals)</strong>
+    </dt>
+    <dd>
+    Connect to a window signal. </p>
+
+<p>The compositor sends signals about various events. Use this function to run a callback when
+some window signal occurs.</p>
+
+<p>This function returns a table of signal handles with each handle stored at the same key used
+to connect to the signal. See <a href="../classes/SignalHandles.html#">SignalHandles</a> for more information.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">signals</span>
+            <span class="types"><span class="type">WindowSignal</span></span>
+         The signal you want to connect to
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/SignalHandles.html#">SignalHandles</a></span>
+        Handles to every signal you connected to wrapped in a table, with keys being the same as the connected signal.
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/SignalHandles.html#signalhandles:disconnect_all">SignalHandles.disconnect_all</a>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Window.<span class="function-name">connect_signal</span>({
+    pointer_enter = <span class="keyword">function</span>(window)
+        <span class="global">print</span>(<span class="string">"Pointer entered"</span>, window:<span class="function-name">class</span>())
+    <span class="keyword">end</span>
+})</pre>
+    </ul>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-03-14 22:32:39 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

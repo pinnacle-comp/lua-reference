@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Pinnacle</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/OutputHandle.html">OutputHandle</a></li>
+  <li><a href="../classes/SignalHandle.html">SignalHandle</a></li>
+  <li><a href="../classes/SignalHandles.html">SignalHandles</a></li>
+  <li><strong>TagHandle</strong></li>
+  <li><a href="../classes/WindowHandle.html">WindowHandle</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/Input.html">Input</a></li>
+  <li><a href="../modules/Layout.html">Layout</a></li>
+  <li><a href="../modules/LayoutHandlerModule.html">LayoutHandlerModule</a></li>
+  <li><a href="../modules/LayoutHandler.html">LayoutHandler</a></li>
+  <li><a href="../modules/Output.html">Output</a></li>
+  <li><a href="../modules/Pinnacle.html">Pinnacle</a></li>
+  <li><a href="../modules/Process.html">Process</a></li>
+  <li><a href="../modules/Tag.html">Tag</a></li>
+  <li><a href="../modules/Util.html">Util</a></li>
+  <li><a href="../modules/RectangleModule.html">RectangleModule</a></li>
+  <li><a href="../modules/Rectangle.html">Rectangle</a></li>
+  <li><a href="../modules/Window.html">Window</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>TagHandle</code></h1>
+<p>A tag handle.</p>
+<p>This is a handle that allows manipulation of a tag.</p>
+
+<p>This can be retrieved through the various <code>get</code> functions in the <a href="../modules/Tag.html#">Tag</a> module.</p>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#taghandle:remove">taghandle:remove()</a></td>
+	<td class="summary">Remove this tag.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#taghandle:set_layout">taghandle:set_layout(layout)</a></td>
+	<td class="summary">Set this tag's layout.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#taghandle:switch_to">taghandle:switch_to()</a></td>
+	<td class="summary">Activate this tag and deactivate all other ones on the same output.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#taghandle:set_active">taghandle:set_active(active)</a></td>
+	<td class="summary">Set whether or not this tag is active.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#taghandle:toggle_active">taghandle:toggle_active()</a></td>
+	<td class="summary">Toggle this tag's active state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#taghandle:props">taghandle:props()</a></td>
+	<td class="summary">Get all properties of this tag.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#taghandle:active">taghandle:active()</a></td>
+	<td class="summary">Get whether or not this tag is being displayed.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#taghandle:name">taghandle:name()</a></td>
+	<td class="summary">Get this tag's name.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#taghandle:output">taghandle:output()</a></td>
+	<td class="summary">Get the output this tag is on.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "taghandle:remove"></a>
+    <strong>taghandle:remove()</strong>
+    </dt>
+    <dd>
+    Remove this tag.
+
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> tags = Tag.<span class="function-name">add</span>(Output.<span class="function-name">get_by_name</span>(<span class="string">"HDMI-1"</span>), <span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"Buckle"</span>, <span class="string">"Shoe"</span>)
+
+tags[<span class="number">2</span>]:<span class="function-name">remove</span>()
+tags[<span class="number">4</span>]:<span class="function-name">remove</span>()
+ <span class="comment">-- "HDMI-1" now only has tags "1" and "Buckle"</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "taghandle:set_layout"></a>
+    <strong>taghandle:set_layout(layout)</strong>
+    </dt>
+    <dd>
+    Set this tag's layout. </p>
+
+<p>If this is the first active tag on its output, its layout will be used to tile windows.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">layout</span>
+            <span class="types"><span class="type">LayoutOld</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Assume the focused output has tag "Tag"
+</span>Tag.<span class="function-name">get</span>(<span class="string">"Tag"</span>):<span class="function-name">set_layout</span>(<span class="string">"dwindle"</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "taghandle:switch_to"></a>
+    <strong>taghandle:switch_to()</strong>
+    </dt>
+    <dd>
+    Activate this tag and deactivate all other ones on the same output.
+
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Assume the focused output has the following inactive tags and windows:
+</span> <span class="comment">--  - "1": Alacritty
+</span> <span class="comment">--  - "2": Firefox, Discord
+</span> <span class="comment">--  - "3": Steam
+</span>Tag.<span class="function-name">get</span>(<span class="string">"2"</span>):<span class="function-name">switch_to</span>() <span class="comment">-- Displays Firefox and Discord
+</span>Tag.<span class="function-name">get</span>(<span class="string">"3"</span>):<span class="function-name">switch_to</span>() <span class="comment">-- Displays Steam</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "taghandle:set_active"></a>
+    <strong>taghandle:set_active(active)</strong>
+    </dt>
+    <dd>
+    Set whether or not this tag is active.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">active</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Assume the focused output has the following inactive tags and windows:
+</span> <span class="comment">--  - "1": Alacritty
+</span> <span class="comment">--  - "2": Firefox, Discord
+</span> <span class="comment">--  - "3": Steam
+</span>Tag.<span class="function-name">get</span>(<span class="string">"2"</span>):<span class="function-name">set_active</span>(<span class="keyword">true</span>)  <span class="comment">-- Displays Firefox and Discord
+</span>Tag.<span class="function-name">get</span>(<span class="string">"3"</span>):<span class="function-name">set_active</span>(<span class="keyword">true</span>)  <span class="comment">-- Displays Firefox, Discord, and Steam
+</span>Tag.<span class="function-name">get</span>(<span class="string">"2"</span>):<span class="function-name">set_active</span>(<span class="keyword">false</span>) <span class="comment">-- Displays Steam</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "taghandle:toggle_active"></a>
+    <strong>taghandle:toggle_active()</strong>
+    </dt>
+    <dd>
+    Toggle this tag's active state.
+
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Assume the focused output has the following inactive tags and windows:
+</span> <span class="comment">--  - "1": Alacritty
+</span> <span class="comment">--  - "2": Firefox, Discord
+</span> <span class="comment">--  - "3": Steam
+</span>Tag.<span class="function-name">get</span>(<span class="string">"2"</span>):<span class="function-name">toggle_active</span>() <span class="comment">-- Displays Firefox and Discord
+</span>Tag.<span class="function-name">get</span>(<span class="string">"2"</span>):<span class="function-name">toggle_active</span>() <span class="comment">-- Displays nothing</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "taghandle:props"></a>
+    <strong>taghandle:props()</strong>
+    </dt>
+    <dd>
+    Get all properties of this tag.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">TagProperties</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "taghandle:active"></a>
+    <strong>taghandle:active()</strong>
+    </dt>
+    <dd>
+    Get whether or not this tag is being displayed. </p>
+
+<p>Shorthand for <code>handle:props().active</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "taghandle:name"></a>
+    <strong>taghandle:name()</strong>
+    </dt>
+    <dd>
+    Get this tag's name. </p>
+
+<p>Shorthand for <code>handle:props().name</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "taghandle:output"></a>
+    <strong>taghandle:output()</strong>
+    </dt>
+    <dd>
+    Get the output this tag is on. </p>
+
+<p>Shorthand for <code>handle:props().output</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/OutputHandle.html#">OutputHandle</a> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-03-14 22:32:39 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

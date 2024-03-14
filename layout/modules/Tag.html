@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Pinnacle</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/Input.html">Input</a></li>
+  <li><a href="../modules/Layout.html">Layout</a></li>
+  <li><a href="../modules/LayoutHandlerModule.html">LayoutHandlerModule</a></li>
+  <li><a href="../modules/LayoutHandler.html">LayoutHandler</a></li>
+  <li><a href="../modules/Output.html">Output</a></li>
+  <li><a href="../modules/Pinnacle.html">Pinnacle</a></li>
+  <li><a href="../modules/Process.html">Process</a></li>
+  <li><strong>Tag</strong></li>
+  <li><a href="../modules/Util.html">Util</a></li>
+  <li><a href="../modules/RectangleModule.html">RectangleModule</a></li>
+  <li><a href="../modules/Rectangle.html">Rectangle</a></li>
+  <li><a href="../modules/Window.html">Window</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/OutputHandle.html">OutputHandle</a></li>
+  <li><a href="../classes/SignalHandle.html">SignalHandle</a></li>
+  <li><a href="../classes/SignalHandles.html">SignalHandles</a></li>
+  <li><a href="../classes/TagHandle.html">TagHandle</a></li>
+  <li><a href="../classes/WindowHandle.html">WindowHandle</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Tag</code></h1>
+<p>Tag management.</p>
+<p>This module provides utilities for creating and manipulating tags.</p>
+
+<p>A tag is a sort of marker for each of your windows. It allows you to present windows in ways that
+traditional workspaces cannot.</p>
+
+<p>More specifically:</p>
+
+<ul>
+    <li>A window can have multiple tags.</li>
+    <li>This means that you can have one window show up across multiple "workspaces" if you come something like i3.</li>
+    <li>An output can display multiple tags at once.</li>
+    <li>This allows you to toggle a tag and have windows on both tags display at once. This is helpful if you, say, want to reference a browser window while coding; you toggle your browser's tag and temporarily reference it while you work without having to change screens.</li>
+</ul>
+
+<p>If you need to get tags beyond the first with the same name, use the <a href="../modules/Tag.html#tag.get">get</a> method and find what you need.</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#tag.get_all">tag.get_all()</a></td>
+	<td class="summary">Get all tags across all outputs.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tag.get">tag.get(name, output)</a></td>
+	<td class="summary">Get the tag with the given name and output.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tag.add">tag.add(output, ...)</a></td>
+	<td class="summary">Add tags with the given names to the specified output.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tag.remove">tag.remove(tags)</a></td>
+	<td class="summary">Remove the given tags.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tag.new_layout_cycler">tag.new_layout_cycler(layouts)</a></td>
+	<td class="summary">Create a layout cycler that will cycle layouts on the given output.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tag.connect_signal">tag.connect_signal(signals)</a></td>
+	<td class="summary">Connect to a tag signal.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "tag.get_all"></a>
+    <strong>tag.get_all()</strong>
+    </dt>
+    <dd>
+    Get all tags across all outputs.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/TagHandle.html#">TagHandle[]</a></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "tag.get"></a>
+    <strong>tag.get(name, output)</strong>
+    </dt>
+    <dd>
+    Get the tag with the given name and output. </p>
+
+<p>If <code>output</code> is not specified, this uses the focused output.</p>
+
+<p>If an output has more than one tag with the same name, this returns the first.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a></span>
+
+
+
+        </li>
+        <li><span class="parameter">output</span>
+            <span class="types"><a class="type" href="../classes/OutputHandle.html#">OutputHandle</a> or <span class="type">nil</span></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/TagHandle.html#">TagHandle</a> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Get tags on the focused output
+</span><span class="keyword">local</span> tag = Tag.<span class="function-name">get</span>(<span class="string">"Tag"</span>)
+
+ <span class="comment">-- Get tags on a specific output
+</span><span class="keyword">local</span> tag_on_hdmi1 = Tag.<span class="function-name">get</span>(<span class="string">"Tag"</span>, Output:<span class="function-name">get_by_name</span>(<span class="string">"HDMI-1"</span>))</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "tag.add"></a>
+    <strong>tag.add(output, ...)</strong>
+    </dt>
+    <dd>
+    Add tags with the given names to the specified output. </p>
+
+<p>Returns handles to the created tags.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">output</span>
+            <span class="types"><a class="type" href="../classes/OutputHandle.html#">OutputHandle</a></span>
+
+
+
+        </li>
+        <li><span class="parameter">...</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/TagHandle.html#">TagHandle[]</a></span>
+        Handles to the created tags
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> tags = Tag.<span class="function-name">add</span>(Output.<span class="function-name">get_by_name</span>(<span class="string">"HDMI-1"</span>), <span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"Buckle"</span>, <span class="string">"Shoe"</span>)
+
+ <span class="comment">-- With a table
+</span><span class="keyword">local</span> tag_names = { <span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"Buckle"</span>, <span class="string">"Shoe"</span> }
+<span class="keyword">local</span> tags = Tag.<span class="function-name">add</span>(Output.<span class="function-name">get_by_name</span>(<span class="string">"HDMI-1"</span>), tag_names)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "tag.remove"></a>
+    <strong>tag.remove(tags)</strong>
+    </dt>
+    <dd>
+    Remove the given tags.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tags</span>
+            <span class="types"><a class="type" href="../classes/TagHandle.html#">TagHandle[]</a></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> tags = Tag.<span class="function-name">add</span>(Output.<span class="function-name">get_by_name</span>(<span class="string">"HDMI-1"</span>), <span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"Buckle"</span>, <span class="string">"Shoe"</span>)
+
+Tag.<span class="function-name">remove</span>(tags) <span class="comment">-- "HDMI-1" no longer has those tags</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "tag.new_layout_cycler"></a>
+    <strong>tag.new_layout_cycler(layouts)</strong>
+    </dt>
+    <dd>
+    Create a layout cycler that will cycle layouts on the given output. </p>
+
+<p>This returns a <code>LayoutCycler</code> table with two fields, both functions that take in an optional <a href="../classes/OutputHandle.html#">OutputHandle</a>:
+ - <a href="https://www.lua.org/manual/5.4/manual.html#pdf-next">next</a>: Cycle to the next layout on the given output
+ - <code>prev</code>: Cycle to the previous layout on the given output</p>
+
+<p>If the output isn't specified then the focused one will be used.</p>
+
+<p>Internally, this will only change the layout of the first active tag on the output
+because that is the one that determines the layout.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">layouts</span>
+            <span class="types"><span class="type">LayoutOld[]</span></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">LayoutCycler</span></span>
+
+
+
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">--- LayoutCycler[]
+</span><span class="keyword">local</span> layouts = {
+    <span class="string">"master_stack"</span>,
+    <span class="string">"dwindle"</span>,
+    <span class="string">"corner_top_left"</span>,
+    <span class="string">"corner_top_right"</span>.
+} <span class="comment">-- Only cycle between these four layouts
+</span>
+<span class="keyword">local</span> layout_cycler = Tag.<span class="function-name">new_layout_cycler</span>()
+
+ <span class="comment">-- Assume the focused output starts with the "master_stack" layout
+</span>layout_cycler.<span class="global">next</span>() <span class="comment">-- Layout is now "dwindle"
+</span>layout_cycler.<span class="global">next</span>() <span class="comment">-- Layout is now "corner_top_left"
+</span>layout_cycler.<span class="global">next</span>() <span class="comment">-- Layout is now "corner_top_right"
+</span>layout_cycler.<span class="global">next</span>() <span class="comment">-- Layout is now "master_stack"
+</span>layout_cycler.<span class="global">next</span>() <span class="comment">-- Layout is now "dwindle"
+</span>
+ <span class="comment">-- Cycling on another output
+</span>layout_cycler.<span class="global">next</span>(Output.<span class="function-name">get_by_name</span>(<span class="string">"eDP-1"</span>))
+layout_cycler.<span class="function-name">prev</span>(Output.<span class="function-name">get_by_name</span>(<span class="string">"HDMI-1"</span>))</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "tag.connect_signal"></a>
+    <strong>tag.connect_signal(signals)</strong>
+    </dt>
+    <dd>
+    Connect to a tag signal. </p>
+
+<p>The compositor sends signals about various events. Use this function to run a callback when
+some tag signal occurs.</p>
+
+<p>This function returns a table of signal handles with each handle stored at the same key used
+to connect to the signal. See <a href="../classes/SignalHandles.html#">SignalHandles</a> for more information.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">signals</span>
+            <span class="types"><span class="type">TagSignal</span></span>
+         The signal you want to connect to
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/SignalHandles.html#">SignalHandles</a></span>
+        Handles to every signal you connected to wrapped in a table, with keys being the same as the connected signal.
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/SignalHandles.html#signalhandles:disconnect_all">SignalHandles.disconnect_all</a>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Tag.<span class="function-name">connect_signal</span>({
+    layout = <span class="keyword">function</span>(tag, windows)
+        <span class="global">print</span>(<span class="string">"Compositor requested a layout"</span>)
+    <span class="keyword">end</span>
+})</pre>
+    </ul>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-03-14 22:32:39 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
