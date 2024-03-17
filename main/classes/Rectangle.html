@@ -42,9 +42,9 @@
   <li><a href="../classes/CyclingLayoutManager.html">CyclingLayoutManager</a></li>
   <li><a href="../classes/OutputHandle.html">OutputHandle</a></li>
   <li><a href="../classes/SignalHandle.html">SignalHandle</a></li>
-  <li><strong>SignalHandles</strong></li>
+  <li><a href="../classes/SignalHandles.html">SignalHandles</a></li>
   <li><a href="../classes/TagHandle.html">TagHandle</a></li>
-  <li><a href="../classes/Rectangle.html">Rectangle</a></li>
+  <li><strong>Rectangle</strong></li>
   <li><a href="../classes/WindowHandle.html">WindowHandle</a></li>
 </ul>
 <h2>Modules</h2>
@@ -70,8 +70,8 @@
 
 <div id="content">
 
-<h1>Class <code>SignalHandles</code></h1>
-<p>A collection of <a href="../classes/SignalHandle.html#">SignalHandle</a>s retreived through a <code>connect_signal</code> function.</p>
+<h1>Class <code>Rectangle</code></h1>
+<p>A rectangle with a position and size.</p>
 <p>
 
 </p>
@@ -80,8 +80,8 @@
 <h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#signalhandles:disconnect_all">signalhandles:disconnect_all(self)</a></td>
-	<td class="summary">Disconnect the callbacks from all the signal connections that are stored in this handle collection.</td>
+	<td class="name" nowrap><a href="#rectangle:split_at">rectangle:split_at(axis, at, thickness)</a></td>
+	<td class="summary">Split this rectangle along <code>axis</code> at <code>at</code>.</td>
 	</tr>
 </table>
 
@@ -93,23 +93,50 @@
 
     <dl class="function">
     <dt>
-    <a name = "signalhandles:disconnect_all"></a>
-    <strong>signalhandles:disconnect_all(self)</strong>
+    <a name = "rectangle:split_at"></a>
+    <strong>rectangle:split_at(axis, at, thickness)</strong>
     </dt>
     <dd>
-    Disconnect the callbacks from all the signal connections that are stored in this handle collection.
+    Split this rectangle along <code>axis</code> at <code>at</code>. </p>
+
+<p>If <code>thickness</code> is specified, the split will chop off a section of this
+rectangle from <code>at</code> to <code>at + thickness</code>.</p>
+
+<p><code>at</code> is relative to the space this rectangle is in, not
+this rectangle's origin.
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table<string,SignalHandle></a></span>
+        <li><span class="parameter">axis</span>
+            <span class="types"><span class="type">"horizontal"</span> or <span class="type">"vertical"</span></span>
+
+
+
+        </li>
+        <li><span class="parameter">at</span>
+            <span class="types"><span class="type">number</span></span>
+
+
+
+        </li>
+        <li><span class="parameter">thickness</span>
+            <span class="types"><span class="type">number</span> or <span class="type">nil</span></span>
 
 
 
         </li>
     </ul>
 
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><a class="type" href="../classes/Rectangle.html#">Rectangle</a></span>
+        The first rectangle.</li>
+        <li>
+           <span class="types"><a class="type" href="../classes/Rectangle.html#">Rectangle</a> or <span class="type">nil</span></span>
+        The second rectangle, if there is one.</li>
+    </ol>
 
 
 
