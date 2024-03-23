@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Pinnacle</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/Input.html">Input</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Layout.html">Layout</a></li>
+  <li><a href="../modules/Output.html">Output</a></li>
+  <li><a href="../modules/Pinnacle.html">Pinnacle</a></li>
+  <li><a href="../modules/Process.html">Process</a></li>
+  <li><a href="../modules/Tag.html">Tag</a></li>
+  <li><a href="../modules/RectangleModule.html">RectangleModule</a></li>
+  <li><strong>Util</strong></li>
+  <li><a href="../modules/Window.html">Window</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/CyclingLayoutManager.html">CyclingLayoutManager</a></li>
+  <li><a href="../classes/OutputHandle.html">OutputHandle</a></li>
+  <li><a href="../classes/SignalHandle.html">SignalHandle</a></li>
+  <li><a href="../classes/SignalHandles.html">SignalHandles</a></li>
+  <li><a href="../classes/TagHandle.html">TagHandle</a></li>
+  <li><a href="../classes/Rectangle.html">Rectangle</a></li>
+  <li><a href="../classes/WindowHandle.html">WindowHandle</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Util</code></h1>
+<p>Utility functions.</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#util.batch">util.batch(requests)</a></td>
+	<td class="summary">Batch a set of requests that will be sent to the compositor all at once.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#util.deep_copy">util.deep_copy(obj)</a></td>
+	<td class="summary">Create a deep copy of an object.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "util.batch"></a>
+    <strong>util.batch(requests)</strong>
+    </dt>
+    <dd>
+    Batch a set of requests that will be sent to the compositor all at once. </p>
+
+<p>Normally, all API calls are blocking. For example, calling <a href="../modules/Window.html#window.get_all">Window.get_all</a>
+then calling <a href="../classes/WindowHandle.html#windowhandle:props">WindowHandle.props</a> on each returned window handle will block
+after each <code>props</code> call waiting for the compositor to respond:</p>
+
+<pre><code>local handles = Window.get_all()
+
+ -- Collect all the props into this table
+local props = {}
+
+ -- This for loop will block after each call. If the compositor is running slowly
+ -- for whatever reason, this will take a long time to complete as it requests
+ -- properties sequentially.
+for i, handle in ipairs(handles) do
+    props[i] = handle:props()
+end
+</code></pre>
+
+<p>In order to mitigate this issue, you can batch up a set of API calls using this function.
+This will send all requests to the compositor at once without blocking, then wait for the compositor
+to respond.</p>
+
+<p>You must wrap each request in a function, otherwise they would just get
+evaluated at the callsite in a blocking manner.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">requests</span>
+            <span class="types"><span class="type">(fun():T)[]</span></span>
+         The requests that you want to batch up, wrapped in a function.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">T[]</span></span>
+        The results of each request in the same order that they were in <code>requests</code>.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> handles = window.<span class="function-name">get_all</span>()
+
+ <span class="comment">--- (fun(): WindowProperties)[]
+</span><span class="keyword">local</span> requests = {}
+
+ <span class="comment">-- Wrap each request to <code>props</code> in another function
+</span><span class="keyword">for</span> i, handle <span class="keyword">in</span> <span class="global">ipairs</span>(handles) <span class="keyword">do</span>
+    requests[i] = <span class="keyword">function</span>()
+        <span class="keyword">return</span> handle:<span class="function-name">props</span>()
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+ <span class="comment">-- Batch send these requests
+</span><span class="keyword">local</span> props = <span class="global">require</span>(<span class="string">"pinnacle.util"</span>).<span class="function-name">batch</span>(requests)
+ <span class="comment">-- <code>props</code> now contains the <code>WindowProperties</code> of all the windows above</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "util.deep_copy"></a>
+    <strong>util.deep_copy(obj)</strong>
+    </dt>
+    <dd>
+    Create a deep copy of an object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">obj</span>
+            <span class="types"><span class="type">T</span></span>
+         The object to deep copy.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">T</span></span>
+        A deep copy of <code>obj</code>
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-03-23 20:26:02 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
