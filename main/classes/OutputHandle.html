@@ -90,6 +90,10 @@ helpers for things like positioning multiple monitors.</p>
 	<td class="summary">Set the location of this output adjacent to another one.</td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#outputhandle:set_mode">outputhandle:set_mode(pixel_width, pixel_height, refresh_rate_millihz)</a></td>
+	<td class="summary">Set this output's mode.</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#outputhandle:props">outputhandle:props()</a></td>
 	<td class="summary">Get all properties of this output.</td>
 	</tr>
@@ -110,16 +114,16 @@ helpers for things like positioning multiple monitors.</p>
 	<td class="summary">Get this output's y-coordinate in the global space.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#outputhandle:pixel_width">outputhandle:pixel_width()</a></td>
-	<td class="summary">Get this output's width in pixels.</td>
+	<td class="name" nowrap><a href="#outputhandle:current_mode">outputhandle:current_mode()</a></td>
+	<td class="summary">Get this output's current mode.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#outputhandle:pixel_height">outputhandle:pixel_height()</a></td>
-	<td class="summary">Get this output's height in pixels.</td>
+	<td class="name" nowrap><a href="#outputhandle:preferred_mode">outputhandle:preferred_mode()</a></td>
+	<td class="summary">Get this output's preferred mode.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#outputhandle:refresh_rate">outputhandle:refresh_rate()</a></td>
-	<td class="summary">Get this output's refresh rate in millihertz.</td>
+	<td class="name" nowrap><a href="#outputhandle:modes">outputhandle:modes()</a></td>
+	<td class="summary">Get all of this output's available modes.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#outputhandle:physical_width">outputhandle:physical_width()</a></td>
@@ -256,6 +260,53 @@ Similarly, "right<em>align</em>center" will place this output to the right of <c
 
 </dd>
     <dt>
+    <a name = "outputhandle:set_mode"></a>
+    <strong>outputhandle:set_mode(pixel_width, pixel_height, refresh_rate_millihz)</strong>
+    </dt>
+    <dd>
+    Set this output's mode. </p>
+
+<p>If <code>refresh_rate_millihz</code> is provided, Pinnacle will attempt to use the mode with that refresh rate.
+If it isn't, Pinnacle will attempt to use the mode with the highest refresh rate that matches the
+given size.</p>
+
+<p>The refresh rate is in millihertz. For example, to choose a mode with a refresh rate of 60Hz, use 60000.</p>
+
+<p>If this output doesn't support the given mode, it will be ignored.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pixel_width</span>
+            <span class="types"><span class="type">integer</span></span>
+
+
+
+        </li>
+        <li><span class="parameter">pixel_height</span>
+            <span class="types"><span class="type">integer</span></span>
+
+
+
+        </li>
+        <li><span class="parameter">refresh_rate_millihz</span>
+            <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Output.<span class="function-name">get_focused</span>():<span class="function-name">set_mode</span>(<span class="number">2560</span>, <span class="number">1440</span>, <span class="number">144000</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
     <a name = "outputhandle:props"></a>
     <strong>outputhandle:props()</strong>
     </dt>
@@ -378,20 +429,20 @@ Similarly, "right<em>align</em>center" will place this output to the right of <c
 
 </dd>
     <dt>
-    <a name = "outputhandle:pixel_width"></a>
-    <strong>outputhandle:pixel_width()</strong>
+    <a name = "outputhandle:current_mode"></a>
+    <strong>outputhandle:current_mode()</strong>
     </dt>
     <dd>
-    Get this output's width in pixels. </p>
+    Get this output's current mode. </p>
 
-<p>Shorthand for <code>handle:props().pixel_width</code>.
+<p>Shorthand for <code>handle:props().current_mode</code>.
 
 
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+           <span class="types"><span class="type">Mode</span> or <span class="type">nil</span></span>
 
 
 
@@ -402,20 +453,20 @@ Similarly, "right<em>align</em>center" will place this output to the right of <c
 
 </dd>
     <dt>
-    <a name = "outputhandle:pixel_height"></a>
-    <strong>outputhandle:pixel_height()</strong>
+    <a name = "outputhandle:preferred_mode"></a>
+    <strong>outputhandle:preferred_mode()</strong>
     </dt>
     <dd>
-    Get this output's height in pixels. </p>
+    Get this output's preferred mode. </p>
 
-<p>Shorthand for <code>handle:props().pixel_height</code>.
+<p>Shorthand for <code>handle:props().preferred_mode</code>.
 
 
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+           <span class="types"><span class="type">Mode</span> or <span class="type">nil</span></span>
 
 
 
@@ -426,22 +477,20 @@ Similarly, "right<em>align</em>center" will place this output to the right of <c
 
 </dd>
     <dt>
-    <a name = "outputhandle:refresh_rate"></a>
-    <strong>outputhandle:refresh_rate()</strong>
+    <a name = "outputhandle:modes"></a>
+    <strong>outputhandle:modes()</strong>
     </dt>
     <dd>
-    Get this output's refresh rate in millihertz. </p>
+    Get all of this output's available modes. </p>
 
-<p>For example, 144Hz is returned as 144000.</p>
-
-<p>Shorthand for <code>handle:props().refresh_rate</code>.
+<p>Shorthand for <code>handle:props().modes</code>.
 
 
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+           <span class="types"><span class="type">Mode[]</span></span>
 
 
 
@@ -556,7 +605,7 @@ Similarly, "right<em>align</em>center" will place this output to the right of <c
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2024-03-22 21:41:02 </i>
+<i style="float:right;">Last updated 2024-03-23 02:20:24 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
