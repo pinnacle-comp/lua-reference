@@ -40,17 +40,17 @@
 <h2>Modules</h2>
 <ul class="nowrap">
   <li><a href="../modules/Input.html">Input</a></li>
-  <li><strong>Builtin</strong></li>
-  <li><strong>Builtin</strong></li>
-  <li><strong>Builtin</strong></li>
-  <li><strong>Builtin</strong></li>
-  <li><strong>Builtin</strong></li>
-  <li><strong>Builtin</strong></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
   <li><a href="../modules/Layout.html">Layout</a></li>
   <li><a href="../modules/Output.html">Output</a></li>
   <li><a href="../modules/Pinnacle.html">Pinnacle</a></li>
   <li><a href="../modules/Process.html">Process</a></li>
-  <li><a href="../modules/Render.html">Render</a></li>
+  <li><strong>Render</strong></li>
   <li><a href="../modules/Tag.html">Tag</a></li>
   <li><a href="../modules/RectangleModule.html">RectangleModule</a></li>
   <li><a href="../modules/Util.html">Util</a></li>
@@ -71,29 +71,23 @@
 
 <div id="content">
 
-<h1>Module <code>Builtin</code></h1>
-<p>A <code>LayoutGenerator</code> that attempts to layout windows such that
-they are the same size.</p>
-<p>Gaps between windows, in pixels.</p>
+<h1>Module <code>Render</code></h1>
+<p>Rendering management.</p>
+<p>
 
-<p>This can be an integer or the table { inner: integer, outer: integer }.
-If it is an integer, all gaps will be that amount of pixels wide.
-If it is a table, <code>outer</code> denotes the amount of pixels around the
-edge of the output area that will become a gap, and
-<code>inner</code> denotes the amount of pixels around each window that
-will become a gap.</p>
 
-<p>This means that, for example, <code>inner = 2</code> will cause the gap
-width between windows to be 4; 2 around each window.</p>
+</p>
 
 
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#Fair:layout">Fair:layout(args)</a></td>
-	<td class="summary">
-
-</td>
+	<td class="name" nowrap><a href="#render.set_upscale_filter">render.set_upscale_filter(filter)</a></td>
+	<td class="summary">Set the upscale filter the renderer will use to upscale buffers.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#render.set_downscale_filter">render.set_downscale_filter(filter)</a></td>
+	<td class="summary">Set the downscale filter the renderer will use to downscale buffers.</td>
 	</tr>
 </table>
 
@@ -105,33 +99,46 @@ width between windows to be 4; 2 around each window.</p>
 
     <dl class="function">
     <dt>
-    <a name = "Fair:layout"></a>
-    <strong>Fair:layout(args)</strong>
+    <a name = "render.set_upscale_filter"></a>
+    <strong>render.set_upscale_filter(filter)</strong>
     </dt>
     <dd>
-
-
-
+    Set the upscale filter the renderer will use to upscale buffers.
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">args</span>
-            <span class="types"><span class="type">LayoutArgs</span></span>
+        <li><span class="parameter">filter</span>
+            <span class="types"><span class="type">ScalingFilter</span></span>
 
 
 
         </li>
     </ul>
 
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><span class="type">{x:integer,y:integer,width:integer,height:integer}[]</span></span>
 
 
 
-    </ol>
+
+</dd>
+    <dt>
+    <a name = "render.set_downscale_filter"></a>
+    <strong>render.set_downscale_filter(filter)</strong>
+    </dt>
+    <dd>
+    Set the downscale filter the renderer will use to downscale buffers.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">filter</span>
+            <span class="types"><span class="type">ScalingFilter</span></span>
+
+
+
+        </li>
+    </ul>
+
 
 
 
