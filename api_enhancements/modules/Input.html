@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Pinnacle</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>Input</strong></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Layout.html">Layout</a></li>
+  <li><a href="../modules/Output.html">Output</a></li>
+  <li><a href="../modules/Pinnacle.html">Pinnacle</a></li>
+  <li><a href="../modules/Process.html">Process</a></li>
+  <li><a href="../modules/Render.html">Render</a></li>
+  <li><a href="../modules/Tag.html">Tag</a></li>
+  <li><a href="../modules/RectangleModule.html">RectangleModule</a></li>
+  <li><a href="../modules/Util.html">Util</a></li>
+  <li><a href="../modules/Window.html">Window</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/CyclingLayoutManager.html">CyclingLayoutManager</a></li>
+  <li><a href="../classes/OutputHandle.html">OutputHandle</a></li>
+  <li><a href="../classes/SignalHandle.html">SignalHandle</a></li>
+  <li><a href="../classes/SignalHandles.html">SignalHandles</a></li>
+  <li><a href="../classes/TagHandle.html">TagHandle</a></li>
+  <li><a href="../classes/Rectangle.html">Rectangle</a></li>
+  <li><a href="../classes/WindowHandle.html">WindowHandle</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Input</code></h1>
+<p>Input management.</p>
+<p>This module provides utilities to set key- and mousebinds as well as change keyboard settings.</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#input.keybind">input.keybind(mods, key, action)</a></td>
+	<td class="summary">Set a keybind.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#input.mousebind">input.mousebind(mods, button, edge, action)</a></td>
+	<td class="summary">Set a mousebind.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#input.set_xkb_config">input.set_xkb_config(xkb_config)</a></td>
+	<td class="summary">Set the xkbconfig for your keyboard.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#input.set_repeat_rate">input.set_repeat_rate(rate, delay)</a></td>
+	<td class="summary">Set the keyboard's repeat rate and delay.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#input.set_libinput_settings">input.set_libinput_settings(settings)</a></td>
+	<td class="summary">Set a libinput setting.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "input.keybind"></a>
+    <strong>input.keybind(mods, key, action)</strong>
+    </dt>
+    <dd>
+
+<p>Set a keybind.  If called with an already existing keybind, it gets replaced.</p>
+
+<p>You must provide three arguments:</p>
+
+<ul>
+    <li><code>mods</code>: An array of <code>Modifier</code>s. If you don't want any, provide an empty table.</li>
+    <li><code>key</code>: The key that will trigger <code>action</code>. You can provide three types of key:
+    <ul>
+        <li>Something from the <code>Key</code> table in <code>Input.key</code>, which lists every xkbcommon key. The naming pattern is the xkbcommon key without the <code>KEY_</code> prefix, unless that would make it start with a number or the reserved lua keyword <code>function</code>, in which case the <code>KEY_</code> prefix is included.</li>
+        <li>A single character representing your key. This can be something like "g", "$", "~", "1", and so on.</li>
+        <li>A string of the key's name. This is the name of the xkbcommon key without the <code>KEY_</code> prefix.</li>
+    </ul></li>
+    <li><code>action</code>: The function that will be run when the keybind is pressed.</li>
+</ul>
+
+<p>It is important to note that <code>&quot;a&quot;</code> is different than <code>&quot;A&quot;</code>. Similarly, <code>key.a</code> is different than <code>key.A</code>.
+Usually, it's best to use the non-modified key to prevent confusion and unintended behavior.</p>
+
+<pre><code>Input.keybind({ "shift" }, "a", function() end) -- This is preferred
+Input.keybind({ "shift" }, "A", function() end) -- over this
+
+ -- This keybind will only work with capslock on.
+Input.keybind({}, "A", function() end)
+
+ -- This keybind won't work at all because to get &lt;code&gt;@&lt;/code&gt; you need to hold shift,
+ -- which this keybind doesn't accept.
+Input.keybind({ "ctrl" }, "@", function() end)
+</code></pre>
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">mods</span>
+            <span class="types"><span class="type">Modifier[]</span></span>
+         The modifiers that need to be held down for the bind to trigger
+        </li>
+        <li><span class="parameter">key</span>
+            <span class="types"><span class="type">Key</span> or <a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a></span>
+         The key used to trigger the bind
+        </li>
+        <li><span class="parameter">action</span>
+            <span class="types"><span class="type">function</span></span>
+         The function to run when the bind is triggered
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Set <code>super + Return</code> to open Alacritty
+</span>Input.<span class="function-name">keybind</span>({ <span class="string">"super"</span> }, Input.key.Return, <span class="keyword">function</span>()
+    Process.<span class="function-name">spawn</span>(<span class="string">"alacritty"</span>)
+<span class="keyword">end</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "input.mousebind"></a>
+    <strong>input.mousebind(mods, button, edge, action)</strong>
+    </dt>
+    <dd>
+    Set a mousebind.  If called with an already existing mousebind, it gets replaced.</p>
+
+<p>You must specify whether the keybind happens on button press or button release.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">mods</span>
+            <span class="types"><span class="type">Modifier[]</span></span>
+         The modifiers that need to be held down for the bind to trigger
+        </li>
+        <li><span class="parameter">button</span>
+            <span class="types"><span class="type">MouseButton</span></span>
+         The mouse button used to trigger the bind
+        </li>
+        <li><span class="parameter">edge</span>
+            <span class="types"><span class="type">MouseEdge</span></span>
+         "press" or "release" to trigger on button press or release
+        </li>
+        <li><span class="parameter">action</span>
+            <span class="types"><span class="type">function</span></span>
+         The function to run when the bind is triggered
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Set <code>super + left mouse button</code> to move a window on press
+</span>Input.<span class="function-name">mousebind</span>({ <span class="string">"super"</span> }, <span class="string">"btn_left"</span>, <span class="string">"press"</span>, <span class="keyword">function</span>()
+    Window.<span class="function-name">begin_move</span>(<span class="string">"btn_left"</span>)
+<span class="keyword">end</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "input.set_xkb_config"></a>
+    <strong>input.set_xkb_config(xkb_config)</strong>
+    </dt>
+    <dd>
+    Set the xkbconfig for your keyboard. </p>
+
+<p>Fields not present will be set to their default values.</p>
+
+<p>Read <code>xkeyboard-config(7)</code> for more information.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">xkb_config</span>
+            <span class="types"><span class="type">XkbConfig</span></span>
+         The new xkbconfig
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Input.<span class="function-name">set_xkb_config</span>({
+    layout = <span class="string">"us,fr,ge"</span>,
+    options = <span class="string">"ctrl:swapcaps,caps:shift"</span>
+})</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "input.set_repeat_rate"></a>
+    <strong>input.set_repeat_rate(rate, delay)</strong>
+    </dt>
+    <dd>
+    Set the keyboard's repeat rate and delay.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">rate</span>
+            <span class="types"><span class="type">integer</span></span>
+         The time between repeats in milliseconds
+        </li>
+        <li><span class="parameter">delay</span>
+            <span class="types"><span class="type">integer</span></span>
+         The duration a key needs to be held down before repeating starts in milliseconds
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Input.<span class="function-name">set_repeat_rate</span>(<span class="number">100</span>, <span class="number">1000</span>) <span class="comment">-- Key must be held down for 1 second, then repeats 10 times per second.</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "input.set_libinput_settings"></a>
+    <strong>input.set_libinput_settings(settings)</strong>
+    </dt>
+    <dd>
+    Set a libinput setting. </p>
+
+<p>This includes settings for pointer devices, like acceleration profiles, natural scroll, and more.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">settings</span>
+            <span class="types"><span class="type">LibinputSettings</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Input.<span class="function-name">set_libinput_settings</span>({
+    accel_profile = <span class="string">"flat"</span>,
+    natural_scroll = <span class="keyword">true</span>,
+})</pre>
+    </ul>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-04-12 12:58:44 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
