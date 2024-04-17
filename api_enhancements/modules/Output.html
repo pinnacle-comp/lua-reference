@@ -97,8 +97,12 @@
 	<td class="summary">Connect a function to be run with all current and future outputs.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#output.setup">output.setup(setup)</a></td>
+	<td class="name" nowrap><a href="#output.setup">output.setup(setups)</a></td>
 	<td class="summary">Declaratively setup outputs.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#output.setup_locs">output.setup_locs(update_locs_on, setup)</a></td>
+	<td class="summary">Setup locations for outputs.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#output.connect_signal">output.connect_signal(signals)</a></td>
@@ -241,23 +245,27 @@ state associated with that output and restores it when replugged.
 </dd>
     <dt>
     <a name = "output.setup"></a>
-    <strong>output.setup(setup)</strong>
+    <strong>output.setup(setups)</strong>
     </dt>
     <dd>
     Declaratively setup outputs. </p>
 
 <p><a href="../modules/Output.html#output.setup">Output.setup</a> allows you to specify output properties that will be applied immediately and
-on output connection. These include location, mode, scale, and tags.</p>
+on output connection. These include mode, scale, tags, and more.</p>
 
-<p>Arguments will be applied from top to bottom.</p>
+<p>Setups will be applied from top to bottom.</p>
 
-<p><code>loc</code> will not be applied to arguments with an output matching function.
+<p><code>setups</code> is an array of <code>OutputSetup</code> tables.
+The table entry at [1] in an <code>OutputSetup</code> table should be either a string or a function
+that takes in an <a href="../classes/OutputHandle.html#">OutputHandle</a> and returns a boolean. Strings will match output names directly,
+while the function matches outputs based on custom logic. You can specify keys such as
+<code>tag_names</code>, <code>scale</code>, and others to customize output properties.
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">setup</span>
-            <span class="types"><span class="type">OutputSetupArgs[]</span></span>
+        <li><span class="parameter">setups</span>
+            <span class="types"><span class="type">OutputSetup[]</span></span>
 
 
 
@@ -267,6 +275,91 @@ on output connection. These include location, mode, scale, and tags.</p>
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Output.<span class="function-name">setup</span>({
+    <span class="comment">-- Give all outputs tags 1 through 5
+</span>    {
+        <span class="keyword">function</span>(_) <span class="keyword">return</span> <span class="keyword">true</span> <span class="keyword">end</span>,
+        tag_names = { <span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"3"</span>, <span class="string">"4"</span>, <span class="string">"5"</span> },
+    }
+    <span class="comment">-- Give outputs with a preferred mode of 4K a scale of 2.0
+</span>    {
+        <span class="keyword">function</span>(op)
+            <span class="keyword">return</span> op:<span class="function-name">preferred_mode</span>().pixel_width == <span class="number">2160</span>
+        <span class="keyword">end</span>,
+        scale = <span class="number">2.0</span>,
+    },
+    <span class="comment">-- Additionally give eDP-1 tags 6 and 7
+</span>    {
+        <span class="string">"eDP-1"</span>,
+        tag_names = { <span class="string">"6"</span>, <span class="string">"7"</span> },
+    },
+})</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "output.setup_locs"></a>
+    <strong>output.setup_locs(update_locs_on, setup)</strong>
+    </dt>
+    <dd>
+    Setup locations for outputs. </p>
+
+<p>This function lets you declare positions for outputs, either as a specific point in the global
+space or relative to another output.</p>
+
+<p><code>update_locs_on</code> specifies when output positions should be recomputed. It can be <code>&quot;all&quot;</code>, signaling you
+want positions to update on all of output connect, disconnect, and resize, or it can be a table
+containing <code>&quot;connect&quot;</code>, <code>&quot;disconnect&quot;</code>, and/or <code>&quot;resize&quot;</code>.</p>
+
+<p><a href="../modules/Output.html#output.setup">setup</a> is an array of tables of the form <code>{ [1]: string, loc: OutputLoc }</code>, where <code>OutputLoc</code> is either
+the table <code>{ x: integer, y: integer }</code>, <code>{ [1]: string, [2]: Alignment }</code>, or an array of the latter table.
+See the examples for information.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">update_locs_on</span>
+            <span class="types"><span class="type">(UpdateLocsOn)[]</span> or <span class="type">"all"</span></span>
+
+
+
+        </li>
+        <li><span class="parameter">setup</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">               <span class="comment">-- vvvvv Relayout on output connect, disconnect, and resize
+</span>Output.<span class="function-name">setup_locs</span>(<span class="string">"all"</span>, {
+    <span class="comment">-- Anchor eDP-1 to (0, 0) so we can place other outputs relative to it
+</span>    { <span class="string">"eDP-1"</span>, loc = { x = <span class="number">0</span>, y = <span class="number">0</span> } },
+    <span class="comment">-- Place HDMI-A-1 below it centered
+</span>    { <span class="string">"HDMI-A-1"</span>, loc = { <span class="string">"eDP-1"</span>, <span class="string">"bottom_align_center"</span> } },
+    <span class="comment">-- Place HDMI-A-2 below HDMI-A-1.
+</span>    <span class="comment">-- Additionally, if HDMI-A-1 isn't connected, fallback to placing
+</span>    <span class="comment">-- it below eDP-1 instead.
+</span>    {
+        <span class="string">"HDMI-A-2"</span>,
+        loc = {
+            { <span class="string">"HDMI-A-1"</span>, <span class="string">"bottom_align_center"</span> },
+            { <span class="string">"eDP-1"</span>, <span class="string">"bottom_align_center"</span> },
+        },
+    },
+})
+
+ <span class="comment">-- Only relayout on output connect and resize
+</span>Output.<span class="function-name">setup_locs</span>({ <span class="string">"connect"</span>, <span class="string">"resize"</span> }, { ... })</pre>
+    </ul>
 
 </dd>
     <dt>
@@ -321,7 +414,7 @@ to connect to the signal. See <a href="../classes/SignalHandles.html#">SignalHan
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2024-04-16 21:27:50 </i>
+<i style="float:right;">Last updated 2024-04-17 00:26:58 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
