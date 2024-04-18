@@ -101,7 +101,7 @@
 	<td class="summary">Declaratively setup outputs.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#output.setup_locs">output.setup_locs(update_locs_on, setup)</a></td>
+	<td class="name" nowrap><a href="#output.setup_locs">output.setup_locs(update_locs_on, locs)</a></td>
 	<td class="summary">Setup locations for outputs.</td>
 	</tr>
 	<tr>
@@ -253,19 +253,37 @@ state associated with that output and restores it when replugged.
 <p><a href="../modules/Output.html#output.setup">Output.setup</a> allows you to specify output properties that will be applied immediately and
 on output connection. These include mode, scale, tags, and more.</p>
 
-<p>Setups will be applied from top to bottom.</p>
+<p><code>setups</code> is a table of output identifier strings to <code>OutputSetup</code>s.</p>
 
-<p><code>setups</code> is an array of <code>OutputSetup</code> tables.
-The table entry at [1] in an <code>OutputSetup</code> table should be either a string or a function
-that takes in an <a href="../classes/OutputHandle.html#">OutputHandle</a> and returns a boolean. Strings will match output names directly,
-while the function matches outputs based on custom logic. You can specify keys such as
-<code>tag_names</code>, <code>scale</code>, and others to customize output properties.
+<h2>Keys</h2>
+
+<p>Keys attempt to match outputs.</p>
+
+<p>Wildcard keys (<code>&quot;*&quot;</code>) will match all outputs. You can additionally filter these outputs
+by setting a <code>filter</code> function in the setup that returns true if it should apply to the output.
+(See the example.)</p>
+
+<p>Otherwise, keys will attempt to match the exact name of an output.</p>
+
+<h2>Setups</h2>
+
+<p>If an output is matched, the corresponding <code>OutputSetup</code> entry will be applied to it.
+Any given <code>tags</code> will be added, and things like <code>transform</code>s, <code>scale</code>s, and <code>mode</code>s will be set.</p>
+
+<h2>Ordering setups</h2>
+
+<p>You may need to specify multiple wildcard matches for different setup applications.
+You can't just add another key of <code>&quot;*&quot;</code>, because that would overwrite the old <code>&quot;*&quot;</code>.
+In this case, you can order setups by prepending <code>n:</code> to the key, where n is a priority number.
+<code>n</code> should be between <code>1</code> and <code>#setups</code>. Setting higher priorities without setting lower ones
+will cause entries without priorities to fill up lower priorities in an arbitrary order. Setting
+priorities above <code>#setups</code> may cause their entries to not apply.
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">setups</span>
-            <span class="types"><span class="type">OutputSetup[]</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table<string,OutputSetup></a></span>
 
 
 
@@ -279,21 +297,19 @@ while the function matches outputs based on custom logic. You can specify keys s
     <ul>
         <pre class="example">Output.<span class="function-name">setup</span>({
     <span class="comment">-- Give all outputs tags 1 through 5
-</span>    {
-        <span class="keyword">function</span>(_) <span class="keyword">return</span> <span class="keyword">true</span> <span class="keyword">end</span>,
-        tag_names = { <span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"3"</span>, <span class="string">"4"</span>, <span class="string">"5"</span> },
-    }
+</span>    [<span class="string">"1:*"</span>] = {
+        tags = { <span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"3"</span>, <span class="string">"4"</span>, <span class="string">"5"</span> },
+    },
     <span class="comment">-- Give outputs with a preferred mode of 4K a scale of 2.0
-</span>    {
-        <span class="keyword">function</span>(op)
-            <span class="keyword">return</span> op:<span class="function-name">preferred_mode</span>().pixel_width == <span class="number">2160</span>
+</span>    [<span class="string">"2:*"</span>] = {
+        filter = <span class="keyword">function</span>(op)
+            <span class="keyword">return</span> op:<span class="function-name">preferred_mode</span>().pixel_height == <span class="number">2160</span>
         <span class="keyword">end</span>,
         scale = <span class="number">2.0</span>,
     },
     <span class="comment">-- Additionally give eDP-1 tags 6 and 7
-</span>    {
-        <span class="string">"eDP-1"</span>,
-        tag_names = { <span class="string">"6"</span>, <span class="string">"7"</span> },
+</span>    [<span class="string">"eDP-1"</span>] = {
+        tags = { <span class="string">"6"</span>, <span class="string">"7"</span> },
     },
 })</pre>
     </ul>
@@ -301,7 +317,7 @@ while the function matches outputs based on custom logic. You can specify keys s
 </dd>
     <dt>
     <a name = "output.setup_locs"></a>
-    <strong>output.setup_locs(update_locs_on, setup)</strong>
+    <strong>output.setup_locs(update_locs_on, locs)</strong>
     </dt>
     <dd>
     Setup locations for outputs. </p>
@@ -326,8 +342,8 @@ See the examples for information.
 
 
         </li>
-        <li><span class="parameter">setup</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+        <li><span class="parameter">locs</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table<string,OutputLoc></a></span>
 
 
 
@@ -342,20 +358,23 @@ See the examples for information.
         <pre class="example">               <span class="comment">-- vvvvv Relayout on output connect, disconnect, and resize
 </span>Output.<span class="function-name">setup_locs</span>(<span class="string">"all"</span>, {
     <span class="comment">-- Anchor eDP-1 to (0, 0) so we can place other outputs relative to it
-</span>    { <span class="string">"eDP-1"</span>, loc = { x = <span class="number">0</span>, y = <span class="number">0</span> } },
+</span>    [<span class="string">"eDP-1"</span>] = { <span class="number">0</span>, <span class="number">0</span> },
     <span class="comment">-- Place HDMI-A-1 below it centered
-</span>    { <span class="string">"HDMI-A-1"</span>, loc = { <span class="string">"eDP-1"</span>, <span class="string">"bottom_align_center"</span> } },
+</span>    [<span class="string">"HDMI-A-1"</span>] = { <span class="string">"eDP-1"</span>, <span class="string">"bottom_align_center"</span> },
     <span class="comment">-- Place HDMI-A-2 below HDMI-A-1.
-</span>    <span class="comment">-- Additionally, if HDMI-A-1 isn't connected, fallback to placing
-</span>    <span class="comment">-- it below eDP-1 instead.
-</span>    {
-        <span class="string">"HDMI-A-2"</span>,
-        loc = {
-            { <span class="string">"HDMI-A-1"</span>, <span class="string">"bottom_align_center"</span> },
-            { <span class="string">"eDP-1"</span>, <span class="string">"bottom_align_center"</span> },
-        },
-    },
-})
+</span>    [<span class="string">"3:HDMI-A-2"</span>] = { <span class="string">"HDMI-A-1"</span>, <span class="string">"bottom_align_center"</span> },
+    <span class="comment">-- Additionally, if HDMI-A-1 isn't connected, fallback to placing it below eDP-1 instead.
+</span>    [<span class="string">"4:HDMI-A-2"</span>] = { <span class="string">"eDP-1"</span>, <span class="string">"bottom_align_center"</span> },
+
+    <span class="comment">-- Note that the last two have a number followed by a colon. This dictates the priority of application.
+</span>    <span class="comment">-- Because Lua tables with string keys don't index by declaration order, this is needed to specify that.
+</span>    <span class="comment">-- You can also put a "1:" and "2:" in front of "eDP-1" and "HDMI-A-1" if you want to be explicit
+</span>    <span class="comment">-- about their ordering.
+</span>    <span class="comment">--
+</span>    <span class="comment">-- Just note that priorities must be from 1 to the length of the array. Entries without a priority
+</span>    <span class="comment">-- will be filled in from 1 upwards, taking any open priorities. Entries with priorities above
+</span>    <span class="comment">-- #locs may not be applied.
+</span>})
 
  <span class="comment">-- Only relayout on output connect and resize
 </span>Output.<span class="function-name">setup_locs</span>({ <span class="string">"connect"</span>, <span class="string">"resize"</span> }, { ... })</pre>
@@ -414,7 +433,7 @@ to connect to the signal. See <a href="../classes/SignalHandles.html#">SignalHan
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2024-04-17 23:56:55 </i>
+<i style="float:right;">Last updated 2024-04-18 02:23:52 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
