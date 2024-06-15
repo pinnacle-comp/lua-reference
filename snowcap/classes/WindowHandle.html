@@ -1,0 +1,809 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Pinnacle</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/CyclingLayoutManager.html">CyclingLayoutManager</a></li>
+  <li><a href="../classes/OutputHandle.html">OutputHandle</a></li>
+  <li><a href="../classes/SignalHandle.html">SignalHandle</a></li>
+  <li><a href="../classes/SignalHandles.html">SignalHandles</a></li>
+  <li><a href="../classes/TagHandle.html">TagHandle</a></li>
+  <li><a href="../classes/Rectangle.html">Rectangle</a></li>
+  <li><strong>WindowHandle</strong></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/defs.html">defs</a></li>
+  <li><a href="../modules/Input.html">Input</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Layout.html">Layout</a></li>
+  <li><a href="../modules/Output.html">Output</a></li>
+  <li><a href="../modules/Pinnacle.html">Pinnacle</a></li>
+  <li><a href="../modules/Process.html">Process</a></li>
+  <li><a href="../modules/Render.html">Render</a></li>
+  <li><a href="../modules/Tag.html">Tag</a></li>
+  <li><a href="../modules/RectangleModule.html">RectangleModule</a></li>
+  <li><a href="../modules/Util.html">Util</a></li>
+  <li><a href="../modules/Window.html">Window</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>WindowHandle</code></h1>
+<p>A window handle.</p>
+<p>This is a handle to an application window that allows manipulation of the window.</p>
+
+<p>If the window is destroyed, the handle will become invalid and may not do
+what you want it to.</p>
+
+<p>You can retrieve window handles through the various <code>get</code> functions in the <a href="../modules/Window.html#">Window</a> module.</p>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:close">windowhandle:close()</a></td>
+	<td class="summary">Send a close request to this window.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:set_geometry">windowhandle:set_geometry(geo)</a></td>
+	<td class="summary">Set this window's location and/or size.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:set_fullscreen">windowhandle:set_fullscreen(fullscreen)</a></td>
+	<td class="summary">Set this window to fullscreen or not.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:toggle_fullscreen">windowhandle:toggle_fullscreen()</a></td>
+	<td class="summary">Toggle this window to and from fullscreen.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:set_maximized">windowhandle:set_maximized(maximized)</a></td>
+	<td class="summary">Set this window to maximized or not.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:toggle_maximized">windowhandle:toggle_maximized()</a></td>
+	<td class="summary">Toggle this window to and from maximized.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:set_floating">windowhandle:set_floating(floating)</a></td>
+	<td class="summary">Set this window to floating or not.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:toggle_floating">windowhandle:toggle_floating()</a></td>
+	<td class="summary">Toggle this window to and from floating.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:set_focused">windowhandle:set_focused(focused)</a></td>
+	<td class="summary">Focus or unfocus this window.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:toggle_focused">windowhandle:toggle_focused()</a></td>
+	<td class="summary">Toggle this window to and from focused.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:move_to_tag">windowhandle:move_to_tag(tag)</a></td>
+	<td class="summary">Move this window to the specified tag.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:set_tag">windowhandle:set_tag(tag, set)</a></td>
+	<td class="summary">Tag or untag the given tag on this window.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:toggle_tag">windowhandle:toggle_tag(tag)</a></td>
+	<td class="summary">Toggle the given tag on this window.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:raise">windowhandle:raise()</a></td>
+	<td class="summary">Raise a window.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:is_on_active_tag">windowhandle:is_on_active_tag()</a></td>
+	<td class="summary">Returns whether or not this window is on an active tag.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:props">windowhandle:props()</a></td>
+	<td class="summary">Get all the properties of this window.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:geometry">windowhandle:geometry()</a></td>
+	<td class="summary">Get this window's location and size.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:class">windowhandle:class()</a></td>
+	<td class="summary">Get this window's class.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:title">windowhandle:title()</a></td>
+	<td class="summary">Get this window's title.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:focused">windowhandle:focused()</a></td>
+	<td class="summary">Get whether or not this window is focused.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:floating">windowhandle:floating()</a></td>
+	<td class="summary">Get whether or not this window is floating.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:fullscreen_or_maximized">windowhandle:fullscreen_or_maximized()</a></td>
+	<td class="summary">Get whether this window is fullscreen, maximized, or neither.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#windowhandle:tags">windowhandle:tags()</a></td>
+	<td class="summary">Get all tags on this window.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "windowhandle:close"></a>
+    <strong>windowhandle:close()</strong>
+    </dt>
+    <dd>
+    Send a close request to this window.
+
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span> focused:<span class="function-name">close</span>() <span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "windowhandle:set_geometry"></a>
+    <strong>windowhandle:set_geometry(geo)</strong>
+    </dt>
+    <dd>
+    Set this window's location and/or size. </p>
+
+<p>The coordinate system has the following axes:</p>
+<pre><code>       ^ -y
+       |
+ -x &lt;--+--&gt; +x
+       |
+       v +y
+</code></pre>
+
+<p><em>Tiled windows will not reflect these changes.</em>
+This method only applies to this window's floating geometry.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">geo</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         The new location and/or size
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span>
+    focused:<span class="function-name">set_floating</span>(<span class="keyword">true</span>)                     <span class="comment">-- <a href="../classes/WindowHandle.html#windowhandle:set_geometry">set_geometry</a> only applies to floating geometry.
+</span>
+    focused:<span class="function-name">set_geometry</span>({ x = <span class="number">50</span>, y = <span class="number">300</span> })      <span class="comment">-- Move this window to (50, 300)
+</span>    focused:<span class="function-name">set_geometry</span>({ y = <span class="number">0</span>, height = <span class="number">1080</span> }) <span class="comment">-- Move this window to y = 0 and make its height 1080 pixels
+</span>    focused:<span class="function-name">set_geometry</span>({})                       <span class="comment">-- Do nothing useful
+</span><span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "windowhandle:set_fullscreen"></a>
+    <strong>windowhandle:set_fullscreen(fullscreen)</strong>
+    </dt>
+    <dd>
+    Set this window to fullscreen or not.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">fullscreen</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span>
+    focused:<span class="function-name">set_fullscreen</span>(<span class="keyword">true</span>)
+    focused:<span class="function-name">set_fullscreen</span>(<span class="keyword">false</span>)
+<span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "windowhandle:toggle_fullscreen"></a>
+    <strong>windowhandle:toggle_fullscreen()</strong>
+    </dt>
+    <dd>
+    Toggle this window to and from fullscreen.
+
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span>
+    focused:<span class="function-name">toggle_fullscreen</span>()
+<span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "windowhandle:set_maximized"></a>
+    <strong>windowhandle:set_maximized(maximized)</strong>
+    </dt>
+    <dd>
+    Set this window to maximized or not.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">maximized</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span>
+    focused:<span class="function-name">set_maximized</span>(<span class="keyword">true</span>)
+    focused:<span class="function-name">set_maximized</span>(<span class="keyword">false</span>)
+<span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "windowhandle:toggle_maximized"></a>
+    <strong>windowhandle:toggle_maximized()</strong>
+    </dt>
+    <dd>
+    Toggle this window to and from maximized.
+
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span>
+    focused:<span class="function-name">toggle_maximized</span>()
+<span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "windowhandle:set_floating"></a>
+    <strong>windowhandle:set_floating(floating)</strong>
+    </dt>
+    <dd>
+    Set this window to floating or not.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">floating</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span>
+    focused:<span class="function-name">set_floating</span>(<span class="keyword">true</span>)
+    focused:<span class="function-name">set_floating</span>(<span class="keyword">false</span>)
+<span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "windowhandle:toggle_floating"></a>
+    <strong>windowhandle:toggle_floating()</strong>
+    </dt>
+    <dd>
+    Toggle this window to and from floating.
+
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span>
+    focused:<span class="function-name">toggle_floating</span>()
+<span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "windowhandle:set_focused"></a>
+    <strong>windowhandle:set_focused(focused)</strong>
+    </dt>
+    <dd>
+    Focus or unfocus this window.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">focused</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span>
+    focused:<span class="function-name">set_focused</span>(<span class="keyword">false</span>)
+<span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "windowhandle:toggle_focused"></a>
+    <strong>windowhandle:toggle_focused()</strong>
+    </dt>
+    <dd>
+    Toggle this window to and from focused.
+
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span>
+    focused:<span class="function-name">toggle_focused</span>()
+<span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "windowhandle:move_to_tag"></a>
+    <strong>windowhandle:move_to_tag(tag)</strong>
+    </dt>
+    <dd>
+    Move this window to the specified tag. </p>
+
+<p>This will remove all tags from this window and tag it with <code>tag</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tag</span>
+            <span class="types"><a class="type" href="../classes/TagHandle.html#">TagHandle</a></span>
+         The tag to move this window to
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Assume the focused output has the tag "Tag"
+</span><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span>
+    focused:<span class="function-name">move_to_tag</span>(Tag.<span class="function-name">get</span>(<span class="string">"Tag"</span>))
+<span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "windowhandle:set_tag"></a>
+    <strong>windowhandle:set_tag(tag, set)</strong>
+    </dt>
+    <dd>
+    Tag or untag the given tag on this window.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tag</span>
+            <span class="types"><a class="type" href="../classes/TagHandle.html#">TagHandle</a></span>
+         The tag to set or unset
+        </li>
+        <li><span class="parameter">set</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Assume the focused output has the tag "Tag"
+</span><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span>
+    <span class="keyword">local</span> tag = Tag.<span class="function-name">get</span>(<span class="string">"Tag"</span>)
+
+    focused:<span class="function-name">set_tag</span>(tag, <span class="keyword">true</span>)
+    <span class="comment">-- <a href="../classes/WindowHandle.html#windowhandle:focused">focused</a> now has tag "Tag"
+</span>    focused:<span class="function-name">set_tag</span>(tag, <span class="keyword">false</span>)
+    <span class="comment">-- <a href="../classes/WindowHandle.html#windowhandle:focused">focused</a> no longer has tag "Tag"
+</span><span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "windowhandle:toggle_tag"></a>
+    <strong>windowhandle:toggle_tag(tag)</strong>
+    </dt>
+    <dd>
+    Toggle the given tag on this window.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tag</span>
+            <span class="types"><a class="type" href="../classes/TagHandle.html#">TagHandle</a></span>
+         The tag to toggle
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Assume the focused output has the tag "Tag"
+</span><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span>
+    <span class="keyword">local</span> tag = Tag.<span class="function-name">get</span>(<span class="string">"Tag"</span>)
+    focused:<span class="function-name">set_tag</span>(tag, <span class="keyword">false</span>)
+
+    focused:<span class="function-name">toggle_tag</span>(tag)
+    <span class="comment">-- <a href="../classes/WindowHandle.html#windowhandle:focused">focused</a> now has tag "Tag"
+</span>    focused:<span class="function-name">toggle_tag</span>(tag)
+    <span class="comment">-- <a href="../classes/WindowHandle.html#windowhandle:focused">focused</a> no longer has tag "Tag"
+</span><span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "windowhandle:raise"></a>
+    <strong>windowhandle:raise()</strong>
+    </dt>
+    <dd>
+    Raise a window. </p>
+
+<p>This will raise a window all the way to the top of the z-stack.
+
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> focused = Window.<span class="function-name">get_focused</span>()
+<span class="keyword">if</span> focused <span class="keyword">then</span>
+    focused:<span class="function-name">raise</span>()
+<span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "windowhandle:is_on_active_tag"></a>
+    <strong>windowhandle:is_on_active_tag()</strong>
+    </dt>
+    <dd>
+    Returns whether or not this window is on an active tag.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "windowhandle:props"></a>
+    <strong>windowhandle:props()</strong>
+    </dt>
+    <dd>
+    Get all the properties of this window.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">WindowProperties</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "windowhandle:geometry"></a>
+    <strong>windowhandle:geometry()</strong>
+    </dt>
+    <dd>
+    Get this window's location and size. </p>
+
+<p>Shorthand for <code>handle:props().geometry</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">{x:integer</span>, <span class="type">nil,y:integer</span>, <span class="type">nil,width:integer</span>, <span class="type">nil,height:integer</span>, <span class="type">nil}</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "windowhandle:class"></a>
+    <strong>windowhandle:class()</strong>
+    </dt>
+    <dd>
+    Get this window's class. </p>
+
+<p>Shorthand for <code>handle:props().class</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "windowhandle:title"></a>
+    <strong>windowhandle:title()</strong>
+    </dt>
+    <dd>
+    Get this window's title. </p>
+
+<p>Shorthand for <code>handle:props().title</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "windowhandle:focused"></a>
+    <strong>windowhandle:focused()</strong>
+    </dt>
+    <dd>
+    Get whether or not this window is focused. </p>
+
+<p>Shorthand for <code>handle:props().focused</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "windowhandle:floating"></a>
+    <strong>windowhandle:floating()</strong>
+    </dt>
+    <dd>
+    Get whether or not this window is floating. </p>
+
+<p>Shorthand for <code>handle:props().floating</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "windowhandle:fullscreen_or_maximized"></a>
+    <strong>windowhandle:fullscreen_or_maximized()</strong>
+    </dt>
+    <dd>
+    Get whether this window is fullscreen, maximized, or neither. </p>
+
+<p>Shorthand for <code>handle:props().fullscreen_or_maximized</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">FullscreenOrMaximized</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "windowhandle:tags"></a>
+    <strong>windowhandle:tags()</strong>
+    </dt>
+    <dd>
+    Get all tags on this window. </p>
+
+<p>Shorthand for <code>handle:props().tags</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/TagHandle.html#">TagHandle[]</a> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-06-15 19:07:22 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
