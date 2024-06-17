@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Pinnacle</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/defs.html">defs</a></li>
+  <li><a href="../modules/Input.html">Input</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><strong>Layout</strong></li>
+  <li><a href="../modules/Output.html">Output</a></li>
+  <li><a href="../modules/Pinnacle.html">Pinnacle</a></li>
+  <li><a href="../modules/Process.html">Process</a></li>
+  <li><a href="../modules/Render.html">Render</a></li>
+  <li><a href="../modules/pinnacle.html">pinnacle</a></li>
+  <li><a href="../modules/pinnacle.html">pinnacle</a></li>
+  <li><a href="../modules/pinnacle.html">pinnacle</a></li>
+  <li><a href="../modules/Tag.html">Tag</a></li>
+  <li><a href="../modules/RectangleModule.html">RectangleModule</a></li>
+  <li><a href="../modules/Util.html">Util</a></li>
+  <li><a href="../modules/Window.html">Window</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/CyclingLayoutManager.html">CyclingLayoutManager</a></li>
+  <li><a href="../classes/OutputHandle.html">OutputHandle</a></li>
+  <li><a href="../classes/SignalHandle.html">SignalHandle</a></li>
+  <li><a href="../classes/SignalHandles.html">SignalHandles</a></li>
+  <li><a href="../classes/TagHandle.html">TagHandle</a></li>
+  <li><a href="../classes/Rectangle.html">Rectangle</a></li>
+  <li><a href="../classes/WindowHandle.html">WindowHandle</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Layout</code></h1>
+<p>
+
+</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#layout.set_manager">layout.set_manager(manager)</a></td>
+	<td class="summary">Set the layout manager for this config.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#layout.request_layout">layout.request_layout(output)</a></td>
+	<td class="summary">Request a layout on the given output, or the focused output if nil.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#layout.new_cycling_manager">layout.new_cycling_manager(layouts)</a></td>
+	<td class="summary">Create a new cycling layout manager.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "layout.set_manager"></a>
+    <strong>layout.set_manager(manager)</strong>
+    </dt>
+    <dd>
+    Set the layout manager for this config. </p>
+
+<p>It will manage layout requests from the compositor.</p>
+
+<p>Only one layout manager can manage layouts at a time.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">manager</span>
+            <span class="types"><span class="type">LayoutManager</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "layout.request_layout"></a>
+    <strong>layout.request_layout(output)</strong>
+    </dt>
+    <dd>
+    Request a layout on the given output, or the focused output if nil. </p>
+
+<p>If no <code>LayoutManager</code> was set, this will do nothing.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">output</span>
+            <span class="types"><a class="type" href="../classes/OutputHandle.html#">OutputHandle</a> or <span class="type">nil</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "layout.new_cycling_manager"></a>
+    <strong>layout.new_cycling_manager(layouts)</strong>
+    </dt>
+    <dd>
+    Create a new cycling layout manager.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">layouts</span>
+            <span class="types"><span class="type">LayoutGenerator[]</span></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/CyclingLayoutManager.html#">CyclingLayoutManager</a></span>
+
+
+
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/CyclingLayoutManager.html#">CyclingLayoutManager</a>
+    </ul>
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-06-17 21:30:17 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
