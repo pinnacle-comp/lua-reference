@@ -1,0 +1,1050 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Pinnacle</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/CyclingLayoutManager.html">CyclingLayoutManager</a></li>
+  <li><strong>OutputHandle</strong></li>
+  <li><a href="../classes/SignalHandle.html">SignalHandle</a></li>
+  <li><a href="../classes/SignalHandles.html">SignalHandles</a></li>
+  <li><a href="../classes/TagHandle.html">TagHandle</a></li>
+  <li><a href="../classes/Rectangle.html">Rectangle</a></li>
+  <li><a href="../classes/WindowHandle.html">WindowHandle</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/defs.html">defs</a></li>
+  <li><a href="../modules/Input.html">Input</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Layout.html">Layout</a></li>
+  <li><a href="../modules/Output.html">Output</a></li>
+  <li><a href="../modules/Pinnacle.html">Pinnacle</a></li>
+  <li><a href="../modules/Process.html">Process</a></li>
+  <li><a href="../modules/Render.html">Render</a></li>
+  <li><a href="../modules/pinnacle.html">pinnacle</a></li>
+  <li><a href="../modules/pinnacle.html">pinnacle</a></li>
+  <li><a href="../modules/pinnacle.html">pinnacle</a></li>
+  <li><a href="../modules/Tag.html">Tag</a></li>
+  <li><a href="../modules/RectangleModule.html">RectangleModule</a></li>
+  <li><a href="../modules/Util.html">Util</a></li>
+  <li><a href="../modules/Window.html">Window</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>OutputHandle</code></h1>
+<p>An output handle.</p>
+<p>This is a handle to one of your monitors.
+It serves to make it easier to deal with them, defining methods for getting properties and
+helpers for things like positioning multiple monitors.</p>
+
+<p>This can be retrieved through the various <code>get</code> functions in the <a href="../modules/Output.html#">Output</a> module.</p>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:set_location">outputhandle:set_location(loc)</a></td>
+	<td class="summary">Set the location of this output in the global space.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:set_loc_adj_to">outputhandle:set_loc_adj_to(other, alignment)</a></td>
+	<td class="summary">Set the location of this output adjacent to another one.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:set_mode">outputhandle:set_mode(pixel_width, pixel_height, refresh_rate_millihz)</a></td>
+	<td class="summary">Set this output's mode.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:set_modeline">outputhandle:set_modeline(modeline)</a></td>
+	<td class="summary">Set a custom modeline for this output.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:set_scale">outputhandle:set_scale(scale)</a></td>
+	<td class="summary">Set this output's scaling factor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:increase_scale">outputhandle:increase_scale(increase_by)</a></td>
+	<td class="summary">Increase this output's scaling factor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:decrease_scale">outputhandle:decrease_scale(decrease_by)</a></td>
+	<td class="summary">Decrease this output's scaling factor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:set_transform">outputhandle:set_transform(transform)</a></td>
+	<td class="summary">Set this output's transform.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:set_powered">outputhandle:set_powered(powered)</a></td>
+	<td class="summary">Power on or off this output.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:props">outputhandle:props()</a></td>
+	<td class="summary">Get all properties of this output.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:make">outputhandle:make()</a></td>
+	<td class="summary">Get this output's make.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:model">outputhandle:model()</a></td>
+	<td class="summary">Get this output's model.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:x">outputhandle:x()</a></td>
+	<td class="summary">Get this output's x-coordinate in the global space.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:y">outputhandle:y()</a></td>
+	<td class="summary">Get this output's y-coordinate in the global space.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:logical_width">outputhandle:logical_width()</a></td>
+	<td class="summary">Get this output's logical width in pixels.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:logical_height">outputhandle:logical_height()</a></td>
+	<td class="summary">Get this output's logical height in pixels.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:current_mode">outputhandle:current_mode()</a></td>
+	<td class="summary">Get this output's current mode.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:preferred_mode">outputhandle:preferred_mode()</a></td>
+	<td class="summary">Get this output's preferred mode.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:modes">outputhandle:modes()</a></td>
+	<td class="summary">Get all of this output's available modes.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:physical_width">outputhandle:physical_width()</a></td>
+	<td class="summary">Get this output's physical width in millimeters.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:physical_height">outputhandle:physical_height()</a></td>
+	<td class="summary">Get this output's physical height in millimeters.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:focused">outputhandle:focused()</a></td>
+	<td class="summary">Get whether or not this output is focused.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:tags">outputhandle:tags()</a></td>
+	<td class="summary">Get the tags this output has.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:scale">outputhandle:scale()</a></td>
+	<td class="summary">Get this output's scaling factor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:transform">outputhandle:transform()</a></td>
+	<td class="summary">Get this output's transform.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:serial">outputhandle:serial()</a></td>
+	<td class="summary">Get this output's EDID serial number.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:keyboard_focus_stack">outputhandle:keyboard_focus_stack()</a></td>
+	<td class="summary">Get this output's keyboard focus stack.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:enabled">outputhandle:enabled()</a></td>
+	<td class="summary">Get whether this output is enabled.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:powered">outputhandle:powered()</a></td>
+	<td class="summary">Get whether this output is powered.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#outputhandle:keyboard_focus_stack_visible">outputhandle:keyboard_focus_stack_visible()</a></td>
+	<td class="summary">Get this output's keyboard focus stack.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "outputhandle:set_location"></a>
+    <strong>outputhandle:set_location(loc)</strong>
+    </dt>
+    <dd>
+    Set the location of this output in the global space. </p>
+
+<p>On startup, Pinnacle will lay out all connected outputs starting at (0, 0)
+and going to the right, with their top borders aligned.</p>
+
+<p>This method allows you to move outputs where necessary.</p>
+
+<p>Note: If you have space between two outputs when setting their locations,
+the pointer will not be able to move between them.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">loc</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/OutputHandle.html#outputhandle:set_loc_adj_to">OutputHandle.set_loc_adj_to</a>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Assume two monitors in order, "DP-1" and "HDMI-1", with the following dimensions:
+</span> <span class="comment">--  - "DP-1":   ┌─────┐
+</span> <span class="comment">--              │     │1920x1080
+</span> <span class="comment">--              └─────┘
+</span> <span class="comment">--  - "HDMI-1": ┌───────┐
+</span> <span class="comment">--              │ 2560x │
+</span> <span class="comment">--              │ 1440  │
+</span> <span class="comment">--              └───────┘
+</span>Output.<span class="function-name">get_by_name</span>(<span class="string">"DP-1"</span>):<span class="function-name">set_location</span>({ x = <span class="number">0</span>, y = <span class="number">0</span> })
+Output.<span class="function-name">get_by_name</span>(<span class="string">"HDMI-1"</span>):<span class="function-name">set_location</span>({ x = <span class="number">1920</span>, y = -<span class="number">360</span> })
+ <span class="comment">-- Results in:
+</span> <span class="comment">--       ┌───────┐
+</span> <span class="comment">-- ┌─────┤       │
+</span> <span class="comment">-- │DP-1 │HDMI-1 │
+</span> <span class="comment">-- └─────┴───────┘
+</span> <span class="comment">-- Notice that y = 0 aligns with the top of "DP-1", and the top of "HDMI-1" is at y = -360.
+</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "outputhandle:set_loc_adj_to"></a>
+    <strong>outputhandle:set_loc_adj_to(other, alignment)</strong>
+    </dt>
+    <dd>
+    Set the location of this output adjacent to another one. </p>
+
+<p><code>alignment</code> is how you want this output to be placed.
+For example, "top<em>align</em>left" will place this output above <code>other</code> and align the left borders.
+Similarly, "right<em>align</em>center" will place this output to the right of <code>other</code> and align their centers.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">other</span>
+            <span class="types"><a class="type" href="../classes/OutputHandle.html#">OutputHandle</a></span>
+
+
+
+        </li>
+        <li><span class="parameter">alignment</span>
+            <span class="types"><span class="type">Alignment</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"> <span class="comment">-- Assume two monitors in order, "DP-1" and "HDMI-1", with the following dimensions:
+</span> <span class="comment">--  - "DP-1":   ┌─────┐
+</span> <span class="comment">--              │     │1920x1080
+</span> <span class="comment">--              └─────┘
+</span> <span class="comment">--  - "HDMI-1": ┌───────┐
+</span> <span class="comment">--              │ 2560x │
+</span> <span class="comment">--              │ 1440  │
+</span> <span class="comment">--              └───────┘
+</span>Output.<span class="function-name">get_by_name</span>(<span class="string">"DP-1"</span>):<span class="function-name">set_loc_adj_to</span>(Output:<span class="function-name">get_by_name</span>(<span class="string">"HDMI-1"</span>), <span class="string">"bottom_align_right"</span>)
+ <span class="comment">-- Results in:
+</span> <span class="comment">-- ┌───────┐
+</span> <span class="comment">-- │       │
+</span> <span class="comment">-- │HDMI-1 │
+</span> <span class="comment">-- └──┬────┤
+</span> <span class="comment">--    │DP-1│
+</span> <span class="comment">--    └────┘
+</span> <span class="comment">-- Notice that "DP-1" now has the coordinates (2280, 1440) because "DP-1" is getting moved, not "HDMI-1".
+</span> <span class="comment">-- "HDMI-1" was placed at (1920, 0) during the compositor's initial output layout.</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "outputhandle:set_mode"></a>
+    <strong>outputhandle:set_mode(pixel_width, pixel_height, refresh_rate_millihz)</strong>
+    </dt>
+    <dd>
+    Set this output's mode. </p>
+
+<p>If <code>refresh_rate_millihz</code> is provided, Pinnacle will attempt to use the mode with that refresh rate.
+If it isn't, Pinnacle will attempt to use the mode with the highest refresh rate that matches the
+given size.</p>
+
+<p>The refresh rate is in millihertz. For example, to choose a mode with a refresh rate of 60Hz, use 60000.</p>
+
+<p>If this output doesn't support the given mode, it will be ignored.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pixel_width</span>
+            <span class="types"><span class="type">integer</span></span>
+
+
+
+        </li>
+        <li><span class="parameter">pixel_height</span>
+            <span class="types"><span class="type">integer</span></span>
+
+
+
+        </li>
+        <li><span class="parameter">refresh_rate_millihz</span>
+            <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">Output.<span class="function-name">get_focused</span>():<span class="function-name">set_mode</span>(<span class="number">2560</span>, <span class="number">1440</span>, <span class="number">144000</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "outputhandle:set_modeline"></a>
+    <strong>outputhandle:set_modeline(modeline)</strong>
+    </dt>
+    <dd>
+    Set a custom modeline for this output. </p>
+
+<p>This accepts a <code>Modeline</code> table or a string of the modeline.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">modeline</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a> or <span class="type">Modeline</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:set_scale"></a>
+    <strong>outputhandle:set_scale(scale)</strong>
+    </dt>
+    <dd>
+    Set this output's scaling factor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">scale</span>
+            <span class="types"><span class="type">number</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:increase_scale"></a>
+    <strong>outputhandle:increase_scale(increase_by)</strong>
+    </dt>
+    <dd>
+    Increase this output's scaling factor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">increase_by</span>
+            <span class="types"><span class="type">number</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:decrease_scale"></a>
+    <strong>outputhandle:decrease_scale(decrease_by)</strong>
+    </dt>
+    <dd>
+    Decrease this output's scaling factor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">decrease_by</span>
+            <span class="types"><span class="type">number</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:set_transform"></a>
+    <strong>outputhandle:set_transform(transform)</strong>
+    </dt>
+    <dd>
+    Set this output's transform.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">transform</span>
+            <span class="types"><span class="type">Transform</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:set_powered"></a>
+    <strong>outputhandle:set_powered(powered)</strong>
+    </dt>
+    <dd>
+    Power on or off this output.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">powered</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:props"></a>
+    <strong>outputhandle:props()</strong>
+    </dt>
+    <dd>
+    Get all properties of this output.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">OutputProperties</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:make"></a>
+    <strong>outputhandle:make()</strong>
+    </dt>
+    <dd>
+    Get this output's make. </p>
+
+<p>Note: make and model detection are currently somewhat iffy and may not work.</p>
+
+<p>Shorthand for <code>handle:props().make</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:model"></a>
+    <strong>outputhandle:model()</strong>
+    </dt>
+    <dd>
+    Get this output's model. </p>
+
+<p>Note: make and model detection are currently somewhat iffy and may not work.</p>
+
+<p>Shorthand for <code>handle:props().model</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.4">string</a> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:x"></a>
+    <strong>outputhandle:x()</strong>
+    </dt>
+    <dd>
+    Get this output's x-coordinate in the global space. </p>
+
+<p>Shorthand for <code>handle:props().x</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:y"></a>
+    <strong>outputhandle:y()</strong>
+    </dt>
+    <dd>
+    Get this output's y-coordinate in the global space. </p>
+
+<p>Shorthand for <code>handle:props().y</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:logical_width"></a>
+    <strong>outputhandle:logical_width()</strong>
+    </dt>
+    <dd>
+    Get this output's logical width in pixels. </p>
+
+<p>If the output is disabled, this returns nil.</p>
+
+<p>Shorthand for <code>handle:props().logical_width</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:logical_height"></a>
+    <strong>outputhandle:logical_height()</strong>
+    </dt>
+    <dd>
+    Get this output's logical height in pixels. </p>
+
+<p>If the output is disabled, this returns nil.</p>
+
+<p>Shorthand for <code>handle:props().y</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:current_mode"></a>
+    <strong>outputhandle:current_mode()</strong>
+    </dt>
+    <dd>
+    Get this output's current mode. </p>
+
+<p>Shorthand for <code>handle:props().current_mode</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Mode</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:preferred_mode"></a>
+    <strong>outputhandle:preferred_mode()</strong>
+    </dt>
+    <dd>
+    Get this output's preferred mode. </p>
+
+<p>Shorthand for <code>handle:props().preferred_mode</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Mode</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:modes"></a>
+    <strong>outputhandle:modes()</strong>
+    </dt>
+    <dd>
+    Get all of this output's available modes. </p>
+
+<p>Shorthand for <code>handle:props().modes</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Mode[]</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:physical_width"></a>
+    <strong>outputhandle:physical_width()</strong>
+    </dt>
+    <dd>
+    Get this output's physical width in millimeters. </p>
+
+<p>Shorthand for <code>handle:props().physical_width</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:physical_height"></a>
+    <strong>outputhandle:physical_height()</strong>
+    </dt>
+    <dd>
+    Get this output's physical height in millimeters. </p>
+
+<p>Shorthand for <code>handle:props().physical_height</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:focused"></a>
+    <strong>outputhandle:focused()</strong>
+    </dt>
+    <dd>
+    Get whether or not this output is focused. </p>
+
+<p>The focused output is currently implemented as the one that last had pointer motion.</p>
+
+<p>Shorthand for <code>handle:props().focused</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:tags"></a>
+    <strong>outputhandle:tags()</strong>
+    </dt>
+    <dd>
+    Get the tags this output has. </p>
+
+<p>Shorthand for <code>handle:props().tags</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/TagHandle.html#">TagHandle[]</a> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:scale"></a>
+    <strong>outputhandle:scale()</strong>
+    </dt>
+    <dd>
+    Get this output's scaling factor. </p>
+
+<p>Shorthand for <code>handle:props().scale</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:transform"></a>
+    <strong>outputhandle:transform()</strong>
+    </dt>
+    <dd>
+    Get this output's transform. </p>
+
+<p>Shorthand for <code>handle:props().transform</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Transform</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:serial"></a>
+    <strong>outputhandle:serial()</strong>
+    </dt>
+    <dd>
+    Get this output's EDID serial number. </p>
+
+<p>Shorthand for <code>handle:props().serial</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:keyboard_focus_stack"></a>
+    <strong>outputhandle:keyboard_focus_stack()</strong>
+    </dt>
+    <dd>
+    Get this output's keyboard focus stack. </p>
+
+<p>This includes <em>all</em> windows on the output, even those on inactive tags.
+If you only want visible windows, use <a href="../classes/OutputHandle.html#outputhandle:keyboard_focus_stack_visible">keyboard_focus_stack_visible</a> instead.</p>
+
+<p>Shorthand for <code>handle:props().keyboard_focus_stack</code>.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/WindowHandle.html#">WindowHandle[]</a></span>
+
+
+
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/OutputHandle.html#outputhandle:keyboard_focus_stack_visible">OutputHandle.keyboard_focus_stack_visible</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:enabled"></a>
+    <strong>outputhandle:enabled()</strong>
+    </dt>
+    <dd>
+    Get whether this output is enabled. </p>
+
+<p>Disabled outputs are not mapped to the global space and cannot be used.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:powered"></a>
+    <strong>outputhandle:powered()</strong>
+    </dt>
+    <dd>
+    Get whether this output is powered. </p>
+
+<p>Unpowered outputs that are enabled will be off, but they will still be
+mapped to the global space, meaning you can still interact with them.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span> or <span class="type">nil</span></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "outputhandle:keyboard_focus_stack_visible"></a>
+    <strong>outputhandle:keyboard_focus_stack_visible()</strong>
+    </dt>
+    <dd>
+    Get this output's keyboard focus stack. </p>
+
+<p>This only includes windows on active tags.
+If you want all windows on the output, use <a href="../classes/OutputHandle.html#outputhandle:keyboard_focus_stack">keyboard_focus_stack</a> instead.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/WindowHandle.html#">WindowHandle[]</a></span>
+
+
+
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../classes/OutputHandle.html#outputhandle:keyboard_focus_stack">OutputHandle.keyboard_focus_stack</a>
+    </ul>
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-06-21 23:35:46 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
