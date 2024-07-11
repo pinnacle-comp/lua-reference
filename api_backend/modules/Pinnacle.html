@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Pinnacle</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Fields">Fields</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/defs.html">defs</a></li>
+  <li><a href="../modules/Input.html">Input</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Builtin.html">Builtin</a></li>
+  <li><a href="../modules/Layout.html">Layout</a></li>
+  <li><a href="../modules/Output.html">Output</a></li>
+  <li><strong>Pinnacle</strong></li>
+  <li><a href="../modules/Process.html">Process</a></li>
+  <li><a href="../modules/Render.html">Render</a></li>
+  <li><a href="../modules/pinnacle.html">pinnacle</a></li>
+  <li><a href="../modules/pinnacle.html">pinnacle</a></li>
+  <li><a href="../modules/pinnacle.html">pinnacle</a></li>
+  <li><a href="../modules/Tag.html">Tag</a></li>
+  <li><a href="../modules/RectangleModule.html">RectangleModule</a></li>
+  <li><a href="../modules/Util.html">Util</a></li>
+  <li><a href="../modules/Window.html">Window</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/CyclingLayoutManager.html">CyclingLayoutManager</a></li>
+  <li><a href="../classes/OutputHandle.html">OutputHandle</a></li>
+  <li><a href="../classes/SignalHandle.html">SignalHandle</a></li>
+  <li><a href="../classes/SignalHandles.html">SignalHandles</a></li>
+  <li><a href="../classes/TagHandle.html">TagHandle</a></li>
+  <li><a href="../classes/Rectangle.html">Rectangle</a></li>
+  <li><a href="../classes/WindowHandle.html">WindowHandle</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Pinnacle</code></h1>
+<p>The entry point to configuration.</p>
+<p>This module contains the <a href="../modules/Pinnacle.html#pinnacle.setup">setup</a> function, which is how you'll access all the ways to configure Pinnacle.</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#pinnacle.quit">pinnacle.quit()</a></td>
+	<td class="summary">Quit Pinnacle.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#pinnacle.reload_config">pinnacle.reload_config()</a></td>
+	<td class="summary">Reload the active config.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#pinnacle.setup">pinnacle.setup(config_fn)</a></td>
+	<td class="summary">Setup a Pinnacle config.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#pinnacle.run">pinnacle.run(run_fn)</a></td>
+	<td class="summary">Run a function with the Pinnacle API.</td>
+	</tr>
+</table>
+<h2><a href="#Fields">Fields</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#input">input</a></td>
+	<td class="summary">Input</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tag">tag</a></td>
+	<td class="summary">Tag</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#output">output</a></td>
+	<td class="summary">Output</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#window">window</a></td>
+	<td class="summary">Window</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#process">process</a></td>
+	<td class="summary">Process</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#util">util</a></td>
+	<td class="summary">Util</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#layout">layout</a></td>
+	<td class="summary">Layout</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#render">render</a></td>
+	<td class="summary">Render</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#snowcap">snowcap</a></td>
+	<td class="summary">pinnacle.Snowcap</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "pinnacle.quit"></a>
+    <strong>pinnacle.quit()</strong>
+    </dt>
+    <dd>
+    Quit Pinnacle.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "pinnacle.reload_config"></a>
+    <strong>pinnacle.reload_config()</strong>
+    </dt>
+    <dd>
+    Reload the active config.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "pinnacle.setup"></a>
+    <strong>pinnacle.setup(config_fn)</strong>
+    </dt>
+    <dd>
+    Setup a Pinnacle config. </p>
+
+<p>You must pass in a function that takes in the <a href="../modules/Pinnacle.html#">Pinnacle</a> table. This table is how you'll access the other config modules.</p>
+
+<p>You can also <a href="https://www.lua.org/manual/5.4/manual.html#pdf-require">require</a> the other modules. Just be sure not to call any of their functions outside this
+setup function.</p>
+
+<p>If you want to run a function with the config without blocking at the end, see <a href="../modules/Pinnacle.html#pinnacle.run">Pinnacle.run</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">config_fn</span>
+            <span class="types"><span class="type">function</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/Pinnacle.html#pinnacle.run">Pinnacle.run</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "pinnacle.run"></a>
+    <strong>pinnacle.run(run_fn)</strong>
+    </dt>
+    <dd>
+    Run a function with the Pinnacle API. </p>
+
+<p>If you are writing a config, use <a href="../modules/Pinnacle.html#pinnacle.setup">Pinnacle.setup</a> instead.</p>
+
+<p>Like <a href="../modules/Pinnacle.html#pinnacle.setup">Pinnacle.setup</a>, this function takes in a function that takes in the <a href="../modules/Pinnacle.html#">Pinnacle</a> table.
+This allows you to run anything that <a href="../modules/Pinnacle.html#pinnacle.setup">setup</a> can run.</p>
+
+<p><em>Unlike</em> <a href="../modules/Pinnacle.html#pinnacle.setup">setup</a>, this will <strong>not</strong> listen to the compositor for incoming key presses, signals, and the like.
+This means that this function will not block and can be used to integrate with external applications
+like taskbars and widget systems like eww, but it will not allow you to set usable keybinds or
+call signal callbacks. This is useful for things like querying compositor information for outputs and
+windows.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">run_fn</span>
+            <span class="types"><span class="type">function</span></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Fields"></a>Fields</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "input"></a>
+    <strong>input</strong>
+    </dt>
+    <dd>
+    Input
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "tag"></a>
+    <strong>tag</strong>
+    </dt>
+    <dd>
+    Tag
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "output"></a>
+    <strong>output</strong>
+    </dt>
+    <dd>
+    Output
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "window"></a>
+    <strong>window</strong>
+    </dt>
+    <dd>
+    Window
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "process"></a>
+    <strong>process</strong>
+    </dt>
+    <dd>
+    Process
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "util"></a>
+    <strong>util</strong>
+    </dt>
+    <dd>
+    Util
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "layout"></a>
+    <strong>layout</strong>
+    </dt>
+    <dd>
+    Layout
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "render"></a>
+    <strong>render</strong>
+    </dt>
+    <dd>
+    Render
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "snowcap"></a>
+    <strong>snowcap</strong>
+    </dt>
+    <dd>
+    pinnacle.Snowcap
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-07-11 01:00:57 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
