@@ -10,13 +10,6 @@ Window management.
 This module helps you deal with setting windows to fullscreen and maximized, setting their size,
 moving them between tags, and various other actions.
 
-## Fields
-
-### handle
-
-`handle`: <code><a href="/classes/WindowHandleModule">WindowHandleModule</a></code>
-
-
 
 
 ## Functions
@@ -28,7 +21,7 @@ moving them between tags, and various other actions.
 
 Get all windows.
 
-### Example
+#### Example
 ```lua
 local windows = Window.get_all()
 for _, window in ipairs(windows) do
@@ -52,7 +45,7 @@ end
 
 Get the currently focused window.
 
-### Example
+#### Example
 ```lua
 local focused = Window.get_focused()
 if focused then
@@ -78,7 +71,7 @@ Begin moving this window using the specified mouse button.
 The button must be pressed at the time this method is called.
 If the button is lifted, the move will end.
 
-### Example
+#### Example
 ```lua
 Input.mousebind({ "super" }, "btn_left", function()
     Window.begin_move("btn_left")
@@ -103,7 +96,7 @@ Begin resizing this window using the specified mouse button.
 The button must be pressed at the time this method is called.
 If the button is lifted, the resize will end.
 
-### Example
+#### Example
 ```lua
 Input.mousebind({ "super" }, "btn_right", function()
     Window.begin_resize("btn_right")
@@ -143,7 +136,7 @@ There are some important mechanics you should know when using window rules:
 
 `cond` can be a bit confusing and quite table heavy. Examples are shown below for guidance.
 
-### Examples
+#### Examples
 ```lua
  -- A simple window rule. This one will cause Firefox to open on tag "Browser".
 Window.add_window_rule({

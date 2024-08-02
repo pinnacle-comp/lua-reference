@@ -56,7 +56,7 @@ Input.keybind({}, "A", function() end)
 Input.keybind({ "ctrl" }, "@", function() end)
 ```
 
-### Example
+#### Example
 ```lua
  -- Set `super + Return` to open Alacritty
 Input.keybind({ "super" }, Input.key.Return, function()
@@ -85,7 +85,7 @@ Set a mousebind. If called with an already existing mousebind, it gets replaced.
 
 You must specify whether the keybind happens on button press or button release.
 
-### Example
+#### Example
 ```lua
  -- Set `super + left mouse button` to move a window on press
 Input.mousebind({ "super" }, "btn_left", "press", function()
@@ -133,7 +133,7 @@ Fields not present will be set to their default values.
 
 Read `xkeyboard-config(7)` for more information.
 
-### Example
+#### Example
 ```lua
 Input.set_xkb_config({
     layout = "us,fr,ge",
@@ -157,7 +157,7 @@ Input.set_xkb_config({
 
 Set the keyboard's repeat rate and delay.
 
-### Example
+#### Example
 ```lua
 Input.set_repeat_rate(100, 1000) -- Key must be held down for 1 second, then repeats 10 times per second.
 ```
@@ -181,7 +181,7 @@ Set a libinput setting.
 
 This includes settings for pointer devices, like acceleration profiles, natural scroll, and more.
 
-### Example
+#### Example
 ```lua
 Input.set_libinput_settings({
     accel_profile = "flat",

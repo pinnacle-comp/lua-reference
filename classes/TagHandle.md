@@ -28,7 +28,7 @@ This can be retrieved through the various `get` functions in the `Tag` module.
 
 Remove this tag.
 
-### Example
+#### Example
 ```lua
 local tags = Tag.add(Output.get_by_name("HDMI-1"), "1", "2", "Buckle", "Shoe")
 
@@ -48,7 +48,7 @@ tags[4]:remove()
 
 Activate this tag and deactivate all other ones on the same output.
 
-### Example
+#### Example
 ```lua
  -- Assume the focused output has the following inactive tags and windows:
  --  - "1": Alacritty
@@ -69,7 +69,7 @@ Tag.get("3"):switch_to() -- Displays Steam
 
 Set whether or not this tag is active.
 
-### Example
+#### Example
 ```lua
  -- Assume the focused output has the following inactive tags and windows:
  --  - "1": Alacritty
@@ -96,7 +96,7 @@ Tag.get("2"):set_active(false) -- Displays Steam
 
 Toggle this tag's active state.
 
-### Example
+#### Example
 ```lua
  -- Assume the focused output has the following inactive tags and windows:
  --  - "1": Alacritty

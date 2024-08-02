@@ -25,7 +25,7 @@ If you need to get tags beyond the first with the same name, use the `get` metho
 
 ### handle
 
-`handle`: <code><a href="/classes/TagHandleModule">TagHandleModule</a></code>
+`handle`: <code>TagHandleModule</code>
 
 
 
@@ -60,7 +60,7 @@ If `output` is not specified, this uses the focused output.
 
 If an output has more than one tag with the same name, this returns the first.
 
-### Example
+#### Example
 ```lua
  -- Get tags on the focused output
 local tag = Tag.get("Tag")
@@ -94,7 +94,7 @@ Add tags with the given names to the specified output.
 
 Returns handles to the created tags.
 
-### Example
+#### Example
 ```lua
 local tags = Tag.add(Output.get_by_name("HDMI-1"), "1", "2", "Buckle", "Shoe")
 
@@ -126,7 +126,7 @@ local tags = Tag.add(Output.get_by_name("HDMI-1"), tag_names)
 
 Remove the given tags.
 
-### Example
+#### Example
 ```lua
 local tags = Tag.add(Output.get_by_name("HDMI-1"), "1", "2", "Buckle", "Shoe")
 

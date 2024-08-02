@@ -31,7 +31,7 @@ You can retrieve window handles through the various `get` functions in the `Wind
 
 Send a close request to this window.
 
-### Example
+#### Example
 ```lua
 local focused = Window.get_focused()
 if focused then focused:close() end
@@ -60,7 +60,7 @@ The coordinate system has the following axes:
 *Tiled windows will not reflect these changes.*
 This method only applies to this window's floating geometry.
 
-### Example
+#### Example
 ```lua
 local focused = Window.get_focused()
 if focused then
@@ -87,7 +87,7 @@ end
 
 Set this window to fullscreen or not.
 
-### Example
+#### Example
 ```lua
 local focused = Window.get_focused()
 if focused then
@@ -112,7 +112,7 @@ end
 
 Toggle this window to and from fullscreen.
 
-### Example
+#### Example
 ```lua
 local focused = Window.get_focused()
 if focused then
@@ -131,7 +131,7 @@ end
 
 Set this window to maximized or not.
 
-### Example
+#### Example
 ```lua
 local focused = Window.get_focused()
 if focused then
@@ -156,7 +156,7 @@ end
 
 Toggle this window to and from maximized.
 
-### Example
+#### Example
 ```lua
 local focused = Window.get_focused()
 if focused then
@@ -175,7 +175,7 @@ end
 
 Set this window to floating or not.
 
-### Example
+#### Example
 ```lua
 local focused = Window.get_focused()
 if focused then
@@ -200,7 +200,7 @@ end
 
 Toggle this window to and from floating.
 
-### Example
+#### Example
 ```lua
 local focused = Window.get_focused()
 if focused then
@@ -219,7 +219,7 @@ end
 
 Focus or unfocus this window.
 
-### Example
+#### Example
 ```lua
 local focused = Window.get_focused()
 if focused then
@@ -243,7 +243,7 @@ end
 
 Toggle this window to and from focused.
 
-### Example
+#### Example
 ```lua
 local focused = Window.get_focused()
 if focused then
@@ -264,7 +264,7 @@ Move this window to the specified tag.
 
 This will remove all tags from this window and tag it with `tag`.
 
-### Example
+#### Example
 ```lua
  -- Assume the focused output has the tag "Tag"
 local focused = Window.get_focused()
@@ -289,7 +289,7 @@ end
 
 Tag or untag the given tag on this window.
 
-### Example
+#### Example
 ```lua
  -- Assume the focused output has the tag "Tag"
 local focused = Window.get_focused()
@@ -320,7 +320,7 @@ end
 
 Toggle the given tag on this window.
 
-### Example
+#### Example
 ```lua
  -- Assume the focused output has the tag "Tag"
 local focused = Window.get_focused()
@@ -353,7 +353,7 @@ Raise a window.
 
 This will raise a window all the way to the top of the z-stack.
 
-### Example
+#### Example
 ```lua
 local focused = Window.get_focused()
 if focused then

@@ -38,7 +38,7 @@ This method allows you to move outputs where necessary.
 Note: If you have space between two outputs when setting their locations,
 the pointer will not be able to move between them.
 
-### Example
+#### Example
 ```lua
  -- Assume two monitors in order, "DP-1" and "HDMI-1", with the following dimensions:
  --  - "DP-1":   ┌─────┐
@@ -81,7 +81,7 @@ Set the location of this output adjacent to another one.
 For example, "top_align_left" will place this output above `other` and align the left borders.
 Similarly, "right_align_center" will place this output to the right of `other` and align their centers.
 
-### Example
+#### Example
 ```lua
  -- Assume two monitors in order, "DP-1" and "HDMI-1", with the following dimensions:
  --  - "DP-1":   ┌─────┐
@@ -128,7 +128,7 @@ The refresh rate is in millihertz. For example, to choose a mode with a refresh 
 
 If this output doesn't support the given mode, it will be ignored.
 
-### Example
+#### Example
 ```lua
 Output.get_focused():set_mode(2560, 1440, 144000)
 ```

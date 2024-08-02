@@ -8,19 +8,6 @@ outline: [2, 3]
 A handle to a connected signal that can be used to disconnect the provided callback.
 
 
-## Fields
-
-### signal
-
-`signal`: <code>string</code>
-
-
-
-### callback
-
-`callback`: <code>function</code>
-
-The callback you connected
 
 
 ## Functions
