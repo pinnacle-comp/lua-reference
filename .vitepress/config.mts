@@ -23,6 +23,7 @@ export default defineConfig({
         },
     },
     lastUpdated: true,
+    base: "/lua-reference/",
     vite: {
         ssr: {
             noExternal: [
