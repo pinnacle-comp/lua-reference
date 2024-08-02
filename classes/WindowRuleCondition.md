@@ -11,13 +11,13 @@ outline: [2, 3]
 
 ### any <Badge type="danger" text="nullable" />
 
-`any?`: <code><a href="/classes/WindowRuleCondition">WindowRuleCondition</a>[]</code>
+`any?`: <code><a href="/lua-reference/classes/WindowRuleCondition">WindowRuleCondition</a>[]</code>
 
 
 
 ### all <Badge type="danger" text="nullable" />
 
-`all?`: <code><a href="/classes/WindowRuleCondition">WindowRuleCondition</a>[]</code>
+`all?`: <code><a href="/lua-reference/classes/WindowRuleCondition">WindowRuleCondition</a>[]</code>
 
 
 
@@ -35,7 +35,7 @@ outline: [2, 3]
 
 ### tags <Badge type="danger" text="nullable" />
 
-`tags?`: <code><a href="/classes/TagHandle">TagHandle</a>[]</code>
+`tags?`: <code><a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code>
 
 
 

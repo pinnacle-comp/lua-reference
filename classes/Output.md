@@ -18,7 +18,7 @@ Outputs are uniquely identified by their name, a.k.a. the name of the connector 
 ### <Badge type="function" text="function" /> get_all
 
 <div class="language-lua"><pre><code>function Output.get_all()
-    -> <a href="/classes/OutputHandle">OutputHandle</a>[]</code></pre></div>
+    -> <a href="/lua-reference/classes/OutputHandle">OutputHandle</a>[]</code></pre></div>
 
 Get all outputs.
 
@@ -32,7 +32,7 @@ local outputs = Output.get_all()
 
 #### Returns
 
-1. <code><a href="/classes/OutputHandle">OutputHandle</a>[]</code>
+1. <code><a href="/lua-reference/classes/OutputHandle">OutputHandle</a>[]</code>
 
 
 
@@ -40,7 +40,7 @@ local outputs = Output.get_all()
 ### <Badge type="function" text="function" /> get_all_enabled
 
 <div class="language-lua"><pre><code>function Output.get_all_enabled()
-    -> <a href="/classes/OutputHandle">OutputHandle</a>[]</code></pre></div>
+    -> <a href="/lua-reference/classes/OutputHandle">OutputHandle</a>[]</code></pre></div>
 
 Get all enabled outputs.
 
@@ -54,7 +54,7 @@ local outputs = Output.get_all_enabled()
 
 #### Returns
 
-1. <code><a href="/classes/OutputHandle">OutputHandle</a>[]</code>
+1. <code><a href="/lua-reference/classes/OutputHandle">OutputHandle</a>[]</code>
 
 
 
@@ -62,7 +62,7 @@ local outputs = Output.get_all_enabled()
 ### <Badge type="function" text="function" /> get_by_name
 
 <div class="language-lua"><pre><code>function Output.get_by_name(name: string)
-    -> <a href="/classes/OutputHandle">OutputHandle</a> | nil</code></pre></div>
+    -> <a href="/lua-reference/classes/OutputHandle">OutputHandle</a> | nil</code></pre></div>
 
 Get an output by its name (the connector it's plugged into).
 
@@ -80,7 +80,7 @@ local output = Output.get_by_name("eDP-1")
 
 #### Returns
 
-1. <code><a href="/classes/OutputHandle">OutputHandle</a> | nil</code>
+1. <code><a href="/lua-reference/classes/OutputHandle">OutputHandle</a> | nil</code>
 
 
 
@@ -88,7 +88,7 @@ local output = Output.get_by_name("eDP-1")
 ### <Badge type="function" text="function" /> get_focused
 
 <div class="language-lua"><pre><code>function Output.get_focused()
-    -> <a href="/classes/OutputHandle">OutputHandle</a> | nil</code></pre></div>
+    -> <a href="/lua-reference/classes/OutputHandle">OutputHandle</a> | nil</code></pre></div>
 
 Get the currently focused output.
 
@@ -104,14 +104,14 @@ local output = Output.get_focused()
 
 #### Returns
 
-1. <code><a href="/classes/OutputHandle">OutputHandle</a> | nil</code>
+1. <code><a href="/lua-reference/classes/OutputHandle">OutputHandle</a> | nil</code>
 
 
 
 
 ### <Badge type="function" text="function" /> connect_for_all
 
-<div class="language-lua"><pre><code>function Output.connect_for_all(callback: fun(output: <a href="/classes/OutputHandle">OutputHandle</a>))</code></pre></div>
+<div class="language-lua"><pre><code>function Output.connect_for_all(callback: fun(output: <a href="/lua-reference/classes/OutputHandle">OutputHandle</a>))</code></pre></div>
 
 Connect a function to be run with all current and future outputs.
 
@@ -135,7 +135,7 @@ end)
 
 #### Parameters
 
-`callback`: <code>fun(output: <a href="/classes/OutputHandle">OutputHandle</a>)</code>
+`callback`: <code>fun(output: <a href="/lua-reference/classes/OutputHandle">OutputHandle</a>)</code>
 
 
 
@@ -144,7 +144,7 @@ end)
 
 ### <Badge type="function" text="function" /> setup
 
-<div class="language-lua"><pre><code>function Output.setup(setups: table&lt;string, <a href="/classes/OutputSetup">OutputSetup</a>>)</code></pre></div>
+<div class="language-lua"><pre><code>function Output.setup(setups: table&lt;string, <a href="/lua-reference/classes/OutputSetup">OutputSetup</a>>)</code></pre></div>
 
 Declaratively setup outputs.
 
@@ -209,7 +209,7 @@ Output.setup({
 
 #### Parameters
 
-`setups`: <code>table&lt;string, <a href="/classes/OutputSetup">OutputSetup</a>></code>
+`setups`: <code>table&lt;string, <a href="/lua-reference/classes/OutputSetup">OutputSetup</a>></code>
 
 
 
@@ -218,7 +218,7 @@ Output.setup({
 
 ### <Badge type="function" text="function" /> setup_locs
 
-<div class="language-lua"><pre><code>function Output.setup_locs(update_locs_on: <a href="/aliases/UpdateLocsOn">UpdateLocsOn</a>[] | "all", locs: table&lt;string, <a href="/aliases/OutputLoc">OutputLoc</a>>)</code></pre></div>
+<div class="language-lua"><pre><code>function Output.setup_locs(update_locs_on: <a href="/lua-reference/aliases/UpdateLocsOn">UpdateLocsOn</a>[] | "all", locs: table&lt;string, <a href="/lua-reference/aliases/OutputLoc">OutputLoc</a>>)</code></pre></div>
 
 Setup locations for outputs.
 
@@ -292,8 +292,8 @@ Output.setup_locs("all" {
 
 #### Parameters
 
-`update_locs_on`: <code><a href="/aliases/UpdateLocsOn">UpdateLocsOn</a>[] | "all"</code><br>
-`locs`: <code>table&lt;string, <a href="/aliases/OutputLoc">OutputLoc</a>></code>
+`update_locs_on`: <code><a href="/lua-reference/aliases/UpdateLocsOn">UpdateLocsOn</a>[] | "all"</code><br>
+`locs`: <code>table&lt;string, <a href="/lua-reference/aliases/OutputLoc">OutputLoc</a>></code>
 
 
 
@@ -302,8 +302,8 @@ Output.setup_locs("all" {
 
 ### <Badge type="function" text="function" /> connect_signal
 
-<div class="language-lua"><pre><code>function Output.connect_signal(signals: <a href="/classes/OutputSignal">OutputSignal</a>)
-    -> signal_handles: <a href="/classes/SignalHandles">SignalHandles</a></code></pre></div>
+<div class="language-lua"><pre><code>function Output.connect_signal(signals: <a href="/lua-reference/classes/OutputSignal">OutputSignal</a>)
+    -> signal_handles: <a href="/lua-reference/classes/SignalHandles">SignalHandles</a></code></pre></div>
 
 Connect to an output signal.
 
@@ -327,16 +327,16 @@ Output.connect_signal({
 
 #### Parameters
 
-`signals`: <code><a href="/classes/OutputSignal">OutputSignal</a></code> - The signal you want to connect to
+`signals`: <code><a href="/lua-reference/classes/OutputSignal">OutputSignal</a></code> - The signal you want to connect to
 
 
 
 #### Returns
 
-1. `signal_handles`: <code><a href="/classes/SignalHandles">SignalHandles</a></code> - Handles to every signal you connected to wrapped in a table, with keys being the same as the connected signal.
+1. `signal_handles`: <code><a href="/lua-reference/classes/SignalHandles">SignalHandles</a></code> - Handles to every signal you connected to wrapped in a table, with keys being the same as the connected signal.
 
 
 
 #### See also
 
-- <code><a href="/classes/SignalHandles#disconnect_all">SignalHandles.disconnect_all</a></code>: - To disconnect from these signals
+- <code><a href="/lua-reference/classes/SignalHandles#disconnect_all">SignalHandles.disconnect_all</a></code>: - To disconnect from these signals

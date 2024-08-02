@@ -35,7 +35,7 @@ If you need to get tags beyond the first with the same name, use the `get` metho
 ### <Badge type="function" text="function" /> get_all
 
 <div class="language-lua"><pre><code>function Tag.get_all()
-    -> <a href="/classes/TagHandle">TagHandle</a>[]</code></pre></div>
+    -> <a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code></pre></div>
 
 Get all tags across all outputs.
 
@@ -44,15 +44,15 @@ Get all tags across all outputs.
 
 #### Returns
 
-1. <code><a href="/classes/TagHandle">TagHandle</a>[]</code>
+1. <code><a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code>
 
 
 
 
 ### <Badge type="function" text="function" /> get
 
-<div class="language-lua"><pre><code>function Tag.get(name: string, output?: <a href="/classes/OutputHandle">OutputHandle</a>)
-    -> <a href="/classes/TagHandle">TagHandle</a> | nil</code></pre></div>
+<div class="language-lua"><pre><code>function Tag.get(name: string, output?: <a href="/lua-reference/classes/OutputHandle">OutputHandle</a>)
+    -> <a href="/lua-reference/classes/TagHandle">TagHandle</a> | nil</code></pre></div>
 
 Get the tag with the given name and output.
 
@@ -74,21 +74,21 @@ local tag_on_hdmi1 = Tag.get("Tag", Output:get_by_name("HDMI-1"))
 #### Parameters
 
 `name`: <code>string</code><br>
-`output?`: <code><a href="/classes/OutputHandle">OutputHandle</a></code>
+`output?`: <code><a href="/lua-reference/classes/OutputHandle">OutputHandle</a></code>
 
 
 
 #### Returns
 
-1. <code><a href="/classes/TagHandle">TagHandle</a> | nil</code>
+1. <code><a href="/lua-reference/classes/TagHandle">TagHandle</a> | nil</code>
 
 
 
 
 ### <Badge type="function" text="function" /> add
 
-<div class="language-lua"><pre><code>function Tag.add(output: <a href="/classes/OutputHandle">OutputHandle</a>, ...: string)
-    -> tags: <a href="/classes/TagHandle">TagHandle</a>[]</code></pre></div>
+<div class="language-lua"><pre><code>function Tag.add(output: <a href="/lua-reference/classes/OutputHandle">OutputHandle</a>, ...: string)
+    -> tags: <a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code></pre></div>
 
 Add tags with the given names to the specified output.
 
@@ -108,21 +108,21 @@ local tags = Tag.add(Output.get_by_name("HDMI-1"), tag_names)
 
 #### Parameters
 
-`output`: <code><a href="/classes/OutputHandle">OutputHandle</a></code><br>
+`output`: <code><a href="/lua-reference/classes/OutputHandle">OutputHandle</a></code><br>
 `...`: <code>string</code>
 
 
 
 #### Returns
 
-1. `tags`: <code><a href="/classes/TagHandle">TagHandle</a>[]</code> - Handles to the created tags
+1. `tags`: <code><a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code> - Handles to the created tags
 
 
 
 
 ### <Badge type="function" text="function" /> remove
 
-<div class="language-lua"><pre><code>function Tag.remove(tags: <a href="/classes/TagHandle">TagHandle</a>[])</code></pre></div>
+<div class="language-lua"><pre><code>function Tag.remove(tags: <a href="/lua-reference/classes/TagHandle">TagHandle</a>[])</code></pre></div>
 
 Remove the given tags.
 
@@ -136,7 +136,7 @@ Tag.remove(tags) -- "HDMI-1" no longer has those tags
 
 #### Parameters
 
-`tags`: <code><a href="/classes/TagHandle">TagHandle</a>[]</code>
+`tags`: <code><a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code>
 
 
 
@@ -145,8 +145,8 @@ Tag.remove(tags) -- "HDMI-1" no longer has those tags
 
 ### <Badge type="function" text="function" /> connect_signal
 
-<div class="language-lua"><pre><code>function Tag.connect_signal(signals: <a href="/classes/TagSignal">TagSignal</a>)
-    -> signal_handles: <a href="/classes/SignalHandles">SignalHandles</a></code></pre></div>
+<div class="language-lua"><pre><code>function Tag.connect_signal(signals: <a href="/lua-reference/classes/TagSignal">TagSignal</a>)
+    -> signal_handles: <a href="/lua-reference/classes/SignalHandles">SignalHandles</a></code></pre></div>
 
 Connect to a tag signal.
 
@@ -170,16 +170,16 @@ Tag.connect_signal({
 
 #### Parameters
 
-`signals`: <code><a href="/classes/TagSignal">TagSignal</a></code> - The signal you want to connect to
+`signals`: <code><a href="/lua-reference/classes/TagSignal">TagSignal</a></code> - The signal you want to connect to
 
 
 
 #### Returns
 
-1. `signal_handles`: <code><a href="/classes/SignalHandles">SignalHandles</a></code> - Handles to every signal you connected to wrapped in a table, with keys being the same as the connected signal.
+1. `signal_handles`: <code><a href="/lua-reference/classes/SignalHandles">SignalHandles</a></code> - Handles to every signal you connected to wrapped in a table, with keys being the same as the connected signal.
 
 
 
 #### See also
 
-- <code><a href="/classes/SignalHandles#disconnect_all">SignalHandles.disconnect_all</a></code>: - To disconnect from these signals
+- <code><a href="/lua-reference/classes/SignalHandles#disconnect_all">SignalHandles.disconnect_all</a></code>: - To disconnect from these signals

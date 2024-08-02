@@ -13,55 +13,55 @@ This module contains the `setup` function, which is how you'll access all the wa
 
 ### input
 
-`input`: <code><a href="/classes/Input">Input</a></code> = `require("pinnacle.input")`
+`input`: <code><a href="/lua-reference/classes/Input">Input</a></code> = `require("pinnacle.input")`
 
 
 
 ### tag
 
-`tag`: <code><a href="/classes/Tag">Tag</a></code> = `require("pinnacle.tag")`
+`tag`: <code><a href="/lua-reference/classes/Tag">Tag</a></code> = `require("pinnacle.tag")`
 
 
 
 ### output
 
-`output`: <code><a href="/classes/Output">Output</a></code> = `require("pinnacle.output")`
+`output`: <code><a href="/lua-reference/classes/Output">Output</a></code> = `require("pinnacle.output")`
 
 
 
 ### window
 
-`window`: <code><a href="/classes/Window">Window</a></code> = `require("pinnacle.window")`
+`window`: <code><a href="/lua-reference/classes/Window">Window</a></code> = `require("pinnacle.window")`
 
 
 
 ### process
 
-`process`: <code><a href="/classes/Process">Process</a></code> = `require("pinnacle.process")`
+`process`: <code><a href="/lua-reference/classes/Process">Process</a></code> = `require("pinnacle.process")`
 
 
 
 ### util
 
-`util`: <code><a href="/classes/Util">Util</a></code> = `require("pinnacle.util")`
+`util`: <code><a href="/lua-reference/classes/Util">Util</a></code> = `require("pinnacle.util")`
 
 
 
 ### layout
 
-`layout`: <code><a href="/classes/Layout">Layout</a></code> = `require("pinnacle.layout")`
+`layout`: <code><a href="/lua-reference/classes/Layout">Layout</a></code> = `require("pinnacle.layout")`
 
 
 
 ### render
 
-`render`: <code><a href="/classes/Render">Render</a></code> = `require("pinnacle.render")`
+`render`: <code><a href="/lua-reference/classes/Render">Render</a></code> = `require("pinnacle.render")`
 
 
 
 ### snowcap
 
-`snowcap`: <code><a href="/classes/pinnacle.Snowcap">pinnacle.Snowcap</a></code> = `nil`
+`snowcap`: <code><a href="/lua-reference/classes/pinnacle.Snowcap">pinnacle.Snowcap</a></code> = `nil`
 
 
 
@@ -92,7 +92,7 @@ Reload the active config.
 
 ### <Badge type="function" text="function" /> setup
 
-<div class="language-lua"><pre><code>function Pinnacle.setup(config_fn: fun(pinnacle: <a href="/classes/Pinnacle">Pinnacle</a>))</code></pre></div>
+<div class="language-lua"><pre><code>function Pinnacle.setup(config_fn: fun(pinnacle: <a href="/lua-reference/classes/Pinnacle">Pinnacle</a>))</code></pre></div>
 
 Setup a Pinnacle config.
 
@@ -107,7 +107,7 @@ If you want to run a function with the config without blocking at the end, see `
 
 #### Parameters
 
-`config_fn`: <code>fun(pinnacle: <a href="/classes/Pinnacle">Pinnacle</a>)</code>
+`config_fn`: <code>fun(pinnacle: <a href="/lua-reference/classes/Pinnacle">Pinnacle</a>)</code>
 
 
 
@@ -115,10 +115,10 @@ If you want to run a function with the config without blocking at the end, see `
 
 #### See also
 
-- <code><a href="/classes/Pinnacle#run">Pinnacle.run</a></code>
+- <code><a href="/lua-reference/classes/Pinnacle#run">Pinnacle.run</a></code>
 ### <Badge type="function" text="function" /> run
 
-<div class="language-lua"><pre><code>function Pinnacle.run(run_fn: fun(pinnacle: <a href="/classes/Pinnacle">Pinnacle</a>))</code></pre></div>
+<div class="language-lua"><pre><code>function Pinnacle.run(run_fn: fun(pinnacle: <a href="/lua-reference/classes/Pinnacle">Pinnacle</a>))</code></pre></div>
 
 Run a function with the Pinnacle API.
 
@@ -136,7 +136,7 @@ windows.
 
 #### Parameters
 
-`run_fn`: <code>fun(pinnacle: <a href="/classes/Pinnacle">Pinnacle</a>)</code>
+`run_fn`: <code>fun(pinnacle: <a href="/lua-reference/classes/Pinnacle">Pinnacle</a>)</code>
 
 
 

@@ -14,14 +14,14 @@ Rendering management.
 
 ### <Badge type="function" text="function" /> set_upscale_filter
 
-<div class="language-lua"><pre><code>function Render.set_upscale_filter(filter: <a href="/enums/ScalingFilter">ScalingFilter</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function Render.set_upscale_filter(filter: <a href="/lua-reference/enums/ScalingFilter">ScalingFilter</a>)</code></pre></div>
 
 Set the upscale filter the renderer will use to upscale buffers.
 
 
 #### Parameters
 
-`filter`: <code><a href="/enums/ScalingFilter">ScalingFilter</a></code>
+`filter`: <code><a href="/lua-reference/enums/ScalingFilter">ScalingFilter</a></code>
 
 
 
@@ -30,14 +30,14 @@ Set the upscale filter the renderer will use to upscale buffers.
 
 ### <Badge type="function" text="function" /> set_downscale_filter
 
-<div class="language-lua"><pre><code>function Render.set_downscale_filter(filter: <a href="/enums/ScalingFilter">ScalingFilter</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function Render.set_downscale_filter(filter: <a href="/lua-reference/enums/ScalingFilter">ScalingFilter</a>)</code></pre></div>
 
 Set the downscale filter the renderer will use to downscale buffers.
 
 
 #### Parameters
 
-`filter`: <code><a href="/enums/ScalingFilter">ScalingFilter</a></code>
+`filter`: <code><a href="/lua-reference/enums/ScalingFilter">ScalingFilter</a></code>
 
 
 

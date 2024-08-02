@@ -11,13 +11,13 @@ outline: [2, 3]
 
 ### output <Badge type="danger" text="nullable" />
 
-`output?`: <code><a href="/classes/OutputHandle">OutputHandle</a></code>
+`output?`: <code><a href="/lua-reference/classes/OutputHandle">OutputHandle</a></code>
 
 
 
 ### tags <Badge type="danger" text="nullable" />
 
-`tags?`: <code><a href="/classes/TagHandle">TagHandle</a>[]</code>
+`tags?`: <code><a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code>
 
 
 
@@ -29,7 +29,7 @@ Deprecated; use `state` with "floating" or "tiled" instead
 
 ### fullscreen_or_maximized <Badge type="danger" text="nullable" />
 
-`fullscreen_or_maximized?`: <code><a href="/enums/FullscreenOrMaximized">FullscreenOrMaximized</a></code>
+`fullscreen_or_maximized?`: <code><a href="/lua-reference/enums/FullscreenOrMaximized">FullscreenOrMaximized</a></code>
 
 Deprecated; use `state` with "fullscreen" or "maximized" instead
 
@@ -65,7 +65,7 @@ Deprecated; use `state` with "fullscreen" or "maximized" instead
 
 ### state <Badge type="danger" text="nullable" />
 
-`state?`: <code><a href="/enums/WindowState">WindowState</a></code>
+`state?`: <code><a href="/lua-reference/enums/WindowState">WindowState</a></code>
 
 
 

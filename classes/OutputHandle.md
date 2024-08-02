@@ -70,10 +70,10 @@ Output.get_by_name("HDMI-1"):set_location({ x = 1920, y = -360 })
 
 #### See also
 
-- <code><a href="/classes/OutputHandle#set_loc_adj_to">OutputHandle.set_loc_adj_to</a></code>
+- <code><a href="/lua-reference/classes/OutputHandle#set_loc_adj_to">OutputHandle.set_loc_adj_to</a></code>
 ### <Badge type="method" text="method" /> set_loc_adj_to
 
-<div class="language-lua"><pre><code>function OutputHandle:set_loc_adj_to(other: <a href="/classes/OutputHandle">OutputHandle</a>, alignment: <a href="/aliases/Alignment">Alignment</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function OutputHandle:set_loc_adj_to(other: <a href="/lua-reference/classes/OutputHandle">OutputHandle</a>, alignment: <a href="/lua-reference/aliases/Alignment">Alignment</a>)</code></pre></div>
 
 Set the location of this output adjacent to another one.
 
@@ -106,8 +106,8 @@ Output.get_by_name("DP-1"):set_loc_adj_to(Output:get_by_name("HDMI-1"), "bottom_
 
 #### Parameters
 
-`other`: <code><a href="/classes/OutputHandle">OutputHandle</a></code><br>
-`alignment`: <code><a href="/aliases/Alignment">Alignment</a></code>
+`other`: <code><a href="/lua-reference/classes/OutputHandle">OutputHandle</a></code><br>
+`alignment`: <code><a href="/lua-reference/aliases/Alignment">Alignment</a></code>
 
 
 
@@ -147,7 +147,7 @@ Output.get_focused():set_mode(2560, 1440, 144000)
 
 ### <Badge type="method" text="method" /> set_modeline
 
-<div class="language-lua"><pre><code>function OutputHandle:set_modeline(modeline: string | <a href="/classes/Modeline">Modeline</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function OutputHandle:set_modeline(modeline: string | <a href="/lua-reference/classes/Modeline">Modeline</a>)</code></pre></div>
 
 Set a custom modeline for this output.
 
@@ -156,7 +156,7 @@ This accepts a `Modeline` table or a string of the modeline.
 
 #### Parameters
 
-`modeline`: <code>string | <a href="/classes/Modeline">Modeline</a></code>
+`modeline`: <code>string | <a href="/lua-reference/classes/Modeline">Modeline</a></code>
 
 
 
@@ -213,14 +213,14 @@ Decrease this output's scaling factor.
 
 ### <Badge type="method" text="method" /> set_transform
 
-<div class="language-lua"><pre><code>function OutputHandle:set_transform(transform: <a href="/enums/Transform">Transform</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function OutputHandle:set_transform(transform: <a href="/lua-reference/enums/Transform">Transform</a>)</code></pre></div>
 
 Set this output's transform.
 
 
 #### Parameters
 
-`transform`: <code><a href="/enums/Transform">Transform</a></code>
+`transform`: <code><a href="/lua-reference/enums/Transform">Transform</a></code>
 
 
 
@@ -246,7 +246,7 @@ Power on or off this output.
 ### <Badge type="method" text="method" /> props
 
 <div class="language-lua"><pre><code>function OutputHandle:props()
-    -> <a href="/classes/OutputProperties">OutputProperties</a></code></pre></div>
+    -> <a href="/lua-reference/classes/OutputProperties">OutputProperties</a></code></pre></div>
 
 Get all properties of this output.
 
@@ -255,7 +255,7 @@ Get all properties of this output.
 
 #### Returns
 
-1. <code><a href="/classes/OutputProperties">OutputProperties</a></code>
+1. <code><a href="/lua-reference/classes/OutputProperties">OutputProperties</a></code>
 
 
 
@@ -385,7 +385,7 @@ Shorthand for `handle:props().y`.
 ### <Badge type="method" text="method" /> current_mode
 
 <div class="language-lua"><pre><code>function OutputHandle:current_mode()
-    -> <a href="/classes/Mode">Mode</a></code></pre></div>
+    -> <a href="/lua-reference/classes/Mode">Mode</a></code></pre></div>
 
 Get this output's current mode.
 
@@ -396,7 +396,7 @@ Shorthand for `handle:props().current_mode`.
 
 #### Returns
 
-1. <code><a href="/classes/Mode">Mode</a></code>
+1. <code><a href="/lua-reference/classes/Mode">Mode</a></code>
 
 
 
@@ -404,7 +404,7 @@ Shorthand for `handle:props().current_mode`.
 ### <Badge type="method" text="method" /> preferred_mode
 
 <div class="language-lua"><pre><code>function OutputHandle:preferred_mode()
-    -> <a href="/classes/Mode">Mode</a></code></pre></div>
+    -> <a href="/lua-reference/classes/Mode">Mode</a></code></pre></div>
 
 Get this output's preferred mode.
 
@@ -415,7 +415,7 @@ Shorthand for `handle:props().preferred_mode`.
 
 #### Returns
 
-1. <code><a href="/classes/Mode">Mode</a></code>
+1. <code><a href="/lua-reference/classes/Mode">Mode</a></code>
 
 
 
@@ -423,7 +423,7 @@ Shorthand for `handle:props().preferred_mode`.
 ### <Badge type="method" text="method" /> modes
 
 <div class="language-lua"><pre><code>function OutputHandle:modes()
-    -> <a href="/classes/Mode">Mode</a>[]</code></pre></div>
+    -> <a href="/lua-reference/classes/Mode">Mode</a>[]</code></pre></div>
 
 Get all of this output's available modes.
 
@@ -434,7 +434,7 @@ Shorthand for `handle:props().modes`.
 
 #### Returns
 
-1. <code><a href="/classes/Mode">Mode</a>[]</code>
+1. <code><a href="/lua-reference/classes/Mode">Mode</a>[]</code>
 
 
 
@@ -501,7 +501,7 @@ Shorthand for `handle:props().focused`.
 ### <Badge type="method" text="method" /> tags
 
 <div class="language-lua"><pre><code>function OutputHandle:tags()
-    -> <a href="/classes/TagHandle">TagHandle</a>[]</code></pre></div>
+    -> <a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code></pre></div>
 
 Get the tags this output has.
 
@@ -512,7 +512,7 @@ Shorthand for `handle:props().tags`.
 
 #### Returns
 
-1. <code><a href="/classes/TagHandle">TagHandle</a>[]</code>
+1. <code><a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code>
 
 
 
@@ -539,7 +539,7 @@ Shorthand for `handle:props().scale`.
 ### <Badge type="method" text="method" /> transform
 
 <div class="language-lua"><pre><code>function OutputHandle:transform()
-    -> <a href="/enums/Transform">Transform</a></code></pre></div>
+    -> <a href="/lua-reference/enums/Transform">Transform</a></code></pre></div>
 
 Get this output's transform.
 
@@ -550,7 +550,7 @@ Shorthand for `handle:props().transform`.
 
 #### Returns
 
-1. <code><a href="/enums/Transform">Transform</a></code>
+1. <code><a href="/lua-reference/enums/Transform">Transform</a></code>
 
 
 
@@ -577,7 +577,7 @@ Shorthand for `handle:props().serial`.
 ### <Badge type="method" text="method" /> keyboard_focus_stack
 
 <div class="language-lua"><pre><code>function OutputHandle:keyboard_focus_stack()
-    -> <a href="/classes/WindowHandle">WindowHandle</a>[]</code></pre></div>
+    -> <a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code></pre></div>
 
 Get this output's keyboard focus stack.
 
@@ -592,13 +592,13 @@ Shorthand for `handle:props().keyboard_focus_stack`.
 
 #### Returns
 
-1. <code><a href="/classes/WindowHandle">WindowHandle</a>[]</code>
+1. <code><a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code>
 
 
 
 #### See also
 
-- <code><a href="/classes/OutputHandle#keyboard_focus_stack_visible">OutputHandle.keyboard_focus_stack_visible</a></code>
+- <code><a href="/lua-reference/classes/OutputHandle#keyboard_focus_stack_visible">OutputHandle.keyboard_focus_stack_visible</a></code>
 ### <Badge type="method" text="method" /> enabled
 
 <div class="language-lua"><pre><code>function OutputHandle:enabled()
@@ -641,7 +641,7 @@ mapped to the global space, meaning you can still interact with them.
 ### <Badge type="method" text="method" /> keyboard_focus_stack_visible
 
 <div class="language-lua"><pre><code>function OutputHandle:keyboard_focus_stack_visible()
-    -> <a href="/classes/WindowHandle">WindowHandle</a>[]</code></pre></div>
+    -> <a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code></pre></div>
 
 Get this output's keyboard focus stack.
 
@@ -654,10 +654,10 @@ If you want all windows on the output, use `keyboard_focus_stack` instead.
 
 #### Returns
 
-1. <code><a href="/classes/WindowHandle">WindowHandle</a>[]</code>
+1. <code><a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code>
 
 
 
 #### See also
 
-- <code><a href="/classes/OutputHandle#keyboard_focus_stack">OutputHandle.keyboard_focus_stack</a></code>
+- <code><a href="/lua-reference/classes/OutputHandle#keyboard_focus_stack">OutputHandle.keyboard_focus_stack</a></code>

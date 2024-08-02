@@ -47,19 +47,19 @@ outline: [2, 3]
 
 ### current_mode <Badge type="danger" text="nullable" />
 
-`current_mode?`: <code><a href="/classes/Mode">Mode</a></code>
+`current_mode?`: <code><a href="/lua-reference/classes/Mode">Mode</a></code>
 
 
 
 ### preferred_mode <Badge type="danger" text="nullable" />
 
-`preferred_mode?`: <code><a href="/classes/Mode">Mode</a></code>
+`preferred_mode?`: <code><a href="/lua-reference/classes/Mode">Mode</a></code>
 
 
 
 ### modes
 
-`modes`: <code><a href="/classes/Mode">Mode</a>[]</code>
+`modes`: <code><a href="/lua-reference/classes/Mode">Mode</a>[]</code>
 
 
 
@@ -83,7 +83,7 @@ outline: [2, 3]
 
 ### tags
 
-`tags`: <code><a href="/classes/TagHandle">TagHandle</a>[]</code>
+`tags`: <code><a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code>
 
 
 
@@ -95,7 +95,7 @@ outline: [2, 3]
 
 ### transform <Badge type="danger" text="nullable" />
 
-`transform?`: <code><a href="/enums/Transform">Transform</a></code>
+`transform?`: <code><a href="/lua-reference/enums/Transform">Transform</a></code>
 
 
 
@@ -107,7 +107,7 @@ outline: [2, 3]
 
 ### keyboard_focus_stack
 
-`keyboard_focus_stack`: <code><a href="/classes/WindowHandle">WindowHandle</a>[]</code>
+`keyboard_focus_stack`: <code><a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code>
 
 
 

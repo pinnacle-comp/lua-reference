@@ -80,7 +80,7 @@ Like `Process.spawn` but will only spawn the program if it isn't already running
 
 #### See also
 
-- <code><a href="/classes/Process#spawn">Process.spawn</a></code>
+- <code><a href="/lua-reference/classes/Process#spawn">Process.spawn</a></code>
 ### <Badge type="function" text="function" /> set_env
 
 <div class="language-lua"><pre><code>function Process.set_env(key: string, value: string)</code></pre></div>

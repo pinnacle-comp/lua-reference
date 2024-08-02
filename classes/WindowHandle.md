@@ -258,7 +258,7 @@ end
 
 ### <Badge type="method" text="method" /> move_to_tag
 
-<div class="language-lua"><pre><code>function WindowHandle:move_to_tag(tag: <a href="/classes/TagHandle">TagHandle</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function WindowHandle:move_to_tag(tag: <a href="/lua-reference/classes/TagHandle">TagHandle</a>)</code></pre></div>
 
 Move this window to the specified tag.
 
@@ -276,7 +276,7 @@ end
 
 #### Parameters
 
-`tag`: <code><a href="/classes/TagHandle">TagHandle</a></code> - The tag to move this window to
+`tag`: <code><a href="/lua-reference/classes/TagHandle">TagHandle</a></code> - The tag to move this window to
 
 
 
@@ -285,7 +285,7 @@ end
 
 ### <Badge type="method" text="method" /> set_tag
 
-<div class="language-lua"><pre><code>function WindowHandle:set_tag(tag: <a href="/classes/TagHandle">TagHandle</a>, set: boolean)</code></pre></div>
+<div class="language-lua"><pre><code>function WindowHandle:set_tag(tag: <a href="/lua-reference/classes/TagHandle">TagHandle</a>, set: boolean)</code></pre></div>
 
 Tag or untag the given tag on this window.
 
@@ -306,7 +306,7 @@ end
 
 #### Parameters
 
-`tag`: <code><a href="/classes/TagHandle">TagHandle</a></code> - The tag to set or unset<br>
+`tag`: <code><a href="/lua-reference/classes/TagHandle">TagHandle</a></code> - The tag to set or unset<br>
 `set`: <code>boolean</code>
 
 
@@ -316,7 +316,7 @@ end
 
 ### <Badge type="method" text="method" /> toggle_tag
 
-<div class="language-lua"><pre><code>function WindowHandle:toggle_tag(tag: <a href="/classes/TagHandle">TagHandle</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function WindowHandle:toggle_tag(tag: <a href="/lua-reference/classes/TagHandle">TagHandle</a>)</code></pre></div>
 
 Toggle the given tag on this window.
 
@@ -338,7 +338,7 @@ end
 
 #### Parameters
 
-`tag`: <code><a href="/classes/TagHandle">TagHandle</a></code> - The tag to toggle
+`tag`: <code><a href="/lua-reference/classes/TagHandle">TagHandle</a></code> - The tag to toggle
 
 
 
@@ -386,7 +386,7 @@ Returns whether or not this window is on an active tag.
 ### <Badge type="method" text="method" /> props
 
 <div class="language-lua"><pre><code>function WindowHandle:props()
-    -> <a href="/classes/WindowProperties">WindowProperties</a></code></pre></div>
+    -> <a href="/lua-reference/classes/WindowProperties">WindowProperties</a></code></pre></div>
 
 Get all the properties of this window.
 
@@ -395,7 +395,7 @@ Get all the properties of this window.
 
 #### Returns
 
-1. <code><a href="/classes/WindowProperties">WindowProperties</a></code>
+1. <code><a href="/lua-reference/classes/WindowProperties">WindowProperties</a></code>
 
 
 
@@ -549,7 +549,7 @@ Get whether this window is maximized.
 ### <Badge type="method" text="method" /> fullscreen_or_maximized
 
 <div class="language-lua"><pre><code>function WindowHandle:fullscreen_or_maximized()
-    -> <a href="/enums/FullscreenOrMaximized">FullscreenOrMaximized</a></code></pre></div>
+    -> <a href="/lua-reference/enums/FullscreenOrMaximized">FullscreenOrMaximized</a></code></pre></div>
 
 Deprecated; use the `fullscreen` or `maximized` methods instead.
 
@@ -562,7 +562,7 @@ Shorthand for `handle:props().fullscreen_or_maximized`.
 
 #### Returns
 
-1. <code><a href="/enums/FullscreenOrMaximized">FullscreenOrMaximized</a></code>
+1. <code><a href="/lua-reference/enums/FullscreenOrMaximized">FullscreenOrMaximized</a></code>
 
 
 
@@ -570,7 +570,7 @@ Shorthand for `handle:props().fullscreen_or_maximized`.
 ### <Badge type="method" text="method" /> tags
 
 <div class="language-lua"><pre><code>function WindowHandle:tags()
-    -> <a href="/classes/TagHandle">TagHandle</a>[]</code></pre></div>
+    -> <a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code></pre></div>
 
 Get all tags on this window.
 
@@ -581,7 +581,7 @@ Shorthand for `handle:props().tags`.
 
 #### Returns
 
-1. <code><a href="/classes/TagHandle">TagHandle</a>[]</code>
+1. <code><a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code>
 
 
 

@@ -11,19 +11,19 @@ outline: [2, 3]
 
 ### output
 
-`output`: <code><a href="/classes/OutputHandle">OutputHandle</a></code>
+`output`: <code><a href="/lua-reference/classes/OutputHandle">OutputHandle</a></code>
 
 
 
 ### windows
 
-`windows`: <code><a href="/classes/WindowHandle">WindowHandle</a>[]</code>
+`windows`: <code><a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code>
 
 
 
 ### tags
 
-`tags`: <code><a href="/classes/TagHandle">TagHandle</a>[]</code>
+`tags`: <code><a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code>
 
 
 

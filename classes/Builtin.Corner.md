@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `Builtin.Corner` : <code><a href="/classes/LayoutGenerator">LayoutGenerator</a></code>
+# Class `Builtin.Corner` : <code><a href="/lua-reference/classes/LayoutGenerator">LayoutGenerator</a></code>
 
 
 A `LayoutGenerator` that has one main corner window and a
@@ -49,14 +49,14 @@ Which corner the corner window will be in.
 
 ### <Badge type="method" text="method" /> layout
 
-<div class="language-lua"><pre><code>function Builtin.Corner:layout(args: <a href="/classes/LayoutArgs">LayoutArgs</a>)
+<div class="language-lua"><pre><code>function Builtin.Corner:layout(args: <a href="/lua-reference/classes/LayoutArgs">LayoutArgs</a>)
     -> { x: integer, y: integer, width: integer, height: integer }[]</code></pre></div>
 
 
 
 #### Parameters
 
-`args`: <code><a href="/classes/LayoutArgs">LayoutArgs</a></code>
+`args`: <code><a href="/lua-reference/classes/LayoutArgs">LayoutArgs</a></code>
 
 
 

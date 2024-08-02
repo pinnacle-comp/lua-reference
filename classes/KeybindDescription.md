@@ -11,7 +11,7 @@ outline: [2, 3]
 
 ### modifiers
 
-`modifiers`: <code><a href="/enums/Modifier">Modifier</a>[]</code>
+`modifiers`: <code><a href="/lua-reference/enums/Modifier">Modifier</a>[]</code>
 
 
 

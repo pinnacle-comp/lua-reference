@@ -114,7 +114,7 @@ Tag.get("2"):toggle_active() -- Displays nothing
 ### <Badge type="method" text="method" /> props
 
 <div class="language-lua"><pre><code>function TagHandle:props()
-    -> <a href="/classes/TagProperties">TagProperties</a></code></pre></div>
+    -> <a href="/lua-reference/classes/TagProperties">TagProperties</a></code></pre></div>
 
 Get all properties of this tag.
 
@@ -123,7 +123,7 @@ Get all properties of this tag.
 
 #### Returns
 
-1. <code><a href="/classes/TagProperties">TagProperties</a></code>
+1. <code><a href="/lua-reference/classes/TagProperties">TagProperties</a></code>
 
 
 
@@ -169,7 +169,7 @@ Shorthand for `handle:props().name`.
 ### <Badge type="method" text="method" /> output
 
 <div class="language-lua"><pre><code>function TagHandle:output()
-    -> <a href="/classes/OutputHandle">OutputHandle</a></code></pre></div>
+    -> <a href="/lua-reference/classes/OutputHandle">OutputHandle</a></code></pre></div>
 
 Get the output this tag is on.
 
@@ -180,7 +180,7 @@ Shorthand for `handle:props().output`.
 
 #### Returns
 
-1. <code><a href="/classes/OutputHandle">OutputHandle</a></code>
+1. <code><a href="/lua-reference/classes/OutputHandle">OutputHandle</a></code>
 
 
 
@@ -188,7 +188,7 @@ Shorthand for `handle:props().output`.
 ### <Badge type="method" text="method" /> windows
 
 <div class="language-lua"><pre><code>function TagHandle:windows()
-    -> <a href="/classes/WindowHandle">WindowHandle</a>[]</code></pre></div>
+    -> <a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code></pre></div>
 
 Get the windows that have this tag.
 
@@ -199,7 +199,7 @@ Shorthand for `handle:props().windows`.
 
 #### Returns
 
-1. <code><a href="/classes/WindowHandle">WindowHandle</a>[]</code>
+1. <code><a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code>
 
 
 

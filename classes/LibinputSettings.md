@@ -11,7 +11,7 @@ outline: [2, 3]
 
 ### accel_profile <Badge type="danger" text="nullable" />
 
-`accel_profile?`: <code><a href="/enums/AccelProfile">AccelProfile</a></code>
+`accel_profile?`: <code><a href="/lua-reference/enums/AccelProfile">AccelProfile</a></code>
 
 Set pointer acceleration
 
@@ -29,7 +29,7 @@ Set pointer acceleration speed
 
 ### click_method <Badge type="danger" text="nullable" />
 
-`click_method?`: <code><a href="/enums/ClickMethod">ClickMethod</a></code>
+`click_method?`: <code><a href="/lua-reference/enums/ClickMethod">ClickMethod</a></code>
 
 
 
@@ -71,7 +71,7 @@ Set whether or not the scroll button is a hold or toggle
 
 ### scroll_method <Badge type="danger" text="nullable" />
 
-`scroll_method?`: <code><a href="/enums/ScrollMethod">ScrollMethod</a></code>
+`scroll_method?`: <code><a href="/lua-reference/enums/ScrollMethod">ScrollMethod</a></code>
 
 
 
@@ -83,7 +83,7 @@ Set whether or not natural scroll is enabled, which reverses scroll direction
 
 ### tap_button_map <Badge type="danger" text="nullable" />
 
-`tap_button_map?`: <code><a href="/enums/TapButtonMap">TapButtonMap</a></code>
+`tap_button_map?`: <code><a href="/lua-reference/enums/TapButtonMap">TapButtonMap</a></code>
 
 
 

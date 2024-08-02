@@ -41,19 +41,19 @@ Whether or not the window is floating
 
 ### fullscreen_or_maximized <Badge type="danger" text="nullable" />
 
-`fullscreen_or_maximized?`: <code><a href="/enums/FullscreenOrMaximized">FullscreenOrMaximized</a></code>
+`fullscreen_or_maximized?`: <code><a href="/lua-reference/enums/FullscreenOrMaximized">FullscreenOrMaximized</a></code>
 
 Whether the window is fullscreen, maximized, or neither
 
 ### tags
 
-`tags`: <code><a href="/classes/TagHandle">TagHandle</a>[]</code>
+`tags`: <code><a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code>
 
 The tags the window has
 
 ### state <Badge type="danger" text="nullable" />
 
-`state?`: <code><a href="/enums/WindowState">WindowState</a></code>
+`state?`: <code><a href="/lua-reference/enums/WindowState">WindowState</a></code>
 
 
 

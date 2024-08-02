@@ -28,7 +28,7 @@ This module provides utilities to set key- and mousebinds as well as change keyb
 
 ### <Badge type="function" text="function" /> keybind
 
-<div class="language-lua"><pre><code>function Input.keybind(mods: <a href="/enums/Modifier">Modifier</a>[], key: <a href="/enums/Key">Key</a> | string, action: fun(), keybind_info?: <a href="/classes/KeybindInfo">KeybindInfo</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function Input.keybind(mods: <a href="/lua-reference/enums/Modifier">Modifier</a>[], key: <a href="/lua-reference/enums/Key">Key</a> | string, action: fun(), keybind_info?: <a href="/lua-reference/classes/KeybindInfo">KeybindInfo</a>)</code></pre></div>
 
 Set a keybind. If called with an already existing keybind, it gets replaced.
 
@@ -67,10 +67,10 @@ end)
 
 #### Parameters
 
-`mods`: <code><a href="/enums/Modifier">Modifier</a>[]</code> - The modifiers that need to be held down for the bind to trigger<br>
-`key`: <code><a href="/enums/Key">Key</a> | string</code> - The key used to trigger the bind<br>
+`mods`: <code><a href="/lua-reference/enums/Modifier">Modifier</a>[]</code> - The modifiers that need to be held down for the bind to trigger<br>
+`key`: <code><a href="/lua-reference/enums/Key">Key</a> | string</code> - The key used to trigger the bind<br>
 `action`: <code>fun()</code> - The function to run when the bind is triggered<br>
-`keybind_info?`: <code><a href="/classes/KeybindInfo">KeybindInfo</a></code>
+`keybind_info?`: <code><a href="/lua-reference/classes/KeybindInfo">KeybindInfo</a></code>
 
 
 
@@ -79,7 +79,7 @@ end)
 
 ### <Badge type="function" text="function" /> mousebind
 
-<div class="language-lua"><pre><code>function Input.mousebind(mods: <a href="/enums/Modifier">Modifier</a>[], button: <a href="/enums/MouseButton">MouseButton</a>, edge: <a href="/enums/MouseEdge">MouseEdge</a>, action: fun())</code></pre></div>
+<div class="language-lua"><pre><code>function Input.mousebind(mods: <a href="/lua-reference/enums/Modifier">Modifier</a>[], button: <a href="/lua-reference/enums/MouseButton">MouseButton</a>, edge: <a href="/lua-reference/enums/MouseEdge">MouseEdge</a>, action: fun())</code></pre></div>
 
 Set a mousebind. If called with an already existing mousebind, it gets replaced.
 
@@ -96,9 +96,9 @@ end)
 
 #### Parameters
 
-`mods`: <code><a href="/enums/Modifier">Modifier</a>[]</code> - The modifiers that need to be held down for the bind to trigger<br>
-`button`: <code><a href="/enums/MouseButton">MouseButton</a></code> - The mouse button used to trigger the bind<br>
-`edge`: <code><a href="/enums/MouseEdge">MouseEdge</a></code> - "press" or "release" to trigger on button press or release<br>
+`mods`: <code><a href="/lua-reference/enums/Modifier">Modifier</a>[]</code> - The modifiers that need to be held down for the bind to trigger<br>
+`button`: <code><a href="/lua-reference/enums/MouseButton">MouseButton</a></code> - The mouse button used to trigger the bind<br>
+`edge`: <code><a href="/lua-reference/enums/MouseEdge">MouseEdge</a></code> - "press" or "release" to trigger on button press or release<br>
 `action`: <code>fun()</code> - The function to run when the bind is triggered
 
 
@@ -109,7 +109,7 @@ end)
 ### <Badge type="function" text="function" /> keybind_descriptions
 
 <div class="language-lua"><pre><code>function Input.keybind_descriptions()
-    -> <a href="/classes/KeybindDescription">KeybindDescription</a>[]</code></pre></div>
+    -> <a href="/lua-reference/classes/KeybindDescription">KeybindDescription</a>[]</code></pre></div>
 
 Get all keybinds along with their descriptions
 
@@ -118,14 +118,14 @@ Get all keybinds along with their descriptions
 
 #### Returns
 
-1. <code><a href="/classes/KeybindDescription">KeybindDescription</a>[]</code>
+1. <code><a href="/lua-reference/classes/KeybindDescription">KeybindDescription</a>[]</code>
 
 
 
 
 ### <Badge type="function" text="function" /> set_xkb_config
 
-<div class="language-lua"><pre><code>function Input.set_xkb_config(xkb_config: <a href="/classes/XkbConfig">XkbConfig</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function Input.set_xkb_config(xkb_config: <a href="/lua-reference/classes/XkbConfig">XkbConfig</a>)</code></pre></div>
 
 Set the xkbconfig for your keyboard.
 
@@ -144,7 +144,7 @@ Input.set_xkb_config({
 
 #### Parameters
 
-`xkb_config`: <code><a href="/classes/XkbConfig">XkbConfig</a></code> - The new xkbconfig
+`xkb_config`: <code><a href="/lua-reference/classes/XkbConfig">XkbConfig</a></code> - The new xkbconfig
 
 
 
@@ -175,7 +175,7 @@ Input.set_repeat_rate(100, 1000) -- Key must be held down for 1 second, then rep
 
 ### <Badge type="function" text="function" /> set_libinput_settings
 
-<div class="language-lua"><pre><code>function Input.set_libinput_settings(settings: <a href="/classes/LibinputSettings">LibinputSettings</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function Input.set_libinput_settings(settings: <a href="/lua-reference/classes/LibinputSettings">LibinputSettings</a>)</code></pre></div>
 
 Set a libinput setting.
 
@@ -192,7 +192,7 @@ Input.set_libinput_settings({
 
 #### Parameters
 
-`settings`: <code><a href="/classes/LibinputSettings">LibinputSettings</a></code>
+`settings`: <code><a href="/lua-reference/classes/LibinputSettings">LibinputSettings</a></code>
 
 
 

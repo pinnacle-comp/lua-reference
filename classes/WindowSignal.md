@@ -11,13 +11,13 @@ outline: [2, 3]
 
 ### pointer_enter <Badge type="danger" text="nullable" />
 
-`pointer_enter?`: <code>fun(window: <a href="/classes/WindowHandle">WindowHandle</a>)</code>
+`pointer_enter?`: <code>fun(window: <a href="/lua-reference/classes/WindowHandle">WindowHandle</a>)</code>
 
 The pointer entered a window.
 
 ### pointer_leave <Badge type="danger" text="nullable" />
 
-`pointer_leave?`: <code>fun(window: <a href="/classes/WindowHandle">WindowHandle</a>)</code>
+`pointer_leave?`: <code>fun(window: <a href="/lua-reference/classes/WindowHandle">WindowHandle</a>)</code>
 
 The pointer left a window.
 

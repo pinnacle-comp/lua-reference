@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `Builtin.Spiral` : <code><a href="/classes/LayoutGenerator">LayoutGenerator</a></code>
+# Class `Builtin.Spiral` : <code><a href="/lua-reference/classes/LayoutGenerator">LayoutGenerator</a></code>
 
 
 A `LayoutGenerator` that lays out windows in a spiral.
@@ -42,14 +42,14 @@ the second at [2], and so on.
 
 ### <Badge type="method" text="method" /> layout
 
-<div class="language-lua"><pre><code>function Builtin.Spiral:layout(args: <a href="/classes/LayoutArgs">LayoutArgs</a>)
+<div class="language-lua"><pre><code>function Builtin.Spiral:layout(args: <a href="/lua-reference/classes/LayoutArgs">LayoutArgs</a>)
     -> { x: integer, y: integer, width: integer, height: integer }[]</code></pre></div>
 
 
 
 #### Parameters
 
-`args`: <code><a href="/classes/LayoutArgs">LayoutArgs</a></code>
+`args`: <code><a href="/lua-reference/classes/LayoutArgs">LayoutArgs</a></code>
 
 
 
