@@ -7,10 +7,10 @@ export default defineConfig({
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
-            { text: "Home", link: "/classes/Pinnacle" },
+            { text: "Home", link: "/" },
         ],
 
-        sidebar: generateSidebar({}),
+        sidebar: generateSidebar(),
 
         socialLinks: [
             { icon: "github", link: "https://github.com/pinnacle-comp/pinnacle" }
