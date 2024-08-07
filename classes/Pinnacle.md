@@ -90,6 +90,37 @@ Reload the active config.
 
 
 
+### <Badge type="function" text="function" /> backend
+
+<div class="language-lua"><pre><code>function Pinnacle.backend()
+    -> "tty" | "window"</code></pre></div>
+
+Gets the currently running backend.
+
+
+
+
+#### Returns
+
+1. <code>"tty" | "window"</code> - `"tty"` if Pinnacle is running in a tty, or `"window"` if it's running in a nested window
+
+
+
+
+### <Badge type="function" text="function" /> init
+
+<div class="language-lua"><pre><code>function Pinnacle.init()</code></pre></div>
+
+Initializes the protobuf backend and connects to Pinnacle's gRPC socket.
+
+If the Snowcap Lua API is installed and Snowcap is running, this will also setup Snowcap and
+connect to its socket as well.
+
+
+
+
+
+
 ### <Badge type="function" text="function" /> setup
 
 <div class="language-lua"><pre><code>function Pinnacle.setup(config_fn: fun(pinnacle: <a href="/lua-reference/classes/Pinnacle">Pinnacle</a>))</code></pre></div>
