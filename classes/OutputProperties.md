@@ -101,7 +101,7 @@ outline: [2, 3]
 
 ### serial <Badge type="danger" text="nullable" />
 
-`serial?`: <code>integer</code>
+`serial?`: <code>string</code>
 
 
 

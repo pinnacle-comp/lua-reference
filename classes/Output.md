@@ -163,11 +163,6 @@ by setting a `filter` function in the setup that returns true if it should apply
 
 Otherwise, keys will attempt to match the exact name of an output.
 
-Use `"serial:<number>"` to match outputs by their EDID serial. For example, `"serial:143256"`.
-Note that not all displays have EDID serials. Also, serials are not guaranteed to be unique.
-If you're unlucky enough to have two displays with the same serial, you'll have to use their names
-or filter with wildcards instead.
-
 ##### Setups
 
 If an output is matched, the corresponding `OutputSetup` entry will be applied to it.
@@ -201,8 +196,6 @@ Output.setup({
     ["eDP-1"] = {
         tags = { "6", "7" },
     },
-    -- Match an output by its EDID serial number
-    ["serial:235987"] = { ... }
 })
 ```
 
@@ -239,9 +232,6 @@ containing `"connect"`, `"disconnect"`, and/or `"resize"`.
 
 Keys for `locs` should be output identifiers. These are strings of
 the name of the output, for example "eDP-1" or "HDMI-A-1".
-Additionally, if you want to match the EDID serial of an output,
-prepend the serial with "serial:", for example "serial:174652".
-You can find this by doing `get-edid | edid-decode`.
 
 #### Fallback relative-tos
 
@@ -277,16 +267,6 @@ Output.setup_locs("all", {
 
  -- Only relayout on output connect and resize
 Output.setup_locs({ "connect", "resize" }, { ... })
-
- -- Use EDID serials for identification.
- -- You can run
- -- require("pinnacle").run(function(Pinnacle)
- --     print(Pinnacle.output.get_focused():serial())
- -- end)
- -- in a Lua repl to find the EDID serial of the focused output.
-Output.setup_locs("all" {
-    ["serial:139487"] = { ... },
-})
 ```
 
 

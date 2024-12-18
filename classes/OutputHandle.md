@@ -558,9 +558,9 @@ Shorthand for `handle:props().transform`.
 ### <Badge type="method" text="method" /> serial
 
 <div class="language-lua"><pre><code>function OutputHandle:serial()
-    -> integer</code></pre></div>
+    -> string</code></pre></div>
 
-Get this output's EDID serial number.
+Get this output's EDID serial.
 
 Shorthand for `handle:props().serial`.
 
@@ -569,7 +569,7 @@ Shorthand for `handle:props().serial`.
 
 #### Returns
 
-1. <code>integer</code>
+1. <code>string</code>
 
 
 
