@@ -19,15 +19,8 @@ moving them between tags, and various other actions.
 <div class="language-lua"><pre><code>function Window.get_all()
     -> windows: <a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code></pre></div>
 
-Get all windows.
+Gets all windows.
 
-#### Example
-```lua
-local windows = Window.get_all()
-for _, window in ipairs(windows) do
-    print(window:props().class)
-end
-```
 
 
 
@@ -43,15 +36,8 @@ end
 <div class="language-lua"><pre><code>function Window.get_focused()
     -> window: <a href="/lua-reference/classes/WindowHandle">WindowHandle</a> | nil</code></pre></div>
 
-Get the currently focused window.
+Gets the currently focused window.
 
-#### Example
-```lua
-local focused = Window.get_focused()
-if focused then
-    print(focused:props().class)
-end
-```
 
 
 
@@ -66,7 +52,7 @@ end
 
 <div class="language-lua"><pre><code>function Window.begin_move(button: <a href="/lua-reference/enums/MouseButton">MouseButton</a>)</code></pre></div>
 
-Begin moving this window using the specified mouse button.
+Begins moving this window using the specified mouse button.
 
 The button must be pressed at the time this method is called.
 If the button is lifted, the move will end.
@@ -91,7 +77,7 @@ end)
 
 <div class="language-lua"><pre><code>function Window.begin_resize(button: <a href="/lua-reference/enums/MouseButton">MouseButton</a>)</code></pre></div>
 
-Begin resizing this window using the specified mouse button.
+Begins resizing this window using the specified mouse button.
 
 The button must be pressed at the time this method is called.
 If the button is lifted, the resize will end.
@@ -112,117 +98,15 @@ end)
 
 
 
-### <Badge type="function" text="function" /> add_window_rule
-
-<div class="language-lua"><pre><code>function Window.add_window_rule(rule: { cond: <a href="/lua-reference/classes/WindowRuleCondition">WindowRuleCondition</a>, rule: <a href="/lua-reference/classes/WindowRule">WindowRule</a> })</code></pre></div>
-
-Add a window rule.
-
-A window rule defines what properties a window will spawn with given certain conditions.
-For example, if Firefox is spawned, you can set it to open on a specific tag.
-
-This method takes in a table with two keys:
-
- - `cond`: The condition for `rule` to apply to a new window.
- - `rule`: What gets applied to the new window if `cond` is true.
-
-There are some important mechanics you should know when using window rules:
-
- - All children inside an `all` block must be true for the block to be true.
- - At least one child inside an `any` block must be true for the block to be true.
- - The outermost block of a window rule condition is implicitly an `all` block.
- - Within an `all` block, all items in each array must be true for the attribute to be true.
- - Within an `any` block, only one item in each array needs to be true for the attribute to be true.
-
-`cond` can be a bit confusing and quite table heavy. Examples are shown below for guidance.
-
-#### Examples
-```lua
- -- A simple window rule. This one will cause Firefox to open on tag "Browser".
-Window.add_window_rule({
-    cond = { classes = { "firefox" } },
-    rule = { tags = { Tag.get("Browser") } },
-})
-
- -- To apply rules when *all* provided conditions are true, use `all`.
- -- `all` takes an array of conditions and checks if all are true.
- -- The following will open Steam fullscreen only if it opens on tag "5".
-Window.add_window_rule({
-    cond = {
-        all = {
-            {
-                classes = { "steam" },
-                tags = { Tag.get("5") },
-            }
-        }
-    },
-    rule = { fullscreen_or_maximized = "fullscreen" },
-})
-
- -- The outermost block of a `cond` is implicitly an `all` block.
- -- Thus, the above can be shortened to:
-Window.add_window_rule({
-    cond = {
-        classes = { "steam" },
-        tags = { Tag.get("5") },
-    },
-    rule = { fullscreen_or_maximized = "fullscreen" },
-})
-
- -- `any` also exists to allow at least one provided condition to match.
- -- The following will open either xterm or Alacritty floating.
-Window.add_window_rule({
-    cond = {
-        any = { { classes = { "xterm", "Alacritty" } } }
-    },
-    rule = { floating = true },
-})
-
- -- You can arbitrarily nest `any` and `all` to achieve desired logic.
- -- The following will open Discord, Thunderbird, or Firefox floating if they
- -- open on either *all* of tags "A", "B", and "C" or both tags "1" and "2".
-Window.add_window_rule({
-    cond = {
-        all = { -- This `all` block is needed because the outermost block cannot be an array.
-            { any = {
-                { classes = { "firefox", "thunderbird", "discord" } }
-            } },
-            { any = {
-                -- Because `tag` is inside an `all` block,
-                -- the window must have all these tags for this to be true.
-                -- If it was in an `any` block, only one tag would need to match.
-                { all = {
-                    { tags = { Tag.get("A"), Tag.get("B"), Tag.get("C") } }
-                } },
-                { all = {
-                    { tags = { Tag.get("1"), Tag.get("2") } }
-                } },
-            } }
-        }
-    },
-    rule = { floating = true },
-})
-```
-
-
-#### Parameters
-
-`rule`: <code>{ cond: <a href="/lua-reference/classes/WindowRuleCondition">WindowRuleCondition</a>, rule: <a href="/lua-reference/classes/WindowRule">WindowRule</a> }</code> - The condition and rule
-
-
-
-
-
-
 ### <Badge type="function" text="function" /> connect_signal
 
 <div class="language-lua"><pre><code>function Window.connect_signal(signals: <a href="/lua-reference/classes/WindowSignal">WindowSignal</a>)
     -> signal_handles: <a href="/lua-reference/classes/SignalHandles">SignalHandles</a></code></pre></div>
 
-Connect to a window signal.
+Connects to a window signal.
 
-The compositor sends signals about various events. Use this function to run a callback when
-some window signal occurs.
+`signals` is a table containing the signal(s) you want to connect to along with
+a corresponding callback that will be called when the signal is signalled.
 
 This function returns a table of signal handles with each handle stored at the same key used
 to connect to the signal. See `SignalHandles` for more information.
@@ -231,7 +115,7 @@ to connect to the signal. See `SignalHandles` for more information.
 ```lua
 Window.connect_signal({
     pointer_enter = function(window)
-        print("Pointer entered", window:class())
+        print("Pointer entered", window:app_id())
     end
 })
 ```
@@ -254,3 +138,38 @@ Window.connect_signal({
 #### See also
 
 - <code><a href="/lua-reference/classes/SignalHandles#disconnect_all">SignalHandles.disconnect_all</a></code>: - To disconnect from these signals
+### <Badge type="function" text="function" /> add_window_rule
+
+<div class="language-lua"><pre><code>function Window.add_window_rule(rule: fun(window: <a href="/lua-reference/classes/WindowHandle">WindowHandle</a>))</code></pre></div>
+
+Adds a window rule.
+
+Instead of using a declarative window rule system with match conditions,
+you supply a closure that acts on a newly opened window.
+You can use standard `if` statements and apply properties using the same
+methods that are used everywhere else in this API.
+
+Note: this function is special in that if it is called, Pinnacle will wait for
+the provided closure to finish running before it sends windows an initial configure event.
+*Do not block here*. At best, short blocks will increase the time it takes for a window to
+open. At worst, a complete deadlock will prevent windows from opening at all.
+
+#### Example
+
+```lua
+Window.add_window_rule(function(window)
+    if window:app_id() == "Alacritty" then
+        window:set_tag(Tag.get("Terminal"), true)
+    end
+end)
+```
+
+
+#### Parameters
+
+`rule`: <code>fun(window: <a href="/lua-reference/classes/WindowHandle">WindowHandle</a>)</code>
+
+
+
+
+

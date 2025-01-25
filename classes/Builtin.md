@@ -13,122 +13,156 @@ This contains functions that create various builtin generators.
 
 ## Functions
 
-### <Badge type="function" text="function" /> master_stack
+### <Badge type="function" text="function" /> line
 
-<div class="language-lua"><pre><code>function Builtin.master_stack(settings?: <a href="/lua-reference/classes/Builtin.MasterStack.Args">Builtin.MasterStack.Args</a>)
-    -> <a href="/lua-reference/classes/Builtin.MasterStack">Builtin.MasterStack</a></code></pre></div>
+<div class="language-lua"><pre><code>function Builtin.line(options?: <a href="/lua-reference/classes/pinnacle.layout.builtin.LineOpts">pinnacle.layout.builtin.LineOpts</a>)
+    -> <a href="/lua-reference/classes/pinnacle.layout.builtin.Line">pinnacle.layout.builtin.Line</a></code></pre></div>
 
-Create a master stack layout generator.
-
-Pass in `settings` to override the defaults.
+Creates a layout generator that lays out windows in a line.
 
 
 
 #### Parameters
 
-`settings?`: <code><a href="/lua-reference/classes/Builtin.MasterStack.Args">Builtin.MasterStack.Args</a></code>
+`options?`: <code><a href="/lua-reference/classes/pinnacle.layout.builtin.LineOpts">pinnacle.layout.builtin.LineOpts</a></code>
 
 
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/Builtin.MasterStack">Builtin.MasterStack</a></code>
+1. <code><a href="/lua-reference/classes/pinnacle.layout.builtin.Line">pinnacle.layout.builtin.Line</a></code>
+
+
+
+
+### <Badge type="function" text="function" /> master_stack
+
+<div class="language-lua"><pre><code>function Builtin.master_stack(options?: <a href="/lua-reference/classes/pinnacle.layout.builtin.MasterStackOpts">pinnacle.layout.builtin.MasterStackOpts</a>)
+    -> <a href="/lua-reference/classes/pinnacle.layout.builtin.MasterStack">pinnacle.layout.builtin.MasterStack</a></code></pre></div>
+
+Creates a layout generator that lays windows out in two stacks: a master and side stack.
+
+
+#### Parameters
+
+`options?`: <code><a href="/lua-reference/classes/pinnacle.layout.builtin.MasterStackOpts">pinnacle.layout.builtin.MasterStackOpts</a></code>
+
+
+
+#### Returns
+
+1. <code><a href="/lua-reference/classes/pinnacle.layout.builtin.MasterStack">pinnacle.layout.builtin.MasterStack</a></code>
 
 
 
 
 ### <Badge type="function" text="function" /> dwindle
 
-<div class="language-lua"><pre><code>function Builtin.dwindle(settings?: <a href="/lua-reference/classes/Builtin.Dwindle.Args">Builtin.Dwindle.Args</a>)
-    -> <a href="/lua-reference/classes/Builtin.Dwindle">Builtin.Dwindle</a></code></pre></div>
+<div class="language-lua"><pre><code>function Builtin.dwindle(options?: <a href="/lua-reference/classes/pinnacle.layout.builtin.DwindleOpts">pinnacle.layout.builtin.DwindleOpts</a>)
+    -> <a href="/lua-reference/classes/pinnacle.layout.builtin.Dwindle">pinnacle.layout.builtin.Dwindle</a></code></pre></div>
 
-Create a dwindle layout generator.
-
-Pass in `settings` to override the defaults.
+Creates a layout generator that lays windows out dwindling down to the bottom right.
 
 
 
 #### Parameters
 
-`settings?`: <code><a href="/lua-reference/classes/Builtin.Dwindle.Args">Builtin.Dwindle.Args</a></code>
+`options?`: <code><a href="/lua-reference/classes/pinnacle.layout.builtin.DwindleOpts">pinnacle.layout.builtin.DwindleOpts</a></code>
 
 
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/Builtin.Dwindle">Builtin.Dwindle</a></code>
-
-
-
-
-### <Badge type="function" text="function" /> corner
-
-<div class="language-lua"><pre><code>function Builtin.corner(settings?: <a href="/lua-reference/classes/Builtin.Corner.Args">Builtin.Corner.Args</a>)
-    -> <a href="/lua-reference/classes/Builtin.Corner">Builtin.Corner</a></code></pre></div>
-
-Create a corner layout generator.
-
-Pass in `settings` to override the defaults.
-
-
-
-#### Parameters
-
-`settings?`: <code><a href="/lua-reference/classes/Builtin.Corner.Args">Builtin.Corner.Args</a></code>
-
-
-
-#### Returns
-
-1. <code><a href="/lua-reference/classes/Builtin.Corner">Builtin.Corner</a></code>
+1. <code><a href="/lua-reference/classes/pinnacle.layout.builtin.Dwindle">pinnacle.layout.builtin.Dwindle</a></code>
 
 
 
 
 ### <Badge type="function" text="function" /> spiral
 
-<div class="language-lua"><pre><code>function Builtin.spiral(settings?: <a href="/lua-reference/classes/Builtin.Spiral.Args">Builtin.Spiral.Args</a>)
-    -> <a href="/lua-reference/classes/Builtin.Spiral">Builtin.Spiral</a></code></pre></div>
+<div class="language-lua"><pre><code>function Builtin.spiral(options?: <a href="/lua-reference/classes/pinnacle.layout.builtin.SpiralOpts">pinnacle.layout.builtin.SpiralOpts</a>)
+    -> <a href="/lua-reference/classes/pinnacle.layout.builtin.Spiral">pinnacle.layout.builtin.Spiral</a></code></pre></div>
 
-Create a spiral layout generator.
-
-Pass in `settings` to override the defaults.
+Creates a layout generator that lays windows out in a spiral.
 
 
 
 #### Parameters
 
-`settings?`: <code><a href="/lua-reference/classes/Builtin.Spiral.Args">Builtin.Spiral.Args</a></code>
+`options?`: <code><a href="/lua-reference/classes/pinnacle.layout.builtin.SpiralOpts">pinnacle.layout.builtin.SpiralOpts</a></code>
 
 
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/Builtin.Spiral">Builtin.Spiral</a></code>
+1. <code><a href="/lua-reference/classes/pinnacle.layout.builtin.Spiral">pinnacle.layout.builtin.Spiral</a></code>
+
+
+
+
+### <Badge type="function" text="function" /> corner
+
+<div class="language-lua"><pre><code>function Builtin.corner(options?: <a href="/lua-reference/classes/pinnacle.layout.builtin.CornerOpts">pinnacle.layout.builtin.CornerOpts</a>)
+    -> <a href="/lua-reference/classes/pinnacle.layout.builtin.Corner">pinnacle.layout.builtin.Corner</a></code></pre></div>
+
+Creates a layout generator that lays windows out with one main corner window and
+a horizontal and vertical stack flanking the other two sides.
+
+
+#### Parameters
+
+`options?`: <code><a href="/lua-reference/classes/pinnacle.layout.builtin.CornerOpts">pinnacle.layout.builtin.CornerOpts</a></code>
+
+
+
+#### Returns
+
+1. <code><a href="/lua-reference/classes/pinnacle.layout.builtin.Corner">pinnacle.layout.builtin.Corner</a></code>
 
 
 
 
 ### <Badge type="function" text="function" /> fair
 
-<div class="language-lua"><pre><code>function Builtin.fair(settings?: <a href="/lua-reference/classes/Builtin.Fair.Args">Builtin.Fair.Args</a>)
-    -> <a href="/lua-reference/classes/Builtin.Fair">Builtin.Fair</a></code></pre></div>
+<div class="language-lua"><pre><code>function Builtin.fair(options?: <a href="/lua-reference/classes/pinnacle.layout.builtin.FairOpts">pinnacle.layout.builtin.FairOpts</a>)
+    -> <a href="/lua-reference/classes/pinnacle.layout.builtin.Fair">pinnacle.layout.builtin.Fair</a></code></pre></div>
 
-Create a fair layout generator.
-
-Pass in `settings` to override the defaults.
+Creates a layout generator that lays windows out keeping their sizes roughly the same.
 
 
 
 #### Parameters
 
-`settings?`: <code><a href="/lua-reference/classes/Builtin.Fair.Args">Builtin.Fair.Args</a></code>
+`options?`: <code><a href="/lua-reference/classes/pinnacle.layout.builtin.FairOpts">pinnacle.layout.builtin.FairOpts</a></code>
 
 
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/Builtin.Fair">Builtin.Fair</a></code>
+1. <code><a href="/lua-reference/classes/pinnacle.layout.builtin.Fair">pinnacle.layout.builtin.Fair</a></code>
+
+
+
+
+### <Badge type="function" text="function" /> cycle
+
+<div class="language-lua"><pre><code>function Builtin.cycle(layouts: <a href="/lua-reference/classes/LayoutGenerator">LayoutGenerator</a>[])
+    -> <a href="/lua-reference/classes/pinnacle.layout.builtin.Cycle">pinnacle.layout.builtin.Cycle</a></code></pre></div>
+
+Creates a layout generator that delegates to other layout generators depending on the tag
+and allows you to cycle between the generators.
+
+
+
+#### Parameters
+
+`layouts`: <code><a href="/lua-reference/classes/LayoutGenerator">LayoutGenerator</a>[]</code>
+
+
+
+#### Returns
+
+1. <code><a href="/lua-reference/classes/pinnacle.layout.builtin.Cycle">pinnacle.layout.builtin.Cycle</a></code>
 
 
 

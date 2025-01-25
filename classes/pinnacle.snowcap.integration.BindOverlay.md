@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `pinnacle.snowcap.integration.KeybindOverlay`
+# Class `pinnacle.snowcap.integration.BindOverlay`
 
 
 
@@ -56,9 +56,9 @@ outline: [2, 3]
 
 ### <Badge type="method" text="method" /> show
 
-<div class="language-lua"><pre><code>function pinnacle.snowcap.integration.KeybindOverlay:show()</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.snowcap.integration.BindOverlay:show()</code></pre></div>
 
-Show this keybind overlay.
+Shows this bind overlay.
 
 
 

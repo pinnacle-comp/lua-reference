@@ -15,27 +15,15 @@ outline: [2, 3]
 
 
 
-### windows
+### window_count
 
-`windows`: <code><a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code>
+`window_count`: <code>integer</code>
 
 
 
 ### tags
 
 `tags`: <code><a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code>
-
-
-
-### output_width
-
-`output_width`: <code>integer</code>
-
-
-
-### output_height
-
-`output_height`: <code>integer</code>
 
 
 

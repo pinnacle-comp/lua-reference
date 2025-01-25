@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `LibinputSettings`
+# Class `LibinputSetting`
 
 
 
@@ -102,6 +102,12 @@ Set whether or not natural scroll is enabled, which reverses scroll direction
 ### tap <Badge type="danger" text="nullable" />
 
 `tap?`: <code>boolean</code>
+
+
+
+### send_events_mode <Badge type="danger" text="nullable" />
+
+`send_events_mode?`: <code><a href="/lua-reference/enums/SendEventsMode">SendEventsMode</a></code>
 
 
 

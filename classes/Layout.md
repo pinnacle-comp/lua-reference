@@ -5,85 +5,57 @@ outline: [2, 3]
 # Class `Layout`
 
 
+Layout management.
 
 
 ## Fields
 
-### stream <Badge type="danger" text="nullable" />
+### builtin
 
-`stream?`: <code>grpc_client.h2.Stream</code>
-
-
-
-### builtins
-
-`builtins` = `builtins`
+`builtin` = `builtin`
 
 
 
 
 ## Functions
 
-### <Badge type="function" text="function" /> set_manager
+### <Badge type="function" text="function" /> manage
 
-<div class="language-lua"><pre><code>function Layout.set_manager(manager: <a href="/lua-reference/classes/LayoutManager">LayoutManager</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function Layout.manage(on_layout: fun(args: <a href="/lua-reference/classes/LayoutArgs">LayoutArgs</a>): <a href="/lua-reference/classes/LayoutNode">LayoutNode</a>)
+    -> <a href="/lua-reference/classes/pinnacle.layout.LayoutRequester">pinnacle.layout.LayoutRequester</a></code></pre></div>
 
-Set the layout manager for this config.
+Begins managing layout requests from the compositor.
 
-It will manage layout requests from the compositor.
+You must call this function to get windows to lay out.
+The provided function will be run with the arguments of the layout request.
+It must return a `LayoutNode` that represents the root of a layout tree.
 
-Only one layout manager can manage layouts at a time.
+#### Example
 
-
-#### Parameters
-
-`manager`: <code><a href="/lua-reference/classes/LayoutManager">LayoutManager</a></code>
-
-
-
-
-
-
-### <Badge type="function" text="function" /> request_layout
-
-<div class="language-lua"><pre><code>function Layout.request_layout(output?: <a href="/lua-reference/classes/OutputHandle">OutputHandle</a>)</code></pre></div>
-
-Request a layout on the given output, or the focused output if nil.
-
-If no `LayoutManager` was set, this will do nothing.
-
-
-#### Parameters
-
-`output?`: <code><a href="/lua-reference/classes/OutputHandle">OutputHandle</a></code>
-
-
-
-
-
-
-### <Badge type="function" text="function" /> new_cycling_manager
-
-<div class="language-lua"><pre><code>function Layout.new_cycling_manager(layouts: <a href="/lua-reference/classes/LayoutGenerator">LayoutGenerator</a>[])
-    -> <a href="/lua-reference/classes/CyclingLayoutManager">CyclingLayoutManager</a></code></pre></div>
-
-Create a new cycling layout manager.
-
+```lua
+local layout_requester = Layout.manage(function(args)
+    local first_tag = args.tags[1]
+    if not first_tag then
+        return {
+            children = {},
+        }
+    end
+    layout_cycler.current_tag = first_tag
+    return layout_cycler:layout(args.window_count)
+end)
+```
 
 
 
 #### Parameters
 
-`layouts`: <code><a href="/lua-reference/classes/LayoutGenerator">LayoutGenerator</a>[]</code>
+`on_layout`: <code>fun(args: <a href="/lua-reference/classes/LayoutArgs">LayoutArgs</a>): <a href="/lua-reference/classes/LayoutNode">LayoutNode</a></code>
 
 
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/CyclingLayoutManager">CyclingLayoutManager</a></code>
+1. <code><a href="/lua-reference/classes/pinnacle.layout.LayoutRequester">pinnacle.layout.LayoutRequester</a></code> - A requester that allows you to force the compositor to request a layout.
 
 
 
-#### See also
-
-- <code><a href="/lua-reference/classes/CyclingLayoutManager">CyclingLayoutManager</a></code>

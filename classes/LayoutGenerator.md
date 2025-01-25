@@ -11,7 +11,7 @@ A layout generator.
 
 ### layout
 
-`layout`: <code>fun(self: self, args: <a href="/lua-reference/classes/LayoutArgs">LayoutArgs</a>): { x: integer, y: integer, width: integer, height: integer }[]</code>
+`layout`: <code>fun(self: self, window_count: integer): <a href="/lua-reference/classes/LayoutNode">LayoutNode</a></code>
 
 Generate an array of geometries from the given `LayoutArgs`.
 

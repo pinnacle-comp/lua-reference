@@ -9,21 +9,21 @@ outline: [2, 3]
 
 ## Fields
 
-### pixel_width
+### width
 
-`pixel_width`: <code>integer</code>
-
-
-
-### pixel_height
-
-`pixel_height`: <code>integer</code>
+`width`: <code>integer</code>
 
 
 
-### refresh_rate_millihz
+### height
 
-`refresh_rate_millihz`: <code>integer</code>
+`height`: <code>integer</code>
+
+
+
+### refresh_rate_mhz
+
+`refresh_rate_mhz`: <code>integer</code>
 
 
 

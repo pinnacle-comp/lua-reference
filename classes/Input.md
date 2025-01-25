@@ -28,33 +28,38 @@ This module provides utilities to set key- and mousebinds as well as change keyb
 
 ### <Badge type="function" text="function" /> keybind
 
-<div class="language-lua"><pre><code>function Input.keybind(mods: <a href="/lua-reference/enums/Modifier">Modifier</a>[], key: <a href="/lua-reference/enums/Key">Key</a> | string, action: fun(), keybind_info?: <a href="/lua-reference/classes/KeybindInfo">KeybindInfo</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function Input.keybind(mods: <a href="/lua-reference/enums/Modifier">Modifier</a>[], key: <a href="/lua-reference/enums/Key">Key</a> | string, on_press: fun(), bind_info?: { group: string, description: string })</code></pre></div>
 
-Set a keybind. If called with an already existing keybind, it gets replaced.
+Sets a keybind.
 
-You must provide three arguments:
+This function can be called in two ways:
+1. As `Input.keybind(mods, key, on_press, bind_info?)`
+2. As `Input.keybind(<Keybind table>)`
+
+Calling this with a `Keybind` table gives you more options, including the ability to assign a bind layer
+to the keybind or set it to happen on release instead of press.
+
+When calling using the first way, you must provide three arguments:
 
  - `mods`: An array of `Modifier`s. If you don't want any, provide an empty table.
  - `key`: The key that will trigger `action`. You can provide three types of key:
      - Something from the `Key` table in `Input.key`, which lists every xkbcommon key. The naming pattern is the xkbcommon key without the `KEY_` prefix, unless that would make it start with a number or the reserved lua keyword `function`, in which case the `KEY_` prefix is included.
      - A single character representing your key. This can be something like "g", "$", "~", "1", and so on.
      - A string of the key's name. This is the name of the xkbcommon key without the `KEY_` prefix.
- - `action`: The function that will be run when the keybind is pressed.
+ - `on_press`: The function that will be run when the keybind is pressed.
 
 It is important to note that `"a"` is different than `"A"`. Similarly, `key.a` is different than `key.A`.
 Usually, it's best to use the non-modified key to prevent confusion and unintended behavior.
 
-```lua
-Input.keybind({ "shift" }, "a", function() end) -- This is preferred
-Input.keybind({ "shift" }, "A", function() end) -- over this
+Similar principles apply when calling with a `Keybind` table.
 
- -- This keybind will only work with capslock on.
-Input.keybind({}, "A", function() end)
+#### Ignoring Modifiers
+Normally, modifiers that are not specified will require the bind to not have them held down.
+You can ignore this by adding the corresponding `"ignore_*"` modifier.
 
- -- This keybind won't work at all because to get `@` you need to hold shift,
- -- which this keybind doesn't accept.
-Input.keybind({ "ctrl" }, "@", function() end)
-```
+#### Descriptions
+You can specify a group and description for the bind.
+This will be used to categorize the bind in the bind overlay and provide a description.
 
 #### Example
 ```lua
@@ -65,12 +70,13 @@ end)
 ```
 
 
+
 #### Parameters
 
 `mods`: <code><a href="/lua-reference/enums/Modifier">Modifier</a>[]</code> - The modifiers that need to be held down for the bind to trigger<br>
 `key`: <code><a href="/lua-reference/enums/Key">Key</a> | string</code> - The key used to trigger the bind<br>
-`action`: <code>fun()</code> - The function to run when the bind is triggered<br>
-`keybind_info?`: <code><a href="/lua-reference/classes/KeybindInfo">KeybindInfo</a></code>
+`on_press`: <code>fun()</code> - The function to run when the bind is triggered<br>
+`bind_info?`: <code>{ group: string, description: string }</code>
 
 
 
@@ -79,11 +85,30 @@ end)
 
 ### <Badge type="function" text="function" /> mousebind
 
-<div class="language-lua"><pre><code>function Input.mousebind(mods: <a href="/lua-reference/enums/Modifier">Modifier</a>[], button: <a href="/lua-reference/enums/MouseButton">MouseButton</a>, edge: <a href="/lua-reference/enums/MouseEdge">MouseEdge</a>, action: fun())</code></pre></div>
+<div class="language-lua"><pre><code>function Input.mousebind(mods: <a href="/lua-reference/enums/Modifier">Modifier</a>[], button: <a href="/lua-reference/enums/MouseButton">MouseButton</a>, on_press: fun(), bind_info?: { group: string, description: string })</code></pre></div>
 
-Set a mousebind. If called with an already existing mousebind, it gets replaced.
+Sets a mousebind.
 
-You must specify whether the keybind happens on button press or button release.
+This function can be called in two ways:
+1. As `Input.mousebind(mods, button, on_press, bind_info?)`
+2. As `Input.mousebind(<Mousebind table>)`
+
+Calling this with a `Mousebind` table gives you more options, including the ability to assign a bind layer
+to the keybind or set it to happen on release instead of press.
+
+When calling using the first way, you must provide three arguments:
+
+ - `mods`: An array of `Modifier`s. If you don't want any, provide an empty table.
+ - `button`: The mouse button.
+ - `on_press`: The function that will be run when the button is pressed.
+
+#### Ignoring Modifiers
+Normally, modifiers that are not specified will require the bind to not have them held down.
+You can ignore this by adding the corresponding `"ignore_*"` modifier.
+
+#### Descriptions
+You can specify a group and description for the bind.
+This will be used to categorize the bind in the bind overlay and provide a description.
 
 #### Example
 ```lua
@@ -94,31 +119,48 @@ end)
 ```
 
 
+
 #### Parameters
 
 `mods`: <code><a href="/lua-reference/enums/Modifier">Modifier</a>[]</code> - The modifiers that need to be held down for the bind to trigger<br>
 `button`: <code><a href="/lua-reference/enums/MouseButton">MouseButton</a></code> - The mouse button used to trigger the bind<br>
-`edge`: <code><a href="/lua-reference/enums/MouseEdge">MouseEdge</a></code> - "press" or "release" to trigger on button press or release<br>
-`action`: <code>fun()</code> - The function to run when the bind is triggered
+`on_press`: <code>fun()</code> - The function to run when the bind is triggered<br>
+`bind_info?`: <code>{ group: string, description: string }</code>
 
 
 
 
 
 
-### <Badge type="function" text="function" /> keybind_descriptions
+### <Badge type="function" text="function" /> enter_bind_layer
 
-<div class="language-lua"><pre><code>function Input.keybind_descriptions()
-    -> <a href="/lua-reference/classes/KeybindDescription">KeybindDescription</a>[]</code></pre></div>
+<div class="language-lua"><pre><code>function Input.enter_bind_layer(layer?: string)</code></pre></div>
 
-Get all keybinds along with their descriptions
+Enters the bind layer `layer`, or the default layer if `layer` is nil.
+
+
+#### Parameters
+
+`layer?`: <code>string</code>
+
+
+
+
+
+
+### <Badge type="function" text="function" /> bind_infos
+
+<div class="language-lua"><pre><code>function Input.bind_infos()
+    -> <a href="/lua-reference/classes/BindInfo">BindInfo</a>[]</code></pre></div>
+
+Gets all binds and their information.
 
 
 
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/KeybindDescription">KeybindDescription</a>[]</code>
+1. <code><a href="/lua-reference/classes/BindInfo">BindInfo</a>[]</code>
 
 
 
@@ -127,9 +169,7 @@ Get all keybinds along with their descriptions
 
 <div class="language-lua"><pre><code>function Input.set_xkb_config(xkb_config: <a href="/lua-reference/classes/XkbConfig">XkbConfig</a>)</code></pre></div>
 
-Set the xkbconfig for your keyboard.
-
-Fields not present will be set to their default values.
+Sets the xkbconfig for your keyboard.
 
 Read `xkeyboard-config(7)` for more information.
 
@@ -155,7 +195,7 @@ Input.set_xkb_config({
 
 <div class="language-lua"><pre><code>function Input.set_repeat_rate(rate: integer, delay: integer)</code></pre></div>
 
-Set the keyboard's repeat rate and delay.
+Sets the keyboard's repeat rate and delay.
 
 #### Example
 ```lua
@@ -167,32 +207,6 @@ Input.set_repeat_rate(100, 1000) -- Key must be held down for 1 second, then rep
 
 `rate`: <code>integer</code> - The time between repeats in milliseconds<br>
 `delay`: <code>integer</code> - The duration a key needs to be held down before repeating starts in milliseconds
-
-
-
-
-
-
-### <Badge type="function" text="function" /> set_libinput_settings
-
-<div class="language-lua"><pre><code>function Input.set_libinput_settings(settings: <a href="/lua-reference/classes/LibinputSettings">LibinputSettings</a>)</code></pre></div>
-
-Set a libinput setting.
-
-This includes settings for pointer devices, like acceleration profiles, natural scroll, and more.
-
-#### Example
-```lua
-Input.set_libinput_settings({
-    accel_profile = "flat",
-    natural_scroll = true,
-})
-```
-
-
-#### Parameters
-
-`settings`: <code><a href="/lua-reference/classes/LibinputSettings">LibinputSettings</a></code>
 
 
 
@@ -236,3 +250,43 @@ This allows you to set it at runtime.
 
 
 
+
+### <Badge type="function" text="function" /> connect_signal
+
+<div class="language-lua"><pre><code>function Input.connect_signal(signals: <a href="/lua-reference/classes/InputSignal">InputSignal</a>)
+    -> signal_handles: <a href="/lua-reference/classes/SignalHandles">SignalHandles</a></code></pre></div>
+
+Connects to an input signal.
+
+`signals` is a table containing the signal(s) you want to connect to along with
+a corresponding callback that will be called when the signal is signalled.
+
+This function returns a table of signal handles with each handle stored at the same key used
+to connect to the signal. See `SignalHandles` for more information.
+
+# Example
+```lua
+Input.connect_signal({
+    device_added = function(device)
+        print("Device connected", device:name())
+    end
+})
+```
+
+
+
+#### Parameters
+
+`signals`: <code><a href="/lua-reference/classes/InputSignal">InputSignal</a></code> - The signal you want to connect to
+
+
+
+#### Returns
+
+1. `signal_handles`: <code><a href="/lua-reference/classes/SignalHandles">SignalHandles</a></code> - Handles to every signal you connected to wrapped in a table, with keys being the same as the connected signal.
+
+
+
+#### See also
+
+- <code><a href="/lua-reference/classes/SignalHandles#disconnect_all">SignalHandles.disconnect_all</a></code>: - To disconnect from these signals

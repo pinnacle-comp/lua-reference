@@ -14,6 +14,7 @@ what you want it to.
 
 You can retrieve window handles through the various `get` functions in the `Window` module.
 
+
 ## Fields
 
 ### id
@@ -29,13 +30,7 @@ You can retrieve window handles through the various `get` functions in the `Wind
 
 <div class="language-lua"><pre><code>function WindowHandle:close()</code></pre></div>
 
-Send a close request to this window.
-
-#### Example
-```lua
-local focused = Window.get_focused()
-if focused then focused:close() end
-```
+Sends a close request to this window.
 
 
 
@@ -46,7 +41,7 @@ if focused then focused:close() end
 
 <div class="language-lua"><pre><code>function WindowHandle:set_geometry(geo: { x: integer, y: integer, width: integer, height: integer })</code></pre></div>
 
-Set this window's location and/or size.
+Sets this window's location and/or size.
 
 The coordinate system has the following axes:
 ```
@@ -85,16 +80,7 @@ end
 
 <div class="language-lua"><pre><code>function WindowHandle:set_fullscreen(fullscreen: boolean)</code></pre></div>
 
-Set this window to fullscreen or not.
-
-#### Example
-```lua
-local focused = Window.get_focused()
-if focused then
-    focused:set_fullscreen(true)
-    focused:set_fullscreen(false)
-end
-```
+Sets this window to fullscreen or not.
 
 
 #### Parameters
@@ -110,15 +96,8 @@ end
 
 <div class="language-lua"><pre><code>function WindowHandle:toggle_fullscreen()</code></pre></div>
 
-Toggle this window to and from fullscreen.
+Toggles this window to and from fullscreen.
 
-#### Example
-```lua
-local focused = Window.get_focused()
-if focused then
-    focused:toggle_fullscreen()
-end
-```
 
 
 
@@ -129,16 +108,7 @@ end
 
 <div class="language-lua"><pre><code>function WindowHandle:set_maximized(maximized: boolean)</code></pre></div>
 
-Set this window to maximized or not.
-
-#### Example
-```lua
-local focused = Window.get_focused()
-if focused then
-    focused:set_maximized(true)
-    focused:set_maximized(false)
-end
-```
+Sets this window to maximized or not.
 
 
 #### Parameters
@@ -154,15 +124,8 @@ end
 
 <div class="language-lua"><pre><code>function WindowHandle:toggle_maximized()</code></pre></div>
 
-Toggle this window to and from maximized.
+Toggles this window to and from maximized.
 
-#### Example
-```lua
-local focused = Window.get_focused()
-if focused then
-    focused:toggle_maximized()
-end
-```
 
 
 
@@ -173,16 +136,7 @@ end
 
 <div class="language-lua"><pre><code>function WindowHandle:set_floating(floating: boolean)</code></pre></div>
 
-Set this window to floating or not.
-
-#### Example
-```lua
-local focused = Window.get_focused()
-if focused then
-    focused:set_floating(true)
-    focused:set_floating(false)
-end
-```
+Sets this window to floating or not.
 
 
 #### Parameters
@@ -198,15 +152,8 @@ end
 
 <div class="language-lua"><pre><code>function WindowHandle:toggle_floating()</code></pre></div>
 
-Toggle this window to and from floating.
+Toggles this window to and from floating.
 
-#### Example
-```lua
-local focused = Window.get_focused()
-if focused then
-    focused:toggle_floating()
-end
-```
 
 
 
@@ -217,15 +164,7 @@ end
 
 <div class="language-lua"><pre><code>function WindowHandle:set_focused(focused: boolean)</code></pre></div>
 
-Focus or unfocus this window.
-
-#### Example
-```lua
-local focused = Window.get_focused()
-if focused then
-    focused:set_focused(false)
-end
-```
+Focuses or unfocuses this window.
 
 
 #### Parameters
@@ -241,15 +180,24 @@ end
 
 <div class="language-lua"><pre><code>function WindowHandle:toggle_focused()</code></pre></div>
 
-Toggle this window to and from focused.
+Toggles this window to and from focused.
 
-#### Example
-```lua
-local focused = Window.get_focused()
-if focused then
-    focused:toggle_focused()
-end
-```
+
+
+
+
+
+
+### <Badge type="method" text="method" /> set_decoration_mode
+
+<div class="language-lua"><pre><code>function WindowHandle:set_decoration_mode(mode: "client_side" | "server_side")</code></pre></div>
+
+Sets this window's decoration mode.
+
+
+#### Parameters
+
+`mode`: <code>"client_side" | "server_side"</code>
 
 
 
@@ -260,18 +208,9 @@ end
 
 <div class="language-lua"><pre><code>function WindowHandle:move_to_tag(tag: <a href="/lua-reference/classes/TagHandle">TagHandle</a>)</code></pre></div>
 
-Move this window to the specified tag.
+Moves this window to the specified tag.
 
-This will remove all tags from this window and tag it with `tag`.
-
-#### Example
-```lua
- -- Assume the focused output has the tag "Tag"
-local focused = Window.get_focused()
-if focused then
-    focused:move_to_tag(Tag.get("Tag"))
-end
-```
+This will remove all tags from this window and add the tag `tag`.
 
 
 #### Parameters
@@ -287,21 +226,7 @@ end
 
 <div class="language-lua"><pre><code>function WindowHandle:set_tag(tag: <a href="/lua-reference/classes/TagHandle">TagHandle</a>, set: boolean)</code></pre></div>
 
-Tag or untag the given tag on this window.
-
-#### Example
-```lua
- -- Assume the focused output has the tag "Tag"
-local focused = Window.get_focused()
-if focused then
-    local tag = Tag.get("Tag")
-
-    focused:set_tag(tag, true)
-    -- `focused` now has tag "Tag"
-    focused:set_tag(tag, false)
-    -- `focused` no longer has tag "Tag"
-end
-```
+Adds or removes the given tag to or from this window.
 
 
 #### Parameters
@@ -318,22 +243,7 @@ end
 
 <div class="language-lua"><pre><code>function WindowHandle:toggle_tag(tag: <a href="/lua-reference/classes/TagHandle">TagHandle</a>)</code></pre></div>
 
-Toggle the given tag on this window.
-
-#### Example
-```lua
- -- Assume the focused output has the tag "Tag"
-local focused = Window.get_focused()
-if focused then
-    local tag = Tag.get("Tag")
-    focused:set_tag(tag, false)
-
-    focused:toggle_tag(tag)
-    -- `focused` now has tag "Tag"
-    focused:toggle_tag(tag)
-    -- `focused` no longer has tag "Tag"
-end
-```
+Toggles the given tag on this window.
 
 
 #### Parameters
@@ -349,17 +259,9 @@ end
 
 <div class="language-lua"><pre><code>function WindowHandle:raise()</code></pre></div>
 
-Raise a window.
+Raises a window.
 
-This will raise a window all the way to the top of the z-stack.
-
-#### Example
-```lua
-local focused = Window.get_focused()
-if focused then
-    focused:raise()
-end
-```
+This will bring the window to the front.
 
 
 
@@ -383,50 +285,46 @@ Returns whether or not this window is on an active tag.
 
 
 
-### <Badge type="method" text="method" /> props
+### <Badge type="method" text="method" /> loc
 
-<div class="language-lua"><pre><code>function WindowHandle:props()
-    -> <a href="/lua-reference/classes/WindowProperties">WindowProperties</a></code></pre></div>
+<div class="language-lua"><pre><code>function WindowHandle:loc()
+    -> { x: integer, y: integer }</code></pre></div>
 
-Get all the properties of this window.
-
-
-
-
-#### Returns
-
-1. <code><a href="/lua-reference/classes/WindowProperties">WindowProperties</a></code>
-
-
-
-
-### <Badge type="method" text="method" /> geometry
-
-<div class="language-lua"><pre><code>function WindowHandle:geometry()
-    -> { x: integer, y: integer, width: integer, height: integer }</code></pre></div>
-
-Get this window's location and size.
-
-Shorthand for `handle:props().geometry`.
+Gets this window's location.
 
 
 
 
 #### Returns
 
-1. <code>{ x: integer, y: integer, width: integer, height: integer }</code>
+1. <code>{ x: integer, y: integer }</code>
 
 
 
 
-### <Badge type="method" text="method" /> class
+### <Badge type="method" text="method" /> size
 
-<div class="language-lua"><pre><code>function WindowHandle:class()
+<div class="language-lua"><pre><code>function WindowHandle:size()
+    -> { width: integer, height: integer }</code></pre></div>
+
+Gets this window's location.
+
+
+
+
+#### Returns
+
+1. <code>{ width: integer, height: integer }</code>
+
+
+
+
+### <Badge type="method" text="method" /> app_id
+
+<div class="language-lua"><pre><code>function WindowHandle:app_id()
     -> string</code></pre></div>
 
-Get this window's class.
-
-Shorthand for `handle:props().class`.
+Gets this window's class.
 
 
 
@@ -443,9 +341,7 @@ Shorthand for `handle:props().class`.
 <div class="language-lua"><pre><code>function WindowHandle:title()
     -> string</code></pre></div>
 
-Get this window's title.
-
-Shorthand for `handle:props().title`.
+Gets this window's title.
 
 
 
@@ -462,9 +358,7 @@ Shorthand for `handle:props().title`.
 <div class="language-lua"><pre><code>function WindowHandle:focused()
     -> boolean</code></pre></div>
 
-Get whether or not this window is focused.
-
-Shorthand for `handle:props().focused`.
+Gets whether or not this window is focused.
 
 
 
@@ -481,9 +375,7 @@ Shorthand for `handle:props().focused`.
 <div class="language-lua"><pre><code>function WindowHandle:floating()
     -> boolean</code></pre></div>
 
-Get whether or not this window is floating.
-
-Shorthand for `handle:props().floating`.
+Gets whether or not this window is floating.
 
 
 
@@ -500,7 +392,7 @@ Shorthand for `handle:props().floating`.
 <div class="language-lua"><pre><code>function WindowHandle:tiled()
     -> boolean</code></pre></div>
 
-Get whether this window is tiled.
+Gets whether this window is tiled.
 
 
 
@@ -517,7 +409,7 @@ Get whether this window is tiled.
 <div class="language-lua"><pre><code>function WindowHandle:fullscreen()
     -> boolean</code></pre></div>
 
-Get whether this window is fullscreen.
+Gets whether this window is fullscreen.
 
 
 
@@ -534,7 +426,7 @@ Get whether this window is fullscreen.
 <div class="language-lua"><pre><code>function WindowHandle:maximized()
     -> boolean</code></pre></div>
 
-Get whether this window is maximized.
+Gets whether this window is maximized.
 
 
 
@@ -546,35 +438,12 @@ Get whether this window is maximized.
 
 
 
-### <Badge type="method" text="method" /> fullscreen_or_maximized
-
-<div class="language-lua"><pre><code>function WindowHandle:fullscreen_or_maximized()
-    -> <a href="/lua-reference/enums/FullscreenOrMaximized">FullscreenOrMaximized</a></code></pre></div>
-
-Deprecated; use the `fullscreen` or `maximized` methods instead.
-
-Get whether this window is fullscreen, maximized, or neither.
-
-Shorthand for `handle:props().fullscreen_or_maximized`.
-
-
-
-
-#### Returns
-
-1. <code><a href="/lua-reference/enums/FullscreenOrMaximized">FullscreenOrMaximized</a></code>
-
-
-
-
 ### <Badge type="method" text="method" /> tags
 
 <div class="language-lua"><pre><code>function WindowHandle:tags()
     -> <a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code></pre></div>
 
-Get all tags on this window.
-
-Shorthand for `handle:props().tags`.
+Gets all tags on this window.
 
 
 

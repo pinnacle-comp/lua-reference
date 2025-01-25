@@ -7,13 +7,6 @@ outline: [2, 3]
 
 Utility functions.
 
-## Fields
-
-### rectangle
-
-`rectangle` = `rectangle`
-
-
 
 
 ## Functions
@@ -23,25 +16,11 @@ Utility functions.
 <div class="language-lua"><pre><code>function Util.batch(requests: fun(): T[])
     -> responses: T[]</code></pre></div>
 
-Batch a set of requests that will be sent to the compositor all at once.
+Batches a set of requests that will be sent to the compositor all at once.
 
 Normally, all API calls are blocking. For example, calling `Window.get_all`
 then calling `WindowHandle.props` on each returned window handle will block
-after each `props` call waiting for the compositor to respond:
-
-```
-local handles = Window.get_all()
-
- -- Collect all the props into this table
-local props = {}
-
- -- This for loop will block after each call. If the compositor is running slowly
- -- for whatever reason, this will take a long time to complete as it requests
- -- properties sequentially.
-for i, handle in ipairs(handles) do
-    props[i] = handle:props()
-end
-```
+after each `props` call waiting for the compositor to respond.
 
 In order to mitigate this issue, you can batch up a set of API calls using this function.
 This will send all requests to the compositor at once without blocking, then wait for the compositor
@@ -54,19 +33,19 @@ evaluated at the callsite in a blocking manner.
 ```lua
 local handles = window.get_all()
 
- ---@type (fun(): WindowProperties)[]
+ ---@type (fun(): bool)[]
 local requests = {}
 
- -- Wrap each request to `props` in another function
+ -- Wrap each request to `focused` in another function
 for i, handle in ipairs(handles) do
     requests[i] = function()
-        return handle:props()
+        return handle:focused()
     end
 end
 
  -- Batch send these requests
 local props = require("pinnacle.util").batch(requests)
- -- `props` now contains the `WindowProperties` of all the windows above
+ -- `props` now contains the focus state of all the windows above
 ```
 
 

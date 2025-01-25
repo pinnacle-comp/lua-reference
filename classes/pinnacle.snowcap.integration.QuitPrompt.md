@@ -58,7 +58,7 @@ outline: [2, 3]
 
 <div class="language-lua"><pre><code>function pinnacle.snowcap.integration.QuitPrompt:show()</code></pre></div>
 
-Show this quit prompt.
+Shows this quit prompt.
 
 
 

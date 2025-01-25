@@ -26,7 +26,7 @@ This can be retrieved through the various `get` functions in the `Tag` module.
 
 <div class="language-lua"><pre><code>function TagHandle:remove()</code></pre></div>
 
-Remove this tag.
+Removes this tag.
 
 #### Example
 ```lua
@@ -46,7 +46,7 @@ tags[4]:remove()
 
 <div class="language-lua"><pre><code>function TagHandle:switch_to()</code></pre></div>
 
-Activate this tag and deactivate all other ones on the same output.
+Activates this tag and deactivates all other ones on the same output.
 
 #### Example
 ```lua
@@ -67,7 +67,7 @@ Tag.get("3"):switch_to() -- Displays Steam
 
 <div class="language-lua"><pre><code>function TagHandle:set_active(active: boolean)</code></pre></div>
 
-Set whether or not this tag is active.
+Sets whether or not this tag is active.
 
 #### Example
 ```lua
@@ -94,7 +94,7 @@ Tag.get("2"):set_active(false) -- Displays Steam
 
 <div class="language-lua"><pre><code>function TagHandle:toggle_active()</code></pre></div>
 
-Toggle this tag's active state.
+Toggles this tag's active state.
 
 #### Example
 ```lua
@@ -111,31 +111,12 @@ Tag.get("2"):toggle_active() -- Displays nothing
 
 
 
-### <Badge type="method" text="method" /> props
-
-<div class="language-lua"><pre><code>function TagHandle:props()
-    -> <a href="/lua-reference/classes/TagProperties">TagProperties</a></code></pre></div>
-
-Get all properties of this tag.
-
-
-
-
-#### Returns
-
-1. <code><a href="/lua-reference/classes/TagProperties">TagProperties</a></code>
-
-
-
-
 ### <Badge type="method" text="method" /> active
 
 <div class="language-lua"><pre><code>function TagHandle:active()
     -> boolean</code></pre></div>
 
-Get whether or not this tag is being displayed.
-
-Shorthand for `handle:props().active`.
+Gets whether or not this tag is active.
 
 
 
@@ -152,9 +133,7 @@ Shorthand for `handle:props().active`.
 <div class="language-lua"><pre><code>function TagHandle:name()
     -> string</code></pre></div>
 
-Get this tag's name.
-
-Shorthand for `handle:props().name`.
+Gets this tag's name.
 
 
 
@@ -171,9 +150,7 @@ Shorthand for `handle:props().name`.
 <div class="language-lua"><pre><code>function TagHandle:output()
     -> <a href="/lua-reference/classes/OutputHandle">OutputHandle</a></code></pre></div>
 
-Get the output this tag is on.
-
-Shorthand for `handle:props().output`.
+Gets the output this tag is on.
 
 
 
@@ -190,9 +167,7 @@ Shorthand for `handle:props().output`.
 <div class="language-lua"><pre><code>function TagHandle:windows()
     -> <a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code></pre></div>
 
-Get the windows that have this tag.
-
-Shorthand for `handle:props().windows`.
+Gets the windows that have this tag.
 
 
 

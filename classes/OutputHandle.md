@@ -8,10 +8,9 @@ outline: [2, 3]
 An output handle.
 
 This is a handle to one of your monitors.
-It serves to make it easier to deal with them, defining methods for getting properties and
-helpers for things like positioning multiple monitors.
 
 This can be retrieved through the various `get` functions in the `Output` module.
+
 
 ## Fields
 
@@ -24,11 +23,11 @@ The unique name of this output
 
 ## Functions
 
-### <Badge type="method" text="method" /> set_location
+### <Badge type="method" text="method" /> set_loc
 
-<div class="language-lua"><pre><code>function OutputHandle:set_location(loc: { x: integer, y: integer })</code></pre></div>
+<div class="language-lua"><pre><code>function OutputHandle:set_loc(x: integer, y: integer)</code></pre></div>
 
-Set the location of this output in the global space.
+Sets the location of this output in the global space.
 
 On startup, Pinnacle will lay out all connected outputs starting at (0, 0)
 and going to the right, with their top borders aligned.
@@ -48,8 +47,8 @@ the pointer will not be able to move between them.
  --              │ 2560x │
  --              │ 1440  │
  --              └───────┘
-Output.get_by_name("DP-1"):set_location({ x = 0, y = 0 })
-Output.get_by_name("HDMI-1"):set_location({ x = 1920, y = -360 })
+Output.get_by_name("DP-1"):set_loc(0, 0)
+Output.get_by_name("HDMI-1"):set_loc(1920, -360)
  -- Results in:
  --       ┌───────┐
  -- ┌─────┤       │
@@ -62,7 +61,8 @@ Output.get_by_name("HDMI-1"):set_location({ x = 1920, y = -360 })
 
 #### Parameters
 
-`loc`: <code>{ x: integer, y: integer }</code>
+`x`: <code>integer</code><br>
+`y`: <code>integer</code>
 
 
 
@@ -75,7 +75,7 @@ Output.get_by_name("HDMI-1"):set_location({ x = 1920, y = -360 })
 
 <div class="language-lua"><pre><code>function OutputHandle:set_loc_adj_to(other: <a href="/lua-reference/classes/OutputHandle">OutputHandle</a>, alignment: <a href="/lua-reference/aliases/Alignment">Alignment</a>)</code></pre></div>
 
-Set the location of this output adjacent to another one.
+Sets the location of this output adjacent to another one.
 
 `alignment` is how you want this output to be placed.
 For example, "top_align_left" will place this output above `other` and align the left borders.
@@ -116,11 +116,11 @@ Output.get_by_name("DP-1"):set_loc_adj_to(Output:get_by_name("HDMI-1"), "bottom_
 
 ### <Badge type="method" text="method" /> set_mode
 
-<div class="language-lua"><pre><code>function OutputHandle:set_mode(pixel_width: integer, pixel_height: integer, refresh_rate_millihz?: integer)</code></pre></div>
+<div class="language-lua"><pre><code>function OutputHandle:set_mode(width: integer, height: integer, refresh_rate_mhz?: integer)</code></pre></div>
 
-Set this output's mode.
+Sets this output's mode.
 
-If `refresh_rate_millihz` is provided, Pinnacle will attempt to use the mode with that refresh rate.
+If `refresh_rate_mhz` is provided, Pinnacle will attempt to use the mode with that refresh rate.
 If it isn't, Pinnacle will attempt to use the mode with the highest refresh rate that matches the
 given size.
 
@@ -136,9 +136,37 @@ Output.get_focused():set_mode(2560, 1440, 144000)
 
 #### Parameters
 
-`pixel_width`: <code>integer</code><br>
-`pixel_height`: <code>integer</code><br>
-`refresh_rate_millihz?`: <code>integer</code>
+`width`: <code>integer</code><br>
+`height`: <code>integer</code><br>
+`refresh_rate_mhz?`: <code>integer</code>
+
+
+
+
+
+
+### <Badge type="method" text="method" /> set_custom_mode
+
+<div class="language-lua"><pre><code>function OutputHandle:set_custom_mode(width: integer, height: integer, refresh_rate_mhz?: integer)</code></pre></div>
+
+Sets this output's mode to a custom one.
+
+If `refresh_rate_mhz` is provided, Pinnacle will create a new mode with that refresh rate.
+If it isn't, it will default to 60Hz.
+
+The refresh rate is in millihertz. For example, to choose a mode with a refresh rate of 60Hz, use 60000.
+
+#### Example
+```lua
+Output.get_focused():set_custom_mode(2560, 1440, 75000)
+```
+
+
+#### Parameters
+
+`width`: <code>integer</code><br>
+`height`: <code>integer</code><br>
+`refresh_rate_mhz?`: <code>integer</code>
 
 
 
@@ -149,9 +177,13 @@ Output.get_focused():set_mode(2560, 1440, 144000)
 
 <div class="language-lua"><pre><code>function OutputHandle:set_modeline(modeline: string | <a href="/lua-reference/classes/Modeline">Modeline</a>)</code></pre></div>
 
-Set a custom modeline for this output.
+Sets a custom modeline for this output.
 
 This accepts a `Modeline` table or a string of the modeline.
+You can parse a modeline into a `Modeline` table with
+```lua
+require("pinnacle.util").output.parse_modeline("your modeline herre")
+```
 
 
 #### Parameters
@@ -167,7 +199,7 @@ This accepts a `Modeline` table or a string of the modeline.
 
 <div class="language-lua"><pre><code>function OutputHandle:set_scale(scale: number)</code></pre></div>
 
-Set this output's scaling factor.
+Sets this output's scaling factor.
 
 
 #### Parameters
@@ -179,32 +211,16 @@ Set this output's scaling factor.
 
 
 
-### <Badge type="method" text="method" /> increase_scale
+### <Badge type="method" text="method" /> change_scale
 
-<div class="language-lua"><pre><code>function OutputHandle:increase_scale(increase_by: number)</code></pre></div>
+<div class="language-lua"><pre><code>function OutputHandle:change_scale(change_by: number)</code></pre></div>
 
-Increase this output's scaling factor.
-
-
-#### Parameters
-
-`increase_by`: <code>number</code>
-
-
-
-
-
-
-### <Badge type="method" text="method" /> decrease_scale
-
-<div class="language-lua"><pre><code>function OutputHandle:decrease_scale(decrease_by: number)</code></pre></div>
-
-Decrease this output's scaling factor.
+Changes this output's scaling factor by the given amount.
 
 
 #### Parameters
 
-`decrease_by`: <code>number</code>
+`change_by`: <code>number</code>
 
 
 
@@ -215,7 +231,7 @@ Decrease this output's scaling factor.
 
 <div class="language-lua"><pre><code>function OutputHandle:set_transform(transform: <a href="/lua-reference/enums/Transform">Transform</a>)</code></pre></div>
 
-Set this output's transform.
+Sets this output's transform.
 
 
 #### Parameters
@@ -231,7 +247,7 @@ Set this output's transform.
 
 <div class="language-lua"><pre><code>function OutputHandle:set_powered(powered: boolean)</code></pre></div>
 
-Power on or off this output.
+Powers on or off this output.
 
 
 #### Parameters
@@ -243,19 +259,13 @@ Power on or off this output.
 
 
 
-### <Badge type="method" text="method" /> props
+### <Badge type="method" text="method" /> toggle_powered
 
-<div class="language-lua"><pre><code>function OutputHandle:props()
-    -> <a href="/lua-reference/classes/OutputProperties">OutputProperties</a></code></pre></div>
+<div class="language-lua"><pre><code>function OutputHandle:toggle_powered()</code></pre></div>
 
-Get all properties of this output.
-
+Toggles power for this output.
 
 
-
-#### Returns
-
-1. <code><a href="/lua-reference/classes/OutputProperties">OutputProperties</a></code>
 
 
 
@@ -265,11 +275,7 @@ Get all properties of this output.
 <div class="language-lua"><pre><code>function OutputHandle:make()
     -> string</code></pre></div>
 
-Get this output's make.
-
-Note: make and model detection are currently somewhat iffy and may not work.
-
-Shorthand for `handle:props().make`.
+Gets this output's make.
 
 
 
@@ -286,11 +292,7 @@ Shorthand for `handle:props().make`.
 <div class="language-lua"><pre><code>function OutputHandle:model()
     -> string</code></pre></div>
 
-Get this output's model.
-
-Note: make and model detection are currently somewhat iffy and may not work.
-
-Shorthand for `handle:props().model`.
+Gets this output's model.
 
 
 
@@ -302,82 +304,72 @@ Shorthand for `handle:props().model`.
 
 
 
-### <Badge type="method" text="method" /> x
+### <Badge type="method" text="method" /> serial
 
-<div class="language-lua"><pre><code>function OutputHandle:x()
-    -> integer</code></pre></div>
+<div class="language-lua"><pre><code>function OutputHandle:serial()
+    -> string</code></pre></div>
 
-Get this output's x-coordinate in the global space.
-
-Shorthand for `handle:props().x`.
+Gets this output's serial.
 
 
 
 
 #### Returns
 
-1. <code>integer</code>
+1. <code>string</code>
 
 
 
 
-### <Badge type="method" text="method" /> y
+### <Badge type="method" text="method" /> loc
 
-<div class="language-lua"><pre><code>function OutputHandle:y()
-    -> integer</code></pre></div>
+<div class="language-lua"><pre><code>function OutputHandle:loc()
+    -> { x: integer, y: integer }</code></pre></div>
 
-Get this output's y-coordinate in the global space.
-
-Shorthand for `handle:props().y`.
+Gets this output's location in the global space.
 
 
 
 
 #### Returns
 
-1. <code>integer</code>
+1. <code>{ x: integer, y: integer }</code>
 
 
 
 
-### <Badge type="method" text="method" /> logical_width
+### <Badge type="method" text="method" /> logical_size
 
-<div class="language-lua"><pre><code>function OutputHandle:logical_width()
-    -> integer</code></pre></div>
+<div class="language-lua"><pre><code>function OutputHandle:logical_size()
+    -> { width: integer, height: integer }</code></pre></div>
 
-Get this output's logical width in pixels.
+Gets this output's logical size in logical pixels.
 
 If the output is disabled, this returns nil.
 
-Shorthand for `handle:props().logical_width`.
+
+
+
+#### Returns
+
+1. <code>{ width: integer, height: integer }</code>
+
+
+
+
+### <Badge type="method" text="method" /> physical_size
+
+<div class="language-lua"><pre><code>function OutputHandle:physical_size()
+    -> { width: integer, height: integer }</code></pre></div>
+
+Gets this output's physical size in millimeters.
 
 
 
 
 #### Returns
 
-1. <code>integer</code>
-
-
-
-
-### <Badge type="method" text="method" /> logical_height
-
-<div class="language-lua"><pre><code>function OutputHandle:logical_height()
-    -> integer</code></pre></div>
-
-Get this output's logical height in pixels.
-
-If the output is disabled, this returns nil.
-
-Shorthand for `handle:props().y`.
-
-
-
-
-#### Returns
-
-1. <code>integer</code>
+1. <code>{ width: integer, height: integer }</code>
 
 
 
@@ -387,9 +379,7 @@ Shorthand for `handle:props().y`.
 <div class="language-lua"><pre><code>function OutputHandle:current_mode()
     -> <a href="/lua-reference/classes/Mode">Mode</a></code></pre></div>
 
-Get this output's current mode.
-
-Shorthand for `handle:props().current_mode`.
+Gets this output's current mode.
 
 
 
@@ -406,9 +396,7 @@ Shorthand for `handle:props().current_mode`.
 <div class="language-lua"><pre><code>function OutputHandle:preferred_mode()
     -> <a href="/lua-reference/classes/Mode">Mode</a></code></pre></div>
 
-Get this output's preferred mode.
-
-Shorthand for `handle:props().preferred_mode`.
+Gets this output's preferred mode.
 
 
 
@@ -425,9 +413,7 @@ Shorthand for `handle:props().preferred_mode`.
 <div class="language-lua"><pre><code>function OutputHandle:modes()
     -> <a href="/lua-reference/classes/Mode">Mode</a>[]</code></pre></div>
 
-Get all of this output's available modes.
-
-Shorthand for `handle:props().modes`.
+Gets all of this output's available modes.
 
 
 
@@ -439,54 +425,14 @@ Shorthand for `handle:props().modes`.
 
 
 
-### <Badge type="method" text="method" /> physical_width
-
-<div class="language-lua"><pre><code>function OutputHandle:physical_width()
-    -> integer</code></pre></div>
-
-Get this output's physical width in millimeters.
-
-Shorthand for `handle:props().physical_width`.
-
-
-
-
-#### Returns
-
-1. <code>integer</code>
-
-
-
-
-### <Badge type="method" text="method" /> physical_height
-
-<div class="language-lua"><pre><code>function OutputHandle:physical_height()
-    -> integer</code></pre></div>
-
-Get this output's physical height in millimeters.
-
-Shorthand for `handle:props().physical_height`.
-
-
-
-
-#### Returns
-
-1. <code>integer</code>
-
-
-
-
 ### <Badge type="method" text="method" /> focused
 
 <div class="language-lua"><pre><code>function OutputHandle:focused()
     -> boolean</code></pre></div>
 
-Get whether or not this output is focused.
+Gets whether or not this output is focused.
 
 The focused output is currently implemented as the one that last had pointer motion.
-
-Shorthand for `handle:props().focused`.
 
 
 
@@ -503,9 +449,7 @@ Shorthand for `handle:props().focused`.
 <div class="language-lua"><pre><code>function OutputHandle:tags()
     -> <a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code></pre></div>
 
-Get the tags this output has.
-
-Shorthand for `handle:props().tags`.
+Gets the tags this output has.
 
 
 
@@ -522,9 +466,7 @@ Shorthand for `handle:props().tags`.
 <div class="language-lua"><pre><code>function OutputHandle:scale()
     -> number</code></pre></div>
 
-Get this output's scaling factor.
-
-Shorthand for `handle:props().scale`.
+Get this output's scale.
 
 
 
@@ -543,8 +485,6 @@ Shorthand for `handle:props().scale`.
 
 Get this output's transform.
 
-Shorthand for `handle:props().transform`.
-
 
 
 
@@ -555,56 +495,12 @@ Shorthand for `handle:props().transform`.
 
 
 
-### <Badge type="method" text="method" /> serial
-
-<div class="language-lua"><pre><code>function OutputHandle:serial()
-    -> string</code></pre></div>
-
-Get this output's EDID serial.
-
-Shorthand for `handle:props().serial`.
-
-
-
-
-#### Returns
-
-1. <code>string</code>
-
-
-
-
-### <Badge type="method" text="method" /> keyboard_focus_stack
-
-<div class="language-lua"><pre><code>function OutputHandle:keyboard_focus_stack()
-    -> <a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code></pre></div>
-
-Get this output's keyboard focus stack.
-
-This includes *all* windows on the output, even those on inactive tags.
-If you only want visible windows, use `keyboard_focus_stack_visible` instead.
-
-Shorthand for `handle:props().keyboard_focus_stack`.
-
-
-
-
-
-#### Returns
-
-1. <code><a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code>
-
-
-
-#### See also
-
-- <code><a href="/lua-reference/classes/OutputHandle#keyboard_focus_stack_visible">OutputHandle.keyboard_focus_stack_visible</a></code>
 ### <Badge type="method" text="method" /> enabled
 
 <div class="language-lua"><pre><code>function OutputHandle:enabled()
     -> boolean</code></pre></div>
 
-Get whether this output is enabled.
+Gets whether this output is enabled.
 
 Disabled outputs are not mapped to the global space and cannot be used.
 
@@ -623,7 +519,7 @@ Disabled outputs are not mapped to the global space and cannot be used.
 <div class="language-lua"><pre><code>function OutputHandle:powered()
     -> boolean</code></pre></div>
 
-Get whether this output is powered.
+Gets whether this output is powered.
 
 Unpowered outputs that are enabled will be off, but they will still be
 mapped to the global space, meaning you can still interact with them.
@@ -638,12 +534,35 @@ mapped to the global space, meaning you can still interact with them.
 
 
 
+### <Badge type="method" text="method" /> keyboard_focus_stack
+
+<div class="language-lua"><pre><code>function OutputHandle:keyboard_focus_stack()
+    -> <a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code></pre></div>
+
+Gets this output's keyboard focus stack.
+
+This includes *all* windows on the output, even those on inactive tags.
+If you only want visible windows, use `keyboard_focus_stack_visible` instead.
+
+
+
+
+
+#### Returns
+
+1. <code><a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code>
+
+
+
+#### See also
+
+- <code><a href="/lua-reference/classes/OutputHandle#keyboard_focus_stack_visible">OutputHandle.keyboard_focus_stack_visible</a></code>
 ### <Badge type="method" text="method" /> keyboard_focus_stack_visible
 
 <div class="language-lua"><pre><code>function OutputHandle:keyboard_focus_stack_visible()
     -> <a href="/lua-reference/classes/WindowHandle">WindowHandle</a>[]</code></pre></div>
 
-Get this output's keyboard focus stack.
+Gets this output's keyboard focus stack.
 
 This only includes windows on active tags.
 If you want all windows on the output, use `keyboard_focus_stack` instead.

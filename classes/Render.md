@@ -16,7 +16,7 @@ Rendering management.
 
 <div class="language-lua"><pre><code>function Render.set_upscale_filter(filter: <a href="/lua-reference/enums/ScalingFilter">ScalingFilter</a>)</code></pre></div>
 
-Set the upscale filter the renderer will use to upscale buffers.
+Sets the upscale filter the renderer will use to upscale buffers.
 
 
 #### Parameters
@@ -32,7 +32,7 @@ Set the upscale filter the renderer will use to upscale buffers.
 
 <div class="language-lua"><pre><code>function Render.set_downscale_filter(filter: <a href="/lua-reference/enums/ScalingFilter">ScalingFilter</a>)</code></pre></div>
 
-Set the downscale filter the renderer will use to downscale buffers.
+Sets the downscale filter the renderer will use to downscale buffers.
 
 
 #### Parameters

@@ -37,7 +37,7 @@ If you need to get tags beyond the first with the same name, use the `get` metho
 <div class="language-lua"><pre><code>function Tag.get_all()
     -> <a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code></pre></div>
 
-Get all tags across all outputs.
+Gets all tags across all outputs.
 
 
 
@@ -54,7 +54,7 @@ Get all tags across all outputs.
 <div class="language-lua"><pre><code>function Tag.get(name: string, output?: <a href="/lua-reference/classes/OutputHandle">OutputHandle</a>)
     -> <a href="/lua-reference/classes/TagHandle">TagHandle</a> | nil</code></pre></div>
 
-Get the tag with the given name and output.
+Gets the tag with the given name and output.
 
 If `output` is not specified, this uses the focused output.
 
@@ -66,7 +66,7 @@ If an output has more than one tag with the same name, this returns the first.
 local tag = Tag.get("Tag")
 
  -- Get tags on a specific output
-local tag_on_hdmi1 = Tag.get("Tag", Output:get_by_name("HDMI-1"))
+local tag_on_hdmi1 = Tag.get("Tag", Output.get_by_name("HDMI-1"))
 ```
 
 
@@ -90,7 +90,7 @@ local tag_on_hdmi1 = Tag.get("Tag", Output:get_by_name("HDMI-1"))
 <div class="language-lua"><pre><code>function Tag.add(output: <a href="/lua-reference/classes/OutputHandle">OutputHandle</a>, ...: string)
     -> tags: <a href="/lua-reference/classes/TagHandle">TagHandle</a>[]</code></pre></div>
 
-Add tags with the given names to the specified output.
+Adds tags with the given names to the specified output.
 
 Returns handles to the created tags.
 
@@ -124,7 +124,7 @@ local tags = Tag.add(Output.get_by_name("HDMI-1"), tag_names)
 
 <div class="language-lua"><pre><code>function Tag.remove(tags: <a href="/lua-reference/classes/TagHandle">TagHandle</a>[])</code></pre></div>
 
-Remove the given tags.
+Removes the given tags.
 
 #### Example
 ```lua
@@ -148,10 +148,10 @@ Tag.remove(tags) -- "HDMI-1" no longer has those tags
 <div class="language-lua"><pre><code>function Tag.connect_signal(signals: <a href="/lua-reference/classes/TagSignal">TagSignal</a>)
     -> signal_handles: <a href="/lua-reference/classes/SignalHandles">SignalHandles</a></code></pre></div>
 
-Connect to a tag signal.
+Connects to a tag signal.
 
-The compositor sends signals about various events. Use this function to run a callback when
-some tag signal occurs.
+`signals` is a table containing the signal(s) you want to connect to along with
+a corresponding callback that will be called when the signal is signalled.
 
 This function returns a table of signal handles with each handle stored at the same key used
 to connect to the signal. See `SignalHandles` for more information.
