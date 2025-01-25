@@ -2,16 +2,20 @@
 outline: [2, 3]
 ---
 
-# Enum `FullscreenOrMaximized`
+# Enum `LayoutMode`
 <Badge type="tip" text="key" />
 
-`"neither"` | `"fullscreen"` | `"maximized"`
+`"tiled"` | `"floating"` | `"fullscreen"` | `"maximized"`
 
 
 
 ## Values
 
-### `"neither"`
+### `"tiled"`
+
+
+
+### `"floating"`
 
 
 

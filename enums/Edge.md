@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Enum `MouseEdge`
+# Enum `Edge`
 <Badge type="tip" text="key" />
 
 `"press"` | `"release"`
