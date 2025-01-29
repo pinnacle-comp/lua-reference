@@ -21,4 +21,10 @@ The pointer entered a window.
 
 The pointer left a window.
 
+### focused <Badge type="danger" text="nullable" />
+
+`focused?`: <code>fun(window: <a href="/lua-reference/classes/WindowHandle">WindowHandle</a>)</code>
+
+The window got keyboard focus.
+
 
