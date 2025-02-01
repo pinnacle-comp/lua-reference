@@ -54,6 +54,31 @@ Gets the currently running backend.
 
 
 
+### <Badge type="function" text="function" /> set_xwayland_self_scaling
+
+<div class="language-lua"><pre><code>function Pinnacle.set_xwayland_self_scaling(should_self_scale: boolean)</code></pre></div>
+
+Sets whether or not xwayland clients should scale themselves.
+
+If `true`, xwayland clients will be told they are on an output with a larger or smaller size than
+normal then rescaled to replicate being on an output with a scale of 1.
+
+Xwayland clients that support DPI scaling will scale properly, leading to crisp and correct scaling
+with fractional output scales. Those that don't, like `xterm`, will render as if they are on outputs
+with scale 1, and their scale will be slightly incorrect on outputs with fractional scale.
+
+Results may vary if you have multiple outputs with different scales.
+
+
+#### Parameters
+
+`should_self_scale`: <code>boolean</code>
+
+
+
+
+
+
 ### <Badge type="function" text="function" /> init
 
 <div class="language-lua"><pre><code>function Pinnacle.init()</code></pre></div>
