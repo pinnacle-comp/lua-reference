@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Alias `Alignment`
+# Alias `pinnacle.output.Alignment`
 
 <code>"top_align_left"</code> | <code>"top_align_center"</code> | <code>"top_align_right"</code> | <code>"bottom_align_left"</code> | <code>"bottom_align_center"</code> | <code>"bottom_align_right"</code> | <code>"left_align_top"</code> | <code>"left_align_center"</code> | <code>"left_align_bottom"</code> | <code>"right_align_top"</code> | <code>"right_align_center"</code> | <code>"right_align_bottom"</code>
 
