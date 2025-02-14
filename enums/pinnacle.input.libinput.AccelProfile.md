@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Enum `AccelProfile`
+# Enum `pinnacle.input.libinput.AccelProfile`
 <Badge type="tip" text="key" />
 
 `"flat"` | `"adaptive"`

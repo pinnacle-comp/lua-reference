@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Enum `ScrollMethod`
+# Enum `pinnacle.input.libinput.ScrollMethod`
 <Badge type="tip" text="key" />
 
 `"no_scroll"` | `"two_finger"` | `"edge"` | `"on_button_down"`

@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Enum `ScalingFilter`
+# Enum `pinnacle.render.ScalingFilter`
 <Badge type="tip" text="key" />
 
 `"bilinear"` | `"nearest_neighbor"`

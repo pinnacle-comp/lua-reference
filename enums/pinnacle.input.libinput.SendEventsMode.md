@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Enum `SendEventsMode`
+# Enum `pinnacle.input.libinput.SendEventsMode`
 <Badge type="tip" text="key" />
 
 `"enabled"` | `"disabled"` | `"disabled_on_external_mouse"`

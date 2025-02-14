@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Enum `TapButtonMap`
+# Enum `pinnacle.input.libinput.TapButtonMap`
 <Badge type="tip" text="key" />
 
 `"left_right_middle"` | `"left_middle_right"`

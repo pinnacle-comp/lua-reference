@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Enum `ClickMethod`
+# Enum `pinnacle.input.libinput.ClickMethod`
 <Badge type="tip" text="key" />
 
 `"button_areas"` | `"click_finger"`
