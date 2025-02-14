@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Alias `LayoutDir`
+# Alias `pinnacle.layout.LayoutDir`
 
 <code>"row"</code> | <code>"column"</code>
 
