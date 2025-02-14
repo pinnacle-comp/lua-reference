@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `pinnacle.layout.builtin.Dwindle` : <code><a href="/lua-reference/classes/LayoutGenerator">LayoutGenerator</a></code>
+# Class `pinnacle.layout.builtin.Dwindle` : <code><a href="/lua-reference/classes/pinnacle.layout.LayoutGenerator">pinnacle.layout.LayoutGenerator</a></code>
 
 
 

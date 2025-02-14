@@ -17,19 +17,19 @@ outline: [2, 3]
 
 ### stdin <Badge type="danger" text="nullable" />
 
-`stdin?`: <code>Socket</code>
+`stdin?`: <code><a href="/lua-reference/classes/pinnacle.process.ChildStdin">pinnacle.process.ChildStdin</a></code>
 
 
 
 ### stdout <Badge type="danger" text="nullable" />
 
-`stdout?`: <code>Socket</code>
+`stdout?`: <code><a href="/lua-reference/classes/pinnacle.process.ChildStdout">pinnacle.process.ChildStdout</a></code>
 
 
 
 ### stderr <Badge type="danger" text="nullable" />
 
-`stderr?`: <code>Socket</code>
+`stderr?`: <code><a href="/lua-reference/classes/pinnacle.process.ChildStderr">pinnacle.process.ChildStderr</a></code>
 
 
 

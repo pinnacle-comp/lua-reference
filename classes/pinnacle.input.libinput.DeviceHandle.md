@@ -108,13 +108,13 @@ when it may actually be a keyboard.
 
 ### <Badge type="method" text="method" /> set_accel_profile
 
-<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_accel_profile(accel_profile: <a href="/lua-reference/enums/AccelProfile">AccelProfile</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_accel_profile(accel_profile: <a href="/lua-reference/enums/pinnacle.input.libinput.AccelProfile">pinnacle.input.libinput.AccelProfile</a>)</code></pre></div>
 
 
 
 #### Parameters
 
-`accel_profile`: <code><a href="/lua-reference/enums/AccelProfile">AccelProfile</a></code>
+`accel_profile`: <code><a href="/lua-reference/enums/pinnacle.input.libinput.AccelProfile">pinnacle.input.libinput.AccelProfile</a></code>
 
 
 
@@ -153,13 +153,13 @@ when it may actually be a keyboard.
 
 ### <Badge type="method" text="method" /> set_click_method
 
-<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_click_method(click_method: <a href="/lua-reference/enums/ClickMethod">ClickMethod</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_click_method(click_method: <a href="/lua-reference/enums/pinnacle.input.libinput.ClickMethod">pinnacle.input.libinput.ClickMethod</a>)</code></pre></div>
 
 
 
 #### Parameters
 
-`click_method`: <code><a href="/lua-reference/enums/ClickMethod">ClickMethod</a></code>
+`click_method`: <code><a href="/lua-reference/enums/pinnacle.input.libinput.ClickMethod">pinnacle.input.libinput.ClickMethod</a></code>
 
 
 
@@ -258,13 +258,13 @@ when it may actually be a keyboard.
 
 ### <Badge type="method" text="method" /> set_scroll_method
 
-<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_scroll_method(scroll_method: <a href="/lua-reference/enums/ScrollMethod">ScrollMethod</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_scroll_method(scroll_method: <a href="/lua-reference/enums/pinnacle.input.libinput.ScrollMethod">pinnacle.input.libinput.ScrollMethod</a>)</code></pre></div>
 
 
 
 #### Parameters
 
-`scroll_method`: <code><a href="/lua-reference/enums/ScrollMethod">ScrollMethod</a></code>
+`scroll_method`: <code><a href="/lua-reference/enums/pinnacle.input.libinput.ScrollMethod">pinnacle.input.libinput.ScrollMethod</a></code>
 
 
 
@@ -288,13 +288,13 @@ when it may actually be a keyboard.
 
 ### <Badge type="method" text="method" /> set_tap_button_map
 
-<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_tap_button_map(tap_button_map: <a href="/lua-reference/enums/TapButtonMap">TapButtonMap</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_tap_button_map(tap_button_map: <a href="/lua-reference/enums/pinnacle.input.libinput.TapButtonMap">pinnacle.input.libinput.TapButtonMap</a>)</code></pre></div>
 
 
 
 #### Parameters
 
-`tap_button_map`: <code><a href="/lua-reference/enums/TapButtonMap">TapButtonMap</a></code>
+`tap_button_map`: <code><a href="/lua-reference/enums/pinnacle.input.libinput.TapButtonMap">pinnacle.input.libinput.TapButtonMap</a></code>
 
 
 
@@ -348,13 +348,13 @@ when it may actually be a keyboard.
 
 ### <Badge type="method" text="method" /> set_send_events_mode
 
-<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_send_events_mode(send_events_mode: <a href="/lua-reference/enums/SendEventsMode">SendEventsMode</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_send_events_mode(send_events_mode: <a href="/lua-reference/enums/pinnacle.input.libinput.SendEventsMode">pinnacle.input.libinput.SendEventsMode</a>)</code></pre></div>
 
 
 
 #### Parameters
 
-`send_events_mode`: <code><a href="/lua-reference/enums/SendEventsMode">SendEventsMode</a></code>
+`send_events_mode`: <code><a href="/lua-reference/enums/pinnacle.input.libinput.SendEventsMode">pinnacle.input.libinput.SendEventsMode</a></code>
 
 
 
