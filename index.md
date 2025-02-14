@@ -8,5 +8,5 @@ hero:
   actions:
     - theme: brand
       text: Read the Reference
-      link: /classes/pinnacle.Pinnacle
+      link: /classes/pinnacle
 ---
