@@ -23,7 +23,7 @@ outline: [2, 3]
 
 ### direction <Badge type="danger" text="nullable" />
 
-`direction?`: <code><a href="/lua-reference/aliases/LayoutDir">LayoutDir</a></code>
+`direction?`: <code><a href="/lua-reference/aliases/pinnacle.layout.LayoutDir">pinnacle.layout.LayoutDir</a></code>
 
 
 

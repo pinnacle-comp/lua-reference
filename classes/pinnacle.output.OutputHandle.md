@@ -68,7 +68,9 @@ Output.get_by_name("HDMI-1"):set_loc(1920, -360)
 
 
 
+#### See also
 
+- <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle#set_loc_adj_to">pinnacle.output.OutputHandle.set_loc_adj_to</a></code>
 ### <Badge type="method" text="method" /> set_loc_adj_to
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_loc_adj_to(other: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>, alignment: <a href="/lua-reference/aliases/pinnacle.output.Alignment">pinnacle.output.Alignment</a>)</code></pre></div>
@@ -552,7 +554,9 @@ If you only want visible windows, use `keyboard_focus_stack_visible` instead.
 
 
 
+#### See also
 
+- <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle#keyboard_focus_stack_visible">pinnacle.output.OutputHandle.keyboard_focus_stack_visible</a></code>
 ### <Badge type="method" text="method" /> keyboard_focus_stack_visible
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:keyboard_focus_stack_visible()
@@ -573,3 +577,6 @@ If you want all windows on the output, use `keyboard_focus_stack` instead.
 
 
 
+#### See also
+
+- <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle#keyboard_focus_stack">pinnacle.output.OutputHandle.keyboard_focus_stack</a></code>

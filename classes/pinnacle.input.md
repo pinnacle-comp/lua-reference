@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `pinnacle.input.Input`
+# Class `pinnacle.input`
 
 
 Input management.
@@ -28,7 +28,7 @@ This module provides utilities to set key- and mousebinds as well as change keyb
 
 ### <Badge type="function" text="function" /> keybind
 
-<div class="language-lua"><pre><code>function pinnacle.input.Input.keybind(mods: <a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[], key: <a href="/lua-reference/enums/pinnacle.input.Key">pinnacle.input.Key</a> | string, on_press: fun(), bind_info?: { group: string, description: string })</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.keybind(mods: <a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[], key: <a href="/lua-reference/enums/pinnacle.input.Key">pinnacle.input.Key</a> | string, on_press: fun(), bind_info?: { group: string, description: string })</code></pre></div>
 
 Sets a keybind.
 
@@ -85,7 +85,7 @@ end)
 
 ### <Badge type="function" text="function" /> mousebind
 
-<div class="language-lua"><pre><code>function pinnacle.input.Input.mousebind(mods: <a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[], button: <a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a>, on_press: fun(), bind_info?: { group: string, description: string })</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.mousebind(mods: <a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[], button: <a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a>, on_press: fun(), bind_info?: { group: string, description: string })</code></pre></div>
 
 Sets a mousebind.
 
@@ -134,7 +134,7 @@ end)
 
 ### <Badge type="function" text="function" /> enter_bind_layer
 
-<div class="language-lua"><pre><code>function pinnacle.input.Input.enter_bind_layer(layer?: string)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.enter_bind_layer(layer?: string)</code></pre></div>
 
 Enters the bind layer `layer`, or the default layer if `layer` is nil.
 
@@ -150,7 +150,7 @@ Enters the bind layer `layer`, or the default layer if `layer` is nil.
 
 ### <Badge type="function" text="function" /> bind_infos
 
-<div class="language-lua"><pre><code>function pinnacle.input.Input.bind_infos()
+<div class="language-lua"><pre><code>function pinnacle.input.bind_infos()
     -> <a href="/lua-reference/classes/pinnacle.input.BindInfo">pinnacle.input.BindInfo</a>[]</code></pre></div>
 
 Gets all binds and their information.
@@ -167,7 +167,7 @@ Gets all binds and their information.
 
 ### <Badge type="function" text="function" /> set_xkb_config
 
-<div class="language-lua"><pre><code>function pinnacle.input.Input.set_xkb_config(xkb_config: <a href="/lua-reference/classes/pinnacle.input.XkbConfig">pinnacle.input.XkbConfig</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.set_xkb_config(xkb_config: <a href="/lua-reference/classes/pinnacle.input.XkbConfig">pinnacle.input.XkbConfig</a>)</code></pre></div>
 
 Sets the xkbconfig for your keyboard.
 
@@ -193,7 +193,7 @@ Input.set_xkb_config({
 
 ### <Badge type="function" text="function" /> set_repeat_rate
 
-<div class="language-lua"><pre><code>function pinnacle.input.Input.set_repeat_rate(rate: integer, delay: integer)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.set_repeat_rate(rate: integer, delay: integer)</code></pre></div>
 
 Sets the keyboard's repeat rate and delay.
 
@@ -215,7 +215,7 @@ Input.set_repeat_rate(100, 1000) -- Key must be held down for 1 second, then rep
 
 ### <Badge type="function" text="function" /> set_xcursor_theme
 
-<div class="language-lua"><pre><code>function pinnacle.input.Input.set_xcursor_theme(theme: string)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.set_xcursor_theme(theme: string)</code></pre></div>
 
 Sets the current xcursor theme.
 
@@ -234,7 +234,7 @@ This allows you to set it at runtime.
 
 ### <Badge type="function" text="function" /> set_xcursor_size
 
-<div class="language-lua"><pre><code>function pinnacle.input.Input.set_xcursor_size(size: integer)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.set_xcursor_size(size: integer)</code></pre></div>
 
 Sets the current xcursor size.
 
@@ -253,7 +253,7 @@ This allows you to set it at runtime.
 
 ### <Badge type="function" text="function" /> connect_signal
 
-<div class="language-lua"><pre><code>function pinnacle.input.Input.connect_signal(signals: <a href="/lua-reference/classes/pinnacle.input.InputSignal">pinnacle.input.InputSignal</a>)
+<div class="language-lua"><pre><code>function pinnacle.input.connect_signal(signals: <a href="/lua-reference/classes/pinnacle.input.InputSignal">pinnacle.input.InputSignal</a>)
     -> signal_handles: <a href="/lua-reference/classes/pinnacle.signal.SignalHandles">pinnacle.signal.SignalHandles</a></code></pre></div>
 
 Connects to an input signal.
@@ -287,3 +287,6 @@ Input.connect_signal({
 
 
 
+#### See also
+
+- <code><a href="/lua-reference/classes/pinnacle#signal.SignalHandles.disconnect_all">pinnacle.signal.SignalHandles.disconnect_all</a></code>: - To disconnect from these signals

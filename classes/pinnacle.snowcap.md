@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `pinnacle.snowcap.Snowcap`
+# Class `pinnacle.snowcap`
 
 
 The Snowcap widget system, integrated into Pinnacle.

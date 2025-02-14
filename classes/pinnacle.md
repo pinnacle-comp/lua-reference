@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `pinnacle.Pinnacle`
+# Class `pinnacle`
 
 
 The entry point to configuration.
@@ -17,7 +17,7 @@ It also contains general compositor actions like `quit` and `reload_config`.
 
 ### <Badge type="function" text="function" /> quit
 
-<div class="language-lua"><pre><code>function pinnacle.Pinnacle.quit()</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.quit()</code></pre></div>
 
 Quits Pinnacle.
 
@@ -28,7 +28,7 @@ Quits Pinnacle.
 
 ### <Badge type="function" text="function" /> reload_config
 
-<div class="language-lua"><pre><code>function pinnacle.Pinnacle.reload_config()</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.reload_config()</code></pre></div>
 
 Reloads the active config.
 
@@ -39,7 +39,7 @@ Reloads the active config.
 
 ### <Badge type="function" text="function" /> backend
 
-<div class="language-lua"><pre><code>function pinnacle.Pinnacle.backend()
+<div class="language-lua"><pre><code>function pinnacle.backend()
     -> "tty" | "window"</code></pre></div>
 
 Gets the currently running backend.
@@ -56,7 +56,7 @@ Gets the currently running backend.
 
 ### <Badge type="function" text="function" /> set_xwayland_self_scaling
 
-<div class="language-lua"><pre><code>function pinnacle.Pinnacle.set_xwayland_self_scaling(should_self_scale: boolean)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.set_xwayland_self_scaling(should_self_scale: boolean)</code></pre></div>
 
 Sets whether or not xwayland clients should scale themselves.
 
@@ -81,7 +81,7 @@ Results may vary if you have multiple outputs with different scales.
 
 ### <Badge type="function" text="function" /> init
 
-<div class="language-lua"><pre><code>function pinnacle.Pinnacle.init()</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.init()</code></pre></div>
 
 Initializes the protobuf backend and connects to Pinnacle's gRPC socket.
 
@@ -95,7 +95,7 @@ connect to its socket as well.
 
 ### <Badge type="function" text="function" /> setup
 
-<div class="language-lua"><pre><code>function pinnacle.Pinnacle.setup(config_fn: fun())</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.setup(config_fn: fun())</code></pre></div>
 
 Sets up a Pinnacle config.
 
@@ -113,10 +113,12 @@ If you want to run a function with the config without blocking, see `Pinnacle.ru
 
 
 
+#### See also
 
+- <code><a href="/lua-reference/classes/pinnacle#Pinnacle.run">pinnacle.Pinnacle.run</a></code>
 ### <Badge type="function" text="function" /> run
 
-<div class="language-lua"><pre><code>function pinnacle.Pinnacle.run(run_fn: fun())</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.run(run_fn: fun())</code></pre></div>
 
 Runs a function with the Pinnacle API.
 

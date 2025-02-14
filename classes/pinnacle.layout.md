@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `pinnacle.layout.Layout`
+# Class `pinnacle.layout`
 
 
 Layout management.
@@ -21,7 +21,7 @@ Layout management.
 
 ### <Badge type="function" text="function" /> manage
 
-<div class="language-lua"><pre><code>function pinnacle.layout.Layout.manage(on_layout: fun(args: <a href="/lua-reference/classes/pinnacle.layout.LayoutArgs">pinnacle.layout.LayoutArgs</a>): <a href="/lua-reference/classes/pinnacle.layout.LayoutNode">pinnacle.layout.LayoutNode</a>)
+<div class="language-lua"><pre><code>function pinnacle.layout.manage(on_layout: fun(args: <a href="/lua-reference/classes/pinnacle.layout.LayoutArgs">pinnacle.layout.LayoutArgs</a>): <a href="/lua-reference/classes/pinnacle.layout.LayoutNode">pinnacle.layout.LayoutNode</a>)
     -> <a href="/lua-reference/classes/pinnacle.layout.LayoutRequester">pinnacle.layout.LayoutRequester</a></code></pre></div>
 
 Begins managing layout requests from the compositor.

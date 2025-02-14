@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `Window`
+# Class `pinnacle.window`
 
 
 Window management.
@@ -16,7 +16,7 @@ moving them between tags, and various other actions.
 
 ### <Badge type="function" text="function" /> get_all
 
-<div class="language-lua"><pre><code>function Window.get_all()
+<div class="language-lua"><pre><code>function pinnacle.window.get_all()
     -> windows: <a href="/lua-reference/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code></pre></div>
 
 Gets all windows.
@@ -33,7 +33,7 @@ Gets all windows.
 
 ### <Badge type="function" text="function" /> get_focused
 
-<div class="language-lua"><pre><code>function Window.get_focused()
+<div class="language-lua"><pre><code>function pinnacle.window.get_focused()
     -> window: <a href="/lua-reference/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a> | nil</code></pre></div>
 
 Gets the currently focused window.
@@ -50,7 +50,7 @@ Gets the currently focused window.
 
 ### <Badge type="function" text="function" /> begin_move
 
-<div class="language-lua"><pre><code>function Window.begin_move(button: <a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.window.begin_move(button: <a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a>)</code></pre></div>
 
 Begins moving this window using the specified mouse button.
 
@@ -75,7 +75,7 @@ end)
 
 ### <Badge type="function" text="function" /> begin_resize
 
-<div class="language-lua"><pre><code>function Window.begin_resize(button: <a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.window.begin_resize(button: <a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a>)</code></pre></div>
 
 Begins resizing this window using the specified mouse button.
 
@@ -100,7 +100,7 @@ end)
 
 ### <Badge type="function" text="function" /> connect_signal
 
-<div class="language-lua"><pre><code>function Window.connect_signal(signals: <a href="/lua-reference/classes/pinnacle.window.WindowSignal">pinnacle.window.WindowSignal</a>)
+<div class="language-lua"><pre><code>function pinnacle.window.connect_signal(signals: <a href="/lua-reference/classes/pinnacle.window.WindowSignal">pinnacle.window.WindowSignal</a>)
     -> signal_handles: <a href="/lua-reference/classes/pinnacle.signal.SignalHandles">pinnacle.signal.SignalHandles</a></code></pre></div>
 
 Connects to a window signal.
@@ -135,10 +135,12 @@ Window.connect_signal({
 
 
 
+#### See also
 
+- <code><a href="/lua-reference/classes/pinnacle#signal.SignalHandles.disconnect_all">pinnacle.signal.SignalHandles.disconnect_all</a></code>: - To disconnect from these signals
 ### <Badge type="function" text="function" /> add_window_rule
 
-<div class="language-lua"><pre><code>function Window.add_window_rule(rule: fun(window: <a href="/lua-reference/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>))</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.window.add_window_rule(rule: fun(window: <a href="/lua-reference/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>))</code></pre></div>
 
 Adds a window rule.
 

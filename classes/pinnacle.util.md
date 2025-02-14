@@ -2,18 +2,25 @@
 outline: [2, 3]
 ---
 
-# Class `pinnacle.util.Util`
+# Class `pinnacle.util`
 
 
 Utility functions.
 
+## Fields
+
+### output
+
+`output`: <code><a href="/lua-reference/classes/pinnacle.util.output">pinnacle.util.output</a></code> = `output`
+
+Output utilities.
 
 
 ## Functions
 
 ### <Badge type="function" text="function" /> batch
 
-<div class="language-lua"><pre><code>function pinnacle.util.Util.batch(requests: fun(): T[])
+<div class="language-lua"><pre><code>function pinnacle.util.batch(requests: fun(): T[])
     -> responses: T[]</code></pre></div>
 
 Batches a set of requests that will be sent to the compositor all at once.
@@ -66,7 +73,7 @@ local props = require("pinnacle.util").batch(requests)
 
 ### <Badge type="function" text="function" /> deep_copy
 
-<div class="language-lua"><pre><code>function pinnacle.util.Util.deep_copy(obj: T)
+<div class="language-lua"><pre><code>function pinnacle.util.deep_copy(obj: T)
     -> deep_copy: T</code></pre></div>
 
 Creates a deep copy of an object.
@@ -89,7 +96,7 @@ Creates a deep copy of an object.
 
 ### <Badge type="function" text="function" /> bijective_table
 
-<div class="language-lua"><pre><code>function pinnacle.util.Util.bijective_table(key_value_pairs: T)
+<div class="language-lua"><pre><code>function pinnacle.util.bijective_table(key_value_pairs: T)
     -> bijective_table: T</code></pre></div>
 
 Creates a table with entries key->value and value->key for all given pairs.
@@ -111,7 +118,7 @@ Creates a table with entries key->value and value->key for all given pairs.
 
 ### <Badge type="function" text="function" /> make_bijective
 
-<div class="language-lua"><pre><code>function pinnacle.util.Util.make_bijective(table: table)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.util.make_bijective(table: table)</code></pre></div>
 
 Makes a table bijective by inserting `value = key` entries for every key-value pair.
 

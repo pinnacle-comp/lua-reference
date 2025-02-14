@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `pinnacle.output.Output`
+# Class `pinnacle.output`
 
 
 Output management.
@@ -18,7 +18,7 @@ Outputs are uniquely identified by their name, a.k.a. the name of the connector 
 
 ### <Badge type="function" text="function" /> get_all
 
-<div class="language-lua"><pre><code>function pinnacle.output.Output.get_all()
+<div class="language-lua"><pre><code>function pinnacle.output.get_all()
     -> <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>[]</code></pre></div>
 
 Gets all outputs.
@@ -35,7 +35,7 @@ Gets all outputs.
 
 ### <Badge type="function" text="function" /> get_all_enabled
 
-<div class="language-lua"><pre><code>function pinnacle.output.Output.get_all_enabled()
+<div class="language-lua"><pre><code>function pinnacle.output.get_all_enabled()
     -> <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>[]</code></pre></div>
 
 Gets all enabled outputs.
@@ -52,7 +52,7 @@ Gets all enabled outputs.
 
 ### <Badge type="function" text="function" /> get_by_name
 
-<div class="language-lua"><pre><code>function pinnacle.output.Output.get_by_name(name: string)
+<div class="language-lua"><pre><code>function pinnacle.output.get_by_name(name: string)
     -> <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a> | nil</code></pre></div>
 
 Gets an output by its name (the connector it's plugged into).
@@ -74,7 +74,7 @@ Gets an output by its name (the connector it's plugged into).
 
 ### <Badge type="function" text="function" /> get_focused
 
-<div class="language-lua"><pre><code>function pinnacle.output.Output.get_focused()
+<div class="language-lua"><pre><code>function pinnacle.output.get_focused()
     -> <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a> | nil</code></pre></div>
 
 Gets the currently focused output.
@@ -93,7 +93,7 @@ This is currently defined as the most recent one that has had pointer motion.
 
 ### <Badge type="function" text="function" /> for_each_output
 
-<div class="language-lua"><pre><code>function pinnacle.output.Output.for_each_output(for_each: fun(output: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>))</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.output.for_each_output(for_each: fun(output: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>))</code></pre></div>
 
  Runs a closure on all current and future outputs.
 
@@ -126,7 +126,7 @@ end)
 
 ### <Badge type="function" text="function" /> connect_signal
 
-<div class="language-lua"><pre><code>function pinnacle.output.Output.connect_signal(signals: <a href="/lua-reference/classes/pinnacle.output.OutputSignal">pinnacle.output.OutputSignal</a>)
+<div class="language-lua"><pre><code>function pinnacle.output.connect_signal(signals: <a href="/lua-reference/classes/pinnacle.output.OutputSignal">pinnacle.output.OutputSignal</a>)
     -> signal_handles: <a href="/lua-reference/classes/pinnacle.signal.SignalHandles">pinnacle.signal.SignalHandles</a></code></pre></div>
 
 Connects to an output signal.
@@ -161,3 +161,6 @@ Output.connect_signal({
 
 
 
+#### See also
+
+- <code><a href="/lua-reference/classes/pinnacle#signal.SignalHandles.disconnect_all">pinnacle.signal.SignalHandles.disconnect_all</a></code>: - To disconnect from these signals

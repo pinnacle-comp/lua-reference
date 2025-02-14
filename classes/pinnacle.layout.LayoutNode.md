@@ -29,7 +29,7 @@ A set of indices per window index that changes how that window is assigned a geo
 
 ### layout_dir <Badge type="danger" text="nullable" />
 
-`layout_dir?`: <code><a href="/lua-reference/aliases/LayoutDir">LayoutDir</a></code>
+`layout_dir?`: <code><a href="/lua-reference/aliases/pinnacle.layout.LayoutDir">pinnacle.layout.LayoutDir</a></code>
 
 
 
