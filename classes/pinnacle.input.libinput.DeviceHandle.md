@@ -106,6 +106,58 @@ when it may actually be a keyboard.
 
 
 
+### <Badge type="method" text="method" /> map_to_output
+
+<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:map_to_output(output: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)</code></pre></div>
+
+Maps the absolute input from this device to the corresponding output.
+
+This will cause touch input from this device to map proportionally
+to the area of an output. For example, tapping in the middle of the device
+will generate a tap event at the middle of the output.
+
+This only affects devices with touch capability.
+
+
+
+#### Parameters
+
+`output`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to map the device's input to
+
+
+
+
+
+#### See also
+
+- <code><a href="/lua-reference/classes/pinnacle.input#libinput.DeviceHandle.map_to_region">pinnacle.input.libinput.DeviceHandle.map_to_region</a></code>: To map device input to an arbitrary region instead
+### <Badge type="method" text="method" /> map_to_region
+
+<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:map_to_region(region: { x: integer, y: integer, width: integer, height: integer })</code></pre></div>
+
+Maps the absolute input from this device to the corresponding region
+in the global space.
+
+This will cause touch input from this device to map proportionally
+to the given region within the global space. For example, tapping in the middle of the device
+will generate a tap event at the middle of the region. This can be used
+to map a touch device to more than one output, for example.
+
+This only affects devices with touch capability.
+
+
+
+#### Parameters
+
+`region`: <code>{ x: integer, y: integer, width: integer, height: integer }</code> - The region in the global space to map input to
+
+
+
+
+
+#### See also
+
+- <code><a href="/lua-reference/classes/pinnacle.input#libinput.DeviceHandle.map_to_output">pinnacle.input.libinput.DeviceHandle.map_to_output</a></code>: To map device input to a specific output instead
 ### <Badge type="method" text="method" /> set_accel_profile
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_accel_profile(accel_profile: <a href="/lua-reference/enums/pinnacle.input.libinput.AccelProfile">pinnacle.input.libinput.AccelProfile</a>)</code></pre></div>
