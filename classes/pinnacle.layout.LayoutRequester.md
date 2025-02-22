@@ -11,7 +11,7 @@ outline: [2, 3]
 
 ### sender
 
-`sender`: <code>grpc_client.h2.Stream</code>
+`sender`: <code><a href="/lua-reference/classes/grpc_client.h2.Stream">grpc_client.h2.Stream</a></code>
 
 
 
