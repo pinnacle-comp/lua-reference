@@ -7,7 +7,7 @@ outline: [2, 3]
 
 `"flat"` | `"adaptive"`
 
-
+A pointer acceleration profile.
 
 ## Values
 

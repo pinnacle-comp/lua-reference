@@ -7,7 +7,8 @@ outline: [2, 3]
 
 `"button_areas"` | `"click_finger"`
 
-
+The click method defines when to generate software-emulated buttons, usually on a device
+that does not have a specific physical button available.
 
 ## Values
 

@@ -7,7 +7,7 @@ outline: [2, 3]
 
 `"left_right_middle"` | `"left_middle_right"`
 
-
+Map 1/2/3 finger taps to buttons.
 
 ## Values
 

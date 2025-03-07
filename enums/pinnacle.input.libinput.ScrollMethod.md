@@ -7,7 +7,7 @@ outline: [2, 3]
 
 `"no_scroll"` | `"two_finger"` | `"edge"` | `"on_button_down"`
 
-
+The scroll method of a device selects when to generate scroll axis events instead of pointer motion events.
 
 ## Values
 

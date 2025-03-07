@@ -7,7 +7,7 @@ outline: [2, 3]
 
 `"bilinear"` | `"nearest_neighbor"`
 
-
+What filter to use when scaling.
 
 ## Values
 
