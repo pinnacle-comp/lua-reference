@@ -12,8 +12,8 @@ outline: [2, 3]
 
 ### <code>"row"</code>
 
-
+Lays out windows in a row horizontally.
 
 ### <code>"column"</code>
 
-
+Lays out windows in a column vertically.

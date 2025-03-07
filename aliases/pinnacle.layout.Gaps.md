@@ -12,8 +12,8 @@ outline: [2, 3]
 
 ### <code>{ left: number, right: number, top: number, bottom: number }</code>
 
-
+A separate number of gaps per side.
 
 ### <code>number</code>
 
-
+Gaps for all sides.
