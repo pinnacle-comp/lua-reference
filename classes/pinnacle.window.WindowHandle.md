@@ -21,7 +21,7 @@ You can retrieve window handles through the various `get` functions in the `Wind
 
 `id`: <code>integer</code>
 
-
+The unique id of this window.
 
 
 ## Functions
@@ -194,10 +194,12 @@ Toggles this window to and from focused.
 
 Sets this window's decoration mode.
 
+If not set, the client is allowed to choose its decoration mode, defaulting to client-side if it doesn't.
+
 
 #### Parameters
 
-`mode`: <code>"client_side" | "server_side"</code>
+`mode`: <code>"client_side" | "server_side"</code> - `"client_side"` to enable CSD, or `"server_side"` to enable CSD.
 
 
 

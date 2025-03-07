@@ -61,7 +61,7 @@ Gets an output by its name (the connector it's plugged into).
 
 #### Parameters
 
-`name`: <code>string</code> - The name of the connector the output is connected to
+`name`: <code>string</code> - The output's name.
 
 
 
@@ -95,7 +95,7 @@ This is currently defined as the most recent one that has had pointer motion.
 
 <div class="language-lua"><pre><code>function pinnacle.output.for_each_output(for_each: fun(output: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>))</code></pre></div>
 
- Runs a closure on all current and future outputs.
+ Runs a function on all current and future outputs.
 
  When called, this will do two things:
  1. Immediately run `for_each` with all currently connected outputs.
@@ -117,7 +117,7 @@ end)
 
 #### Parameters
 
-`for_each`: <code>fun(output: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)</code>
+`for_each`: <code>fun(output: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)</code> - The function that will be run for each output.
 
 
 

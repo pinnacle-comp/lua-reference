@@ -5,7 +5,7 @@ outline: [2, 3]
 # Class `pinnacle.input.libinput.DeviceHandle`
 
 
-
+A handle to an input device.
 
 ## Fields
 
@@ -13,7 +13,7 @@ outline: [2, 3]
 
 `sysname`: <code>string</code>
 
-
+The name of the device's system path.
 
 
 ## Functions
@@ -57,7 +57,7 @@ Gets the name of this device.
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:product_id()
     -> integer</code></pre></div>
 
-Gets this device;s product id.
+Gets this device's product id.
 
 
 
@@ -74,7 +74,7 @@ Gets this device;s product id.
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:vendor_id()
     -> integer</code></pre></div>
 
-Gets this devices vendor id.
+Gets this device's vendor id.
 
 
 
@@ -130,7 +130,7 @@ This only affects devices with touch capability.
 
 #### See also
 
-- <code><a href="/lua-reference/classes/pinnacle.input#libinput.DeviceHandle.map_to_region">pinnacle.input.libinput.DeviceHandle.map_to_region</a></code>: To map device input to an arbitrary region instead
+- <code><a href="/lua-reference/classes/pinnacle.input.libinput.DeviceHandle#map_to_region">pinnacle.input.libinput.DeviceHandle.map_to_region</a></code>: To map device input to an arbitrary region instead
 ### <Badge type="method" text="method" /> map_to_region
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:map_to_region(region: { x: integer, y: integer, width: integer, height: integer })</code></pre></div>
@@ -157,11 +157,12 @@ This only affects devices with touch capability.
 
 #### See also
 
-- <code><a href="/lua-reference/classes/pinnacle.input#libinput.DeviceHandle.map_to_output">pinnacle.input.libinput.DeviceHandle.map_to_output</a></code>: To map device input to a specific output instead
+- <code><a href="/lua-reference/classes/pinnacle.input.libinput.DeviceHandle#map_to_output">pinnacle.input.libinput.DeviceHandle.map_to_output</a></code>: To map device input to a specific output instead
 ### <Badge type="method" text="method" /> set_accel_profile
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_accel_profile(accel_profile: <a href="/lua-reference/enums/pinnacle.input.libinput.AccelProfile">pinnacle.input.libinput.AccelProfile</a>)</code></pre></div>
 
+Sets this device's acceleration profile.
 
 
 #### Parameters
@@ -177,6 +178,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_accel_speed(accel_speed: number)</code></pre></div>
 
+Sets this device's acceleration speed.
 
 
 #### Parameters
@@ -192,11 +194,12 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_calibration_matrix(calibration_matrix: number[])</code></pre></div>
 
+Sets this device's calibration matrix.
 
 
 #### Parameters
 
-`calibration_matrix`: <code>number[]</code> - 6 floats
+`calibration_matrix`: <code>number[]</code> - The calibration matrix as an array of 6 floats.
 
 
 
@@ -207,6 +210,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_click_method(click_method: <a href="/lua-reference/enums/pinnacle.input.libinput.ClickMethod">pinnacle.input.libinput.ClickMethod</a>)</code></pre></div>
 
+Sets this device's click method.
 
 
 #### Parameters
@@ -222,6 +226,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_disable_while_typing(disable_while_typing: boolean)</code></pre></div>
 
+Sets whether or not this device is disabled while typing.
 
 
 #### Parameters
@@ -237,6 +242,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_left_handed(left_handed: boolean)</code></pre></div>
 
+Sets this device to left-handed or not.
 
 
 #### Parameters
@@ -252,6 +258,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_middle_emulation(middle_emulation: boolean)</code></pre></div>
 
+Sets whether or not middle emulation is enabled.
 
 
 #### Parameters
@@ -267,6 +274,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_rotation_angle(rotation_angle: integer)</code></pre></div>
 
+Sets this device's rotation angle.
 
 
 #### Parameters
@@ -282,6 +290,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_scroll_button(scroll_button: integer)</code></pre></div>
 
+Sets this device's scroll button.
 
 
 #### Parameters
@@ -297,6 +306,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_scroll_button_lock(scroll_button_lock: boolean)</code></pre></div>
 
+Sets whether or not the scroll button locks on this device.
 
 
 #### Parameters
@@ -312,6 +322,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_scroll_method(scroll_method: <a href="/lua-reference/enums/pinnacle.input.libinput.ScrollMethod">pinnacle.input.libinput.ScrollMethod</a>)</code></pre></div>
 
+Sets this device's scroll method.
 
 
 #### Parameters
@@ -327,6 +338,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_natural_scroll(natural_scroll: boolean)</code></pre></div>
 
+Enables or disables natural scroll on this device.
 
 
 #### Parameters
@@ -342,6 +354,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_tap_button_map(tap_button_map: <a href="/lua-reference/enums/pinnacle.input.libinput.TapButtonMap">pinnacle.input.libinput.TapButtonMap</a>)</code></pre></div>
 
+Sets this device's tap button map.
 
 
 #### Parameters
@@ -357,6 +370,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_tap_drag(tap_drag: boolean)</code></pre></div>
 
+Enables or disables tap dragging on this device.
 
 
 #### Parameters
@@ -372,6 +386,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_tap_drag_lock(tap_drag_lock: boolean)</code></pre></div>
 
+Sets whether or not tap dragging locks on this device.
 
 
 #### Parameters
@@ -387,6 +402,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_tap(tap: boolean)</code></pre></div>
 
+Enables or disables tap-to-click on this device.
 
 
 #### Parameters
@@ -402,6 +418,7 @@ This only affects devices with touch capability.
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_send_events_mode(send_events_mode: <a href="/lua-reference/enums/pinnacle.input.libinput.SendEventsMode">pinnacle.input.libinput.SendEventsMode</a>)</code></pre></div>
 
+Sets this device's send events mode.
 
 
 #### Parameters

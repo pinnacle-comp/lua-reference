@@ -18,11 +18,14 @@ Output utilities.
 
 Parses a modeline string.
 
+The string must have the form
+`"clock hdisplay hsync_start hsync_end htotal vdisplay vsync_start vsync_end hsync vsync"`.
+
 
 
 #### Parameters
 
-`modeline`: <code>string</code>
+`modeline`: <code>string</code> - The modeline string.
 
 
 

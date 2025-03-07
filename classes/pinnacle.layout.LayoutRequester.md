@@ -5,13 +5,13 @@ outline: [2, 3]
 # Class `pinnacle.layout.LayoutRequester`
 
 
-
+An object that allows you to forcibly request layouts.
 
 ## Fields
 
 ### sender
 
-`sender`: <code><a href="/lua-reference/classes/grpc_client.h2.Stream">grpc_client.h2.Stream</a></code>
+`sender`: <code>grpc_client.h2.Stream</code>
 
 
 
@@ -27,7 +27,7 @@ Causes the compositor to emit a layout request.
 
 #### Parameters
 
-`output?`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code>
+`output?`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to layout, or `nil` for the focused output.
 
 
 

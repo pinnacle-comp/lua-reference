@@ -5,7 +5,7 @@ outline: [2, 3]
 # Class `pinnacle.input.BindInfoKind`
 
 
-
+The kind of a bind.
 
 ## Fields
 
@@ -13,12 +13,12 @@ outline: [2, 3]
 
 `key?`: <code>{ key_code: integer, xkb_name: string }</code>
 
-
+This is a keybind.
 
 ### mouse <Badge type="danger" text="nullable" />
 
 `mouse?`: <code>{ button: <a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a> }</code>
 
-
+This is a mousebind.
 
 

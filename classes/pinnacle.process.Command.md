@@ -54,7 +54,7 @@ Spawns this process, returning a `Child` that contains the process's standard IO
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code>
+1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
 
 
 

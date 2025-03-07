@@ -73,8 +73,8 @@ local tag_on_hdmi1 = Tag.get("Tag", Output.get_by_name("HDMI-1"))
 
 #### Parameters
 
-`name`: <code>string</code><br>
-`output?`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code>
+`name`: <code>string</code> - The name of the tag<br>
+`output?`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to get the tag on, or `nil` for the focused output.
 
 
 
@@ -108,14 +108,14 @@ local tags = Tag.add(Output.get_by_name("HDMI-1"), tag_names)
 
 #### Parameters
 
-`output`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code><br>
-`...`: <code>string</code>
+`output`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to add tags to.<br>
+`...`: <code>string</code> - The names of the new tags.
 
 
 
 #### Returns
 
-1. `tags`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code> - Handles to the created tags
+1. `tags`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code> - Handles to the created tags.
 
 
 
@@ -136,7 +136,7 @@ Tag.remove(tags) -- "HDMI-1" no longer has those tags
 
 #### Parameters
 
-`tags`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code>
+`tags`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code> - The tags to remove.
 
 
 

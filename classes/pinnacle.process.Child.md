@@ -5,7 +5,7 @@ outline: [2, 3]
 # Class `pinnacle.process.Child`
 
 
-
+The result of spawning a command.
 
 ## Fields
 
@@ -13,25 +13,25 @@ outline: [2, 3]
 
 `pid`: <code>integer</code>
 
-
+The pid of the spawned command.
 
 ### stdin <Badge type="danger" text="nullable" />
 
 `stdin?`: <code><a href="/lua-reference/classes/pinnacle.process.ChildStdin">pinnacle.process.ChildStdin</a></code>
 
-
+This process's standard input, if any.
 
 ### stdout <Badge type="danger" text="nullable" />
 
 `stdout?`: <code><a href="/lua-reference/classes/pinnacle.process.ChildStdout">pinnacle.process.ChildStdout</a></code>
 
-
+This process's standard output, if any.
 
 ### stderr <Badge type="danger" text="nullable" />
 
 `stderr?`: <code><a href="/lua-reference/classes/pinnacle.process.ChildStderr">pinnacle.process.ChildStderr</a></code>
 
-
+This process's standard error, if any.
 
 
 ## Functions
@@ -45,14 +45,12 @@ Waits for this child process to exit.
 
 This will block the calling thread.
 
-Returns the exit status of the process.
-
 
 
 
 #### Returns
 
-1. <code>{ exit_code: integer, exit_msg: string }</code>
+1. <code>{ exit_code: integer, exit_msg: string }</code> - The exit status of the process.
 
 
 

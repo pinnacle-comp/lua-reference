@@ -61,8 +61,8 @@ Output.get_by_name("HDMI-1"):set_loc(1920, -360)
 
 #### Parameters
 
-`x`: <code>integer</code><br>
-`y`: <code>integer</code>
+`x`: <code>integer</code> - The x-coordinate.<br>
+`y`: <code>integer</code> - The y-coordinate.
 
 
 
@@ -70,7 +70,7 @@ Output.get_by_name("HDMI-1"):set_loc(1920, -360)
 
 #### See also
 
-- <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle#set_loc_adj_to">pinnacle.output.OutputHandle.set_loc_adj_to</a></code>
+- <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle#set_loc_adj_to">pinnacle.output.OutputHandle.set_loc_adj_to</a></code>: A helper function to move outputs relative to other outputs.
 ### <Badge type="method" text="method" /> set_loc_adj_to
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_loc_adj_to(other: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>, alignment: <a href="/lua-reference/aliases/pinnacle.output.Alignment">pinnacle.output.Alignment</a>)</code></pre></div>
@@ -106,8 +106,8 @@ Output.get_by_name("DP-1"):set_loc_adj_to(Output:get_by_name("HDMI-1"), "bottom_
 
 #### Parameters
 
-`other`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code><br>
-`alignment`: <code><a href="/lua-reference/aliases/pinnacle.output.Alignment">pinnacle.output.Alignment</a></code>
+`other`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to move this output relative to.<br>
+`alignment`: <code><a href="/lua-reference/aliases/pinnacle.output.Alignment">pinnacle.output.Alignment</a></code> - How to align this output with the other output.
 
 
 
@@ -136,9 +136,9 @@ Output.get_focused():set_mode(2560, 1440, 144000)
 
 #### Parameters
 
-`width`: <code>integer</code><br>
-`height`: <code>integer</code><br>
-`refresh_rate_mhz?`: <code>integer</code>
+`width`: <code>integer</code> - The mode's width.<br>
+`height`: <code>integer</code> - The mode's height.<br>
+`refresh_rate_mhz?`: <code>integer</code> - The mode's refresh rate in millihertz, or `nil` to auto-select.
 
 
 
@@ -164,9 +164,9 @@ Output.get_focused():set_custom_mode(2560, 1440, 75000)
 
 #### Parameters
 
-`width`: <code>integer</code><br>
-`height`: <code>integer</code><br>
-`refresh_rate_mhz?`: <code>integer</code>
+`width`: <code>integer</code> - A custom width.<br>
+`height`: <code>integer</code> - A custom height.<br>
+`refresh_rate_mhz?`: <code>integer</code> - A custom refresh rate in millihertz, or `nil` to default to 60Hz.
 
 
 
@@ -182,19 +182,24 @@ Sets a custom modeline for this output.
 This accepts a `Modeline` table or a string of the modeline.
 You can parse a modeline into a `Modeline` table with
 ```lua
-require("pinnacle.util").output.parse_modeline("your modeline herre")
+require("pinnacle.util").output.parse_modeline(
+    "173.00 1920 2048 2248 2576 1080 1083 1088 1120 -hsync +vsync"
+)
 ```
+
 
 
 #### Parameters
 
-`modeline`: <code>string | <a href="/lua-reference/classes/pinnacle.output.Modeline">pinnacle.output.Modeline</a></code>
+`modeline`: <code>string | <a href="/lua-reference/classes/pinnacle.output.Modeline">pinnacle.output.Modeline</a></code> - A modeline table, or a modeline string to feed it into `parse_modeline`.
 
 
 
 
 
+#### See also
 
+- <code><a href="/lua-reference/classes/pinnacle.util.output#parse_modeline">pinnacle.util.output.parse_modeline</a></code>
 ### <Badge type="method" text="method" /> set_scale
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_scale(scale: number)</code></pre></div>
@@ -204,7 +209,7 @@ Sets this output's scaling factor.
 
 #### Parameters
 
-`scale`: <code>number</code>
+`scale`: <code>number</code> - The new scale.
 
 
 
@@ -220,7 +225,7 @@ Changes this output's scaling factor by the given amount.
 
 #### Parameters
 
-`change_by`: <code>number</code>
+`change_by`: <code>number</code> - How much to change the current scale by.
 
 
 
@@ -236,7 +241,7 @@ Sets this output's transform.
 
 #### Parameters
 
-`transform`: <code><a href="/lua-reference/enums/pinnacle.output.Transform">pinnacle.output.Transform</a></code>
+`transform`: <code><a href="/lua-reference/enums/pinnacle.output.Transform">pinnacle.output.Transform</a></code> - The new transform.
 
 
 
@@ -282,7 +287,7 @@ Gets this output's make.
 
 #### Returns
 
-1. <code>string</code>
+1. <code>string</code> - The make, or an empty string if it doesn't have one.
 
 
 
@@ -299,7 +304,7 @@ Gets this output's model.
 
 #### Returns
 
-1. <code>string</code>
+1. <code>string</code> - The model, or an empty string if it doesn't have one.
 
 
 
@@ -316,7 +321,7 @@ Gets this output's serial.
 
 #### Returns
 
-1. <code>string</code>
+1. <code>string</code> - The serial, or an empty string if it doesn't have one.
 
 
 
@@ -333,7 +338,7 @@ Gets this output's location in the global space.
 
 #### Returns
 
-1. <code>{ x: integer, y: integer }</code>
+1. <code>{ x: integer, y: integer }</code> - The output's location, or `nil` if it is not enabled or doesn't exist.
 
 
 
@@ -345,14 +350,12 @@ Gets this output's location in the global space.
 
 Gets this output's logical size in logical pixels.
 
-If the output is disabled, this returns nil.
-
 
 
 
 #### Returns
 
-1. <code>{ width: integer, height: integer }</code>
+1. <code>{ width: integer, height: integer }</code> - The output's logical size, or `nil` if it is disabled or doesn't exist.
 
 
 
@@ -369,7 +372,7 @@ Gets this output's physical size in millimeters.
 
 #### Returns
 
-1. <code>{ width: integer, height: integer }</code>
+1. <code>{ width: integer, height: integer }</code> - The output's physical size, or `nil` if it doesn't advertise one or doesn't exist.
 
 
 
@@ -386,7 +389,7 @@ Gets this output's current mode.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a></code>
+1. <code><a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a></code> - The current mode, or `nil` if the output is disabled or doesn't exist.
 
 
 
@@ -403,7 +406,7 @@ Gets this output's preferred mode.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a></code>
+1. <code><a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a></code> - The preferred mode, or `nil` if the output doesn't exist.
 
 
 

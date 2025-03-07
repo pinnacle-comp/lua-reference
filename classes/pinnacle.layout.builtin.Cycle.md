@@ -5,7 +5,8 @@ outline: [2, 3]
 # Class `pinnacle.layout.builtin.Cycle` : <code><a href="/lua-reference/classes/pinnacle.layout.LayoutGenerator">pinnacle.layout.LayoutGenerator</a></code>
 
 
-
+A layout generator that keeps track of layouts per tag
+and provides methods to cycle between them.
 
 ## Fields
 
@@ -13,7 +14,7 @@ outline: [2, 3]
 
 `layouts`: <code><a href="/lua-reference/classes/pinnacle.layout.LayoutGenerator">pinnacle.layout.LayoutGenerator</a>[]</code>
 
-
+The layouts this generator will cycle between.
 
 ### tag_indices
 
@@ -25,7 +26,7 @@ outline: [2, 3]
 
 `current_tag?`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code>
 
-
+The current tag that will determine the chosen layout.
 
 
 ## Functions
@@ -39,7 +40,7 @@ Cycles the layout forward for the given tag.
 
 #### Parameters
 
-`tag`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code>
+`tag`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code> - The tag to cycle the layout for.
 
 
 
@@ -55,7 +56,7 @@ Cycles the layout backward for the given tag.
 
 #### Parameters
 
-`tag`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code>
+`tag`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code> - The tag to cycle the layout for.
 
 
 
@@ -73,7 +74,7 @@ Gets the current layout generator for the given tag.
 
 #### Parameters
 
-`tag`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code>
+`tag`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code> - The tag to get a layout for.
 
 
 

@@ -21,7 +21,7 @@ This module provides utilities to set key- and mousebinds as well as change keyb
 
 `key` = `require("pinnacle.input.keys")`
 
-
+Keycodes for every key.
 
 
 ## Functions
@@ -76,7 +76,7 @@ end)
 `mods`: <code><a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code> - The modifiers that need to be held down for the bind to trigger<br>
 `key`: <code><a href="/lua-reference/enums/pinnacle.input.Key">pinnacle.input.Key</a> | string</code> - The key used to trigger the bind<br>
 `on_press`: <code>fun()</code> - The function to run when the bind is triggered<br>
-`bind_info?`: <code>{ group: string, description: string }</code>
+`bind_info?`: <code>{ group: string, description: string }</code> - An optional group and description that is displayed in the bind overlay.
 
 
 
@@ -125,7 +125,7 @@ end)
 `mods`: <code><a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code> - The modifiers that need to be held down for the bind to trigger<br>
 `button`: <code><a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a></code> - The mouse button used to trigger the bind<br>
 `on_press`: <code>fun()</code> - The function to run when the bind is triggered<br>
-`bind_info?`: <code>{ group: string, description: string }</code>
+`bind_info?`: <code>{ group: string, description: string }</code> - An optional group and description that will be displayed in the bind overlay.
 
 
 
@@ -141,7 +141,7 @@ Enters the bind layer `layer`, or the default layer if `layer` is nil.
 
 #### Parameters
 
-`layer?`: <code>string</code>
+`layer?`: <code>string</code> - The bind layer.
 
 
 
@@ -225,7 +225,7 @@ This allows you to set it at runtime.
 
 #### Parameters
 
-`theme`: <code>string</code>
+`theme`: <code>string</code> - The name of the xcursor theme.
 
 
 
@@ -244,7 +244,7 @@ This allows you to set it at runtime.
 
 #### Parameters
 
-`size`: <code>integer</code>
+`size`: <code>integer</code> - The new size of the cursor.
 
 
 

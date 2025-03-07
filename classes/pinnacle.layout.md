@@ -14,7 +14,7 @@ Layout management.
 
 `builtin` = `builtin`
 
-
+Builtin layout generators.
 
 
 ## Functions
@@ -49,7 +49,7 @@ end)
 
 #### Parameters
 
-`on_layout`: <code>fun(args: <a href="/lua-reference/classes/pinnacle.layout.LayoutArgs">pinnacle.layout.LayoutArgs</a>): <a href="/lua-reference/classes/pinnacle.layout.LayoutNode">pinnacle.layout.LayoutNode</a></code>
+`on_layout`: <code>fun(args: <a href="/lua-reference/classes/pinnacle.layout.LayoutArgs">pinnacle.layout.LayoutArgs</a>): <a href="/lua-reference/classes/pinnacle.layout.LayoutNode">pinnacle.layout.LayoutNode</a></code> - A function that receives layout arguments and builds and returns a layout tree.
 
 
 

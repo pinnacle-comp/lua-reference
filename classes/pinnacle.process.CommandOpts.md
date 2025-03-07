@@ -32,7 +32,7 @@ Any environment variables that should be set for the spawned process.
 
 `unique?`: <code>boolean</code>
 
-Causes the spawn to fizzle if the process is already running.
+Prevents the spawn from occurring if the process is already running.
 
 ### once <Badge type="danger" text="nullable" />
 

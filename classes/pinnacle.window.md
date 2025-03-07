@@ -167,7 +167,7 @@ end)
 
 #### Parameters
 
-`rule`: <code>fun(window: <a href="/lua-reference/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>)</code>
+`rule`: <code>fun(window: <a href="/lua-reference/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>)</code> - A function that will run with all new, unmapped windows.
 
 
 

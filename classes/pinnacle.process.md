@@ -27,15 +27,16 @@ For more control over the spawn, use `Process.command` instead.
 
 
 
+
 #### Parameters
 
-`...`: <code>string</code>
+`...`: <code>string</code> - The arguments of the command.
 
 
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code>
+1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
 
 
 
@@ -57,15 +58,16 @@ For more control over the spawn, use `Process.command` instead.
 
 
 
+
 #### Parameters
 
-`...`: <code>string</code>
+`...`: <code>string</code> - The arguments of the command.
 
 
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code>
+1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
 
 
 
@@ -87,15 +89,16 @@ For more control over the spawn, use `Process.command` instead.
 
 
 
+
 #### Parameters
 
-`...`: <code>string</code>
+`...`: <code>string</code> - The arguments of the command.
 
 
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code>
+1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
 
 
 
@@ -115,13 +118,13 @@ A `Command` represents a to-be-spawned process.
 
 #### Parameters
 
-`cmd`: <code><a href="/lua-reference/classes/pinnacle.process.CommandOpts">pinnacle.process.CommandOpts</a></code>
+`cmd`: <code><a href="/lua-reference/classes/pinnacle.process.CommandOpts">pinnacle.process.CommandOpts</a></code> - Options for the command.
 
 
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.process.Command">pinnacle.process.Command</a></code>
+1. <code><a href="/lua-reference/classes/pinnacle.process.Command">pinnacle.process.Command</a></code> - An object that allows you to spawn this command.
 
 
 

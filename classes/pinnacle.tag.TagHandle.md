@@ -17,7 +17,7 @@ This can be retrieved through the various `get` functions in the `Tag` module.
 
 `id`: <code>integer</code>
 
-
+The unique id of this tag.
 
 
 ## Functions

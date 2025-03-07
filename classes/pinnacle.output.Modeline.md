@@ -5,7 +5,7 @@ outline: [2, 3]
 # Class `pinnacle.output.Modeline`
 
 
-
+A custom modeline.
 
 ## Fields
 
