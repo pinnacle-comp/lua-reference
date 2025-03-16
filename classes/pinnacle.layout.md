@@ -7,6 +7,8 @@ outline: [2, 3]
 
 Layout management.
 
+Read the [wiki page](https://pinnacle-comp.github.io/pinnacle/configuration/layout.html) for more information.
+
 
 ## Fields
 
