@@ -79,6 +79,39 @@ Results may vary if you have multiple outputs with different scales.
 
 
 
+### <Badge type="function" text="function" /> set_last_error
+
+<div class="language-lua"><pre><code>function pinnacle.set_last_error(error: string)</code></pre></div>
+
+Sets an error message that is held by the compositor until it is retrieved.
+
+
+#### Parameters
+
+`error`: <code>string</code>
+
+
+
+
+
+
+### <Badge type="function" text="function" /> take_last_error
+
+<div class="language-lua"><pre><code>function pinnacle.take_last_error()
+    -> error: string | nil</code></pre></div>
+
+Gets and consumes the last error message set, possibly by a previously running config.
+
+
+
+
+#### Returns
+
+1. `error`: <code>string | nil</code> - An error string, or `nil` if none was set.
+
+
+
+
 ### <Badge type="function" text="function" /> init
 
 <div class="language-lua"><pre><code>function pinnacle.init()</code></pre></div>
