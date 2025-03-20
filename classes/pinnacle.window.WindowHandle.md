@@ -39,7 +39,7 @@ Sends a close request to this window.
 
 ### <Badge type="method" text="method" /> set_geometry
 
-<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:set_geometry(geo: { x?: integer?, y?: integer?, width?: integer?, height?: integer? })</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:set_geometry(geo: { x?: integer, y?: integer, width?: integer, height?: integer })</code></pre></div>
 
 Sets this window's location and/or size.
 
@@ -69,7 +69,7 @@ end
 
 #### Parameters
 
-`geo`: <code>{ x?: integer?, y?: integer?, width?: integer?, height?: integer? }</code> - The new location and/or size
+`geo`: <code>{ x?: integer, y?: integer, width?: integer, height?: integer }</code> - The new location and/or size
 
 
 
@@ -299,7 +299,7 @@ Gets this window's location.
 
 #### Returns
 
-1. <code>{ x: integer, y: integer }?</code>
+1. <code>{ x: integer, y: integer }</code>
 
 
 
@@ -316,7 +316,7 @@ Gets this window's location.
 
 #### Returns
 
-1. <code>{ width: integer, height: integer }?</code>
+1. <code>{ width: integer, height: integer }</code>
 
 
 

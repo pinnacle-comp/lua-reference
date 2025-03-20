@@ -25,19 +25,19 @@ The bind's ignored modifiers.
 
 ### bind_layer <Badge type="danger" text="nullable" />
 
-`bind_layer?`: <code>string?</code>
+`bind_layer?`: <code>string</code>
 
 The bind's layer.
 
 ### group <Badge type="danger" text="nullable" />
 
-`group?`: <code>string?</code>
+`group?`: <code>string</code>
 
 The bind's group.
 
 ### description <Badge type="danger" text="nullable" />
 
-`description?`: <code>string?</code>
+`description?`: <code>string</code>
 
 The bind's description.
 

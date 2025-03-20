@@ -28,7 +28,7 @@ Keycodes for every key.
 
 ### <Badge type="function" text="function" /> keybind
 
-<div class="language-lua"><pre><code>function pinnacle.input.keybind(mods: <a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[], key: <a href="/lua-reference/enums/pinnacle.input.Key">pinnacle.input.Key</a> | string, on_press: fun(), bind_info?: { group?: string?, description?: string? }?)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.keybind(mods: <a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[], key: <a href="/lua-reference/enums/pinnacle.input.Key">pinnacle.input.Key</a> | string, on_press: fun(), bind_info?: { group?: string, description?: string })</code></pre></div>
 
 Sets a keybind.
 
@@ -76,7 +76,7 @@ end)
 `mods`: <code><a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code> - The modifiers that need to be held down for the bind to trigger<br>
 `key`: <code><a href="/lua-reference/enums/pinnacle.input.Key">pinnacle.input.Key</a> | string</code> - The key used to trigger the bind<br>
 `on_press`: <code>fun()</code> - The function to run when the bind is triggered<br>
-`bind_info?`: <code>{ group?: string?, description?: string? }?</code> - An optional group and description that is displayed in the bind overlay.
+`bind_info?`: <code>{ group?: string, description?: string }</code> - An optional group and description that is displayed in the bind overlay.
 
 
 
@@ -85,7 +85,7 @@ end)
 
 ### <Badge type="function" text="function" /> mousebind
 
-<div class="language-lua"><pre><code>function pinnacle.input.mousebind(mods: <a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[], button: <a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a>, on_press: fun(), bind_info?: { group?: string?, description?: string? }?)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.mousebind(mods: <a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[], button: <a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a>, on_press: fun(), bind_info?: { group?: string, description?: string })</code></pre></div>
 
 Sets a mousebind.
 
@@ -125,7 +125,7 @@ end)
 `mods`: <code><a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code> - The modifiers that need to be held down for the bind to trigger<br>
 `button`: <code><a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a></code> - The mouse button used to trigger the bind<br>
 `on_press`: <code>fun()</code> - The function to run when the bind is triggered<br>
-`bind_info?`: <code>{ group?: string?, description?: string? }?</code> - An optional group and description that will be displayed in the bind overlay.
+`bind_info?`: <code>{ group?: string, description?: string }</code> - An optional group and description that will be displayed in the bind overlay.
 
 
 
@@ -134,14 +134,14 @@ end)
 
 ### <Badge type="function" text="function" /> enter_bind_layer
 
-<div class="language-lua"><pre><code>function pinnacle.input.enter_bind_layer(layer?: string?)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.enter_bind_layer(layer?: string)</code></pre></div>
 
 Enters the bind layer `layer`, or the default layer if `layer` is nil.
 
 
 #### Parameters
 
-`layer?`: <code>string?</code> - The bind layer.
+`layer?`: <code>string</code> - The bind layer.
 
 
 

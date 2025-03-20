@@ -36,7 +36,7 @@ For more control over the spawn, use `Process.command` instead.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a>?</code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
+1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
 
 
 
@@ -67,7 +67,7 @@ For more control over the spawn, use `Process.command` instead.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a>?</code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
+1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
 
 
 
@@ -98,7 +98,7 @@ For more control over the spawn, use `Process.command` instead.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a>?</code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
+1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
 
 
 

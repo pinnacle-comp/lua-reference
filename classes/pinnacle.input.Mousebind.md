@@ -17,13 +17,13 @@ The mouse button that will trigger this bind.
 
 ### on_press <Badge type="danger" text="nullable" />
 
-`on_press?`: <code>fun()?</code>
+`on_press?`: <code>fun()</code>
 
 An action that will be run when the mousebind is pressed.
 
 ### on_release <Badge type="danger" text="nullable" />
 
-`on_release?`: <code>fun()?</code>
+`on_release?`: <code>fun()</code>
 
 An action that will be run when the mousebind is released.
 

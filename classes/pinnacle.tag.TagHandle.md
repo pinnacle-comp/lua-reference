@@ -140,7 +140,7 @@ Gets this tag's name.
 
 #### Returns
 
-1. <code>string?</code>
+1. <code>string</code>
 
 
 

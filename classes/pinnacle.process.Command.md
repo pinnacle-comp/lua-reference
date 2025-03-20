@@ -17,25 +17,25 @@ A command representing a to-be-spawned process.
 
 ### shell_cmd <Badge type="danger" text="nullable" />
 
-`shell_cmd?`: <code>string[]?</code>
+`shell_cmd?`: <code>string[]</code>
 
 
 
 ### envs <Badge type="danger" text="nullable" />
 
-`envs?`: <code>table&lt;string, string>?</code>
+`envs?`: <code>table&lt;string, string></code>
 
 
 
 ### unique <Badge type="danger" text="nullable" />
 
-`unique?`: <code>boolean?</code>
+`unique?`: <code>boolean</code>
 
 
 
 ### once <Badge type="danger" text="nullable" />
 
-`once?`: <code>boolean?</code>
+`once?`: <code>boolean</code>
 
 
 
@@ -54,7 +54,7 @@ Spawns this process, returning a `Child` that contains the process's standard IO
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a>?</code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
+1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
 
 
 

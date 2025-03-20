@@ -17,13 +17,13 @@ The key that will trigger this bind.
 
 ### on_press <Badge type="danger" text="nullable" />
 
-`on_press?`: <code>fun()?</code>
+`on_press?`: <code>fun()</code>
 
 An action that is run when the keybind is pressed.
 
 ### on_release <Badge type="danger" text="nullable" />
 
-`on_release?`: <code>fun()?</code>
+`on_release?`: <code>fun()</code>
 
 An action that is run when the keybind is released.
 

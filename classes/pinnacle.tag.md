@@ -51,7 +51,7 @@ Gets all tags across all outputs.
 
 ### <Badge type="function" text="function" /> get
 
-<div class="language-lua"><pre><code>function pinnacle.tag.get(name: string, output?: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>?)
+<div class="language-lua"><pre><code>function pinnacle.tag.get(name: string, output?: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)
     -> <a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a> | nil</code></pre></div>
 
 Gets the tag with the given name and output.
@@ -74,7 +74,7 @@ local tag_on_hdmi1 = Tag.get("Tag", Output.get_by_name("HDMI-1"))
 #### Parameters
 
 `name`: <code>string</code> - The name of the tag<br>
-`output?`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>?</code> - The output to get the tag on, or `nil` for the focused output.
+`output?`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to get the tag on, or `nil` for the focused output.
 
 
 
