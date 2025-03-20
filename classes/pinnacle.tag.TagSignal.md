@@ -11,7 +11,7 @@ outline: [2, 3]
 
 ### active <Badge type="danger" text="nullable" />
 
-`active?`: <code>fun(tag: <a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>, active: boolean)</code>
+`active?`: <code>fun(tag: <a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>, active: boolean)?</code>
 
 A tag was set to active or not active.
 

@@ -11,25 +11,25 @@ Options for the line generator.
 
 ### outer_gaps <Badge type="danger" text="nullable" />
 
-`outer_gaps?`: <code><a href="/lua-reference/aliases/pinnacle.layout.Gaps">pinnacle.layout.Gaps</a></code>
+`outer_gaps?`: <code><a href="/lua-reference/aliases/pinnacle.layout.Gaps">pinnacle.layout.Gaps</a>?</code>
 
 The gaps between the outer container and this layout.
 
 ### inner_gaps <Badge type="danger" text="nullable" />
 
-`inner_gaps?`: <code><a href="/lua-reference/aliases/pinnacle.layout.Gaps">pinnacle.layout.Gaps</a></code>
+`inner_gaps?`: <code><a href="/lua-reference/aliases/pinnacle.layout.Gaps">pinnacle.layout.Gaps</a>?</code>
 
 The gaps between windows within this layout.
 
 ### direction <Badge type="danger" text="nullable" />
 
-`direction?`: <code><a href="/lua-reference/aliases/pinnacle.layout.LayoutDir">pinnacle.layout.LayoutDir</a></code>
+`direction?`: <code><a href="/lua-reference/aliases/pinnacle.layout.LayoutDir">pinnacle.layout.LayoutDir</a>?</code>
 
 The direction that windows should be laid out in.
 
 ### reversed <Badge type="danger" text="nullable" />
 
-`reversed?`: <code>boolean</code>
+`reversed?`: <code>boolean?</code>
 
 Whether or not windows are inserted backwards.
 

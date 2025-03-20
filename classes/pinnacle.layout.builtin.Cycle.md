@@ -24,7 +24,7 @@ The layouts this generator will cycle between.
 
 ### current_tag <Badge type="danger" text="nullable" />
 
-`current_tag?`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code>
+`current_tag?`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>?</code>
 
 The current tag that will determine the chosen layout.
 
@@ -66,7 +66,7 @@ Cycles the layout backward for the given tag.
 ### <Badge type="method" text="method" /> current_layout
 
 <div class="language-lua"><pre><code>function pinnacle.layout.builtin.Cycle:current_layout(tag: <a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>)
-    -> <a href="/lua-reference/classes/pinnacle.layout.LayoutGenerator">pinnacle.layout.LayoutGenerator</a></code></pre></div>
+    -> <a href="/lua-reference/classes/pinnacle.layout.LayoutGenerator">pinnacle.layout.LayoutGenerator</a>?</code></pre></div>
 
 Gets the current layout generator for the given tag.
 
@@ -80,7 +80,7 @@ Gets the current layout generator for the given tag.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.layout.LayoutGenerator">pinnacle.layout.LayoutGenerator</a></code>
+1. <code><a href="/lua-reference/classes/pinnacle.layout.LayoutGenerator">pinnacle.layout.LayoutGenerator</a>?</code>
 
 
 

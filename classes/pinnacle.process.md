@@ -16,7 +16,7 @@ This module provides utilities to spawn processes and capture their output.
 ### <Badge type="function" text="function" /> spawn
 
 <div class="language-lua"><pre><code>function pinnacle.process.spawn(...: string)
-    -> <a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code></pre></div>
+    -> <a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a>?</code></pre></div>
 
 Spawns a process, returning a `Child` with the process's standard IO if successful.
 
@@ -36,7 +36,7 @@ For more control over the spawn, use `Process.command` instead.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
+1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a>?</code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
 
 
 
@@ -46,7 +46,7 @@ For more control over the spawn, use `Process.command` instead.
 ### <Badge type="function" text="function" /> spawn_once
 
 <div class="language-lua"><pre><code>function pinnacle.process.spawn_once(...: string)
-    -> <a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code></pre></div>
+    -> <a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a>?</code></pre></div>
 
 Spawns a process if it hasn't been spawned before,
 returning a `Child` with the process's standard IO if successful.
@@ -67,7 +67,7 @@ For more control over the spawn, use `Process.command` instead.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
+1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a>?</code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
 
 
 
@@ -77,7 +77,7 @@ For more control over the spawn, use `Process.command` instead.
 ### <Badge type="function" text="function" /> spawn_unique
 
 <div class="language-lua"><pre><code>function pinnacle.process.spawn_unique(...: string)
-    -> <a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code></pre></div>
+    -> <a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a>?</code></pre></div>
 
 Spawns a process if it isn't already running,
 returning a `Child` with the process's standard IO if successful.
@@ -98,7 +98,7 @@ For more control over the spawn, use `Process.command` instead.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
+1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a>?</code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
 
 
 

@@ -20,14 +20,14 @@ An object that allows you to forcibly request layouts.
 
 ### <Badge type="method" text="method" /> request_layout
 
-<div class="language-lua"><pre><code>function pinnacle.layout.LayoutRequester:request_layout(output?: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.layout.LayoutRequester:request_layout(output?: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>?)</code></pre></div>
 
 Causes the compositor to emit a layout request.
 
 
 #### Parameters
 
-`output?`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to layout, or `nil` for the focused output.
+`output?`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>?</code> - The output to layout, or `nil` for the focused output.
 
 
 

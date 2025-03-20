@@ -131,7 +131,7 @@ Gets whether or not this tag is active.
 ### <Badge type="method" text="method" /> name
 
 <div class="language-lua"><pre><code>function pinnacle.tag.TagHandle:name()
-    -> string</code></pre></div>
+    -> string?</code></pre></div>
 
 Gets this tag's name.
 
@@ -140,7 +140,7 @@ Gets this tag's name.
 
 #### Returns
 
-1. <code>string</code>
+1. <code>string?</code>
 
 
 

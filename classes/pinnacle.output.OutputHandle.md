@@ -116,7 +116,7 @@ Output.get_by_name("DP-1"):set_loc_adj_to(Output:get_by_name("HDMI-1"), "bottom_
 
 ### <Badge type="method" text="method" /> set_mode
 
-<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_mode(width: integer, height: integer, refresh_rate_mhz?: integer)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_mode(width: integer, height: integer, refresh_rate_mhz?: integer?)</code></pre></div>
 
 Sets this output's mode.
 
@@ -138,7 +138,7 @@ Output.get_focused():set_mode(2560, 1440, 144000)
 
 `width`: <code>integer</code> - The mode's width.<br>
 `height`: <code>integer</code> - The mode's height.<br>
-`refresh_rate_mhz?`: <code>integer</code> - The mode's refresh rate in millihertz, or `nil` to auto-select.
+`refresh_rate_mhz?`: <code>integer?</code> - The mode's refresh rate in millihertz, or `nil` to auto-select.
 
 
 
@@ -147,7 +147,7 @@ Output.get_focused():set_mode(2560, 1440, 144000)
 
 ### <Badge type="method" text="method" /> set_custom_mode
 
-<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_custom_mode(width: integer, height: integer, refresh_rate_mhz?: integer)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_custom_mode(width: integer, height: integer, refresh_rate_mhz?: integer?)</code></pre></div>
 
 Sets this output's mode to a custom one.
 
@@ -166,7 +166,7 @@ Output.get_focused():set_custom_mode(2560, 1440, 75000)
 
 `width`: <code>integer</code> - A custom width.<br>
 `height`: <code>integer</code> - A custom height.<br>
-`refresh_rate_mhz?`: <code>integer</code> - A custom refresh rate in millihertz, or `nil` to default to 60Hz.
+`refresh_rate_mhz?`: <code>integer?</code> - A custom refresh rate in millihertz, or `nil` to default to 60Hz.
 
 
 
@@ -329,7 +329,7 @@ Gets this output's serial.
 ### <Badge type="method" text="method" /> loc
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:loc()
-    -> { x: integer, y: integer }</code></pre></div>
+    -> { x: integer, y: integer }?</code></pre></div>
 
 Gets this output's location in the global space.
 
@@ -338,7 +338,7 @@ Gets this output's location in the global space.
 
 #### Returns
 
-1. <code>{ x: integer, y: integer }</code> - The output's location, or `nil` if it is not enabled or doesn't exist.
+1. <code>{ x: integer, y: integer }?</code> - The output's location, or `nil` if it is not enabled or doesn't exist.
 
 
 
@@ -346,7 +346,7 @@ Gets this output's location in the global space.
 ### <Badge type="method" text="method" /> logical_size
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:logical_size()
-    -> { width: integer, height: integer }</code></pre></div>
+    -> { width: integer, height: integer }?</code></pre></div>
 
 Gets this output's logical size in logical pixels.
 
@@ -355,7 +355,7 @@ Gets this output's logical size in logical pixels.
 
 #### Returns
 
-1. <code>{ width: integer, height: integer }</code> - The output's logical size, or `nil` if it is disabled or doesn't exist.
+1. <code>{ width: integer, height: integer }?</code> - The output's logical size, or `nil` if it is disabled or doesn't exist.
 
 
 
@@ -363,7 +363,7 @@ Gets this output's logical size in logical pixels.
 ### <Badge type="method" text="method" /> physical_size
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:physical_size()
-    -> { width: integer, height: integer }</code></pre></div>
+    -> { width: integer, height: integer }?</code></pre></div>
 
 Gets this output's physical size in millimeters.
 
@@ -372,7 +372,7 @@ Gets this output's physical size in millimeters.
 
 #### Returns
 
-1. <code>{ width: integer, height: integer }</code> - The output's physical size, or `nil` if it doesn't advertise one or doesn't exist.
+1. <code>{ width: integer, height: integer }?</code> - The output's physical size, or `nil` if it doesn't advertise one or doesn't exist.
 
 
 
@@ -380,7 +380,7 @@ Gets this output's physical size in millimeters.
 ### <Badge type="method" text="method" /> current_mode
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:current_mode()
-    -> <a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a></code></pre></div>
+    -> <a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a>?</code></pre></div>
 
 Gets this output's current mode.
 
@@ -389,7 +389,7 @@ Gets this output's current mode.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a></code> - The current mode, or `nil` if the output is disabled or doesn't exist.
+1. <code><a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a>?</code> - The current mode, or `nil` if the output is disabled or doesn't exist.
 
 
 
@@ -397,7 +397,7 @@ Gets this output's current mode.
 ### <Badge type="method" text="method" /> preferred_mode
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:preferred_mode()
-    -> <a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a></code></pre></div>
+    -> <a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a>?</code></pre></div>
 
 Gets this output's preferred mode.
 
@@ -406,7 +406,7 @@ Gets this output's preferred mode.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a></code> - The preferred mode, or `nil` if the output doesn't exist.
+1. <code><a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a>?</code> - The preferred mode, or `nil` if the output doesn't exist.
 
 
 
