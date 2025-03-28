@@ -28,7 +28,7 @@ Keycodes for every key.
 
 ### <Badge type="function" text="function" /> keybind
 
-<div class="language-lua"><pre><code>function pinnacle.input.keybind(mods: <a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[], key: <a href="/lua-reference/enums/pinnacle.input.Key">pinnacle.input.Key</a> | string, on_press: fun(), bind_info?: { group?: string, description?: string })</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.keybind(mods: <a href="/lua-reference/main/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[], key: <a href="/lua-reference/main/enums/pinnacle.input.Key">pinnacle.input.Key</a> | string, on_press: fun(), bind_info?: { group?: string, description?: string })</code></pre></div>
 
 Sets a keybind.
 
@@ -73,8 +73,8 @@ end)
 
 #### Parameters
 
-`mods`: <code><a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code> - The modifiers that need to be held down for the bind to trigger<br>
-`key`: <code><a href="/lua-reference/enums/pinnacle.input.Key">pinnacle.input.Key</a> | string</code> - The key used to trigger the bind<br>
+`mods`: <code><a href="/lua-reference/main/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code> - The modifiers that need to be held down for the bind to trigger<br>
+`key`: <code><a href="/lua-reference/main/enums/pinnacle.input.Key">pinnacle.input.Key</a> | string</code> - The key used to trigger the bind<br>
 `on_press`: <code>fun()</code> - The function to run when the bind is triggered<br>
 `bind_info?`: <code>{ group?: string, description?: string }</code> - An optional group and description that is displayed in the bind overlay.
 
@@ -85,7 +85,7 @@ end)
 
 ### <Badge type="function" text="function" /> mousebind
 
-<div class="language-lua"><pre><code>function pinnacle.input.mousebind(mods: <a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[], button: <a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a>, on_press: fun(), bind_info?: { group?: string, description?: string })</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.mousebind(mods: <a href="/lua-reference/main/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[], button: <a href="/lua-reference/main/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a>, on_press: fun(), bind_info?: { group?: string, description?: string })</code></pre></div>
 
 Sets a mousebind.
 
@@ -122,8 +122,8 @@ end)
 
 #### Parameters
 
-`mods`: <code><a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code> - The modifiers that need to be held down for the bind to trigger<br>
-`button`: <code><a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a></code> - The mouse button used to trigger the bind<br>
+`mods`: <code><a href="/lua-reference/main/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code> - The modifiers that need to be held down for the bind to trigger<br>
+`button`: <code><a href="/lua-reference/main/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a></code> - The mouse button used to trigger the bind<br>
 `on_press`: <code>fun()</code> - The function to run when the bind is triggered<br>
 `bind_info?`: <code>{ group?: string, description?: string }</code> - An optional group and description that will be displayed in the bind overlay.
 
@@ -151,7 +151,7 @@ Enters the bind layer `layer`, or the default layer if `layer` is nil.
 ### <Badge type="function" text="function" /> bind_infos
 
 <div class="language-lua"><pre><code>function pinnacle.input.bind_infos()
-    -> <a href="/lua-reference/classes/pinnacle.input.BindInfo">pinnacle.input.BindInfo</a>[]</code></pre></div>
+    -> <a href="/lua-reference/main/classes/pinnacle.input.BindInfo">pinnacle.input.BindInfo</a>[]</code></pre></div>
 
 Gets all binds and their information.
 
@@ -160,14 +160,14 @@ Gets all binds and their information.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.input.BindInfo">pinnacle.input.BindInfo</a>[]</code>
+1. <code><a href="/lua-reference/main/classes/pinnacle.input.BindInfo">pinnacle.input.BindInfo</a>[]</code>
 
 
 
 
 ### <Badge type="function" text="function" /> set_xkb_config
 
-<div class="language-lua"><pre><code>function pinnacle.input.set_xkb_config(xkb_config: <a href="/lua-reference/classes/pinnacle.input.XkbConfig">pinnacle.input.XkbConfig</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.set_xkb_config(xkb_config: <a href="/lua-reference/main/classes/pinnacle.input.XkbConfig">pinnacle.input.XkbConfig</a>)</code></pre></div>
 
 Sets the xkbconfig for your keyboard.
 
@@ -184,7 +184,7 @@ Input.set_xkb_config({
 
 #### Parameters
 
-`xkb_config`: <code><a href="/lua-reference/classes/pinnacle.input.XkbConfig">pinnacle.input.XkbConfig</a></code> - The new xkbconfig
+`xkb_config`: <code><a href="/lua-reference/main/classes/pinnacle.input.XkbConfig">pinnacle.input.XkbConfig</a></code> - The new xkbconfig
 
 
 
@@ -253,8 +253,8 @@ This allows you to set it at runtime.
 
 ### <Badge type="function" text="function" /> connect_signal
 
-<div class="language-lua"><pre><code>function pinnacle.input.connect_signal(signals: <a href="/lua-reference/classes/pinnacle.input.InputSignal">pinnacle.input.InputSignal</a>)
-    -> signal_handles: <a href="/lua-reference/classes/pinnacle.signal.SignalHandles">pinnacle.signal.SignalHandles</a></code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.connect_signal(signals: <a href="/lua-reference/main/classes/pinnacle.input.InputSignal">pinnacle.input.InputSignal</a>)
+    -> signal_handles: <a href="/lua-reference/main/classes/pinnacle.signal.SignalHandles">pinnacle.signal.SignalHandles</a></code></pre></div>
 
 Connects to an input signal.
 
@@ -277,16 +277,16 @@ Input.connect_signal({
 
 #### Parameters
 
-`signals`: <code><a href="/lua-reference/classes/pinnacle.input.InputSignal">pinnacle.input.InputSignal</a></code> - The signal you want to connect to
+`signals`: <code><a href="/lua-reference/main/classes/pinnacle.input.InputSignal">pinnacle.input.InputSignal</a></code> - The signal you want to connect to
 
 
 
 #### Returns
 
-1. `signal_handles`: <code><a href="/lua-reference/classes/pinnacle.signal.SignalHandles">pinnacle.signal.SignalHandles</a></code> - Handles to every signal you connected to wrapped in a table, with keys being the same as the connected signal.
+1. `signal_handles`: <code><a href="/lua-reference/main/classes/pinnacle.signal.SignalHandles">pinnacle.signal.SignalHandles</a></code> - Handles to every signal you connected to wrapped in a table, with keys being the same as the connected signal.
 
 
 
 #### See also
 
-- <code><a href="/lua-reference/classes/pinnacle#signal.SignalHandles.disconnect_all">pinnacle.signal.SignalHandles.disconnect_all</a></code>: - To disconnect from these signals
+- <code><a href="/lua-reference/main/classes/pinnacle#signal.SignalHandles.disconnect_all">pinnacle.signal.SignalHandles.disconnect_all</a></code>: - To disconnect from these signals

@@ -13,13 +13,13 @@ Mainly used for the bind overlay.
 
 ### mods
 
-`mods`: <code><a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code>
+`mods`: <code><a href="/lua-reference/main/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code>
 
 The bind's modifiers.
 
 ### ignore_mods
 
-`ignore_mods`: <code><a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code>
+`ignore_mods`: <code><a href="/lua-reference/main/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code>
 
 The bind's ignored modifiers.
 
@@ -43,7 +43,7 @@ The bind's description.
 
 ### kind
 
-`kind`: <code><a href="/lua-reference/classes/pinnacle.input.BindInfoKind">pinnacle.input.BindInfoKind</a></code>
+`kind`: <code><a href="/lua-reference/main/classes/pinnacle.input.BindInfoKind">pinnacle.input.BindInfoKind</a></code>
 
 What kind of bind this is.
 

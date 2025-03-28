@@ -21,7 +21,7 @@ The name of the device's system path.
 ### <Badge type="method" text="method" /> capabilities
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:capabilities()
-    -> <a href="/lua-reference/classes/pinnacle.input.libinput.Capabilities">pinnacle.input.libinput.Capabilities</a></code></pre></div>
+    -> <a href="/lua-reference/main/classes/pinnacle.input.libinput.Capabilities">pinnacle.input.libinput.Capabilities</a></code></pre></div>
 
 Gets this device's libinput capabilities.
 
@@ -30,7 +30,7 @@ Gets this device's libinput capabilities.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.input.libinput.Capabilities">pinnacle.input.libinput.Capabilities</a></code>
+1. <code><a href="/lua-reference/main/classes/pinnacle.input.libinput.Capabilities">pinnacle.input.libinput.Capabilities</a></code>
 
 
 
@@ -88,7 +88,7 @@ Gets this device's vendor id.
 ### <Badge type="method" text="method" /> device_type
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:device_type()
-    -> <a href="/lua-reference/aliases/pinnacle.input.libinput.DeviceType">pinnacle.input.libinput.DeviceType</a></code></pre></div>
+    -> <a href="/lua-reference/main/aliases/pinnacle.input.libinput.DeviceType">pinnacle.input.libinput.DeviceType</a></code></pre></div>
 
 Gets the type of this device.
 
@@ -101,14 +101,14 @@ when it may actually be a keyboard.
 
 #### Returns
 
-1. <code><a href="/lua-reference/aliases/pinnacle.input.libinput.DeviceType">pinnacle.input.libinput.DeviceType</a></code>
+1. <code><a href="/lua-reference/main/aliases/pinnacle.input.libinput.DeviceType">pinnacle.input.libinput.DeviceType</a></code>
 
 
 
 
 ### <Badge type="method" text="method" /> map_to_output
 
-<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:map_to_output(output: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:map_to_output(output: <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)</code></pre></div>
 
 Maps the absolute input from this device to the corresponding output.
 
@@ -122,7 +122,7 @@ This only affects devices with touch capability.
 
 #### Parameters
 
-`output`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to map the device's input to
+`output`: <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to map the device's input to
 
 
 
@@ -130,7 +130,7 @@ This only affects devices with touch capability.
 
 #### See also
 
-- <code><a href="/lua-reference/classes/pinnacle.input.libinput.DeviceHandle#map_to_region">pinnacle.input.libinput.DeviceHandle.map_to_region</a></code>: To map device input to an arbitrary region instead
+- <code><a href="/lua-reference/main/classes/pinnacle.input.libinput.DeviceHandle#map_to_region">pinnacle.input.libinput.DeviceHandle.map_to_region</a></code>: To map device input to an arbitrary region instead
 ### <Badge type="method" text="method" /> map_to_region
 
 <div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:map_to_region(region: { x: integer, y: integer, width: integer, height: integer })</code></pre></div>
@@ -157,17 +157,17 @@ This only affects devices with touch capability.
 
 #### See also
 
-- <code><a href="/lua-reference/classes/pinnacle.input.libinput.DeviceHandle#map_to_output">pinnacle.input.libinput.DeviceHandle.map_to_output</a></code>: To map device input to a specific output instead
+- <code><a href="/lua-reference/main/classes/pinnacle.input.libinput.DeviceHandle#map_to_output">pinnacle.input.libinput.DeviceHandle.map_to_output</a></code>: To map device input to a specific output instead
 ### <Badge type="method" text="method" /> set_accel_profile
 
-<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_accel_profile(accel_profile: <a href="/lua-reference/enums/pinnacle.input.libinput.AccelProfile">pinnacle.input.libinput.AccelProfile</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_accel_profile(accel_profile: <a href="/lua-reference/main/enums/pinnacle.input.libinput.AccelProfile">pinnacle.input.libinput.AccelProfile</a>)</code></pre></div>
 
 Sets this device's acceleration profile.
 
 
 #### Parameters
 
-`accel_profile`: <code><a href="/lua-reference/enums/pinnacle.input.libinput.AccelProfile">pinnacle.input.libinput.AccelProfile</a></code>
+`accel_profile`: <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.AccelProfile">pinnacle.input.libinput.AccelProfile</a></code>
 
 
 
@@ -208,14 +208,14 @@ Sets this device's calibration matrix.
 
 ### <Badge type="method" text="method" /> set_click_method
 
-<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_click_method(click_method: <a href="/lua-reference/enums/pinnacle.input.libinput.ClickMethod">pinnacle.input.libinput.ClickMethod</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_click_method(click_method: <a href="/lua-reference/main/enums/pinnacle.input.libinput.ClickMethod">pinnacle.input.libinput.ClickMethod</a>)</code></pre></div>
 
 Sets this device's click method.
 
 
 #### Parameters
 
-`click_method`: <code><a href="/lua-reference/enums/pinnacle.input.libinput.ClickMethod">pinnacle.input.libinput.ClickMethod</a></code>
+`click_method`: <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.ClickMethod">pinnacle.input.libinput.ClickMethod</a></code>
 
 
 
@@ -320,14 +320,14 @@ Sets whether or not the scroll button locks on this device.
 
 ### <Badge type="method" text="method" /> set_scroll_method
 
-<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_scroll_method(scroll_method: <a href="/lua-reference/enums/pinnacle.input.libinput.ScrollMethod">pinnacle.input.libinput.ScrollMethod</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_scroll_method(scroll_method: <a href="/lua-reference/main/enums/pinnacle.input.libinput.ScrollMethod">pinnacle.input.libinput.ScrollMethod</a>)</code></pre></div>
 
 Sets this device's scroll method.
 
 
 #### Parameters
 
-`scroll_method`: <code><a href="/lua-reference/enums/pinnacle.input.libinput.ScrollMethod">pinnacle.input.libinput.ScrollMethod</a></code>
+`scroll_method`: <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.ScrollMethod">pinnacle.input.libinput.ScrollMethod</a></code>
 
 
 
@@ -352,14 +352,14 @@ Enables or disables natural scroll on this device.
 
 ### <Badge type="method" text="method" /> set_tap_button_map
 
-<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_tap_button_map(tap_button_map: <a href="/lua-reference/enums/pinnacle.input.libinput.TapButtonMap">pinnacle.input.libinput.TapButtonMap</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_tap_button_map(tap_button_map: <a href="/lua-reference/main/enums/pinnacle.input.libinput.TapButtonMap">pinnacle.input.libinput.TapButtonMap</a>)</code></pre></div>
 
 Sets this device's tap button map.
 
 
 #### Parameters
 
-`tap_button_map`: <code><a href="/lua-reference/enums/pinnacle.input.libinput.TapButtonMap">pinnacle.input.libinput.TapButtonMap</a></code>
+`tap_button_map`: <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.TapButtonMap">pinnacle.input.libinput.TapButtonMap</a></code>
 
 
 
@@ -416,14 +416,14 @@ Enables or disables tap-to-click on this device.
 
 ### <Badge type="method" text="method" /> set_send_events_mode
 
-<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_send_events_mode(send_events_mode: <a href="/lua-reference/enums/pinnacle.input.libinput.SendEventsMode">pinnacle.input.libinput.SendEventsMode</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.input.libinput.DeviceHandle:set_send_events_mode(send_events_mode: <a href="/lua-reference/main/enums/pinnacle.input.libinput.SendEventsMode">pinnacle.input.libinput.SendEventsMode</a>)</code></pre></div>
 
 Sets this device's send events mode.
 
 
 #### Parameters
 
-`send_events_mode`: <code><a href="/lua-reference/enums/pinnacle.input.libinput.SendEventsMode">pinnacle.input.libinput.SendEventsMode</a></code>
+`send_events_mode`: <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.SendEventsMode">pinnacle.input.libinput.SendEventsMode</a></code>
 
 
 

@@ -208,7 +208,7 @@ If not set, the client is allowed to choose its decoration mode, defaulting to c
 
 ### <Badge type="method" text="method" /> move_to_tag
 
-<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:move_to_tag(tag: <a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:move_to_tag(tag: <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>)</code></pre></div>
 
 Moves this window to the specified tag.
 
@@ -217,7 +217,7 @@ This will remove all tags from this window and add the tag `tag`.
 
 #### Parameters
 
-`tag`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code> - The tag to move this window to
+`tag`: <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code> - The tag to move this window to
 
 
 
@@ -226,14 +226,14 @@ This will remove all tags from this window and add the tag `tag`.
 
 ### <Badge type="method" text="method" /> set_tag
 
-<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:set_tag(tag: <a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>, set: boolean)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:set_tag(tag: <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>, set: boolean)</code></pre></div>
 
 Adds or removes the given tag to or from this window.
 
 
 #### Parameters
 
-`tag`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code> - The tag to set or unset<br>
+`tag`: <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code> - The tag to set or unset<br>
 `set`: <code>boolean</code>
 
 
@@ -243,14 +243,14 @@ Adds or removes the given tag to or from this window.
 
 ### <Badge type="method" text="method" /> toggle_tag
 
-<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:toggle_tag(tag: <a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:toggle_tag(tag: <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>)</code></pre></div>
 
 Toggles the given tag on this window.
 
 
 #### Parameters
 
-`tag`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code> - The tag to toggle
+`tag`: <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code> - The tag to toggle
 
 
 
@@ -443,7 +443,7 @@ Gets whether this window is maximized.
 ### <Badge type="method" text="method" /> tags
 
 <div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:tags()
-    -> <a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code></pre></div>
+    -> <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code></pre></div>
 
 Gets all tags on this window.
 
@@ -452,7 +452,7 @@ Gets all tags on this window.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code>
+1. <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code>
 
 
 

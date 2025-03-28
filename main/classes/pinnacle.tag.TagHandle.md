@@ -148,7 +148,7 @@ Gets this tag's name.
 ### <Badge type="method" text="method" /> output
 
 <div class="language-lua"><pre><code>function pinnacle.tag.TagHandle:output()
-    -> <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code></pre></div>
+    -> <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code></pre></div>
 
 Gets the output this tag is on.
 
@@ -157,7 +157,7 @@ Gets the output this tag is on.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code>
+1. <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code>
 
 
 
@@ -165,7 +165,7 @@ Gets the output this tag is on.
 ### <Badge type="method" text="method" /> windows
 
 <div class="language-lua"><pre><code>function pinnacle.tag.TagHandle:windows()
-    -> <a href="/lua-reference/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code></pre></div>
+    -> <a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code></pre></div>
 
 Gets the windows that have this tag.
 
@@ -174,7 +174,7 @@ Gets the windows that have this tag.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code>
+1. <code><a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code>
 
 
 

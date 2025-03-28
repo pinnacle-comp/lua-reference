@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `pinnacle.input.Mousebind` : <code><a href="/lua-reference/classes/pinnacle.input.Bind">pinnacle.input.Bind</a></code>
+# Class `pinnacle.input.Mousebind` : <code><a href="/lua-reference/main/classes/pinnacle.input.Bind">pinnacle.input.Bind</a></code>
 
 
 A mousebind.
@@ -11,7 +11,7 @@ A mousebind.
 
 ### button
 
-`button`: <code><a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a></code>
+`button`: <code><a href="/lua-reference/main/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a></code>
 
 The mouse button that will trigger this bind.
 

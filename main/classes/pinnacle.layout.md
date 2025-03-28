@@ -23,8 +23,8 @@ Builtin layout generators.
 
 ### <Badge type="function" text="function" /> manage
 
-<div class="language-lua"><pre><code>function pinnacle.layout.manage(on_layout: fun(args: <a href="/lua-reference/classes/pinnacle.layout.LayoutArgs">pinnacle.layout.LayoutArgs</a>): <a href="/lua-reference/classes/pinnacle.layout.LayoutNode">pinnacle.layout.LayoutNode</a>)
-    -> <a href="/lua-reference/classes/pinnacle.layout.LayoutRequester">pinnacle.layout.LayoutRequester</a></code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.layout.manage(on_layout: fun(args: <a href="/lua-reference/main/classes/pinnacle.layout.LayoutArgs">pinnacle.layout.LayoutArgs</a>): <a href="/lua-reference/main/classes/pinnacle.layout.LayoutNode">pinnacle.layout.LayoutNode</a>)
+    -> <a href="/lua-reference/main/classes/pinnacle.layout.LayoutRequester">pinnacle.layout.LayoutRequester</a></code></pre></div>
 
 Begins managing layout requests from the compositor.
 
@@ -51,13 +51,13 @@ end)
 
 #### Parameters
 
-`on_layout`: <code>fun(args: <a href="/lua-reference/classes/pinnacle.layout.LayoutArgs">pinnacle.layout.LayoutArgs</a>): <a href="/lua-reference/classes/pinnacle.layout.LayoutNode">pinnacle.layout.LayoutNode</a></code> - A function that receives layout arguments and builds and returns a layout tree.
+`on_layout`: <code>fun(args: <a href="/lua-reference/main/classes/pinnacle.layout.LayoutArgs">pinnacle.layout.LayoutArgs</a>): <a href="/lua-reference/main/classes/pinnacle.layout.LayoutNode">pinnacle.layout.LayoutNode</a></code> - A function that receives layout arguments and builds and returns a layout tree.
 
 
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.layout.LayoutRequester">pinnacle.layout.LayoutRequester</a></code> - A requester that allows you to force the compositor to request a layout.
+1. <code><a href="/lua-reference/main/classes/pinnacle.layout.LayoutRequester">pinnacle.layout.LayoutRequester</a></code> - A requester that allows you to force the compositor to request a layout.
 
 
 

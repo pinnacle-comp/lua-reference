@@ -11,13 +11,13 @@ Options for the master stack generator.
 
 ### outer_gaps <Badge type="danger" text="nullable" />
 
-`outer_gaps?`: <code><a href="/lua-reference/aliases/pinnacle.layout.Gaps">pinnacle.layout.Gaps</a></code>
+`outer_gaps?`: <code><a href="/lua-reference/main/aliases/pinnacle.layout.Gaps">pinnacle.layout.Gaps</a></code>
 
 The gaps between the outer container and this layout.
 
 ### inner_gaps <Badge type="danger" text="nullable" />
 
-`inner_gaps?`: <code><a href="/lua-reference/aliases/pinnacle.layout.Gaps">pinnacle.layout.Gaps</a></code>
+`inner_gaps?`: <code><a href="/lua-reference/main/aliases/pinnacle.layout.Gaps">pinnacle.layout.Gaps</a></code>
 
 The gaps between windows within this layout.
 

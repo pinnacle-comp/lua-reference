@@ -11,7 +11,7 @@ outline: [2, 3]
 
 ### output
 
-`output`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code>
+`output`: <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code>
 
 
 
@@ -23,7 +23,7 @@ outline: [2, 3]
 
 ### tags
 
-`tags`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code>
+`tags`: <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code>
 
 
 

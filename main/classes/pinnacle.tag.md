@@ -35,7 +35,7 @@ If you need to get tags beyond the first with the same name, use the `get` metho
 ### <Badge type="function" text="function" /> get_all
 
 <div class="language-lua"><pre><code>function pinnacle.tag.get_all()
-    -> <a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code></pre></div>
+    -> <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code></pre></div>
 
 Gets all tags across all outputs.
 
@@ -44,15 +44,15 @@ Gets all tags across all outputs.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code>
+1. <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code>
 
 
 
 
 ### <Badge type="function" text="function" /> get
 
-<div class="language-lua"><pre><code>function pinnacle.tag.get(name: string, output?: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)
-    -> <a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a> | nil</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.tag.get(name: string, output?: <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)
+    -> <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a> | nil</code></pre></div>
 
 Gets the tag with the given name and output.
 
@@ -74,21 +74,21 @@ local tag_on_hdmi1 = Tag.get("Tag", Output.get_by_name("HDMI-1"))
 #### Parameters
 
 `name`: <code>string</code> - The name of the tag<br>
-`output?`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to get the tag on, or `nil` for the focused output.
+`output?`: <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to get the tag on, or `nil` for the focused output.
 
 
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a> | nil</code>
+1. <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a> | nil</code>
 
 
 
 
 ### <Badge type="function" text="function" /> add
 
-<div class="language-lua"><pre><code>function pinnacle.tag.add(output: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>, ...: string)
-    -> tags: <a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.tag.add(output: <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>, ...: string)
+    -> tags: <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code></pre></div>
 
 Adds tags with the given names to the specified output.
 
@@ -108,21 +108,21 @@ local tags = Tag.add(Output.get_by_name("HDMI-1"), tag_names)
 
 #### Parameters
 
-`output`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to add tags to.<br>
+`output`: <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to add tags to.<br>
 `...`: <code>string</code> - The names of the new tags.
 
 
 
 #### Returns
 
-1. `tags`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code> - Handles to the created tags.
+1. `tags`: <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code> - Handles to the created tags.
 
 
 
 
 ### <Badge type="function" text="function" /> remove
 
-<div class="language-lua"><pre><code>function pinnacle.tag.remove(tags: <a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[])</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.tag.remove(tags: <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[])</code></pre></div>
 
 Removes the given tags.
 
@@ -136,7 +136,7 @@ Tag.remove(tags) -- "HDMI-1" no longer has those tags
 
 #### Parameters
 
-`tags`: <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code> - The tags to remove.
+`tags`: <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code> - The tags to remove.
 
 
 
@@ -145,8 +145,8 @@ Tag.remove(tags) -- "HDMI-1" no longer has those tags
 
 ### <Badge type="function" text="function" /> connect_signal
 
-<div class="language-lua"><pre><code>function pinnacle.tag.connect_signal(signals: <a href="/lua-reference/classes/pinnacle.tag.TagSignal">pinnacle.tag.TagSignal</a>)
-    -> signal_handles: <a href="/lua-reference/classes/pinnacle.signal.SignalHandles">pinnacle.signal.SignalHandles</a></code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.tag.connect_signal(signals: <a href="/lua-reference/main/classes/pinnacle.tag.TagSignal">pinnacle.tag.TagSignal</a>)
+    -> signal_handles: <a href="/lua-reference/main/classes/pinnacle.signal.SignalHandles">pinnacle.signal.SignalHandles</a></code></pre></div>
 
 Connects to a tag signal.
 
@@ -170,16 +170,16 @@ Tag.connect_signal({
 
 #### Parameters
 
-`signals`: <code><a href="/lua-reference/classes/pinnacle.tag.TagSignal">pinnacle.tag.TagSignal</a></code> - The signal you want to connect to
+`signals`: <code><a href="/lua-reference/main/classes/pinnacle.tag.TagSignal">pinnacle.tag.TagSignal</a></code> - The signal you want to connect to
 
 
 
 #### Returns
 
-1. `signal_handles`: <code><a href="/lua-reference/classes/pinnacle.signal.SignalHandles">pinnacle.signal.SignalHandles</a></code> - Handles to every signal you connected to wrapped in a table, with keys being the same as the connected signal.
+1. `signal_handles`: <code><a href="/lua-reference/main/classes/pinnacle.signal.SignalHandles">pinnacle.signal.SignalHandles</a></code> - Handles to every signal you connected to wrapped in a table, with keys being the same as the connected signal.
 
 
 
 #### See also
 
-- <code><a href="/lua-reference/classes/pinnacle#signal.SignalHandles.disconnect_all">pinnacle.signal.SignalHandles.disconnect_all</a></code>: - To disconnect from these signals
+- <code><a href="/lua-reference/main/classes/pinnacle#signal.SignalHandles.disconnect_all">pinnacle.signal.SignalHandles.disconnect_all</a></code>: - To disconnect from these signals

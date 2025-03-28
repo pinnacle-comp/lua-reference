@@ -29,13 +29,13 @@ A set of indices per window index that changes how that window is assigned a geo
 
 ### layout_dir <Badge type="danger" text="nullable" />
 
-`layout_dir?`: <code><a href="/lua-reference/aliases/pinnacle.layout.LayoutDir">pinnacle.layout.LayoutDir</a></code>
+`layout_dir?`: <code><a href="/lua-reference/main/aliases/pinnacle.layout.LayoutDir">pinnacle.layout.LayoutDir</a></code>
 
 The direction that child nodes are laid out.
 
 ### gaps <Badge type="danger" text="nullable" />
 
-`gaps?`: <code>number | <a href="/lua-reference/aliases/pinnacle.layout.Gaps">pinnacle.layout.Gaps</a></code>
+`gaps?`: <code>number | <a href="/lua-reference/main/aliases/pinnacle.layout.Gaps">pinnacle.layout.Gaps</a></code>
 
 The gaps the node applies around its children nodes.
 
@@ -47,7 +47,7 @@ The proportion the node takes up relative to its siblings.
 
 ### children
 
-`children`: <code><a href="/lua-reference/classes/pinnacle.layout.LayoutNode">pinnacle.layout.LayoutNode</a>[]</code>
+`children`: <code><a href="/lua-reference/main/classes/pinnacle.layout.LayoutNode">pinnacle.layout.LayoutNode</a>[]</code>
 
 Child layout nodes.
 

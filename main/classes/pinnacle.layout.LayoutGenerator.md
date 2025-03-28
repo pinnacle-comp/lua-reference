@@ -11,7 +11,7 @@ A layout generator.
 
 ### layout
 
-`layout`: <code>fun(self: self, window_count: integer): <a href="/lua-reference/classes/pinnacle.layout.LayoutNode">pinnacle.layout.LayoutNode</a></code>
+`layout`: <code>fun(self: self, window_count: integer): <a href="/lua-reference/main/classes/pinnacle.layout.LayoutNode">pinnacle.layout.LayoutNode</a></code>
 
 Generate an array of geometries from the given `LayoutArgs`.
 

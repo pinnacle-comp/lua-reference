@@ -11,7 +11,7 @@ An input bind.
 
 ### mods
 
-`mods`: <code><a href="/lua-reference/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code>
+`mods`: <code><a href="/lua-reference/main/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code>
 
 The modifiers that need to be pressed for this bind to trigger.
 

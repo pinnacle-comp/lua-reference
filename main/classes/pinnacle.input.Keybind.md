@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `pinnacle.input.Keybind` : <code><a href="/lua-reference/classes/pinnacle.input.Bind">pinnacle.input.Bind</a></code>
+# Class `pinnacle.input.Keybind` : <code><a href="/lua-reference/main/classes/pinnacle.input.Bind">pinnacle.input.Bind</a></code>
 
 
 A keybind.
@@ -11,7 +11,7 @@ A keybind.
 
 ### key
 
-`key`: <code>string | <a href="/lua-reference/enums/pinnacle.input.Key">pinnacle.input.Key</a></code>
+`key`: <code>string | <a href="/lua-reference/main/enums/pinnacle.input.Key">pinnacle.input.Key</a></code>
 
 The key that will trigger this bind.
 

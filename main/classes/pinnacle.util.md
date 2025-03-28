@@ -11,7 +11,7 @@ Utility functions.
 
 ### output
 
-`output`: <code><a href="/lua-reference/classes/pinnacle.util.output">pinnacle.util.output</a></code> = `output`
+`output`: <code><a href="/lua-reference/main/classes/pinnacle.util.output">pinnacle.util.output</a></code> = `output`
 
 Output utilities.
 

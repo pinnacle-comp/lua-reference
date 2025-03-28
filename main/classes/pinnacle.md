@@ -148,7 +148,7 @@ If you want to run a function with the config without blocking, see `Pinnacle.ru
 
 #### See also
 
-- <code><a href="/lua-reference/classes/pinnacle#run">pinnacle.run</a></code>
+- <code><a href="/lua-reference/main/classes/pinnacle#run">pinnacle.run</a></code>
 ### <Badge type="function" text="function" /> run
 
 <div class="language-lua"><pre><code>function pinnacle.run(run_fn: fun())</code></pre></div>
@@ -172,4 +172,4 @@ However, it will not block to receive compositor events.
 
 #### See also
 
-- <code><a href="/lua-reference/classes/pinnacle#setup">pinnacle.setup</a></code>
+- <code><a href="/lua-reference/main/classes/pinnacle#setup">pinnacle.setup</a></code>

@@ -70,10 +70,10 @@ Output.get_by_name("HDMI-1"):set_loc(1920, -360)
 
 #### See also
 
-- <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle#set_loc_adj_to">pinnacle.output.OutputHandle.set_loc_adj_to</a></code>: A helper function to move outputs relative to other outputs.
+- <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle#set_loc_adj_to">pinnacle.output.OutputHandle.set_loc_adj_to</a></code>: A helper function to move outputs relative to other outputs.
 ### <Badge type="method" text="method" /> set_loc_adj_to
 
-<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_loc_adj_to(other: <a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>, alignment: <a href="/lua-reference/aliases/pinnacle.output.Alignment">pinnacle.output.Alignment</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_loc_adj_to(other: <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>, alignment: <a href="/lua-reference/main/aliases/pinnacle.output.Alignment">pinnacle.output.Alignment</a>)</code></pre></div>
 
 Sets the location of this output adjacent to another one.
 
@@ -106,8 +106,8 @@ Output.get_by_name("DP-1"):set_loc_adj_to(Output.get_by_name("HDMI-1"), "bottom_
 
 #### Parameters
 
-`other`: <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to move this output relative to.<br>
-`alignment`: <code><a href="/lua-reference/aliases/pinnacle.output.Alignment">pinnacle.output.Alignment</a></code> - How to align this output with the other output.
+`other`: <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to move this output relative to.<br>
+`alignment`: <code><a href="/lua-reference/main/aliases/pinnacle.output.Alignment">pinnacle.output.Alignment</a></code> - How to align this output with the other output.
 
 
 
@@ -175,7 +175,7 @@ Output.get_focused():set_custom_mode(2560, 1440, 75000)
 
 ### <Badge type="method" text="method" /> set_modeline
 
-<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_modeline(modeline: string | <a href="/lua-reference/classes/pinnacle.output.Modeline">pinnacle.output.Modeline</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_modeline(modeline: string | <a href="/lua-reference/main/classes/pinnacle.output.Modeline">pinnacle.output.Modeline</a>)</code></pre></div>
 
 Sets a custom modeline for this output.
 
@@ -191,7 +191,7 @@ require("pinnacle.util").output.parse_modeline(
 
 #### Parameters
 
-`modeline`: <code>string | <a href="/lua-reference/classes/pinnacle.output.Modeline">pinnacle.output.Modeline</a></code> - A modeline table, or a modeline string to feed it into `parse_modeline`.
+`modeline`: <code>string | <a href="/lua-reference/main/classes/pinnacle.output.Modeline">pinnacle.output.Modeline</a></code> - A modeline table, or a modeline string to feed it into `parse_modeline`.
 
 
 
@@ -199,7 +199,7 @@ require("pinnacle.util").output.parse_modeline(
 
 #### See also
 
-- <code><a href="/lua-reference/classes/pinnacle.util.output#parse_modeline">pinnacle.util.output.parse_modeline</a></code>
+- <code><a href="/lua-reference/main/classes/pinnacle.util.output#parse_modeline">pinnacle.util.output.parse_modeline</a></code>
 ### <Badge type="method" text="method" /> set_scale
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_scale(scale: number)</code></pre></div>
@@ -234,14 +234,14 @@ Changes this output's scaling factor by the given amount.
 
 ### <Badge type="method" text="method" /> set_transform
 
-<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_transform(transform: <a href="/lua-reference/enums/pinnacle.output.Transform">pinnacle.output.Transform</a>)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_transform(transform: <a href="/lua-reference/main/enums/pinnacle.output.Transform">pinnacle.output.Transform</a>)</code></pre></div>
 
 Sets this output's transform.
 
 
 #### Parameters
 
-`transform`: <code><a href="/lua-reference/enums/pinnacle.output.Transform">pinnacle.output.Transform</a></code> - The new transform.
+`transform`: <code><a href="/lua-reference/main/enums/pinnacle.output.Transform">pinnacle.output.Transform</a></code> - The new transform.
 
 
 
@@ -380,7 +380,7 @@ Gets this output's physical size in millimeters.
 ### <Badge type="method" text="method" /> current_mode
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:current_mode()
-    -> <a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a>?</code></pre></div>
+    -> <a href="/lua-reference/main/classes/pinnacle.output.Mode">pinnacle.output.Mode</a>?</code></pre></div>
 
 Gets this output's current mode.
 
@@ -389,7 +389,7 @@ Gets this output's current mode.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a></code> - The current mode, or `nil` if the output is disabled or doesn't exist.
+1. <code><a href="/lua-reference/main/classes/pinnacle.output.Mode">pinnacle.output.Mode</a></code> - The current mode, or `nil` if the output is disabled or doesn't exist.
 
 
 
@@ -397,7 +397,7 @@ Gets this output's current mode.
 ### <Badge type="method" text="method" /> preferred_mode
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:preferred_mode()
-    -> <a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a>?</code></pre></div>
+    -> <a href="/lua-reference/main/classes/pinnacle.output.Mode">pinnacle.output.Mode</a>?</code></pre></div>
 
 Gets this output's preferred mode.
 
@@ -406,7 +406,7 @@ Gets this output's preferred mode.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a></code> - The preferred mode, or `nil` if the output doesn't exist.
+1. <code><a href="/lua-reference/main/classes/pinnacle.output.Mode">pinnacle.output.Mode</a></code> - The preferred mode, or `nil` if the output doesn't exist.
 
 
 
@@ -414,7 +414,7 @@ Gets this output's preferred mode.
 ### <Badge type="method" text="method" /> modes
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:modes()
-    -> <a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a>[]</code></pre></div>
+    -> <a href="/lua-reference/main/classes/pinnacle.output.Mode">pinnacle.output.Mode</a>[]</code></pre></div>
 
 Gets all of this output's available modes.
 
@@ -423,7 +423,7 @@ Gets all of this output's available modes.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.output.Mode">pinnacle.output.Mode</a>[]</code>
+1. <code><a href="/lua-reference/main/classes/pinnacle.output.Mode">pinnacle.output.Mode</a>[]</code>
 
 
 
@@ -450,7 +450,7 @@ The focused output is currently implemented as the one that last had pointer mot
 ### <Badge type="method" text="method" /> tags
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:tags()
-    -> <a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code></pre></div>
+    -> <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code></pre></div>
 
 Gets the tags this output has.
 
@@ -459,7 +459,7 @@ Gets the tags this output has.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code>
+1. <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code>
 
 
 
@@ -484,7 +484,7 @@ Get this output's scale.
 ### <Badge type="method" text="method" /> transform
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:transform()
-    -> <a href="/lua-reference/enums/pinnacle.output.Transform">pinnacle.output.Transform</a></code></pre></div>
+    -> <a href="/lua-reference/main/enums/pinnacle.output.Transform">pinnacle.output.Transform</a></code></pre></div>
 
 Get this output's transform.
 
@@ -493,7 +493,7 @@ Get this output's transform.
 
 #### Returns
 
-1. <code><a href="/lua-reference/enums/pinnacle.output.Transform">pinnacle.output.Transform</a></code>
+1. <code><a href="/lua-reference/main/enums/pinnacle.output.Transform">pinnacle.output.Transform</a></code>
 
 
 
@@ -540,7 +540,7 @@ mapped to the global space, meaning you can still interact with them.
 ### <Badge type="method" text="method" /> keyboard_focus_stack
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:keyboard_focus_stack()
-    -> <a href="/lua-reference/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code></pre></div>
+    -> <a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code></pre></div>
 
 Gets this output's keyboard focus stack.
 
@@ -553,17 +553,17 @@ If you only want visible windows, use `keyboard_focus_stack_visible` instead.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code>
+1. <code><a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code>
 
 
 
 #### See also
 
-- <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle#keyboard_focus_stack_visible">pinnacle.output.OutputHandle.keyboard_focus_stack_visible</a></code>
+- <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle#keyboard_focus_stack_visible">pinnacle.output.OutputHandle.keyboard_focus_stack_visible</a></code>
 ### <Badge type="method" text="method" /> keyboard_focus_stack_visible
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:keyboard_focus_stack_visible()
-    -> <a href="/lua-reference/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code></pre></div>
+    -> <a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code></pre></div>
 
 Gets this output's keyboard focus stack.
 
@@ -576,10 +576,10 @@ If you want all windows on the output, use `keyboard_focus_stack` instead.
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code>
+1. <code><a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code>
 
 
 
 #### See also
 
-- <code><a href="/lua-reference/classes/pinnacle.output.OutputHandle#keyboard_focus_stack">pinnacle.output.OutputHandle.keyboard_focus_stack</a></code>
+- <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle#keyboard_focus_stack">pinnacle.output.OutputHandle.keyboard_focus_stack</a></code>

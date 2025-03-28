@@ -45,7 +45,7 @@ A command representing a to-be-spawned process.
 ### <Badge type="method" text="method" /> spawn
 
 <div class="language-lua"><pre><code>function pinnacle.process.Command:spawn()
-    -> <a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a>?</code></pre></div>
+    -> <a href="/lua-reference/main/classes/pinnacle.process.Child">pinnacle.process.Child</a>?</code></pre></div>
 
 Spawns this process, returning a `Child` that contains the process's standard IO if successful.
 
@@ -54,7 +54,7 @@ Spawns this process, returning a `Child` that contains the process's standard IO
 
 #### Returns
 
-1. <code><a href="/lua-reference/classes/pinnacle.process.Child">pinnacle.process.Child</a></code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
+1. <code><a href="/lua-reference/main/classes/pinnacle.process.Child">pinnacle.process.Child</a></code> - A child with the process's standard IO, or `nil` if the process failed to spawn or doesn't exist.
 
 
 

@@ -17,7 +17,7 @@ This is a keybind.
 
 ### mouse <Badge type="danger" text="nullable" />
 
-`mouse?`: <code>{ button: <a href="/lua-reference/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a> }</code>
+`mouse?`: <code>{ button: <a href="/lua-reference/main/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a> }</code>
 
 This is a mousebind.
 
