@@ -7,6 +7,6 @@ hero:
   tagline: The reference for Pinnacle's Lua API
   actions:
     - theme: brand
-      text: Read the Reference
-      link: /classes/pinnacle
+      text: Read the Reference (main branch)
+      link: /main/classes/pinnacle
 ---
