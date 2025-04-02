@@ -45,4 +45,10 @@ Sets this bind as a quit bind.
 
 Sets this bind as a reload config bind.
 
+### allow_when_locked <Badge type="danger" text="nullable" />
+
+`allow_when_locked?`: <code>boolean</code>
+
+Allows this bind to trigger when the session is locked.
+
 

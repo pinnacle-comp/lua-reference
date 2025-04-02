@@ -29,17 +29,35 @@ The bind's ignored modifiers.
 
 The bind's layer.
 
-### group <Badge type="danger" text="nullable" />
+### group
 
-`group?`: <code>string</code>
+`group`: <code>string</code>
 
-The bind's group.
+The bind's group. Empty if it is not in one.
 
-### description <Badge type="danger" text="nullable" />
+### description
 
-`description?`: <code>string</code>
+`description`: <code>string</code>
 
-The bind's description.
+The bind's description. Empty if it does not have one.
+
+### quit
+
+`quit`: <code>boolean</code>
+
+Whether this bind is a quit bind.
+
+### reload_config
+
+`reload_config`: <code>boolean</code>
+
+Whether this bind is a reload config bind.
+
+### allow_when_locked
+
+`allow_when_locked`: <code>boolean</code>
+
+Whether this bind is allowed when the session is locked.
 
 ### kind
 
