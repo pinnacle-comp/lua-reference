@@ -213,6 +213,70 @@ Input.set_repeat_rate(100, 1000) -- Key must be held down for 1 second, then rep
 
 
 
+### <Badge type="function" text="function" /> set_xkb_keymap
+
+<div class="language-lua"><pre><code>function pinnacle.input.set_xkb_keymap(keymap: string)</code></pre></div>
+
+Sets the XKB keymap.
+
+#### Examples
+```lua
+Input.set_xkb_keymap("keymap here...")
+
+-- From a file
+Input.set_xkb_keymap(io.open("/path/to/keymap.xkb"):read("*a"))
+```
+
+
+#### Parameters
+
+`keymap`: <code>string</code> - The keymap to set.
+
+
+
+
+
+
+### <Badge type="function" text="function" /> cycle_xkb_layout_forward
+
+<div class="language-lua"><pre><code>function pinnacle.input.cycle_xkb_layout_forward()</code></pre></div>
+
+Cycles the current XKB layout forward.
+
+
+
+
+
+
+### <Badge type="function" text="function" /> cycle_xkb_layout_backward
+
+<div class="language-lua"><pre><code>function pinnacle.input.cycle_xkb_layout_backward()</code></pre></div>
+
+Cycles the current XKB layout backward.
+
+
+
+
+
+
+### <Badge type="function" text="function" /> switch_xkb_layout
+
+<div class="language-lua"><pre><code>function pinnacle.input.switch_xkb_layout(index: integer)</code></pre></div>
+
+Switches the current XKB layout to the one at the provided `index`.
+
+Fails if the index is out of bounds.
+
+
+#### Parameters
+
+`index`: <code>integer</code> - The index of the layout to switch to.
+
+
+
+
+
+
 ### <Badge type="function" text="function" /> set_xcursor_theme
 
 <div class="language-lua"><pre><code>function pinnacle.input.set_xcursor_theme(theme: string)</code></pre></div>
