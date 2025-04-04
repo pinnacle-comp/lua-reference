@@ -82,3 +82,57 @@ drawn.
 
 
 
+
+### <Badge type="function" text="function" /> set_cursor_plane_scanout
+
+<div class="language-lua"><pre><code>function pinnacle.debug.set_cursor_plane_scanout(set: boolean)</code></pre></div>
+
+Sets cursor plane scanout.
+
+
+#### Parameters
+
+`set`: <code>boolean</code>
+
+
+
+
+
+
+### <Badge type="function" text="function" /> toggle_cursor_plane_scanout
+
+<div class="language-lua"><pre><code>function pinnacle.debug.toggle_cursor_plane_scanout()</code></pre></div>
+
+Toggles cursor plane scanout.
+
+
+
+
+
+
+### <Badge type="function" text="function" /> set_process_piping
+
+<div class="language-lua"><pre><code>function pinnacle.debug.set_process_piping(set: boolean)</code></pre></div>
+
+Enables or disables process spawning setting up pipes to give fds to the config.
+
+
+#### Parameters
+
+`set`: <code>boolean</code>
+
+
+
+
+
+
+### <Badge type="function" text="function" /> toggle_process_piping
+
+<div class="language-lua"><pre><code>function pinnacle.debug.toggle_process_piping()</code></pre></div>
+
+Toggles process spawning setting up pipes to give fds to the config.
+
+
+
+
+
