@@ -128,3 +128,20 @@ A `Command` represents a to-be-spawned process.
 
 
 
+
+### <Badge type="function" text="function" /> set_env
+
+<div class="language-lua"><pre><code>function pinnacle.process.set_env(key: string, value: string)</code></pre></div>
+
+Adds an environment variable that all newly spawned processes will inherit.
+
+
+#### Parameters
+
+`key`: <code>string</code> - The environment variable's key.<br>
+`value`: <code>string</code> - The environment variable's value.
+
+
+
+
+
