@@ -41,4 +41,28 @@ Prevents the spawn from occurring if the process is already running.
 Causes the command to only spawn the process if it hasn't been spawned before within the
 lifetime of the compositor.
 
+### pipe_stdin <Badge type="danger" text="nullable" />
+
+`pipe_stdin?`: <code>boolean</code>
+
+Sets up a pipe to allow the config to write to the process's stdin.
+
+The pipe will be available through the spawned child's `stdin`.
+
+### pipe_stdout <Badge type="danger" text="nullable" />
+
+`pipe_stdout?`: <code>boolean</code>
+
+Sets up a pipe to allow the config to read from the process's stdout.
+
+The pipe will be available through the spawned child's `stdout`.
+
+### pipe_stderr <Badge type="danger" text="nullable" />
+
+`pipe_stderr?`: <code>boolean</code>
+
+Sets up a pipe to allow the config to read from the process's stderr.
+
+The pipe will be available through the spawned child's `stderr`.
+
 

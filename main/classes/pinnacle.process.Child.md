@@ -21,17 +21,23 @@ The pid of the spawned command.
 
 This process's standard input, if any.
 
+This will only exist if `pipe_stdin` was set on the `Command` before spawning.
+
 ### stdout <Badge type="danger" text="nullable" />
 
 `stdout?`: <code><a href="/lua-reference/main/classes/pinnacle.process.ChildStdout">pinnacle.process.ChildStdout</a></code>
 
 This process's standard output, if any.
 
+This will only exist if `pipe_stdout` was set on the `Command` before spawning.
+
 ### stderr <Badge type="danger" text="nullable" />
 
 `stderr?`: <code><a href="/lua-reference/main/classes/pinnacle.process.ChildStderr">pinnacle.process.ChildStderr</a></code>
 
 This process's standard error, if any.
+
+This will only exist if `pipe_stderr` was set on the `Command` before spawning.
 
 
 ## Functions

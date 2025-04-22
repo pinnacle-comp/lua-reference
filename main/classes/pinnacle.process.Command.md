@@ -39,6 +39,24 @@ A command representing a to-be-spawned process.
 
 
 
+### pipe_stdin <Badge type="danger" text="nullable" />
+
+`pipe_stdin?`: <code>boolean</code>
+
+
+
+### pipe_stdout <Badge type="danger" text="nullable" />
+
+`pipe_stdout?`: <code>boolean</code>
+
+
+
+### pipe_stderr <Badge type="danger" text="nullable" />
+
+`pipe_stderr?`: <code>boolean</code>
+
+
+
 
 ## Functions
 
