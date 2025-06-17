@@ -84,3 +84,21 @@ Gets the current layout generator for the given tag.
 
 
 
+
+### <Badge type="method" text="method" /> current_tree_id
+
+<div class="language-lua"><pre><code>function pinnacle.layout.builtin.Cycle:current_tree_id()
+    -> integer</code></pre></div>
+
+Gets a (most-likely) unique identifier for the current layout tree.
+This is guaranteed to be greater than zero.
+
+
+
+
+#### Returns
+
+1. <code>integer</code>
+
+
+

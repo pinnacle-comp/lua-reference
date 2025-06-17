@@ -76,6 +76,42 @@ end
 
 
 
+### <Badge type="method" text="method" /> resize_tile
+
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:resize_tile(dimensions: { left?: integer, right?: integer, top?: integer, bottom?: integer })</code></pre></div>
+
+If this window is tiled, resizes its tile by shifting the left, right,
+top, and bottom edges by the provided pixel amounts.
+
+Positive amounts shift edges right/down, while negative amounts
+shift edges left/up.
+
+If this resizes the tile in a direction that it can no longer resize
+towards (e.g. it's at the edge of the screen), it will resize in the opposite
+direction.
+
+#### Example
+```lua
+-- Grow the focused tiled window 10 pixels leftward
+Window.get_focused():resize_tile({ left = -10 })
+
+-- Shrink the focused tiled window 10 pixels inward from the right
+Window.get_focused():resize_tile({ right = -10 })
+
+-- Grow the focused tiled window 20 pixels centered vertically
+Window.get_focused():resize_tile({ top = -10, bottom = 10 })
+```
+
+
+#### Parameters
+
+`dimensions`: <code>{ left?: integer, right?: integer, top?: integer, bottom?: integer }</code>
+
+
+
+
+
+
 ### <Badge type="method" text="method" /> set_fullscreen
 
 <div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:set_fullscreen(fullscreen: boolean)</code></pre></div>

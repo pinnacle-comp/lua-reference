@@ -45,9 +45,9 @@ The gaps the node applies around its children nodes.
 
 The proportion the node takes up relative to its siblings.
 
-### children
+### children <Badge type="danger" text="nullable" />
 
-`children`: <code><a href="/lua-reference/main/classes/pinnacle.layout.LayoutNode">pinnacle.layout.LayoutNode</a>[]</code>
+`children?`: <code><a href="/lua-reference/main/classes/pinnacle.layout.LayoutNode">pinnacle.layout.LayoutNode</a>[]</code>
 
 Child layout nodes.
 
