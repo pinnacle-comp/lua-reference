@@ -492,3 +492,24 @@ Gets all tags on this window.
 
 
 
+
+### <Badge type="method" text="method" /> in_direction
+
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:in_direction(direction: "left" | "right" | "up" | "down")
+    -> <a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code></pre></div>
+
+Gets all windows in the provided direction, sorted closest to farthest.
+
+
+#### Parameters
+
+`direction`: <code>"left" | "right" | "up" | "down"</code>
+
+
+
+#### Returns
+
+1. <code><a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>[]</code>
+
+
+
