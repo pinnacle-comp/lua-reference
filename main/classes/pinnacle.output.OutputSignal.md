@@ -33,4 +33,22 @@ An output's logical size changed.
 
 An output moved.
 
+### pointer_enter <Badge type="danger" text="nullable" />
+
+`pointer_enter?`: <code>fun(output: <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)</code>
+
+The pointer entered an output.
+
+### pointer_leave <Badge type="danger" text="nullable" />
+
+`pointer_leave?`: <code>fun(output: <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)</code>
+
+The pointer left an output.
+
+### focused <Badge type="danger" text="nullable" />
+
+`focused?`: <code>fun(output: <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)</code>
+
+An output was focused.
+
 

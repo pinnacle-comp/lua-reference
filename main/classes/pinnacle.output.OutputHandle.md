@@ -275,6 +275,17 @@ Toggles power for this output.
 
 
 
+### <Badge type="method" text="method" /> focus
+
+<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:focus()</code></pre></div>
+
+Focuses this output.
+
+
+
+
+
+
 ### <Badge type="method" text="method" /> make
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:make()
@@ -583,3 +594,23 @@ If you want all windows on the output, use `keyboard_focus_stack` instead.
 #### See also
 
 - <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle#keyboard_focus_stack">pinnacle.output.OutputHandle.keyboard_focus_stack</a></code>
+### <Badge type="method" text="method" /> in_direction
+
+<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:in_direction(direction: "left" | "right" | "up" | "down")
+    -> <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>[]</code></pre></div>
+
+Gets all outputs in the provided direction, sorted closest to farthest.
+
+
+#### Parameters
+
+`direction`: <code>"left" | "right" | "up" | "down"</code>
+
+
+
+#### Returns
+
+1. <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>[]</code>
+
+
+
