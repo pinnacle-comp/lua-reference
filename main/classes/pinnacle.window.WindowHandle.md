@@ -408,6 +408,25 @@ Gets whether or not this window is focused.
 
 
 
+### <Badge type="method" text="method" /> output
+
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:output()
+    -> output: <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a> | nil</code></pre></div>
+
+Gets this window's output.
+
+This is currently implemented as the output of the first tag on this window.
+
+
+
+
+#### Returns
+
+1. `output`: <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a> | nil</code> - This window's output, or `nil` if it doesn't exist or it has no tags.
+
+
+
+
 ### <Badge type="method" text="method" /> floating
 
 <div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:floating()
