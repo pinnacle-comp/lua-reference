@@ -293,6 +293,30 @@ Toggles the given tag on this window.
 
 
 
+### <Badge type="method" text="method" /> set_tags
+
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:set_tags(tags: <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[])</code></pre></div>
+
+Sets the exact provided tags on this window.
+
+Passing in an empty table will not change the window's tags.
+
+#### Example
+```lua
+-- Sets the focused window's tags to "1" and "3", removing all others
+Window.get_focused():set_tags({ Tag.get("1"), Tag.get("2") })
+```
+
+
+#### Parameters
+
+`tags`: <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code> - The tags to set
+
+
+
+
+
+
 ### <Badge type="method" text="method" /> raise
 
 <div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:raise()</code></pre></div>
