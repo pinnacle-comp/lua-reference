@@ -485,6 +485,28 @@ Gets whether this window is tiled.
 
 
 
+### <Badge type="method" text="method" /> spilled
+
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:spilled()
+    -> boolean</code></pre></div>
+
+Gets whether this window is spilled from the layout.
+
+A window is spilled when the current layout doesn't contains enough nodes
+and the compositor cannot assign a geometry to it. In that state, the window
+behaves as a floating window except that it gets tiled again if the number
+of nodes become big enough.
+
+
+
+
+#### Returns
+
+1. <code>boolean</code>
+
+
+
+
 ### <Badge type="method" text="method" /> fullscreen
 
 <div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:fullscreen()

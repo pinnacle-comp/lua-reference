@@ -145,6 +145,23 @@ Creates a layout generator that lays windows out keeping their sizes roughly the
 
 
 
+### <Badge type="function" text="function" /> floating
+
+<div class="language-lua"><pre><code>function pinnacle.layout.builtin.floating()
+    -> <a href="/lua-reference/main/classes/pinnacle.layout.builtin.Floating">pinnacle.layout.builtin.Floating</a></code></pre></div>
+
+Creates a layout generator that floats windows.
+
+
+
+
+#### Returns
+
+1. <code><a href="/lua-reference/main/classes/pinnacle.layout.builtin.Floating">pinnacle.layout.builtin.Floating</a></code>
+
+
+
+
 ### <Badge type="function" text="function" /> cycle
 
 <div class="language-lua"><pre><code>function pinnacle.layout.builtin.cycle(layouts: <a href="/lua-reference/main/classes/pinnacle.layout.LayoutGenerator">pinnacle.layout.LayoutGenerator</a>[])
