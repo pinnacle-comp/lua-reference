@@ -23,19 +23,19 @@ The thickness of the overlay border.
 
 ### background_color
 
-`background_color`: <code>snowcap.Color</code>
+`background_color`: <code>snowcap.widget.Color</code>
 
 The color of the overlay background.
 
 ### border_color
 
-`border_color`: <code>snowcap.Color</code>
+`border_color`: <code>snowcap.widget.Color</code>
 
 The color of the overlay border.
 
 ### font
 
-`font`: <code>snowcap.Font</code>
+`font`: <code>snowcap.widget.Font</code>
 
 The font of the overlay.
 
