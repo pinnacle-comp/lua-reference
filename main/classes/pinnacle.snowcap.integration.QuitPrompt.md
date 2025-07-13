@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `pinnacle.snowcap.integration.QuitPrompt`
+# Class `pinnacle.snowcap.integration.QuitPrompt` : <code>snowcap.widget.Program</code>
 
 
 A quit prompt.

@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Class `pinnacle.snowcap.integration.BindOverlay`
+# Class `pinnacle.snowcap.integration.BindOverlay` : <code>snowcap.widget.Program</code>
 
 
 An overlay that shows various input binds.
