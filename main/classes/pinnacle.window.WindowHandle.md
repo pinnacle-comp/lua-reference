@@ -242,6 +242,24 @@ If not set, the client is allowed to choose its decoration mode, defaulting to c
 
 
 
+### <Badge type="method" text="method" /> move_to_output
+
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:move_to_output(output: <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)</code></pre></div>
+
+Moves this window to the specified output.
+
+This will set the window tags to the output tags, and update the window position.
+
+
+#### Parameters
+
+`output`: <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to move this window to.
+
+
+
+
+
+
 ### <Badge type="method" text="method" /> move_to_tag
 
 <div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:move_to_tag(tag: <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>)</code></pre></div>
