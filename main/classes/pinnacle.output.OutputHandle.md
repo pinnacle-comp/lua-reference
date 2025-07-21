@@ -475,6 +475,40 @@ Gets the tags this output has.
 
 
 
+### <Badge type="method" text="method" /> active_tags
+
+<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:active_tags()
+    -> <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code></pre></div>
+
+Gets the active tags this output has.
+
+
+
+
+#### Returns
+
+1. <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code>
+
+
+
+
+### <Badge type="method" text="method" /> inactive_tags
+
+<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:inactive_tags()
+    -> <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code></pre></div>
+
+Gets the inactive tags this output has.
+
+
+
+
+#### Returns
+
+1. <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code>
+
+
+
+
 ### <Badge type="method" text="method" /> scale
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:scale()
