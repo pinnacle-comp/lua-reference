@@ -596,3 +596,19 @@ Gets all windows in the provided direction, sorted closest to farthest.
 
 
 
+
+### <Badge type="method" text="method" /> swap
+
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:swap(target: <a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>)</code></pre></div>
+
+Swap position with another window.
+
+
+#### Parameters
+
+`target`: <code><a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a></code>
+
+
+
+
+
