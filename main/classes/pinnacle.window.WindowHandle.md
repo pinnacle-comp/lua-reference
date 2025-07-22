@@ -348,6 +348,19 @@ This will bring the window to the front.
 
 
 
+### <Badge type="method" text="method" /> lower
+
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:lower()</code></pre></div>
+
+Lowers a window.
+
+This will bring the window to the back.
+
+
+
+
+
+
 ### <Badge type="method" text="method" /> is_on_active_tag
 
 <div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:is_on_active_tag()
