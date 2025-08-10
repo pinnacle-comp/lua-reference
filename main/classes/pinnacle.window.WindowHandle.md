@@ -610,6 +610,23 @@ Gets all windows in the provided direction, sorted closest to farthest.
 
 
 
+### <Badge type="method" text="method" /> foreign_toplevel_list_identifier
+
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:foreign_toplevel_list_identifier()
+    -> identifier: string | nil</code></pre></div>
+
+Gets this window's ext-foreign-toplevel-list handle identifier.
+
+
+
+
+#### Returns
+
+1. `identifier`: <code>string | nil</code>
+
+
+
+
 ### <Badge type="method" text="method" /> swap
 
 <div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:swap(target: <a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>)</code></pre></div>
