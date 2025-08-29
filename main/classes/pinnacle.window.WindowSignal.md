@@ -27,4 +27,10 @@ The pointer left a window.
 
 The window got keyboard focus.
 
+### title_changed <Badge type="danger" text="nullable" />
+
+`title_changed?`: <code>fun(window: <a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>, title: string)</code>
+
+A window's title changed.
+
 

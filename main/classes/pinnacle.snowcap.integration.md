@@ -48,3 +48,47 @@ Some of its characteristics can be changed by altering its fields.
 
 
 
+
+### <Badge type="function" text="function" /> focus_border
+
+<div class="language-lua"><pre><code>function pinnacle.snowcap.integration.focus_border(window: <a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>)
+    -> <a href="/lua-reference/main/classes/pinnacle.snowcap.integration.FocusBorder">pinnacle.snowcap.integration.FocusBorder</a></code></pre></div>
+
+Creates the default focus border without a titlebar.
+
+
+
+#### Parameters
+
+`window`: <code><a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a></code>
+
+
+
+#### Returns
+
+1. <code><a href="/lua-reference/main/classes/pinnacle.snowcap.integration.FocusBorder">pinnacle.snowcap.integration.FocusBorder</a></code>
+
+
+
+
+### <Badge type="function" text="function" /> focus_border_with_titlebar
+
+<div class="language-lua"><pre><code>function pinnacle.snowcap.integration.focus_border_with_titlebar(window: <a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>)
+    -> <a href="/lua-reference/main/classes/pinnacle.snowcap.integration.FocusBorder">pinnacle.snowcap.integration.FocusBorder</a></code></pre></div>
+
+Creates the default focus border with a titlebar.
+
+
+
+#### Parameters
+
+`window`: <code><a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a></code>
+
+
+
+#### Returns
+
+1. <code><a href="/lua-reference/main/classes/pinnacle.snowcap.integration.FocusBorder">pinnacle.snowcap.integration.FocusBorder</a></code>
+
+
+
