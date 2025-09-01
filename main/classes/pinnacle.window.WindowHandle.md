@@ -335,6 +335,22 @@ Window.get_focused():set_tags({ Tag.get("1"), Tag.get("2") })
 
 
 
+### <Badge type="method" text="method" /> set_vrr_demand
+
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:set_vrr_demand()</code></pre></div>
+
+Sets this window's vrr demand.
+
+This works in conjunction with an output with an on-demand vrr state.
+
+| "visible" # Turns vrr on on an on-demand vrr output when a window is visible.
+| "fullscreen" # Turns vrr on on an on-demand vrr output when a window is both visible *and* fullscreen.
+
+
+
+
+
+
 ### <Badge type="method" text="method" /> raise
 
 <div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:raise()</code></pre></div>

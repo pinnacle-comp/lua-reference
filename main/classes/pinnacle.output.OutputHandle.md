@@ -275,6 +275,21 @@ Toggles power for this output.
 
 
 
+### <Badge type="method" text="method" /> set_vrr
+
+<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_vrr()</code></pre></div>
+
+Sets the variable refresh rate state of this output.
+
+| true # Turns vrr on at all times.
+| false # Turns vrr off.
+| "on_demand" # Turns vrr on whenever a window with an active vrr demand is visible.
+
+
+
+
+
+
 ### <Badge type="method" text="method" /> focus
 
 <div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:focus()</code></pre></div>
