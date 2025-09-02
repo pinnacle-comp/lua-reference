@@ -69,7 +69,8 @@ end
 
 #### Parameters
 
-`geo`: <code>{ x?: integer, y?: integer, width?: integer, height?: integer }</code> - The new location and/or size
+`geo` - The new location and/or size
+	| <code>{ x?: integer, y?: integer, width?: integer, height?: integer }</code>
 
 
 
@@ -105,7 +106,8 @@ Window.get_focused():resize_tile({ top = -10, bottom = 10 })
 
 #### Parameters
 
-`dimensions`: <code>{ left?: integer, right?: integer, top?: integer, bottom?: integer }</code>
+`dimensions`
+	| <code>{ left?: integer, right?: integer, top?: integer, bottom?: integer }</code>
 
 
 
@@ -121,7 +123,8 @@ Sets this window to fullscreen or not.
 
 #### Parameters
 
-`fullscreen`: <code>boolean</code>
+`fullscreen`
+	| <code>boolean</code>
 
 
 
@@ -149,7 +152,8 @@ Sets this window to maximized or not.
 
 #### Parameters
 
-`maximized`: <code>boolean</code>
+`maximized`
+	| <code>boolean</code>
 
 
 
@@ -177,7 +181,8 @@ Sets this window to floating or not.
 
 #### Parameters
 
-`floating`: <code>boolean</code>
+`floating`
+	| <code>boolean</code>
 
 
 
@@ -205,7 +210,8 @@ Focuses or unfocuses this window.
 
 #### Parameters
 
-`focused`: <code>boolean</code>
+`focused`
+	| <code>boolean</code>
 
 
 
@@ -235,7 +241,8 @@ If not set, the client is allowed to choose its decoration mode, defaulting to c
 
 #### Parameters
 
-`mode`: <code>"client_side" | "server_side"</code> - `"client_side"` to enable CSD, or `"server_side"` to enable CSD.
+`mode` - `"client_side"` to enable CSD, or `"server_side"` to enable CSD.
+	| <code>"client_side" | "server_side"</code>
 
 
 
@@ -253,7 +260,8 @@ This will set the window tags to the output tags, and update the window position
 
 #### Parameters
 
-`output`: <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to move this window to.
+`output` - The output to move this window to.
+	| <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code>
 
 
 
@@ -271,7 +279,8 @@ This will remove all tags from this window and add the tag `tag`.
 
 #### Parameters
 
-`tag`: <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code> - The tag to move this window to
+`tag` - The tag to move this window to
+	| <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code>
 
 
 
@@ -287,8 +296,10 @@ Adds or removes the given tag to or from this window.
 
 #### Parameters
 
-`tag`: <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code> - The tag to set or unset<br>
-`set`: <code>boolean</code>
+`tag` - The tag to set or unset
+	| <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code><br>
+`set`
+	| <code>boolean</code>
 
 
 
@@ -304,7 +315,8 @@ Toggles the given tag on this window.
 
 #### Parameters
 
-`tag`: <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code> - The tag to toggle
+`tag` - The tag to toggle
+	| <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code>
 
 
 
@@ -328,7 +340,8 @@ Window.get_focused():set_tags({ Tag.get("1"), Tag.get("2") })
 
 #### Parameters
 
-`tags`: <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code> - The tags to set
+`tags` - The tags to set
+	| <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code>
 
 
 
@@ -337,14 +350,18 @@ Window.get_focused():set_tags({ Tag.get("1"), Tag.get("2") })
 
 ### <Badge type="method" text="method" /> set_vrr_demand
 
-<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:set_vrr_demand()</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.window.WindowHandle:set_vrr_demand(vrr_demand?: "visible" | "fullscreen")</code></pre></div>
 
-Sets this window's vrr demand.
+
+
+#### Parameters
+
+`vrr_demand?` - The vrr demand, or `nil` to have none.
+	| <code>"visible"</code> - Sets this window's vrr demand.
 
 This works in conjunction with an output with an on-demand vrr state.
 
-| "visible" # Turns vrr on on an on-demand vrr output when a window is visible.
-| "fullscreen" # Turns vrr on on an on-demand vrr output when a window is both visible *and* fullscreen.
+	| <code>"fullscreen"</code> - Turns vrr on on an on-demand vrr output when a window is both visible *and* fullscreen.
 
 
 
@@ -615,7 +632,8 @@ Gets all windows in the provided direction, sorted closest to farthest.
 
 #### Parameters
 
-`direction`: <code>"left" | "right" | "up" | "down"</code>
+`direction`
+	| <code>"left" | "right" | "up" | "down"</code>
 
 
 
@@ -652,7 +670,8 @@ Swap position with another window.
 
 #### Parameters
 
-`target`: <code><a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a></code>
+`target`
+	| <code><a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a></code>
 
 
 

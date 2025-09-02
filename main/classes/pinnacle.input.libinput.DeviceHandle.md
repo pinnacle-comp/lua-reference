@@ -122,7 +122,8 @@ This only affects devices with touch capability.
 
 #### Parameters
 
-`output`: <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to map the device's input to
+`output` - The output to map the device's input to
+	| <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code>
 
 
 
@@ -149,7 +150,8 @@ This only affects devices with touch capability.
 
 #### Parameters
 
-`region`: <code>{ x: integer, y: integer, width: integer, height: integer }</code> - The region in the global space to map input to
+`region` - The region in the global space to map input to
+	| <code>{ x: integer, y: integer, width: integer, height: integer }</code>
 
 
 
@@ -167,7 +169,8 @@ Sets this device's acceleration profile.
 
 #### Parameters
 
-`accel_profile`: <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.AccelProfile">pinnacle.input.libinput.AccelProfile</a></code>
+`accel_profile`
+	| <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.AccelProfile">pinnacle.input.libinput.AccelProfile</a></code>
 
 
 
@@ -183,7 +186,8 @@ Sets this device's acceleration speed.
 
 #### Parameters
 
-`accel_speed`: <code>number</code>
+`accel_speed`
+	| <code>number</code>
 
 
 
@@ -199,7 +203,8 @@ Sets this device's calibration matrix.
 
 #### Parameters
 
-`calibration_matrix`: <code>number[]</code> - The calibration matrix as an array of 6 floats.
+`calibration_matrix` - The calibration matrix as an array of 6 floats.
+	| <code>number[]</code>
 
 
 
@@ -215,7 +220,8 @@ Sets this device's click method.
 
 #### Parameters
 
-`click_method`: <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.ClickMethod">pinnacle.input.libinput.ClickMethod</a></code>
+`click_method`
+	| <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.ClickMethod">pinnacle.input.libinput.ClickMethod</a></code>
 
 
 
@@ -231,7 +237,8 @@ Sets whether or not this device is disabled while typing.
 
 #### Parameters
 
-`disable_while_typing`: <code>boolean</code>
+`disable_while_typing`
+	| <code>boolean</code>
 
 
 
@@ -247,7 +254,8 @@ Sets this device to left-handed or not.
 
 #### Parameters
 
-`left_handed`: <code>boolean</code>
+`left_handed`
+	| <code>boolean</code>
 
 
 
@@ -263,7 +271,8 @@ Sets whether or not middle emulation is enabled.
 
 #### Parameters
 
-`middle_emulation`: <code>boolean</code>
+`middle_emulation`
+	| <code>boolean</code>
 
 
 
@@ -279,7 +288,8 @@ Sets this device's rotation angle.
 
 #### Parameters
 
-`rotation_angle`: <code>integer</code>
+`rotation_angle`
+	| <code>integer</code>
 
 
 
@@ -295,7 +305,8 @@ Sets this device's scroll button.
 
 #### Parameters
 
-`scroll_button`: <code>integer</code>
+`scroll_button`
+	| <code>integer</code>
 
 
 
@@ -311,7 +322,8 @@ Sets whether or not the scroll button locks on this device.
 
 #### Parameters
 
-`scroll_button_lock`: <code>boolean</code>
+`scroll_button_lock`
+	| <code>boolean</code>
 
 
 
@@ -327,7 +339,8 @@ Sets this device's scroll method.
 
 #### Parameters
 
-`scroll_method`: <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.ScrollMethod">pinnacle.input.libinput.ScrollMethod</a></code>
+`scroll_method`
+	| <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.ScrollMethod">pinnacle.input.libinput.ScrollMethod</a></code>
 
 
 
@@ -343,7 +356,8 @@ Enables or disables natural scroll on this device.
 
 #### Parameters
 
-`natural_scroll`: <code>boolean</code>
+`natural_scroll`
+	| <code>boolean</code>
 
 
 
@@ -359,7 +373,8 @@ Sets this device's tap button map.
 
 #### Parameters
 
-`tap_button_map`: <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.TapButtonMap">pinnacle.input.libinput.TapButtonMap</a></code>
+`tap_button_map`
+	| <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.TapButtonMap">pinnacle.input.libinput.TapButtonMap</a></code>
 
 
 
@@ -375,7 +390,8 @@ Enables or disables tap dragging on this device.
 
 #### Parameters
 
-`tap_drag`: <code>boolean</code>
+`tap_drag`
+	| <code>boolean</code>
 
 
 
@@ -391,7 +407,8 @@ Sets whether or not tap dragging locks on this device.
 
 #### Parameters
 
-`tap_drag_lock`: <code>boolean</code>
+`tap_drag_lock`
+	| <code>boolean</code>
 
 
 
@@ -407,7 +424,8 @@ Enables or disables tap-to-click on this device.
 
 #### Parameters
 
-`tap`: <code>boolean</code>
+`tap`
+	| <code>boolean</code>
 
 
 
@@ -423,7 +441,8 @@ Sets this device's send events mode.
 
 #### Parameters
 
-`send_events_mode`: <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.SendEventsMode">pinnacle.input.libinput.SendEventsMode</a></code>
+`send_events_mode`
+	| <code><a href="/lua-reference/main/enums/pinnacle.input.libinput.SendEventsMode">pinnacle.input.libinput.SendEventsMode</a></code>
 
 
 

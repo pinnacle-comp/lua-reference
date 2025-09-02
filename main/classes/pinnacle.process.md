@@ -30,7 +30,8 @@ For more control over the spawn, use `Process.command` instead.
 
 #### Parameters
 
-`...`: <code>string</code> - The arguments of the command.
+`...` - The arguments of the command.
+	| <code>string</code>
 
 
 
@@ -61,7 +62,8 @@ For more control over the spawn, use `Process.command` instead.
 
 #### Parameters
 
-`...`: <code>string</code> - The arguments of the command.
+`...` - The arguments of the command.
+	| <code>string</code>
 
 
 
@@ -92,7 +94,8 @@ For more control over the spawn, use `Process.command` instead.
 
 #### Parameters
 
-`...`: <code>string</code> - The arguments of the command.
+`...` - The arguments of the command.
+	| <code>string</code>
 
 
 
@@ -118,7 +121,8 @@ A `Command` represents a to-be-spawned process.
 
 #### Parameters
 
-`cmd`: <code><a href="/lua-reference/main/classes/pinnacle.process.CommandOpts">pinnacle.process.CommandOpts</a></code> - Options for the command.
+`cmd` - Options for the command.
+	| <code><a href="/lua-reference/main/classes/pinnacle.process.CommandOpts">pinnacle.process.CommandOpts</a></code>
 
 
 
@@ -138,8 +142,10 @@ Adds an environment variable that all newly spawned processes will inherit.
 
 #### Parameters
 
-`key`: <code>string</code> - The environment variable's key.<br>
-`value`: <code>string</code> - The environment variable's value.
+`key` - The environment variable's key.
+	| <code>string</code><br>
+`value` - The environment variable's value.
+	| <code>string</code>
 
 
 

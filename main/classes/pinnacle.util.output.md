@@ -25,7 +25,8 @@ The string must have the form
 
 #### Parameters
 
-`modeline`: <code>string</code> - The modeline string.
+`modeline` - The modeline string.
+	| <code>string</code>
 
 
 

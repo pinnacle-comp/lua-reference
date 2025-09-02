@@ -61,8 +61,10 @@ Output.get_by_name("HDMI-1"):set_loc(1920, -360)
 
 #### Parameters
 
-`x`: <code>integer</code> - The x-coordinate.<br>
-`y`: <code>integer</code> - The y-coordinate.
+`x` - The x-coordinate.
+	| <code>integer</code><br>
+`y` - The y-coordinate.
+	| <code>integer</code>
 
 
 
@@ -106,8 +108,10 @@ Output.get_by_name("DP-1"):set_loc_adj_to(Output.get_by_name("HDMI-1"), "bottom_
 
 #### Parameters
 
-`other`: <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code> - The output to move this output relative to.<br>
-`alignment`: <code><a href="/lua-reference/main/aliases/pinnacle.output.Alignment">pinnacle.output.Alignment</a></code> - How to align this output with the other output.
+`other` - The output to move this output relative to.
+	| <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code><br>
+`alignment` - How to align this output with the other output.
+	| <code><a href="/lua-reference/main/aliases/pinnacle.output.Alignment">pinnacle.output.Alignment</a></code>
 
 
 
@@ -116,7 +120,7 @@ Output.get_by_name("DP-1"):set_loc_adj_to(Output.get_by_name("HDMI-1"), "bottom_
 
 ### <Badge type="method" text="method" /> set_mode
 
-<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_mode(width: integer, height: integer, refresh_rate_mhz?: integer)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_mode(width: integer, height: integer, refresh_rate_mhz: integer)</code></pre></div>
 
 Sets this output's mode.
 
@@ -136,9 +140,12 @@ Output.get_focused():set_mode(2560, 1440, 144000)
 
 #### Parameters
 
-`width`: <code>integer</code> - The mode's width.<br>
-`height`: <code>integer</code> - The mode's height.<br>
-`refresh_rate_mhz?`: <code>integer</code> - The mode's refresh rate in millihertz, or `nil` to auto-select.
+`width` - The mode's width.
+	| <code>integer</code><br>
+`height` - The mode's height.
+	| <code>integer</code><br>
+`refresh_rate_mhz` - The mode's refresh rate in millihertz, or `nil` to auto-select.
+	| <code>integer</code>
 
 
 
@@ -147,7 +154,7 @@ Output.get_focused():set_mode(2560, 1440, 144000)
 
 ### <Badge type="method" text="method" /> set_custom_mode
 
-<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_custom_mode(width: integer, height: integer, refresh_rate_mhz?: integer)</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_custom_mode(width: integer, height: integer, refresh_rate_mhz: integer)</code></pre></div>
 
 Sets this output's mode to a custom one.
 
@@ -164,9 +171,12 @@ Output.get_focused():set_custom_mode(2560, 1440, 75000)
 
 #### Parameters
 
-`width`: <code>integer</code> - A custom width.<br>
-`height`: <code>integer</code> - A custom height.<br>
-`refresh_rate_mhz?`: <code>integer</code> - A custom refresh rate in millihertz, or `nil` to default to 60Hz.
+`width` - A custom width.
+	| <code>integer</code><br>
+`height` - A custom height.
+	| <code>integer</code><br>
+`refresh_rate_mhz` - A custom refresh rate in millihertz, or `nil` to default to 60Hz.
+	| <code>integer</code>
 
 
 
@@ -191,7 +201,8 @@ require("pinnacle.util").output.parse_modeline(
 
 #### Parameters
 
-`modeline`: <code>string | <a href="/lua-reference/main/classes/pinnacle.output.Modeline">pinnacle.output.Modeline</a></code> - A modeline table, or a modeline string to feed it into `parse_modeline`.
+`modeline` - A modeline table, or a modeline string to feed it into `parse_modeline`.
+	| <code>string | <a href="/lua-reference/main/classes/pinnacle.output.Modeline">pinnacle.output.Modeline</a></code>
 
 
 
@@ -209,7 +220,8 @@ Sets this output's scaling factor.
 
 #### Parameters
 
-`scale`: <code>number</code> - The new scale.
+`scale` - The new scale.
+	| <code>number</code>
 
 
 
@@ -225,7 +237,8 @@ Changes this output's scaling factor by the given amount.
 
 #### Parameters
 
-`change_by`: <code>number</code> - How much to change the current scale by.
+`change_by` - How much to change the current scale by.
+	| <code>number</code>
 
 
 
@@ -241,7 +254,8 @@ Sets this output's transform.
 
 #### Parameters
 
-`transform`: <code><a href="/lua-reference/main/enums/pinnacle.output.Transform">pinnacle.output.Transform</a></code> - The new transform.
+`transform` - The new transform.
+	| <code><a href="/lua-reference/main/enums/pinnacle.output.Transform">pinnacle.output.Transform</a></code>
 
 
 
@@ -257,7 +271,8 @@ Powers on or off this output.
 
 #### Parameters
 
-`powered`: <code>boolean</code>
+`powered`
+	| <code>boolean</code>
 
 
 
@@ -653,7 +668,8 @@ Gets all outputs in the provided direction, sorted closest to farthest.
 
 #### Parameters
 
-`direction`: <code>"left" | "right" | "up" | "down"</code>
+`direction`
+	| <code>"left" | "right" | "up" | "down"</code>
 
 
 

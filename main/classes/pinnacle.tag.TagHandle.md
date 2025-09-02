@@ -83,7 +83,8 @@ Tag.get("2"):set_active(false) -- Displays Steam
 
 #### Parameters
 
-`active`: <code>boolean</code>
+`active`
+	| <code>boolean</code>
 
 
 

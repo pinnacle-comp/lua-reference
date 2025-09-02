@@ -21,7 +21,8 @@ Sets the upscale filter the renderer will use to upscale buffers.
 
 #### Parameters
 
-`filter`: <code><a href="/lua-reference/main/enums/pinnacle.render.ScalingFilter">pinnacle.render.ScalingFilter</a></code>
+`filter`
+	| <code><a href="/lua-reference/main/enums/pinnacle.render.ScalingFilter">pinnacle.render.ScalingFilter</a></code>
 
 
 
@@ -37,7 +38,8 @@ Sets the downscale filter the renderer will use to downscale buffers.
 
 #### Parameters
 
-`filter`: <code><a href="/lua-reference/main/enums/pinnacle.render.ScalingFilter">pinnacle.render.ScalingFilter</a></code>
+`filter`
+	| <code><a href="/lua-reference/main/enums/pinnacle.render.ScalingFilter">pinnacle.render.ScalingFilter</a></code>
 
 
 
