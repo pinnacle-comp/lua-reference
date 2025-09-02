@@ -13,16 +13,33 @@
 a {
     text-decoration: none !important;
 }
+
 pre {
     white-space: pre-wrap;
 }
+
 :root {
     --vp-code-color: var(--vp-c-text-1);
+    --vp-layout-max-width: 1920px;
 }
+
 .vp-doc h2 {
     padding-top: 12px;
     padding-bottom: 12px;
 }
+
 .vp-doc h2 .header-anchor {
     top: 12px;
+}
+
+.VPDoc:not(.has-sidebar) .container {
+  max-width: 1584px !important;
+}
+
+.VPDoc:not(.has-sidebar) .content {
+  max-width: 1264px !important;
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: 1168px !important;
 }
