@@ -144,6 +144,7 @@ Adds an environment variable that all newly spawned processes will inherit.
 
 `key` - The environment variable's key.
   - <code>string</code><br>
+
 `value` - The environment variable's value.
   - <code>string</code>
 

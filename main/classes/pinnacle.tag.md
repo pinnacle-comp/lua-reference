@@ -75,6 +75,7 @@ local tag_on_hdmi1 = Tag.get("Tag", Output.get_by_name("HDMI-1"))
 
 `name` - The name of the tag
   - <code>string</code><br>
+
 `output` - The output to get the tag on, or `nil` for the focused output.
   - <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code>
 
@@ -112,6 +113,7 @@ local tags = Tag.add(Output.get_by_name("HDMI-1"), tag_names)
 
 `output` - The output to add tags to.
   - <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code><br>
+
 `...` - The names of the new tags.
   - <code>string</code>
 

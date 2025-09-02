@@ -298,6 +298,7 @@ Adds or removes the given tag to or from this window.
 
 `tag` - The tag to set or unset
   - <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code><br>
+
 `set`
   - <code>boolean</code>
 

@@ -63,6 +63,7 @@ Output.get_by_name("HDMI-1"):set_loc(1920, -360)
 
 `x` - The x-coordinate.
   - <code>integer</code><br>
+
 `y` - The y-coordinate.
   - <code>integer</code>
 
@@ -110,6 +111,7 @@ Output.get_by_name("DP-1"):set_loc_adj_to(Output.get_by_name("HDMI-1"), "bottom_
 
 `other` - The output to move this output relative to.
   - <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code><br>
+
 `alignment` - How to align this output with the other output.
   - <code><a href="/lua-reference/main/aliases/pinnacle.output.Alignment">pinnacle.output.Alignment</a></code>
 
@@ -142,8 +144,10 @@ Output.get_focused():set_mode(2560, 1440, 144000)
 
 `width` - The mode's width.
   - <code>integer</code><br>
+
 `height` - The mode's height.
   - <code>integer</code><br>
+
 `refresh_rate_mhz` - The mode's refresh rate in millihertz, or `nil` to auto-select.
   - <code>integer</code>
 
@@ -173,8 +177,10 @@ Output.get_focused():set_custom_mode(2560, 1440, 75000)
 
 `width` - A custom width.
   - <code>integer</code><br>
+
 `height` - A custom height.
   - <code>integer</code><br>
+
 `refresh_rate_mhz` - A custom refresh rate in millihertz, or `nil` to default to 60Hz.
   - <code>integer</code>
 
