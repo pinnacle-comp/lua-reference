@@ -73,7 +73,7 @@ Results may vary if you have multiple outputs with different scales.
 #### Parameters
 
 `should_self_scale`
-	- <code>boolean</code>
+  - <code>boolean</code>
 
 
 
@@ -90,7 +90,7 @@ Sets an error message that is held by the compositor until it is retrieved.
 #### Parameters
 
 `error`
-	- <code>string</code>
+  - <code>string</code>
 
 
 
@@ -143,7 +143,7 @@ If you want to run a function with the config without blocking, see `Pinnacle.ru
 #### Parameters
 
 `config_fn`
-	- <code>fun()</code>
+  - <code>fun()</code>
 
 
 
@@ -168,7 +168,7 @@ However, it will not block to receive compositor events.
 #### Parameters
 
 `run_fn`
-	- <code>fun()</code>
+  - <code>fun()</code>
 
 
 

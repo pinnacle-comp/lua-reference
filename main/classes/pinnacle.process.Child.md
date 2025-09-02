@@ -73,7 +73,7 @@ Runs a function with every line of the child process's standard output.
 #### Parameters
 
 `on_line`
-	- <code>fun(line: string)</code>
+  - <code>fun(line: string)</code>
 
 
 
@@ -96,7 +96,7 @@ Runs a function with every line of the child process's standard error.
 #### Parameters
 
 `on_line`
-	- <code>fun(line: string)</code>
+  - <code>fun(line: string)</code>
 
 
 

@@ -62,7 +62,7 @@ end)
 #### Parameters
 
 `on_layout` - A function that receives layout arguments and builds and returns a layout response.
-	- <code>fun(args: <a href="/lua-reference/main/classes/pinnacle.layout.LayoutArgs">pinnacle.layout.LayoutArgs</a>): <a href="/lua-reference/main/classes/pinnacle.layout.LayoutResponse">pinnacle.layout.LayoutResponse</a></code>
+  - <code>fun(args: <a href="/lua-reference/main/classes/pinnacle.layout.LayoutArgs">pinnacle.layout.LayoutArgs</a>): <a href="/lua-reference/main/classes/pinnacle.layout.LayoutResponse">pinnacle.layout.LayoutResponse</a></code>
 
 
 
