@@ -39,7 +39,7 @@ all devices that will be connected in the future.
 #### Parameters
 
 `for_each`
-	| <code>fun(device: <a href="/lua-reference/main/classes/pinnacle.input.libinput.DeviceHandle">pinnacle.input.libinput.DeviceHandle</a>)</code>
+	- <code>fun(device: <a href="/lua-reference/main/classes/pinnacle.input.libinput.DeviceHandle">pinnacle.input.libinput.DeviceHandle</a>)</code>
 
 
 

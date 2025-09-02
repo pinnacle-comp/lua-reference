@@ -62,9 +62,9 @@ Output.get_by_name("HDMI-1"):set_loc(1920, -360)
 #### Parameters
 
 `x` - The x-coordinate.
-	| <code>integer</code><br>
+	- <code>integer</code><br>
 `y` - The y-coordinate.
-	| <code>integer</code>
+	- <code>integer</code>
 
 
 
@@ -109,9 +109,9 @@ Output.get_by_name("DP-1"):set_loc_adj_to(Output.get_by_name("HDMI-1"), "bottom_
 #### Parameters
 
 `other` - The output to move this output relative to.
-	| <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code><br>
+	- <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code><br>
 `alignment` - How to align this output with the other output.
-	| <code><a href="/lua-reference/main/aliases/pinnacle.output.Alignment">pinnacle.output.Alignment</a></code>
+	- <code><a href="/lua-reference/main/aliases/pinnacle.output.Alignment">pinnacle.output.Alignment</a></code>
 
 
 
@@ -141,11 +141,11 @@ Output.get_focused():set_mode(2560, 1440, 144000)
 #### Parameters
 
 `width` - The mode's width.
-	| <code>integer</code><br>
+	- <code>integer</code><br>
 `height` - The mode's height.
-	| <code>integer</code><br>
+	- <code>integer</code><br>
 `refresh_rate_mhz` - The mode's refresh rate in millihertz, or `nil` to auto-select.
-	| <code>integer</code>
+	- <code>integer</code>
 
 
 
@@ -172,11 +172,11 @@ Output.get_focused():set_custom_mode(2560, 1440, 75000)
 #### Parameters
 
 `width` - A custom width.
-	| <code>integer</code><br>
+	- <code>integer</code><br>
 `height` - A custom height.
-	| <code>integer</code><br>
+	- <code>integer</code><br>
 `refresh_rate_mhz` - A custom refresh rate in millihertz, or `nil` to default to 60Hz.
-	| <code>integer</code>
+	- <code>integer</code>
 
 
 
@@ -202,7 +202,7 @@ require("pinnacle.util").output.parse_modeline(
 #### Parameters
 
 `modeline` - A modeline table, or a modeline string to feed it into `parse_modeline`.
-	| <code>string | <a href="/lua-reference/main/classes/pinnacle.output.Modeline">pinnacle.output.Modeline</a></code>
+	- <code>string | <a href="/lua-reference/main/classes/pinnacle.output.Modeline">pinnacle.output.Modeline</a></code>
 
 
 
@@ -221,7 +221,7 @@ Sets this output's scaling factor.
 #### Parameters
 
 `scale` - The new scale.
-	| <code>number</code>
+	- <code>number</code>
 
 
 
@@ -238,7 +238,7 @@ Changes this output's scaling factor by the given amount.
 #### Parameters
 
 `change_by` - How much to change the current scale by.
-	| <code>number</code>
+	- <code>number</code>
 
 
 
@@ -255,7 +255,7 @@ Sets this output's transform.
 #### Parameters
 
 `transform` - The new transform.
-	| <code><a href="/lua-reference/main/enums/pinnacle.output.Transform">pinnacle.output.Transform</a></code>
+	- <code><a href="/lua-reference/main/enums/pinnacle.output.Transform">pinnacle.output.Transform</a></code>
 
 
 
@@ -272,7 +272,7 @@ Powers on or off this output.
 #### Parameters
 
 `powered`
-	| <code>boolean</code>
+	- <code>boolean</code>
 
 
 
@@ -292,13 +292,17 @@ Toggles power for this output.
 
 ### <Badge type="method" text="method" /> set_vrr
 
-<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_vrr()</code></pre></div>
+<div class="language-lua"><pre><code>function pinnacle.output.OutputHandle:set_vrr(vrr: true | false | "on_demand")</code></pre></div>
 
 Sets the variable refresh rate state of this output.
 
-| true # Turns vrr on at all times.
-| false # Turns vrr off.
-| "on_demand" # Turns vrr on whenever a window with an active vrr demand is visible.
+
+#### Parameters
+
+`vrr`
+	- <code>true</code> - Turns vrr on at all times.
+	- <code>false</code> - Turns vrr off.
+	- <code>"on_demand"</code> - Turns vrr on whenever a window with an active vrr demand is visible.
 
 
 
@@ -669,7 +673,7 @@ Gets all outputs in the provided direction, sorted closest to farthest.
 #### Parameters
 
 `direction`
-	| <code>"left" | "right" | "up" | "down"</code>
+	- <code>"left" | "right" | "up" | "down"</code>
 
 
 

@@ -25,7 +25,7 @@ Creates a layout generator that lays out windows in a line.
 #### Parameters
 
 `options` - Options for the generator.
-	| <code><a href="/lua-reference/main/classes/pinnacle.layout.builtin.LineOpts">pinnacle.layout.builtin.LineOpts</a></code>
+	- <code><a href="/lua-reference/main/classes/pinnacle.layout.builtin.LineOpts">pinnacle.layout.builtin.LineOpts</a></code>
 
 
 
@@ -47,7 +47,7 @@ Creates a layout generator that lays windows out in two stacks: a master and sid
 #### Parameters
 
 `options` - Options for the generator.
-	| <code><a href="/lua-reference/main/classes/pinnacle.layout.builtin.MasterStackOpts">pinnacle.layout.builtin.MasterStackOpts</a></code>
+	- <code><a href="/lua-reference/main/classes/pinnacle.layout.builtin.MasterStackOpts">pinnacle.layout.builtin.MasterStackOpts</a></code>
 
 
 
@@ -70,7 +70,7 @@ Creates a layout generator that lays windows out dwindling down to the bottom ri
 #### Parameters
 
 `options` - Options for the generator.
-	| <code><a href="/lua-reference/main/classes/pinnacle.layout.builtin.DwindleOpts">pinnacle.layout.builtin.DwindleOpts</a></code>
+	- <code><a href="/lua-reference/main/classes/pinnacle.layout.builtin.DwindleOpts">pinnacle.layout.builtin.DwindleOpts</a></code>
 
 
 
@@ -93,7 +93,7 @@ Creates a layout generator that lays windows out in a spiral.
 #### Parameters
 
 `options` - Options for the generator.
-	| <code><a href="/lua-reference/main/classes/pinnacle.layout.builtin.SpiralOpts">pinnacle.layout.builtin.SpiralOpts</a></code>
+	- <code><a href="/lua-reference/main/classes/pinnacle.layout.builtin.SpiralOpts">pinnacle.layout.builtin.SpiralOpts</a></code>
 
 
 
@@ -117,7 +117,7 @@ a horizontal and vertical stack flanking the other two sides.
 #### Parameters
 
 `options` - Options for the generator.
-	| <code><a href="/lua-reference/main/classes/pinnacle.layout.builtin.CornerOpts">pinnacle.layout.builtin.CornerOpts</a></code>
+	- <code><a href="/lua-reference/main/classes/pinnacle.layout.builtin.CornerOpts">pinnacle.layout.builtin.CornerOpts</a></code>
 
 
 
@@ -140,7 +140,7 @@ Creates a layout generator that lays windows out keeping their sizes roughly the
 #### Parameters
 
 `options` - Options for the generator.
-	| <code><a href="/lua-reference/main/classes/pinnacle.layout.builtin.FairOpts">pinnacle.layout.builtin.FairOpts</a></code>
+	- <code><a href="/lua-reference/main/classes/pinnacle.layout.builtin.FairOpts">pinnacle.layout.builtin.FairOpts</a></code>
 
 
 
@@ -181,7 +181,7 @@ and allows you to cycle between the generators.
 #### Parameters
 
 `layouts` - The layouts that this generator will cycle between.
-	| <code><a href="/lua-reference/main/classes/pinnacle.layout.LayoutGenerator">pinnacle.layout.LayoutGenerator</a>[]</code>
+	- <code><a href="/lua-reference/main/classes/pinnacle.layout.LayoutGenerator">pinnacle.layout.LayoutGenerator</a>[]</code>
 
 
 

@@ -74,13 +74,13 @@ end)
 #### Parameters
 
 `mods` - The modifiers that need to be held down for the bind to trigger
-	| <code><a href="/lua-reference/main/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code><br>
+	- <code><a href="/lua-reference/main/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code><br>
 `key` - The key used to trigger the bind
-	| <code><a href="/lua-reference/main/enums/pinnacle.input.Key">pinnacle.input.Key</a> | string</code><br>
+	- <code><a href="/lua-reference/main/enums/pinnacle.input.Key">pinnacle.input.Key</a> | string</code><br>
 `on_press` - The function to run when the bind is triggered
-	| <code>fun()</code><br>
+	- <code>fun()</code><br>
 `bind_info` - An optional group and description that is displayed in the bind overlay.
-	| <code>{ group?: string, description?: string }</code>
+	- <code>{ group?: string, description?: string }</code>
 
 
 
@@ -127,13 +127,13 @@ end)
 #### Parameters
 
 `mods` - The modifiers that need to be held down for the bind to trigger
-	| <code><a href="/lua-reference/main/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code><br>
+	- <code><a href="/lua-reference/main/enums/pinnacle.input.Mod">pinnacle.input.Mod</a>[]</code><br>
 `button` - The mouse button used to trigger the bind
-	| <code><a href="/lua-reference/main/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a></code><br>
+	- <code><a href="/lua-reference/main/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a></code><br>
 `on_press` - The function to run when the bind is triggered
-	| <code>fun()</code><br>
+	- <code>fun()</code><br>
 `bind_info` - An optional group and description that will be displayed in the bind overlay.
-	| <code>{ group?: string, description?: string }</code>
+	- <code>{ group?: string, description?: string }</code>
 
 
 
@@ -150,7 +150,7 @@ Enters the bind layer `layer`, or the default layer if `layer` is nil.
 #### Parameters
 
 `layer` - The bind layer.
-	| <code>string</code>
+	- <code>string</code>
 
 
 
@@ -194,7 +194,7 @@ Input.set_xkb_config({
 #### Parameters
 
 `xkb_config` - The new xkbconfig
-	| <code><a href="/lua-reference/main/classes/pinnacle.input.XkbConfig">pinnacle.input.XkbConfig</a></code>
+	- <code><a href="/lua-reference/main/classes/pinnacle.input.XkbConfig">pinnacle.input.XkbConfig</a></code>
 
 
 
@@ -216,9 +216,9 @@ Input.set_repeat_rate(100, 1000) -- Key must be held down for 1 second, then rep
 #### Parameters
 
 `rate` - The time between repeats in milliseconds
-	| <code>integer</code><br>
+	- <code>integer</code><br>
 `delay` - The duration a key needs to be held down before repeating starts in milliseconds
-	| <code>integer</code>
+	- <code>integer</code>
 
 
 
@@ -243,7 +243,7 @@ Input.set_xkb_keymap(io.open("/path/to/keymap.xkb"):read("*a"))
 #### Parameters
 
 `keymap` - The keymap to set.
-	| <code>string</code>
+	- <code>string</code>
 
 
 
@@ -284,7 +284,7 @@ Fails if the index is out of bounds.
 #### Parameters
 
 `index` - The index of the layout to switch to.
-	| <code>integer</code>
+	- <code>integer</code>
 
 
 
@@ -304,7 +304,7 @@ This allows you to set it at runtime.
 #### Parameters
 
 `theme` - The name of the xcursor theme.
-	| <code>string</code>
+	- <code>string</code>
 
 
 
@@ -324,7 +324,7 @@ This allows you to set it at runtime.
 #### Parameters
 
 `size` - The new size of the cursor.
-	| <code>integer</code>
+	- <code>integer</code>
 
 
 
@@ -358,7 +358,7 @@ Input.connect_signal({
 #### Parameters
 
 `signals` - The signal you want to connect to
-	| <code><a href="/lua-reference/main/classes/pinnacle.input.InputSignal">pinnacle.input.InputSignal</a></code>
+	- <code><a href="/lua-reference/main/classes/pinnacle.input.InputSignal">pinnacle.input.InputSignal</a></code>
 
 
 

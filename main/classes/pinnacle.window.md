@@ -67,7 +67,7 @@ end)
 #### Parameters
 
 `button` - The button that will initiate the move
-	| <code><a href="/lua-reference/main/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a></code>
+	- <code><a href="/lua-reference/main/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a></code>
 
 
 
@@ -93,7 +93,7 @@ end)
 #### Parameters
 
 `button` - The button that will initiate the resize
-	| <code><a href="/lua-reference/main/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a></code>
+	- <code><a href="/lua-reference/main/enums/pinnacle.input.MouseButton">pinnacle.input.MouseButton</a></code>
 
 
 
@@ -128,7 +128,7 @@ Window.connect_signal({
 #### Parameters
 
 `signals` - The signal you want to connect to
-	| <code><a href="/lua-reference/main/classes/pinnacle.window.WindowSignal">pinnacle.window.WindowSignal</a></code>
+	- <code><a href="/lua-reference/main/classes/pinnacle.window.WindowSignal">pinnacle.window.WindowSignal</a></code>
 
 
 
@@ -171,7 +171,7 @@ end)
 #### Parameters
 
 `rule` - A function that will run with all new, unmapped windows.
-	| <code>fun(window: <a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>)</code>
+	- <code>fun(window: <a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>)</code>
 
 
 

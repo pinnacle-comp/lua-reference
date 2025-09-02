@@ -61,7 +61,7 @@ Creates the default focus border without a titlebar.
 #### Parameters
 
 `window`
-	| <code><a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a></code>
+	- <code><a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a></code>
 
 
 
@@ -84,7 +84,7 @@ Creates the default focus border with a titlebar.
 #### Parameters
 
 `window`
-	| <code><a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a></code>
+	- <code><a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a></code>
 
 
 

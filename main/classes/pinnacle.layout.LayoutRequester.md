@@ -28,7 +28,7 @@ Causes the compositor to emit a layout request.
 #### Parameters
 
 `output` - The output to layout, or `nil` for the focused output.
-	| <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code>
+	- <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code>
 
 
 
