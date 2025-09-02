@@ -20,8 +20,8 @@ Disconnects the callbacks from all the signal connections that are stored in thi
 
 #### Parameters
 
-`self`
-  - <code>table&lt;string, <a href="/lua-reference/main/classes/pinnacle.signal.SignalHandle">pinnacle.signal.SignalHandle</a>></code>
+`self`<br>
+&emsp; ┃ <code>table&lt;string, <a href="/lua-reference/main/classes/pinnacle.signal.SignalHandle">pinnacle.signal.SignalHandle</a>></code><br>
 
 
 

@@ -73,11 +73,11 @@ local tag_on_hdmi1 = Tag.get("Tag", Output.get_by_name("HDMI-1"))
 
 #### Parameters
 
-`name` - The name of the tag
-  - <code>string</code><br>
+`name` - The name of the tag<br>
+&emsp; ┃ <code>string</code><br>
 
-`output` - The output to get the tag on, or `nil` for the focused output.
-  - <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code>
+`output` - The output to get the tag on, or `nil` for the focused output.<br>
+&emsp; ┃ <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code><br>
 
 
 
@@ -111,11 +111,11 @@ local tags = Tag.add(Output.get_by_name("HDMI-1"), tag_names)
 
 #### Parameters
 
-`output` - The output to add tags to.
-  - <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code><br>
+`output` - The output to add tags to.<br>
+&emsp; ┃ <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code><br>
 
-`...` - The names of the new tags.
-  - <code>string</code>
+`...` - The names of the new tags.<br>
+&emsp; ┃ <code>string</code><br>
 
 
 
@@ -142,8 +142,8 @@ Tag.remove(tags) -- "HDMI-1" no longer has those tags
 
 #### Parameters
 
-`tags` - The tags to remove.
-  - <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code>
+`tags` - The tags to remove.<br>
+&emsp; ┃ <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code><br>
 
 
 
@@ -177,8 +177,8 @@ Tag.connect_signal({
 
 #### Parameters
 
-`signals` - The signal you want to connect to
-  - <code><a href="/lua-reference/main/classes/pinnacle.tag.TagSignal">pinnacle.tag.TagSignal</a></code>
+`signals` - The signal you want to connect to<br>
+&emsp; ┃ <code><a href="/lua-reference/main/classes/pinnacle.tag.TagSignal">pinnacle.tag.TagSignal</a></code><br>
 
 
 

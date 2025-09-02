@@ -72,8 +72,8 @@ Runs a function with every line of the child process's standard output.
 
 #### Parameters
 
-`on_line`
-  - <code>fun(line: string)</code>
+`on_line`<br>
+&emsp; ┃ <code>fun(line: string)</code><br>
 
 
 
@@ -95,8 +95,8 @@ Runs a function with every line of the child process's standard error.
 
 #### Parameters
 
-`on_line`
-  - <code>fun(line: string)</code>
+`on_line`<br>
+&emsp; ┃ <code>fun(line: string)</code><br>
 
 
 

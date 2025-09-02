@@ -61,8 +61,8 @@ Gets an output by its name (the connector it's plugged into).
 
 #### Parameters
 
-`name` - The output's name.
-  - <code>string</code>
+`name` - The output's name.<br>
+&emsp; ┃ <code>string</code><br>
 
 
 
@@ -118,8 +118,8 @@ end)
 
 #### Parameters
 
-`for_each` - The function that will be run for each output.
-  - <code>fun(output: <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)</code>
+`for_each` - The function that will be run for each output.<br>
+&emsp; ┃ <code>fun(output: <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)</code><br>
 
 
 
@@ -153,8 +153,8 @@ Output.connect_signal({
 
 #### Parameters
 
-`signals` - The signal you want to connect to
-  - <code><a href="/lua-reference/main/classes/pinnacle.output.OutputSignal">pinnacle.output.OutputSignal</a></code>
+`signals` - The signal you want to connect to<br>
+&emsp; ┃ <code><a href="/lua-reference/main/classes/pinnacle.output.OutputSignal">pinnacle.output.OutputSignal</a></code><br>
 
 
 

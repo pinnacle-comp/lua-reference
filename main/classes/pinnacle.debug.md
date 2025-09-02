@@ -27,8 +27,8 @@ red rectangles drawn where the damage is.
 
 #### Parameters
 
-`set`
-  - <code>boolean</code>
+`set`<br>
+&emsp; ┃ <code>boolean</code><br>
 
 
 
@@ -62,8 +62,8 @@ drawn.
 
 #### Parameters
 
-`set`
-  - <code>boolean</code>
+`set`<br>
+&emsp; ┃ <code>boolean</code><br>
 
 
 
@@ -94,8 +94,8 @@ Sets cursor plane scanout.
 
 #### Parameters
 
-`set`
-  - <code>boolean</code>
+`set`<br>
+&emsp; ┃ <code>boolean</code><br>
 
 
 
@@ -122,8 +122,8 @@ Enables or disables process spawning setting up pipes to give fds to the config.
 
 #### Parameters
 
-`set`
-  - <code>boolean</code>
+`set`<br>
+&emsp; ┃ <code>boolean</code><br>
 
 
 

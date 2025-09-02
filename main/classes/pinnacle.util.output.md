@@ -25,8 +25,8 @@ The string must have the form
 
 #### Parameters
 
-`modeline` - The modeline string.
-  - <code>string</code>
+`modeline` - The modeline string.<br>
+&emsp; ┃ <code>string</code><br>
 
 
 

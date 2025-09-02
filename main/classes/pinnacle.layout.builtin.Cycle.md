@@ -40,8 +40,8 @@ Cycles the layout forward for the given tag.
 
 #### Parameters
 
-`tag` - The tag to cycle the layout for.
-  - <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code>
+`tag` - The tag to cycle the layout for.<br>
+&emsp; ┃ <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code><br>
 
 
 
@@ -57,8 +57,8 @@ Cycles the layout backward for the given tag.
 
 #### Parameters
 
-`tag` - The tag to cycle the layout for.
-  - <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code>
+`tag` - The tag to cycle the layout for.<br>
+&emsp; ┃ <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code><br>
 
 
 
@@ -76,8 +76,8 @@ Gets the current layout generator for the given tag.
 
 #### Parameters
 
-`tag` - The tag to get a layout for.
-  - <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code>
+`tag` - The tag to get a layout for.<br>
+&emsp; ┃ <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a></code><br>
 
 
 

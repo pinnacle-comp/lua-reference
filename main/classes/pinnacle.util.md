@@ -60,8 +60,8 @@ local props = require("pinnacle.util").batch(requests)
 
 #### Parameters
 
-`requests` - The requests that you want to batch up, wrapped in a function.
-  - <code>fun(): T[]</code>
+`requests` - The requests that you want to batch up, wrapped in a function.<br>
+&emsp; ┃ <code>fun(): T[]</code><br>
 
 
 
@@ -84,8 +84,8 @@ Creates a deep copy of an object.
 
 #### Parameters
 
-`obj` - The object to deep copy.
-  - <code>T</code>
+`obj` - The object to deep copy.<br>
+&emsp; ┃ <code>T</code><br>
 
 
 
@@ -107,8 +107,8 @@ Creates a table with entries key->value and value->key for all given pairs.
 
 #### Parameters
 
-`key_value_pairs`
-  - <code>T</code>
+`key_value_pairs`<br>
+&emsp; ┃ <code>T</code><br>
 
 
 
@@ -128,8 +128,8 @@ Makes a table bijective by inserting `value = key` entries for every key-value p
 
 #### Parameters
 
-`table`
-  - <code>table</code>
+`table`<br>
+&emsp; ┃ <code>table</code><br>
 
 
 
