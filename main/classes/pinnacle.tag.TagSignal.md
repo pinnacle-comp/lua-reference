@@ -15,4 +15,16 @@ outline: [2, 3]
 
 A tag was set to active or not active.
 
+### created <Badge type="danger" text="nullable" />
+
+`created?`: <code>fun(tag: <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>)</code>
+
+A tag was created.
+
+### removed <Badge type="danger" text="nullable" />
+
+`removed?`: <code>fun(tag: <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>)</code>
+
+A tag was removed.
+
 
