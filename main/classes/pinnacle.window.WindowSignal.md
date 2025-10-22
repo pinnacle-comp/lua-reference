@@ -33,4 +33,22 @@ The window got keyboard focus.
 
 A window's title changed.
 
+### layout_mode_changed <Badge type="danger" text="nullable" />
+
+`layout_mode_changed?`: <code>fun(window: <a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>, layout_mode: <a href="/lua-reference/main/aliases/pinnacle.window.LayoutMode">pinnacle.window.LayoutMode</a>)</code>
+
+A window's layout mode changed.
+
+### created <Badge type="danger" text="nullable" />
+
+`created?`: <code>fun(window: <a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>)</code>
+
+A window was created.
+
+### destroyed <Badge type="danger" text="nullable" />
+
+`destroyed?`: <code>fun(window: <a href="/lua-reference/main/classes/pinnacle.window.WindowHandle">pinnacle.window.WindowHandle</a>, title: string, app_id: string)</code>
+
+A window was closed.
+
 
