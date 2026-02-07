@@ -150,6 +150,39 @@ Tag.remove(tags) -- "HDMI-1" no longer has those tags
 
 
 
+### <Badge type="function" text="function" /> move_to_output
+
+<div class="language-lua"><pre><code>function pinnacle.tag.move_to_output(output: <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>, tags: <a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[])
+    -> ok: boolean, err: <a href="/lua-reference/main/classes/pinnacle.tag.MoveToOutputError">pinnacle.tag.MoveToOutputError</a> | nil</code></pre></div>
+
+Moves existing tags to the specified output.
+
+#### Example
+```lua
+local tag_to_move = Tag.get("1")
+Tag.move_to_output(Output.get_by_name("HDMI-1"), { tag_to_move })
+```
+
+
+
+#### Parameters
+
+`output` - The output to move tags to.<br>
+&emsp; ┃ <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code><br>
+
+`tags` - The tags to move.<br>
+&emsp; ┃ <code><a href="/lua-reference/main/classes/pinnacle.tag.TagHandle">pinnacle.tag.TagHandle</a>[]</code><br>
+
+
+
+#### Returns
+
+1. `ok`: <code>boolean</code> - `true` on success.
+2. `err`: <code><a href="/lua-reference/main/classes/pinnacle.tag.MoveToOutputError">pinnacle.tag.MoveToOutputError</a> | nil</code> - Error on failure.
+
+
+
+
 ### <Badge type="function" text="function" /> connect_signal
 
 <div class="language-lua"><pre><code>function pinnacle.tag.connect_signal(signals: <a href="/lua-reference/main/classes/pinnacle.tag.TagSignal">pinnacle.tag.TagSignal</a>)

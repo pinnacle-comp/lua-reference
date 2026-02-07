@@ -112,6 +112,32 @@ Tag.get("2"):toggle_active() -- Displays nothing
 
 
 
+### <Badge type="method" text="method" /> move_to_output
+
+<div class="language-lua"><pre><code>function pinnacle.tag.TagHandle:move_to_output(output: <a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a>)
+    -> ok: boolean, err: <a href="/lua-reference/main/classes/pinnacle.tag.MoveToOutputError">pinnacle.tag.MoveToOutputError</a> | nil</code></pre></div>
+
+Moves this tag to the specified output.
+
+
+
+#### Parameters
+
+`output` - The output to move this tag to.<br>
+&emsp; ┃ <code><a href="/lua-reference/main/classes/pinnacle.output.OutputHandle">pinnacle.output.OutputHandle</a></code><br>
+
+
+
+#### Returns
+
+1. `ok`: <code>boolean</code> - `true` on success.
+2. `err`: <code><a href="/lua-reference/main/classes/pinnacle.tag.MoveToOutputError">pinnacle.tag.MoveToOutputError</a> | nil</code> - Error on failure.
+
+
+
+#### See also
+
+- <code><a href="/lua-reference/main/classes/pinnacle.tag#move_to_output">pinnacle.tag.move_to_output</a></code>: - for further information
 ### <Badge type="method" text="method" /> active
 
 <div class="language-lua"><pre><code>function pinnacle.tag.TagHandle:active()
