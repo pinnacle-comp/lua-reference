@@ -5,7 +5,7 @@ outline: [2, 3]
 # Enum `pinnacle.output.Transform`
 <Badge type="tip" text="key" />
 
-`"normal"` | `"flipped"` | `"flipped_90"` | `"flipped_180"` | `"flipped_270"`
+`"normal"` | `"90"` | `"180"` | `"270"` | `"flipped"` | `"flipped_90"` | `"flipped_180"` | `"flipped_270"`
 
 An output transform.
 
@@ -16,6 +16,18 @@ This determines what orientation outputs will render with.
 ### `"normal"`
 
 No transform.
+
+### `"90"`
+
+90 degrees counter-clockwise.
+
+### `"180"`
+
+180 degrees counter-clockwise.
+
+### `"270"`
+
+270 degrees counter-clockwise.
 
 ### `"flipped"`
 
